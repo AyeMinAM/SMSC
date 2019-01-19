@@ -155,16 +155,27 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         // Enqueue the default style.css with the name devdmbootstrap4-stylesheet
         wp_enqueue_style('devdmbootstrap4-stylesheet', get_stylesheet_uri());
 
+
+        
+        
+
         // Enqueue Font Awesome Icon Set with the name devdmbootstrap4-fontawesome.
         if (get_theme_mod('devdmbootstrap4_fontawesome_setting', 1)) {
             wp_enqueue_style('devdmbootstrap4-fontawesome', get_template_directory_uri() . '/assets/fontawesome-free-5.0.2/web-fonts-with-css/css/fontawesome-all.min.css');
         }
 
+
+        wp_enqueue_style('devdmbootstrap4-ionicons', get_template_directory_uri() . '/assets/ionicons-2.0.1/css/ionicons.min.css');
+
+        
         // Enqueue popper.min.js with the name devdmbootstrap4-popper-js
         wp_enqueue_script('devdmbootstrap4-popper-js', get_template_directory_uri() . '/assets/js/bootstrap4x/popper.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
 
         // Enqueue the default Bootstrap 4.x JS with the name devdmbootstrap4-js.
         wp_enqueue_script('devdmbootstrap4-js', get_template_directory_uri() . '/assets/js/bootstrap4x/bootstrap.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+  
+
 
         // Enqueue comment-reply
         if ( is_singular() && comments_open() && get_option('thread_comments') ) {
