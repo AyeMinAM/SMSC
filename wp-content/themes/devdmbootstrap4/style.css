@@ -72,7 +72,7 @@ The default Bootstrap 4 CSS and JS files are enqueued inside the functions.php f
 }
 
 
-/*.btn-outline {
+.btn-outline {
     color: #ffffff;
     background-color:#932a0c;
     font-weight: bold;
@@ -81,7 +81,7 @@ The default Bootstrap 4 CSS and JS files are enqueued inside the functions.php f
     padding: 15px 30px; 
     font-size: 18px;
     
-  }*/
+  }
 
   /*add*/
 
