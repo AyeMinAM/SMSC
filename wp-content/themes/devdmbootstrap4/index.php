@@ -119,7 +119,7 @@
             </div>
             <div class="row" style="margin-top:20px;">
                     <div class="col text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
+                    <a href="<?php echo get_site_url(); ?>/retreat/" class="btn btn-lg btn-outline">
                     Register</a> 
                     </div>
             </div>
