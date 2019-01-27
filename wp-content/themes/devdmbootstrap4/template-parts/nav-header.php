@@ -107,7 +107,7 @@
                         </div>
                     </li>
                     <li class="nav-item smsc_menu_right">
-                        <a class="nav-link" href="#">Library</a>
+                        <a class="nav-link" href="<?php echo get_site_url(); ?>/library/">Library</a>
                     </li>
                         <button class="btn navbar-btn button-donation smsc_margin" >Donation</button>
                     </ul>
