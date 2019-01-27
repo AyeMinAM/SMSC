@@ -74,7 +74,7 @@ The default Bootstrap 4 CSS and JS files are enqueued inside the functions.php f
 
 .btn-outline {
     color: #ffffff;
-    background-color:#932a0c;
+    background-color:green;
     font-weight: bold;
     letter-spacing: 0.05em;
     font-family: OpenSans;
