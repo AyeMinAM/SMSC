@@ -99,13 +99,13 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('aboutsmsc') ) ); ?>">About SMSC</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Teachers</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('teacher') ) ); ?>">The Teachers</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">The Project</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('project') ) ); ?>">The Project</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Past Activities</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('pastactivities') ) ); ?>">Past Activities</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Contact SMSC</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('contactus') ) ); ?>">Contact SMSC</a>
                         </div>
                     </li>
                     <li class="nav-item smsc_menu_right">
