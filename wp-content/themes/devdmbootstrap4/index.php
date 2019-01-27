@@ -45,7 +45,7 @@
             <div  class="col-sm-5 text-center"> 
 
 
-                <a href="<?php echo get_site_url(); ?>/beginner/" class="btn btn-lg btn-outline">
+                <a href="<?php echo get_site_url(); ?>/mprogram/" class="btn btn-lg btn-outline">
                 Our Meditation Programs</a>
             </div>
 

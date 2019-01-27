@@ -301,6 +301,20 @@ height: 22px;
 }
 
 
+.img-container {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  
+}
+.img-container .img-to-fit {
+  flex: 1;
+  height: 100%;
+}
+
  
  
   

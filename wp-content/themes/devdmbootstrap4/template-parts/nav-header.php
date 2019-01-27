@@ -56,6 +56,8 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Day Retreat</a>
                             <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Monthly Retreat</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Annual Retreat</a>
                             </div>
                         </li>
@@ -95,7 +97,7 @@
                         About
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">SMSC</a>
+                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('aboutsmsc') ) ); ?>">About SMSC</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Teachers</a>
                         <div class="dropdown-divider"></div>
