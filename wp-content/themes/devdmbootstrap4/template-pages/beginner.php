@@ -38,7 +38,7 @@ Template Name: Beginner Page
         <div class="row" style="margin-top:20px;">
             <div  class="col-sm-12 text-center"> 
 
-                <a href="#" class="btn btn-lg btn-register">
+                <a href="<?php echo esc_url( get_permalink( get_page_by_title('registerclass') ) ); ?>" class="btn btn-lg btn-register">
                 Register</a>
             </div>
 

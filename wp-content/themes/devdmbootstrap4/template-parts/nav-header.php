@@ -69,9 +69,9 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Upcoming Events</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Photo Gallery</a>
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('gallery') ) ); ?>">Photo Gallery</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Volunteers</a>
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('volunteer') ) ); ?>">Volunteers</a>
                              
                             </div>
                         </li>
