@@ -12,6 +12,22 @@ Template Name: Gallery Page
 
 
 <div class="container">
+<?php  
+ 
+
+ if ($dir = opendir(get_template_directory().'/gallery')) {
+	$images = array();
+	while (false !== ($file = readdir($dir))) {
+		if ($file != "." && $file != "..") {
+			$images[] = $file; 
+		}
+	}
+	closedir($dir);
+}
+
+ 
+?>
+
 
 <!-- main slider carousel -->
 <div class="row" style="margin-top:20px;">
@@ -19,30 +35,20 @@ Template Name: Gallery Page
             <div id="myCarousel" class="carousel slide">
                 <!-- main slider carousel items -->
                 <div class="carousel-inner">
-                    <div class="active item carousel-item" data-slide-number="0">
-                        <img src="http://placehold.it/1200x480&amp;text=one" class="img-fluid">
+                    <?php 
+                        $slideNo = 0; 
+                        $active = "active";
+                        foreach($images as $image) {
+                             
+                    ?> 
+                    <div class="<?php echo $active;?> item carousel-item" data-slide-number="<?php echo $slideNo; ?>">
+                        <img src="<?php echo get_template_directory_uri().'/gallery/'.$image ; ?>" class="img-fluid">
                     </div>
-                    <div class="item carousel-item" data-slide-number="1">
-                        <img src="http://placehold.it/1200x480/888/FFF" class="img-fluid">
-                    </div>
-                    <div class="item carousel-item" data-slide-number="2">
-                        <img src="http://placehold.it/1200x480&amp;text=three" class="img-fluid">
-                    </div>
-                    <div class="item carousel-item" data-slide-number="3">
-                        <img src="http://placehold.it/1200x480&amp;text=four" class="img-fluid">
-                    </div>
-                    <div class="item carousel-item" data-slide-number="4">
-                        <img src="http://placehold.it/1200x480&amp;text=five" class="img-fluid">
-                    </div>
-                    <div class="item carousel-item" data-slide-number="5">
-                        <img src="http://placehold.it/1200x480&amp;text=six" class="img-fluid">
-                    </div>
-                    <div class="item carousel-item" data-slide-number="6">
-                        <img src="http://placehold.it/1200x480&amp;text=seven" class="img-fluid">
-                    </div>
-                    <div class="item carousel-item" data-slide-number="7">
-                        <img src="http://placehold.it/1200x480&amp;text=eight" class="img-fluid">
-                    </div>
+                     <?php
+                            $slideNo +=1; 
+                            $active = "";  
+                        }
+                     ?>
 
                     <a class="carousel-control left pt-3" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                     <a class="carousel-control right pt-3" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
@@ -52,46 +58,25 @@ Template Name: Gallery Page
 
 
                 <ul class="carousel-indicators list-inline">
-                    <li class="list-inline-item active">
-                        <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">
-                            <img src="http://placehold.it/80x60&amp;text=one" class="img-fluid">
+                    <?php 
+                        $slideNo = 0; 
+                        $active = "active";
+                        $selected = "class='selected'";
+                        foreach($images as $image) {
+                             
+                    ?> 
+                    <li class="list-inline-item <?php echo $active;?>">
+                        <a id="carousel-selector-0" <?php echo $selected;?> data-slide-to="<?php echo $slideNo; ?>" data-target="#myCarousel">
+                            <img src="<?php echo get_template_directory_uri().'/gallery/'.$image ; ?>" class="img-fluid">
                         </a>
                     </li>
-                    <li class="list-inline-item">
-                        <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">
-                            <img src="http://placehold.it/80x60&amp;text=two" class="img-fluid">
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a id="carousel-selector-2" data-slide-to="2" data-target="#myCarousel">
-                            <img src="http://placehold.it/80x60&amp;text=three" class="img-fluid">
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a id="carousel-selector-3" data-slide-to="3" data-target="#myCarousel">
-                            <img src="http://placehold.it/80x60&amp;text=four" class="img-fluid">
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a id="carousel-selector-4" data-slide-to="4" data-target="#myCarousel">
-                            <img src="http://placehold.it/80x60&amp;text=five" class="img-fluid">
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a id="carousel-selector-5" data-slide-to="5" data-target="#myCarousel">
-                            <img src="http://placehold.it/80x60&amp;text=six" class="img-fluid">
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a id="carousel-selector-6" data-slide-to="6" data-target="#myCarousel">
-                            <img src="http://placehold.it/80x60&amp;text=seven" class="img-fluid">
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a id="carousel-selector-7" data-slide-to="7" data-target="#myCarousel">
-                            <img src="http://placehold.it/80x60&amp;text=eight" class="img-fluid">
-                        </a>
-                    </li>
+                    <?php
+                            $slideNo +=1; 
+                            $active = "";  
+                            $selected = ""; 
+                        }
+                     ?>
+                     
                 </ul>
         </div>
     </div>
