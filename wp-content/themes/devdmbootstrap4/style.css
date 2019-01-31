@@ -358,5 +358,24 @@ height: 22px;
 }
 
 
+
  
+.card-header .fa {
+  transition: .3s transform ease-in-out;
+}
+.card-header .collapsed .fa {
+  transform: rotate(90deg);
+}
+
+ 
+ .card-header {
+  padding: 12px 35px 12px 15px;
+  display: inline-block;
+  width: 100%;
+  background-color: #932a0c;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
   
+  }
+ 
