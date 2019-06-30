@@ -67,7 +67,7 @@
                             SMSC Community
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Upcoming Events</a>
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('upcomingevents') ) ); ?>">Upcoming Events</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('gallery') ) ); ?>">Photo Gallery</a>
                             <div class="dropdown-divider"></div>
