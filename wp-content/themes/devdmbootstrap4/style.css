@@ -31,7 +31,8 @@ The default Bootstrap 4 CSS and JS files are enqueued inside the functions.php f
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #f6f6f6;
+    /*color: #f6f6f6;*/
+    color: red;
     margin-top: 20px; 
   }
  
