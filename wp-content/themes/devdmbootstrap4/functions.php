@@ -151,9 +151,15 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
 
         // Enqueue the default Bootstrap 4.x CSS with the name devdmbootstrap4-css
         wp_enqueue_style('devdmbootstrap4-css', get_template_directory_uri() . '/assets/css/devdmbootstrap/devdmbootstrap4.min.css');
-
-
  
+ 
+
+        wp_enqueue_style('jsgrid-css', get_template_directory_uri() . '/assets/jsgrid-1.5.3/jsgrid.min.css');
+
+        wp_enqueue_style('jsgrid-theme-css', get_template_directory_uri() . '/assets/jsgrid-1.5.3/jsgrid-theme.min.css');
+
+        wp_enqueue_style('jquery-ui-css', get_template_directory_uri() . '/assets/jquery-ui-1.12.1/jquery-ui.css');
+
 
         // Enqueue the default style.css with the name devdmbootstrap4-stylesheet
         wp_enqueue_style('devdmbootstrap4-stylesheet', get_stylesheet_uri());
@@ -165,8 +171,11 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         // Enqueue Font Awesome Icon Set with the name devdmbootstrap4-fontawesome.
         if (get_theme_mod('devdmbootstrap4_fontawesome_setting', 1)) {
             wp_enqueue_style('devdmbootstrap4-fontawesome', get_template_directory_uri() . '/assets/fontawesome-free-5.0.2/web-fonts-with-css/css/fontawesome-all.min.css');
+
         }
 
+
+        
 
         wp_enqueue_style('devdmbootstrap4-ionicons', get_template_directory_uri() . '/assets/ionicons-2.0.1/css/ionicons.min.css');
 
@@ -178,6 +187,16 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         wp_enqueue_script('devdmbootstrap4-js', get_template_directory_uri() . '/assets/js/bootstrap4x/bootstrap.js', array('jquery'), $wpTheme->get( 'Version' ), true);
 
   
+        wp_enqueue_script('devdmjquery-js', get_template_directory_uri() . '/assets/js/jquery/jquery-3.4.1.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+
+        wp_enqueue_script('devdmbootstable-js', get_template_directory_uri() . '/assets/js/bootstable.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+ 
+
+        wp_enqueue_script('jsgrid-js', get_template_directory_uri() . '/assets/jsgrid-1.5.3/jsgrid.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+
+        wp_enqueue_script('jquery-ui-js', get_template_directory_uri() . '/assets/jquery-ui-1.12.1/jquery-ui.js', array('jquery'), $wpTheme->get( 'Version' ), true);
 
 
         // Enqueue comment-reply
