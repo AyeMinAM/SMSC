@@ -6,8 +6,10 @@
 
 <div class="container">
     <div class="row ">
-        <div class="col-sm-12 smsc_header_img" >
- 
+        <div class="lazy col-sm-12 smsc_header_img" data-src="<?php echo get_template_directory_uri(); ?>/images/hero-header.jpg">
+
+        <!-- <div   class="col-sm-12 smsc_header_img lazy"     > -->
+
         <div class="row" style="margin-top:200px;">
             <div class="col-sm-7"></div>
             <div  class="col-sm-5 text-center"> 
@@ -52,7 +54,7 @@
         </div>
     
     <div>
-    <div class="row" style="margin-top:130px;">
+    <div class="row" style="margin-top:320px;">
         <div class="col-sm-12 text-center">
                              <span class = "label label_prg_events_title">
                         Programs & Events</span>
@@ -66,7 +68,9 @@
     </div>
     <div class="row">
         <div class="col-sm-6 text-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg"  class="img-rounded smsc_img_beginner"  alt="beginner">
+            <img 
+            width="460" height="345"
+            data-src="<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg"  class="img-rounded smsc_img_beginner lazy"  alt="beginner">
         </div>
         <div class="col-sm-6">
             <div class="row">
@@ -125,7 +129,9 @@
             </div>
         </div>
         <div class="col-sm-6 text-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/retreat-daily.jpg" class="img-rounded smsc_img_beginner" alt="retreat">
+             
+            <img  width="460" height="345"
+           data-src="<?php echo get_template_directory_uri(); ?>/images/retreat-daily.jpg" class="img-rounded smsc_img_beginner lazy" alt="retreat">
         </div>
     </div>
     
@@ -137,7 +143,8 @@
     
     <div class="row">
         <div class="col-sm-6 text-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/events-02.jpg" class="img-rounded smsc_img_beginner" alt="events">
+            <img   width="460" height="345"
+            data-src="<?php echo get_template_directory_uri(); ?>/images/events-02.jpg" class="img-rounded smsc_img_beginner lazy" alt="events">
         </div>
         <div class="col-sm-6">
             <div class="row">
@@ -166,14 +173,14 @@
     
     <div class="row" style="margin-top:20px;margin-bottom:20px;">
         <div class="col-sm-12 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
+        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider lazy" alt="divider">           
         </div>
     </div>
 
     <div class="row" style="margin-top:20px;" >
         <div class="col-sm-12 text-center">
                              <span class = "label label_prg_events_title">
-                             Check out our soical media for news and update about our events and programs.</span>
+                             Check out our social media for news and update about our events and programs.</span>
         </div>
     </div>
 
@@ -292,6 +299,33 @@
     </div>  --!>
 </div>
 
+<script>
+
+    jQuery(document).ready(function () {
+
+        
+        jQuery('.lazy').lazy({
+
+		  beforeLoad: function(element){
+
+			    console.log('image "' +  element.data('src')  + '" is about to be loaded');
+		  },
+		  afterLoad: function(element) {
+		 	    console.log('image "' + element.data('src') + '" was loaded successfully');
+		  },
+		  onError: function(element) {
+			    console.log('image "' +  element.data('src') + '" could not be loaded');
+		  },
+		  onFinishedAll: function() {
+ 			    console.log('lazy instance is about to be destroyed')
+		  }
+	  });
+
+    });
+</script>
+
+
 <?php get_template_part('template-parts/nav','footer'); ?>
 
 <?php get_footer(); ?>
+

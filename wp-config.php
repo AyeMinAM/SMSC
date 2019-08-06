@@ -20,7 +20,11 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'SMSC');
+
+define('WP_HOME','https://localhost/smsc/');
+define('WP_SITEURL','https://localhost/smsc/');
+
+define('DB_NAME', 'wp-smsc');
 
 /** MySQL database username */
 define('DB_USER', 'root');

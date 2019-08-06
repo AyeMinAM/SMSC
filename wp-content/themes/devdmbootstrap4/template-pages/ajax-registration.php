@@ -11,7 +11,7 @@ Template Name: Ajax register
 
 <div class="container">
 
- 
+  
     <div class="row" style="margin-top:20px;" >
          <div class="col-sm-12 text-center">
                     <span class = "label label_prg_events_title">
@@ -50,9 +50,12 @@ Template Name: Ajax register
 
     <div class="row" style="margin-top:20px;">
 
+ 
     <div id="jsGrid"></div>   
 
     </div>
+    <form id="registerForm" method="post"  class="form-horizontal" action="">
+ 
 
 
     <div class="row" style="margin-top:20px;" >
@@ -61,42 +64,57 @@ Template Name: Ajax register
                     Personal Information Form</span>
           </div>
     </div>
+ 
+
+ 								 
+ 
 
     <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">FIRST NAME:
-            </p>
+   
+        <label class="col-sm-3 control-label" for="inputfirstname">
+             FIRST NAME:
+             
 
-        </div>
-        <div class="col-sm-8 text-center">
-        <input type="text" class="form-control" id="inputFirstName" placeholder="Jane">
+        </label>
+      
+         <div class="col-sm-8 text-center">
+             <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="Jane">
         </div>  
+                      
     </div>  
     
     <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">LAST NAME:
-            </p>
+      
+        <label class="col-sm-3 control-label" for="inputlastname">
+        LAST NAME:
+             
 
-        </div>
+        </label>
+      
+
         <div class="col-sm-8 text-center">
-        <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+            <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Doe">
         </div>  
     </div> 
 
     <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">GENDER:
-            </p>
 
-        </div>
-        <div class="col-sm-8 text-center">
+    <label class="col-sm-3 control-label" for="select_gender">
+    GENDER:
+             
 
-        <select class="custom-select">
-  <option selected>select Gender</option>
+        </label>
+      
+ 
+        <div class="col-sm-8">
+
+        <select  style="width: 400px" id="select_gender" name="select_gender">
+  <option value="">select Gender</option>
   <option value="1">Male</option>
   <option value="2">Female</option>
 </select>
+
+ 
 
         </div>  
     </div> 
@@ -108,7 +126,7 @@ Template Name: Ajax register
 
         </div>
         <div class="col-sm-8 text-center">
-        <textarea class="form-control rounded-0" id="address" rows="3"></textarea>
+        <textarea class="form-control rounded-0" id="txtaddress" name="txtaddress" rows="3"></textarea>
 
   
         </div>  
@@ -124,7 +142,7 @@ Template Name: Ajax register
 
         </div>
         <div class="col-sm-8 text-center">
-        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="tel-input">
+        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="inputtelnumber" name="inputtelnumber">
 
   
         </div>  
@@ -138,7 +156,7 @@ Template Name: Ajax register
 
         </div>
         <div class="col-sm-8 text-center">
-        <input class="form-control" type="email" placeholder="bootstrap@example.com" id="email-input">
+        <input class="form-control" type="email" placeholder="bootstrap@example.com" id="inputemail" name="inputemail">
 
         </div>  
     </div> 
@@ -149,12 +167,12 @@ Template Name: Ajax register
 
         </div>
         <div class="col-sm-4">
-        FROM:<input type="text" class="form-control" id="selectStart" >
+        FROM:<input type="text" class="form-control" id="inputStart" name="inputStart" >
 
         </div>
  
         <div class="col-sm-4">
-        TO:<input type="text" class="form-control" id="selectEnd" >
+        TO:<input type="text" class="form-control" id="inputEnd" name="inputEnd">
 
         </div>
     </div> 
@@ -173,12 +191,12 @@ Template Name: Ajax register
            
         </div>
         <div class="col-sm-4">
-         <input type="text" class="form-control" id="selectDOB" >
+         <input type="text" class="form-control" id="inputDOB" name="inputDOB">
 
         </div>
  
         <div class="col-sm-4">
-         <input type="text" class="form-control" id="txtId" >
+         <input type="text" class="form-control" id="inputId" name="inputId">
 
         </div>
     </div> 
@@ -190,7 +208,7 @@ Template Name: Ajax register
 
         </div>
         <div class="col-sm-8 text-center">
-        <input type="text" class="form-control" id="inputOccupation" >
+            <input type="text" class="form-control" id="inputOccupation" name="inputOccupation">
         </div>  
     </div> 
 
@@ -200,12 +218,14 @@ Template Name: Ajax register
             </p>
 
         </div>
-        <div class="col-sm-8 text-center">
-        <select class="custom-select">
-  <option selected>select</option>
-  <option value="1">Yes</option>
-  <option value="2">No</option>
-</select>        </div>  
+        <div class="col-sm-8">
+            <select  style="width: 400px" id="select_veget" name="select_veget">
+                <option value="">select</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>        
+
+        </div>  
     </div> 
  
 
@@ -218,7 +238,7 @@ Template Name: Ajax register
         <div class="col-sm-8 text-center">
         
     
-        <textarea class="form-control rounded-0" id="address" rows="3"></textarea>
+        <textarea class="form-control rounded-0" id="txtfood_allergy" name="txtfood_allergy" rows="3"></textarea>
 
         </div>  
     </div> 
@@ -230,8 +250,27 @@ Template Name: Ajax register
             </p>
 
         </div>
-         
+   
     </div> 
+ 
+
+
+    <div class="row" style="margin-top:20px;">
+    <div class="col-sm-3">
+                NAME
+        </div>
+   
+        <div class="col-sm-8">
+        <input type="text" class="form-control" id="inputeme_name" name="inputeme_name" >
+
+            </div>
+
+
+    </div> 
+
+   
+         
+
 
     <div class="row" style="margin-top:20px;">
         <div class="col-sm-3">
@@ -240,9 +279,7 @@ Template Name: Ajax register
 
         </div>
         <div class="col-sm-8 text-center">
-        <textarea class="form-control rounded-0" id="address" rows="3"></textarea>
-
-  
+            <textarea class="form-control rounded-0" id="inputeme_address" name="inputeme_address" rows="3"></textarea>
         </div>  
     </div> 
 
@@ -253,9 +290,8 @@ Template Name: Ajax register
 
         </div>
         <div class="col-sm-8 text-center">
-        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="tel-input">
+        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="inputeme_telnumber" name="inputeme_telnumber">
 
-  
         </div>  
     </div> 
 
@@ -267,8 +303,8 @@ Template Name: Ajax register
 
         </div>
         <div class="col-sm-8 text-center">
-        <input class="form-control" type="email" placeholder="bootstrap@example.com" id="email-input">
-
+            <input class="form-control" type="email" placeholder="test@example.com" id="eme_email">
+            <input class="form-control" type="email" placeholder="test@example.com" id="inputeme_email" name="inputeme_email">
         </div>  
     </div> 
 
@@ -286,9 +322,9 @@ Template Name: Ajax register
         <div class="col-sm-3">
       
         </div>
-        <div class="col-sm-8 text-center">
-        <select class="custom-select">
-  <option selected>select</option>
+        <div class="col-sm-8">
+        <select  style="width: 400px" id="select_minsurance" name="select_minsurance">
+  <option value="">select</option>
   <option value="1">Yes</option>
   <option value="2">No</option>
 </select>        </div>  
@@ -311,7 +347,7 @@ Template Name: Ajax register
         </div>
         <div class="col-sm-8 text-center">
          
-        <textarea class="form-control rounded-0" id="address" rows="3"></textarea>
+        <textarea class="form-control rounded-0" id="txtother_minsurance" name="txtother_minsurance" rows="3"></textarea>
 
         </div>  
     </div> 
@@ -332,9 +368,9 @@ Template Name: Ajax register
         <div class="col-sm-3">
       
         </div>
-        <div class="col-sm-8 text-center">
-        <select class="custom-select">
-  <option selected>select</option>
+        <div class="col-sm-8">
+        <select style="width: 400px" id="select_mental_issue" name="select_mental_issue">
+  <option value="">select</option>
   <option value="1">Yes</option>
   <option value="2">No</option>
 </select>        </div>  
@@ -357,7 +393,7 @@ Template Name: Ajax register
         </div>
         <div class="col-sm-8 text-center">
          
-        <textarea class="form-control rounded-0" id="address" rows="3"></textarea>
+        <textarea class="form-control rounded-0" id="txtmental_issue" name="txtmental_issue" rows="3"></textarea>
 
         </div>  
     </div> 
@@ -390,8 +426,8 @@ Template Name: Ajax register
 
     <div class="row" style="margin-top:20px;" >
          <div class="col-sm-12 text-center">
-         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
+         <input class="form-check-input" type="checkbox" value="" id="chk_agree" required>
+      <label class="form-check-label label_prg_events_title" for="chk_agree" >
         Agree to terms and conditions
       </label>
       <div class="invalid-feedback">
@@ -399,7 +435,7 @@ Template Name: Ajax register
       </div>
       <p>
         <br>
-    <button class="btn btn-primary btn-lg"  type="submit">Submit</button>
+    <button class="btn btn-primary btn-lg" style="padding: 20px 80px;font-size:20px; border-radius: 10px;"  type="submit">Submit</button>
 
           </div>
     </div>
@@ -413,22 +449,39 @@ Template Name: Ajax register
 
 </div>
 
-
+</form>
+ 
  
 <style>
-    /* .ui-datepicker-calendar {
+      /* .ui-datepicker-calendar {
         display: none;
-    } */
-    </style>
+    }   */
+
+/* .has-error input[type=text], 
+.has-error input[type=email], 
+.has-error select {
+    border-color: #2f2f2f;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+} */
+</style>
+
 <script>
 
+ 
     jQuery(document).ready(function () {
 
+  
+ 
+    jQuery( "#chk_agree" ).checkboxradio();
 
-    jQuery( "#selectStart" ).datepicker({ defaultDate: new Date()});
-    jQuery( "#selectEnd" ).datepicker({ defaultDate: new Date()});
 
-    jQuery( "#selectDOB" ).datepicker({ defaultDate: new Date()});
+    jQuery( "#inputStart" ).datepicker({ dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
+
+
+    jQuery( "#inputEnd" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
+
+    jQuery( "#inputDOB" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
 
     
 
@@ -494,7 +547,6 @@ Template Name: Ajax register
     jsGrid.fields.DateField = DateField;
 
     $("#jsGrid").jsGrid({
-        height: "85%",
         width: "100%",
         paging: true,
         pageSize: 15,
@@ -509,16 +561,126 @@ Template Name: Ajax register
             { name: "TypeRetreat", title: "Type of Retreat", type: "text", width: 150, validate: "required" },
             { name: "Teacher", type: "text", width: 200,validate: "required"},
             { name: "Location", type: "text", width: 200,validate: "required" },
-            { name: "WhenMMYY",  title: "When(month, Year)", type: "DateField", width: 100, align: "center" },
-            { name: "Duration",title: "Duration(How many days?)", type: "text",width: 100,  },
+             { name: "WhenMMYY",  title: "When(month, Year)", type: "DateField", width: 100, align: "center" },
+            { name: "Duration",title: "Duration(How many days?)", type: "text",width: 100  },
             { type: "control" }
         ]
     });
 
-            
-    });
 
+    $.validator.addMethod("regx", function(value, element, regexpr) {          
+    return regexpr.test(value);
+    }, "Please enter a valid phone number.");
+
+
+    $.validator.addMethod("regxDate", function(value, element, regexpr) {          
+    return regexpr.test(value);
+    }, "Please enter a valid date format.");
+
+
+
+    jQuery( "#registerForm" ).validate( {
+        ignore: ":hidden",
+        submitHandler: function (form) {
+             $.ajax({
+                 type: "POST",
+                 url: '<?php echo admin_url("admin-ajax.php") ?>',
+                 data: $(form).serialize(),
+                 success: function () {
+                     $(form).html("<div id='message'></div>");
+                     $('#message').html("<h2>Your request is on the way!</h2>")
+                         .append("<p>someone</p>")
+                         .hide()
+                         .fadeIn(1500, function () {
+                         $('#message').append("<img id='checkmark' src='images/ok.png' />");
+                     });
+                 }
+             });
+             return false; // required to block normal submit since you used ajax
+         },
+				rules: {
+					inputfirstname: "required",
+					inputlastname: "required",
+					select_gender: "required" ,
+                    txtaddress:"required",
+                    inputtelnumber:{
+						required: true,
+						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
+					},
+					inputemail: {
+						required: true,
+						email: true
+					},
+                    inputStart: {
+						required: true,
+						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+					},
+                    inputEnd: {
+						required: true,
+						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+					},
+                    inputDOB: {
+						required: true,
+						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+					},
+                    inputId:"required",
+                    inputOccupation:"required",
+                    select_veget:"required",
+                    txtfood_allergy:"required",
+                    inputeme_name:"required",
+                    inputeme_address:"required",
+                    inputeme_telnumber:{
+						required: true,
+						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
+					},
+                    select_minsurance:"required",
+                    txtother_minsurance:"required",
+                    select_mental_issue:"required",
+                    txtmental_issue:"required",
+                    inputeme_email: {
+						required: true,
+						email: true
+					},
+					chk_agree: "required"
+				},
+				messages: {
+					inputfirstname: "Please enter your firstname",
+					inputlastname: "Please enter your lastname",
+					select_gender:  "Please select gender",
+                    select_veget: "Please answer for Vegetarian",
+                    select_minsurance:  "Please answer for insurance",
+                    select_mental_issue:  "Please answer for health and safety",
+					inputemail: "Please enter a valid email address",
+					chk_agree: "Please accept our policy"
+				},
+				errorElement: "em",
+				errorPlacement: function ( error, element ) {
+					// Add the `help-block` class to the error element
+					error.addClass( "help-block" );
+
+					// Add `has-feedback` class to the parent div.form-group
+					// in order to add icons to inputs
+ 
+					if ( element.prop( "type" ) === "checkbox" ) {
+						error.insertAfter( element.parent( "label" ) );
+					} else {
+						error.insertAfter( element );
+					}
+
+					 
+				},
+				success: function ( label, element ) {
+					 
+				},
+				highlight: function ( element, errorClass, validClass ) {
+					$( element ).addClass( "is-invalid" )
+				},
+				unhighlight: function ( element, errorClass, validClass ) {
+					$( element ).removeClass( "is-invalid" );
+ 				}
+			} );
   
+});
 </script>
 
 
