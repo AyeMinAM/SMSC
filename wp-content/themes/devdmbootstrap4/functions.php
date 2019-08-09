@@ -218,42 +218,12 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         if ( is_singular() && comments_open() && get_option('thread_comments') ) {
             wp_enqueue_script( 'comment-reply' );
         }
+
+        
     }
 }
 wp_enqueue_script('jquery');
 
-function registerSubmit(){
-
-    global $wpdb;
-    
-
-    echo " successfully added, row ID is " . $_POST['inputfirstname'];
-
-
-    $inputfirstname = $_POST['inputfirstname'];
-    $inputlastname = $_POST['inputlastname'];
-    $select_gender = $_POST['select_gender'];
-    $txtaddress = $_POST['txtaddress'];
- 
-    
-    // if($wpdb->insert('customers',array(
-    // 'name'=>$name,
-    // 'email'=>$email,
-    // 'address'=>$address,
-    // 'phone'=>$phone
-    // ))===FALSE){
-    
-    // echo "Error";
-    
-    // }
-    // else {
-    // echo "Customer '".$name. "' successfully added, row ID is ".$wpdb->insert_id;
-    
-    // }
-    die();
-}
-add_action('wp_ajax_registerSubmit', 'registerSubmit');
-add_action('wp_ajax_nopriv_registerSubmit', 'registerSubmit');
 add_action( 'wp_enqueue_scripts', 'devdmbootstrap_scripts' );
 
 /**
@@ -313,6 +283,209 @@ if (!function_exists( 'devdmbootstrap_nav_walker' ) ) {
 }
 
 add_action('wp_enqueue_scripts','devdmbootstrap_nav_walker');
+add_action('wp_ajax_nopriv_registerSubmit', 'registerSubmit');
+add_action('wp_ajax_registerSubmit', 'registerSubmit');
+
+function registerSubmit(){
+
+    global $wpdb;
+
+    global $phpmailer;
+
+    // (Re)create it, if it's gone missing
+    if ( ! ( $phpmailer instanceof PHPMailer ) ) {
+        require_once ABSPATH . WPINC . '/class-phpmailer.php';
+        require_once ABSPATH . WPINC . '/class-smtp.php';
+    }
+    $phpmailer = new PHPMailer;
+    
+
+    error_log($_POST['retreatdata']);
+
+    $strRetreatdata = $_POST['retreatdata'];
+ 
+    $retreatArray = json_decode(stripslashes($strRetreatdata),true);
+
+  
+
+    $inputfirstname = $_POST['inputfirstname'];
+    $inputlastname = $_POST['inputlastname'];
+    $select_gender = $_POST['select_gender'];
+    $txtaddress = $_POST['txtaddress'];
+    $inputtelnumber = $_POST['inputtelnumber'];
+    $inputemail = $_POST['inputemail'];
+    $inputStart = $_POST['inputStart'];
+    $inputEnd = $_POST['inputEnd'];
+    $inputDOB = $_POST['inputDOB'];
+    $inputId = $_POST['inputId'];
+    $inputOccupation = $_POST['inputOccupation'];
+    $select_veget = $_POST['select_veget'];
+    $txtfood_allergy = $_POST['txtfood_allergy'];
+    $inputeme_name = $_POST['inputeme_name'];
+    $inputeme_address = $_POST['inputeme_address'];
+    $inputeme_telnumber = $_POST['inputeme_telnumber'];
+    $inputeme_email = $_POST['inputeme_email'];
+    $select_minsurance = $_POST['select_minsurance'];
+    $txtother_minsurance = $_POST['txtother_minsurance'];
+    $select_mental_issue = $_POST['select_mental_issue'];
+    $txtmental_issue = $_POST['txtmental_issue'];
+ 
+    try {
+        
+        $wpdb->query( "START TRANSACTION" );
+
+        if($wpdb->insert('wp_register',array(
+            'first_name'=>$inputfirstname,
+            'last_name'=>$inputlastname,
+            'gender'=>$select_gender,
+            'address'=>$txtaddress,
+            'phone'=>$inputtelnumber,
+            'email'=>$inputemail,
+            'start_retreat_date'=>$inputStart,
+            'end_retreat_date'=>$inputEnd,
+            'dob'=>$inputDOB,
+            'personal_id'=>$inputId,
+            'occupation'=>$inputOccupation,
+            'is_vegetarian'=>$select_veget,
+            'food_allergy'=>$txtfood_allergy,
+            'emerg_name'=>$inputeme_name,
+            'emerg_address'=>$inputeme_address,
+            'emerg_phone'=>$inputeme_telnumber,
+            'emerg_email'=>$inputeme_email,
+            'has_insurance'=>$select_minsurance,
+            'other_insurance'=>$txtother_minsurance,
+            'has_mental'=>$select_mental_issue,
+            'mental_health'=>$txtmental_issue
+        ))===FALSE){
+        
+            echo "Error";
+        
+        }
+        else 
+        {
+            echo "successfully added, row ID is ".$wpdb->insert_id;
+
+            foreach ($retreatArray as $key => $value ) {
+
+                error_log($value["TypeRetreat"]); 
+
+                if($wpdb->insert('wp_attended_retreats',array(
+                    'register_id'=>$wpdb->insert_id,
+                    'type'=>$value["TypeRetreat"],
+                    'teacher'=>$value["Teacher"],
+                    'location'=>$value["Location"],
+                    'attended_date'=>$value["WhenMMYY"],
+                    'duration'=>$value["Duration"]
+                    
+                    ))===FALSE){
+                    
+                        echo "Error";
+                    
+                }
+                else {
+                    echo "successfully added, row ID is ".$wpdb->id;
+                
+                }
+
+            }
+        }
+
+        $wpdb->query( "COMMIT" );
+
+
+        $options_results = $wpdb->get_results( 
+            "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
+        );
+       // error_log(print_r($options_results));
+
+
+        $host = ''; 
+        $username = ''; 
+        $password = ''; 
+        $CC = ''; 
+        foreach ( $options_results as $result )
+        {
+           
+            switch ($result->option_name) {
+                case "SMTP_username":
+                    $username = $result->option_value;
+                    break;
+                case "SMTP_password":
+                    $password = $result->option_value;
+                    break;
+                case "SMTP_CC":
+                    $CC = $result->option_value;
+                    break;
+                case "SMTP_host":
+                    $host = $result->option_value;
+                    break;
+            }
+        }
+
+
+        if ($host !== '' && $username !== ''  && $password !== '' && $CC !== '')
+        {
+            error_log($host);
+
+            error_log($username);
+            error_log($password);
+
+            error_log($CC);
+
+
+
+            $phpmailer->isSMTP();                    
+            $phpmailer->Host = $host;
+            $phpmailer->SMTPDebug = 1;
+            $phpmailer->SMTPAuth = true;
+            $phpmailer->Username = $username;
+            $phpmailer->Password =  $password ;
+            $phpmailer->SMTPSecure = 'ssl';
+            $phpmailer->Port = 465;
+    
+            $phpmailer->setFrom($username);
+    
+            // Add a recipient
+            $phpmailer->addAddress($inputemail);
+    
+            // Add cc or bcc 
+            $phpmailer->addCC($CC);
+     
+            // Set email format to HTML
+            $phpmailer->isHTML(true);
+    
+            // Email subject
+            $phpmailer->Subject = 'Registration Acknowldgement';
+    
+            // Email body content
+            $mailContent = "<h1>Registration Acknowledgement</h1>
+                <p>This is to acknowledge your application to attend the course(s). You'll be informed of the outcome soonest possible.
+                </p>
+                Thanks and regards,<br> 
+                Registration Admin <br>SMSC";
+            $phpmailer->Body    = $mailContent;
+    
+            if(!$phpmailer->send()){
+
+                error_log( 'Message could not be sent.');
+                error_log( 'Mailer Error: ' . $phpmailer->ErrorInfo);
+            }else{
+                error_log( 'Message has been sent');
+            }
+
+        }
+        
+
+    
+
+    } catch (Exception $e) {
+        // An exception has been thrown
+        // We must rollback the transaction
+        $wpdb->query( "ROLLBACK" );
+    }
+  
+    die();
+}
 
 /**
  * Custom Comment Walker

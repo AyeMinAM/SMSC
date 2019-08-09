@@ -21,9 +21,6 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-define('WP_HOME','https://localhost/smsc/');
-define('WP_SITEURL','https://localhost/smsc/');
-
 define('DB_NAME', 'wp-smsc');
 
 /** MySQL database username */
@@ -81,8 +78,10 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
-
+define('WP_DEBUG', true);
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', false );
+define( 'SCRIPT_DEBUG', true );
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

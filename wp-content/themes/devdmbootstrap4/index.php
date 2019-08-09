@@ -173,7 +173,7 @@
     
     <div class="row" style="margin-top:20px;margin-bottom:20px;">
         <div class="col-sm-12 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider lazy" alt="divider">           
+        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
         </div>
     </div>
 

@@ -12,6 +12,7 @@ Template Name: Ajax register
 <div class="container">
 
   
+ 
     <div class="row" style="margin-top:20px;" >
          <div class="col-sm-12 text-center">
                     <span class = "label label_prg_events_title">
@@ -48,409 +49,410 @@ Template Name: Ajax register
                     </div> 
     </div>
 
-    <div class="row" style="margin-top:20px;">
+    <div class="row" style="margin-top:20px;"> </div>
 
+ 
+   
+    
+    <form id="registerForm" method="post"  class="form-horizontal" action="" >
  
     <div id="jsGrid"></div>   
 
-    </div>
-    <form id="registerForm" method="post"  class="form-horizontal" action="">
- 
 
+    <fieldset>
 
-    <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-                    <span class = "label label_prg_events_title">
-                    Personal Information Form</span>
-          </div>
-    </div>
- 
+        <div class="row" style="margin-top:20px;" >
+            <div class="col-sm-12 text-center">
+                        <span class = "label label_prg_events_title">
+                        Personal Information Form</span>
+            </div>
+        </div>
+    
 
  								 
  
 
-    <div class="row" style="margin-top:20px;">
-   
-        <label class="col-sm-3 control-label" for="inputfirstname">
-             FIRST NAME:
-             
-
-        </label>
-      
-         <div class="col-sm-8 text-center">
-             <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="Jane">
-        </div>  
-                      
-    </div>  
+        <div class="row" style="margin-top:20px;">
     
-    <div class="row" style="margin-top:20px;">
-      
-        <label class="col-sm-3 control-label" for="inputlastname">
-        LAST NAME:
-             
+            <label class="col-sm-3 control-label" for="inputfirstname">
+                FIRST NAME:
+                
 
-        </label>
-      
-
-        <div class="col-sm-8 text-center">
-            <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Doe">
+            </label>
+        
+            <div class="col-sm-8 text-center">
+                <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="Jane">
+            </div>  
+                        
         </div>  
-    </div> 
-
-    <div class="row" style="margin-top:20px;">
-
-    <label class="col-sm-3 control-label" for="select_gender">
-    GENDER:
-             
-
-        </label>
-      
- 
-        <div class="col-sm-8">
-
-        <select  style="width: 400px" id="select_gender" name="select_gender">
-  <option value="">select Gender</option>
-  <option value="1">Male</option>
-  <option value="2">Female</option>
-</select>
-
- 
-
-        </div>  
-    </div> 
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">FULL ADDRESS:
-            </p>
-
-        </div>
-        <div class="col-sm-8 text-center">
-        <textarea class="form-control rounded-0" id="txtaddress" name="txtaddress" rows="3"></textarea>
-
-  
-        </div>  
-    </div> 
-
-
-
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">PHONE:
-            </p>
-
-        </div>
-        <div class="col-sm-8 text-center">
-        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="inputtelnumber" name="inputtelnumber">
-
-  
-        </div>  
-    </div> 
-
     
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">EMAIL:
-            </p>
+        <div class="row" style="margin-top:20px;">
+        
+            <label class="col-sm-3 control-label" for="inputlastname">
+            LAST NAME:
+                
 
-        </div>
-        <div class="col-sm-8 text-center">
-        <input class="form-control" type="email" placeholder="bootstrap@example.com" id="inputemail" name="inputemail">
+            </label>
+        
 
-        </div>  
-    </div> 
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">DATES OF RETREAT:
-            </p>
+            <div class="col-sm-8 text-center">
+                <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Doe">
+            </div>  
+        </div> 
 
-        </div>
-        <div class="col-sm-4">
-        FROM:<input type="text" class="form-control" id="inputStart" name="inputStart" >
+        <div class="row" style="margin-top:20px;">
 
-        </div>
- 
-        <div class="col-sm-4">
-        TO:<input type="text" class="form-control" id="inputEnd" name="inputEnd">
-
-        </div>
-    </div> 
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-8">
-            <p class="text-justify">DATE OF BIRTH & ID (Canadian Drivers Licence; Passport Number and Country)
-            </p>
-
-        </div>
-         
-    </div> 
-
-    <div class="row" style="margin-top:-5px;">
-        <div class="col-sm-3">
-           
-        </div>
-        <div class="col-sm-4">
-         <input type="text" class="form-control" id="inputDOB" name="inputDOB">
-
-        </div>
- 
-        <div class="col-sm-4">
-         <input type="text" class="form-control" id="inputId" name="inputId">
-
-        </div>
-    </div> 
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">OCCUPATION:
-            </p>
-
-        </div>
-        <div class="col-sm-8 text-center">
-            <input type="text" class="form-control" id="inputOccupation" name="inputOccupation">
-        </div>  
-    </div> 
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">ARE YOU VEGETARIAN?
-            </p>
-
-        </div>
-        <div class="col-sm-8">
-            <select  style="width: 400px" id="select_veget" name="select_veget">
-                <option value="">select</option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-            </select>        
-
-        </div>  
-    </div> 
- 
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-             FOOD ALLERGY (Please indicate):
-             
-
-        </div>
-        <div class="col-sm-8 text-center">
+            <label class="col-sm-3 control-label" for="select_gender">
+                GENDER:
+            </label>
         
     
-        <textarea class="form-control rounded-0" id="txtfood_allergy" name="txtfood_allergy" rows="3"></textarea>
+            <div class="col-sm-8">
 
-        </div>  
-    </div> 
+            <select  style="width: 400px" id="select_gender" name="select_gender">
+                <option value="">select Gender</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select>
+            </div>  
+        </div> 
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">FULL ADDRESS:
+                </p>
+
+            </div>
+            <div class="col-sm-8 text-center">
+            <textarea class="form-control rounded-0" id="txtaddress" name="txtaddress" rows="3"></textarea>
+
+    
+            </div>  
+        </div> 
 
 
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-8">
-            <p class="text-justify">FULL NAME AND RELATIONTHIP OF EMERGENCY CONTACT:
-            </p>
 
-        </div>
-   
-    </div> 
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">PHONE:
+                </p>
+
+            </div>
+            <div class="col-sm-8 text-center">
+            <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="inputtelnumber" name="inputtelnumber">
+
+    
+            </div>  
+        </div> 
+
+    
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">EMAIL:
+                </p>
+
+            </div>
+            <div class="col-sm-8 text-center">
+            <input class="form-control" type="email" placeholder="bootstrap@example.com" id="inputemail" name="inputemail">
+
+            </div>  
+        </div> 
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">DATES OF RETREAT:
+                </p>
+
+            </div>
+            <div class="col-sm-4">
+            FROM:<input type="text" class="form-control" id="inputStart" name="inputStart" >
+
+            </div>
+    
+            <div class="col-sm-4">
+            TO:<input   type="text" class="form-control" id="inputEnd" name="inputEnd">
+
+            </div>
+        </div> 
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-8">
+                <p class="text-justify">DATE OF BIRTH & ID (Canadian Drivers Licence; Passport Number and Country)
+                </p>
+
+            </div>
+            
+        </div> 
+
+        <div class="row" style="margin-top:-5px;">
+            <div class="col-sm-3">
+            
+            </div>
+            <div class="col-sm-4">
+            <input type="text" class="form-control" id="inputDOB" name="inputDOB">
+
+            </div>
+    
+            <div class="col-sm-4">
+            <input type="text" class="form-control" id="inputId" name="inputId">
+
+            </div>
+        </div> 
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">OCCUPATION:
+                </p>
+
+            </div>
+            <div class="col-sm-8 text-center">
+                <input type="text" class="form-control" id="inputOccupation" name="inputOccupation">
+            </div>  
+        </div> 
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">ARE YOU VEGETARIAN?
+                </p>
+
+            </div>
+            <div class="col-sm-8">
+                <select  style="width: 400px" id="select_veget" name="select_veget">
+                    <option value="">select</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>        
+
+            </div>  
+        </div> 
+ 
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                FOOD ALLERGY (Please indicate):
+                
+
+            </div>
+            <div class="col-sm-8 text-center">
+            
+        
+            <textarea class="form-control rounded-0" id="txtfood_allergy" name="txtfood_allergy" rows="3"></textarea>
+
+            </div>  
+        </div> 
+
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-8">
+                <p class="text-justify">FULL NAME AND RELATIONTHIP OF EMERGENCY CONTACT:
+                </p>
+
+            </div>
+    
+        </div> 
  
 
 
-    <div class="row" style="margin-top:20px;">
-    <div class="col-sm-3">
-                NAME
-        </div>
-   
-        <div class="col-sm-8">
-        <input type="text" class="form-control" id="inputeme_name" name="inputeme_name" >
-
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                    NAME
+            </div>
+    
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputeme_name" name="inputeme_name" >
             </div>
 
 
-    </div> 
+        </div> 
 
-   
+    
          
 
 
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">FULL ADDRESS:
-            </p>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">FULL ADDRESS:
+                </p>
 
-        </div>
-        <div class="col-sm-8 text-center">
-            <textarea class="form-control rounded-0" id="inputeme_address" name="inputeme_address" rows="3"></textarea>
-        </div>  
-    </div> 
+            </div>
+            <div class="col-sm-8 text-center">
+                <textarea class="form-control rounded-0" id="inputeme_address" name="inputeme_address" rows="3"></textarea>
+            </div>  
+        </div> 
 
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">PHONE:
-            </p>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">PHONE:
+                </p>
 
-        </div>
-        <div class="col-sm-8 text-center">
-        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="inputeme_telnumber" name="inputeme_telnumber">
+            </div>
+            <div class="col-sm-8 text-center">
+            <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="inputeme_telnumber" name="inputeme_telnumber">
 
-        </div>  
-    </div> 
+            </div>  
+        </div> 
 
     
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-3">
-            <p class="text-justify">EMAIL:
-            </p>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-3">
+                <p class="text-justify">EMAIL:
+                </p>
 
-        </div>
-        <div class="col-sm-8 text-center">
-            <input class="form-control" type="email" placeholder="test@example.com" id="eme_email">
-            <input class="form-control" type="email" placeholder="test@example.com" id="inputeme_email" name="inputeme_email">
-        </div>  
-    </div> 
+            </div>
+            <div class="col-sm-8 text-center">
+                <!-- <input class="form-control" type="email" placeholder="test@example.com" id="eme_email"> -->
+                <input class="form-control" type="email" placeholder="test@example.com" id="inputeme_email" name="inputeme_email">
+            </div>  
+        </div> 
 
   
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-8">
-            <p class="text-justify">Do you have medical insurance of BC or traveling medical insurance for overseas yogis?    
-            </p>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-8">
+                <p class="text-justify">Do you have medical insurance of BC or traveling medical insurance for overseas yogis?    
+                </p>
 
+            </div>
+            
         </div>
-         
-    </div>
 
-    <div class="row" style="margin-top:-5px;">
-        <div class="col-sm-3">
-      
-        </div>
-        <div class="col-sm-8">
-        <select  style="width: 400px" id="select_minsurance" name="select_minsurance">
-  <option value="">select</option>
-  <option value="1">Yes</option>
-  <option value="2">No</option>
-</select>        </div>  
-    </div> 
+        <div class="row" style="margin-top:-5px;">
+            <div class="col-sm-3">
+        
+            </div>
+            <div class="col-sm-8">
+                <select  style="width: 400px" id="select_minsurance" name="select_minsurance">
+                    <option value="">select</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>        
+
+            </div>  
+        </div> 
 
     
 
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-8">
-            <p class="text-justify">Do you have any other kind of medical insurance? Please specify.    
-            </p>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-8">
+                <p class="text-justify">Do you have any other kind of medical insurance? Please specify.    
+                </p>
 
+            </div>
+            
         </div>
-         
-    </div>
 
-    <div class="row" style="margin-top:-5px;">
-        <div class="col-sm-3">
-      
-        </div>
-        <div class="col-sm-8 text-center">
-         
-        <textarea class="form-control rounded-0" id="txtother_minsurance" name="txtother_minsurance" rows="3"></textarea>
+        <div class="row" style="margin-top:-5px;">
+            <div class="col-sm-3">
+        
+            </div>
+            <div class="col-sm-8 text-center">
+            
+            <textarea class="form-control rounded-0" id="txtother_minsurance" name="txtother_minsurance" rows="3"></textarea>
 
-        </div>  
-    </div> 
-
-
-    
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-8">
-            <p class="text-justify">Do you have any physical or mental health issues that the meditation centre should be aware of to ensure your health and safety and that of other yogis and instructors?   
-            </p>
-
-        </div>
-         
-    </div>
-
-    <div class="row" style="margin-top:-5px;">
-        <div class="col-sm-3">
-      
-        </div>
-        <div class="col-sm-8">
-        <select style="width: 400px" id="select_mental_issue" name="select_mental_issue">
-  <option value="">select</option>
-  <option value="1">Yes</option>
-  <option value="2">No</option>
-</select>        </div>  
-    </div> 
-
-
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-8">
-            <p class="text-justify">If yes please describe briefly.    
-            </p>
-
-        </div>
-         
-    </div>
-
-    <div class="row" style="margin-top:-5px;">
-        <div class="col-sm-3">
-      
-        </div>
-        <div class="col-sm-8 text-center">
-         
-        <textarea class="form-control rounded-0" id="txtmental_issue" name="txtmental_issue" rows="3"></textarea>
-
-        </div>  
-    </div> 
+            </div>  
+        </div> 
 
 
     
 
-    <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-                    <span class = "label label_prg_events_title">
-                    ** PLEASE TAKE THIS FORM WITH YOU WHEN YOU LEAVE THE RETREAT CENTRE **</span>
-          </div>
-    </div>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-8">
+                <p class="text-justify">Do you have any physical or mental health issues that the meditation centre should be aware of to ensure your health and safety and that of other yogis and instructors?   
+                </p>
+
+            </div>
+            
+        </div>
+
+        <div class="row" style="margin-top:-5px;">
+            <div class="col-sm-3">
+        
+            </div>
+            <div class="col-sm-8">
+                <select style="width: 400px" id="select_mental_issue" name="select_mental_issue">
+                    <option value="">select</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>        
+            </div>  
+        </div> 
+ 
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-8">
+                <p class="text-justify">If yes please describe briefly.    
+                </p>
+
+            </div>
+            
+        </div>
+
+        <div class="row" style="margin-top:-5px;">
+            <div class="col-sm-3">
+        
+            </div>
+            <div class="col-sm-8 text-center">
+            
+            <textarea class="form-control rounded-0" id="txtmental_issue" name="txtmental_issue" rows="3"></textarea>
+
+            </div>  
+        </div> 
 
 
-    <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-                    <span class = "label label_prg_events_title">
-                    ** AND REUSE FOR NEXT RETREAT **</span>
-          </div>
-    </div>
-
-    <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-                    <span class = "label label_prg_events_title">
-                    *** Alternatively with your permission this information is kept on file at SMSC for use in your future retreats. ****</span>
-          </div>
-    </div>
-
-
-    <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-         <input class="form-check-input" type="checkbox" value="" id="chk_agree" required>
-      <label class="form-check-label label_prg_events_title" for="chk_agree" >
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
-      <p>
-        <br>
-    <button class="btn btn-primary btn-lg" style="padding: 20px 80px;font-size:20px; border-radius: 10px;"  type="submit">Submit</button>
-
-          </div>
-    </div>
     
 
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-12 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
+        <div class="row" style="margin-top:20px;" >
+            <div class="col-sm-12 text-center">
+                        <span class = "label label_prg_events_title">
+                        ** PLEASE TAKE THIS FORM WITH YOU WHEN YOU LEAVE THE RETREAT CENTRE **</span>
+            </div>
         </div>
-    </div>
 
+
+        <div class="row" style="margin-top:20px;" >
+            <div class="col-sm-12 text-center">
+                        <span class = "label label_prg_events_title">
+                        ** AND REUSE FOR NEXT RETREAT **</span>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:20px;" >
+            <div class="col-sm-12 text-center">
+                        <span class = "label label_prg_events_title">
+                        *** Alternatively with your permission this information is kept on file at SMSC for use in your future retreats. ****</span>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top:20px;" >
+            <div class="col-sm-12 text-center">
+                  <input class="form-check-input" type="checkbox" value="" id="chk_agree" name='chk_agree' />
+                <label class="form-check-label label_prg_events_title" for="chk_agree" >
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+                <p>
+                <br>
+                <button class="btn btn-primary btn-lg" style="padding: 20px 80px;font-size:20px; border-radius: 10px;"  type="submit">Submit</button>
+
+            </div>
+        </div>
+    
+
+        <div class="row" style="margin-top:20px;">
+            <div class="col-sm-12 text-center">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
+            </div>
+        </div>
+    </fieldset>
+    </form>
 </div>
 
-</form>
- 
+
+<div id="dialog" title="Info">
+  <div class="progress-label">Loading...</div>
+  <div id="progressbar"></div>
+</div>
  
 <style>
       /* .ui-datepicker-calendar {
@@ -464,6 +466,10 @@ Template Name: Ajax register
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 } */
+
+.ui-dialog-titlebar-close {
+    display: none;
+  }
 </style>
 
 <script>
@@ -471,7 +477,25 @@ Template Name: Ajax register
  
     jQuery(document).ready(function () {
 
-  
+ 
+        dialog = $( "#dialog" ).dialog({
+        autoOpen: false,
+        closeOnEscape: false,
+        resizable: false,
+        open: function() {
+        }
+      });
+ 
+     
+    
+    $(document).ajaxStart(function(){
+        dialog.dialog( "open" );
+    });
+
+    $(document).ajaxComplete(function(){
+        dialog
+        .dialog( "close" );
+    });
  
     jQuery( "#chk_agree" ).checkboxradio();
 
@@ -546,7 +570,7 @@ Template Name: Ajax register
  
     jsGrid.fields.DateField = DateField;
 
-    $("#jsGrid").jsGrid({
+    var jsGridData = $("#jsGrid").jsGrid({
         width: "100%",
         paging: true,
         pageSize: 15,
@@ -567,6 +591,7 @@ Template Name: Ajax register
         ]
     });
 
+    
 
     $.validator.addMethod("regx", function(value, element, regexpr) {          
     return regexpr.test(value);
@@ -577,25 +602,104 @@ Template Name: Ajax register
     return regexpr.test(value);
     }, "Please enter a valid date format.");
 
-
+ 
 
     jQuery( "#registerForm" ).validate( {
         ignore: ":hidden",
         submitHandler: function (form) {
-             $.ajax({
+            var count =  clients.length;
+
+             if(count>0)
+            {
+                var jsonData = JSON.stringify(clients);
+
+                 var input = $("<input>")
+               .attr("type", "hidden")
+               .attr("name", "retreatdata").val(jsonData);
+               $(form).append(input);
+
+                $.ajax({
                  type: "POST",
                  url: '<?php echo admin_url("admin-ajax.php") ?>',
-                 data: $(form).serialize(),
+                 data: $(form).serialize()  + '&action=registerSubmit' ,
+                 error: function () {
+                    $( "<div title='Alert'>There is error in your submission. Please try to submit again or contact with Administrator</div>" ).dialog({
+                    modal: true,
+                    height: 200,
+			        width: 600,
+                    open: function( event, ui ) {
+                            //center the dialog within the viewport (i.e. visible area of the screen)
+                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
+                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
+                        jQuery(this).parent().css('top', top + "px");
+                        jQuery(this).parent().css('left', left + "px");
+                        jQuery(this).parent().css('position', 'fixed');                
+                    },
+                    buttons: {
+                        Ok: function() {
+                            
+                            $( this ).dialog( "close" );
+                            window.location.href = "http://yellowbabykick.com/";
+                           
+
+                        }
+                    }
+                    });
+                 },
                  success: function () {
-                     $(form).html("<div id='message'></div>");
-                     $('#message').html("<h2>Your request is on the way!</h2>")
-                         .append("<p>someone</p>")
-                         .hide()
-                         .fadeIn(1500, function () {
-                         $('#message').append("<img id='checkmark' src='images/ok.png' />");
-                     });
+
+                    $( "<div title='Alert'>You have submitted successfully! Please check your email for acknowledge and wait for the reply.</div>" ).dialog({
+                    modal: true,
+                    height: 200,
+			        width: 600,
+                    open: function( event, ui ) {
+                            //center the dialog within the viewport (i.e. visible area of the screen)
+                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
+                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
+                        jQuery(this).parent().css('top', top + "px");
+                        jQuery(this).parent().css('left', left + "px");
+                        jQuery(this).parent().css('position', 'fixed');                
+                    },
+                    buttons: {
+                        Ok: function() {
+                            $( this ).dialog( "close" );
+                            window.location.href = "http://yellowbabykick.com/";
+                           
+
+                        }
+                    }
+                    });
+
+                  
                  }
              });
+            }
+            else
+            {
+               
+                $( "<div title='Alert'>Please add your history records for MEDITATION RETREATS ATTENDED (THERAVADA AND NON THERAVADA)</div>" ).dialog({
+                    modal: true,
+                    height: 200,
+			        width: 600,
+                    open: function( event, ui ) {
+                            //center the dialog within the viewport (i.e. visible area of the screen)
+                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
+                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
+                        jQuery(this).parent().css('top', top + "px");
+                        jQuery(this).parent().css('left', left + "px");
+                        jQuery(this).parent().css('position', 'fixed');                
+                    },
+                    buttons: {
+                        Ok: function() {
+                        $( this ).dialog( "close" );
+                        }
+                    }
+                    });
+ 
+                // alert("Please add your history records for MEDITATION RETREATS ATTENDED (THERAVADA AND NON THERAVADA)");
+            }
+
+            
              return false; // required to block normal submit since you used ajax
          },
 				rules: {
@@ -620,6 +724,7 @@ Template Name: Ajax register
 						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
 					},
                     inputDOB: {
+                        lessThanToday: new Date(),
 						required: true,
 						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
 					},
@@ -655,8 +760,8 @@ Template Name: Ajax register
 				},
 				errorElement: "em",
 				errorPlacement: function ( error, element ) {
-					// Add the `help-block` class to the error element
-					error.addClass( "help-block" );
+                    // Add the `help-block` class to the error element
+ 					error.addClass( "help-block" );
 
 					// Add `has-feedback` class to the parent div.form-group
 					// in order to add icons to inputs
