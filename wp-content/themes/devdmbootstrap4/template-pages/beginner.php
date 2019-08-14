@@ -12,9 +12,12 @@ Template Name: Beginner Page
 <div class="container">
 
     <div class="row ">
-        <div class="col-sm-12 smsc_beginner_img" >
+         <div class="lazy col-sm-12 smsc_beginner_img" data-src="<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
+
+
+        <!-- <div class="col-sm-12 smsc_beginner_img" > -->
  
-        <div class="row" style="margin-top:150px;">
+        <div class="row" style="margin-top:100px;">
             <div  class="col-sm-12 text-center"> 
 
                     <span class = "label label_beginner">
@@ -59,7 +62,7 @@ Template Name: Beginner Page
                  <div class="col-sm-2"> </div>
                     <div class="col">
                     
-                            <i class = "icon icon ion-ios-calendar" style="font-size: 40px;color:#932a0c;"></i>
+                            <i class = "icon icon ion-ios-calendar" style="font-size: 25px;color:#932a0c;"></i>
                               <span class = "label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'ScheduleDate', true ); ?></span>
                     </div>
@@ -67,7 +70,7 @@ Template Name: Beginner Page
             <div class="row" style="margin-top:10px;">
                  <div class="col-sm-2"> </div>
                     <div class="col">
-                            <i class = "icon icon ion-ios-timer" style="font-size: 40px;color:#932a0c;"></i>
+                            <i class = "icon icon ion-ios-timer" style="font-size: 25px;color:#932a0c;"></i>
 
                              <span class = "label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'ScheduleTime', true ); ?></span>
@@ -77,7 +80,7 @@ Template Name: Beginner Page
                  <div class="col-sm-2"> </div>
                     <div class="col">
                     
-                            <i class = "icon icon ion-ios-circle-filled" style="font-size: 40px;color:#932a0c;"></i>
+                            <i class = "icon icon ion-ios-circle-filled" style="font-size: 25px;color:#932a0c;"></i>
 
                              <span class = "label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'Remark', true ); ?></span>
@@ -112,7 +115,7 @@ Template Name: Beginner Page
             <div class="row" style="margin-top:20px;">
                  <div class="col-sm-2"> </div>
                     <div class="col">
-                            <i class = "icon icon ion-ios-stopwatch" style="font-size: 40px;color:#932a0c;"></i>
+                            <i class = "icon icon ion-ios-stopwatch" style="font-size: 25px;color:#932a0c;"></i>
 
                              <span class = "label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'Duration', true ); ?></span>
@@ -121,7 +124,7 @@ Template Name: Beginner Page
             <div class="row" style="margin-top:10px;">
                  <div class="col-sm-2"> </div>
                     <div class="col">
-                             <i class = "icon icon ion-ios-location" style="font-size: 40px;color:#932a0c;"></i>
+                             <i class = "icon icon ion-ios-location" style="font-size: 25px;color:#932a0c;"></i>
 
                              <span class = "label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'Address', true ); ?></span>
@@ -241,7 +244,7 @@ Template Name: Beginner Page
                 <div class="row">
                 <div class="col text-center">
                     <a href="#" class="btn btn-lg btn-beginner">
-                    Book</a> 
+                    Register</a> 
                     </div>
 
  
@@ -269,7 +272,7 @@ Template Name: Beginner Page
         <div class="row">
         <div class="col text-center">
             <a href="#" class="btn btn-lg btn-beginner">
-            Book</a> 
+            Register</a> 
             </div>
 
 
@@ -298,7 +301,7 @@ Template Name: Beginner Page
         <div class="row">
         <div class="col text-center">
             <a href="#" class="btn btn-lg btn-beginner">
-            Book</a> 
+            Register</a> 
             </div>
 
 
@@ -306,6 +309,33 @@ Template Name: Beginner Page
         </div>                   
         </div>
     </div>
+
+<script>
+
+jQuery(document).ready(function () {
+
+    
+    jQuery('.lazy').lazy({
+
+      beforeLoad: function(element){
+
+            console.log('image "' +  element.data('src')  + '" is about to be loaded');
+      },
+      afterLoad: function(element) {
+             console.log('image "' + element.data('src') + '" was loaded successfully');
+      },
+      onError: function(element) {
+            console.log('image "' +  element.data('src') + '" could not be loaded');
+      },
+      onFinishedAll: function() {
+             console.log('lazy instance is about to be destroyed')
+      }
+  });
+
+});
+</script>
+
+
 </div>
 
 <?php get_template_part('template-parts/nav','footer'); ?>

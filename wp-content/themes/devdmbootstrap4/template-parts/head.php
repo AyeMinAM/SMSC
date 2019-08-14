@@ -1,7 +1,6 @@
 <?php if (get_theme_mod('devdmbootstrap4_show_header_setting', 1)) : ?>
 
-    <div class="container dmbs-header" style="background-color:#932a0c">
-
+    <div class="dmbs-header" style="background-color:#932a0c">
         <div class="row">
             <?php
                 $dmbsCustomLogoUrl = devdmbootstrap4_custom_logo();
@@ -30,7 +29,6 @@
                 </div>
             <?php endif; ?>
             
-
         </div>
         <div class="row">
 

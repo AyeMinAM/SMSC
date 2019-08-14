@@ -151,9 +151,18 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
 
         // Enqueue the default Bootstrap 4.x CSS with the name devdmbootstrap4-css
         wp_enqueue_style('devdmbootstrap4-css', get_template_directory_uri() . '/assets/css/devdmbootstrap/devdmbootstrap4.min.css');
-
-
  
+ 
+
+        wp_enqueue_style('jsgrid-css', get_template_directory_uri() . '/assets/jsgrid-1.5.3/jsgrid.min.css');
+
+        wp_enqueue_style('jsgrid-theme-css', get_template_directory_uri() . '/assets/jsgrid-1.5.3/jsgrid-theme.min.css');
+
+        wp_enqueue_style('jquery-ui-css', get_template_directory_uri() . '/assets/jquery-ui-1.12.1/jquery-ui.css');
+
+        // wp_enqueue_style('bootstrapValidator-css', get_template_directory_uri() . '/assets/bootstrapValidator/css/bootstrapValidator.min.css');
+
+
 
         // Enqueue the default style.css with the name devdmbootstrap4-stylesheet
         wp_enqueue_style('devdmbootstrap4-stylesheet', get_stylesheet_uri());
@@ -165,8 +174,11 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         // Enqueue Font Awesome Icon Set with the name devdmbootstrap4-fontawesome.
         if (get_theme_mod('devdmbootstrap4_fontawesome_setting', 1)) {
             wp_enqueue_style('devdmbootstrap4-fontawesome', get_template_directory_uri() . '/assets/fontawesome-free-5.0.2/web-fonts-with-css/css/fontawesome-all.min.css');
+
         }
 
+
+        
 
         wp_enqueue_style('devdmbootstrap4-ionicons', get_template_directory_uri() . '/assets/ionicons-2.0.1/css/ionicons.min.css');
 
@@ -178,14 +190,40 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         wp_enqueue_script('devdmbootstrap4-js', get_template_directory_uri() . '/assets/js/bootstrap4x/bootstrap.js', array('jquery'), $wpTheme->get( 'Version' ), true);
 
   
+        wp_enqueue_script('devdmjquery-js', get_template_directory_uri() . '/assets/js/jquery/jquery-3.4.1.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+
+        // wp_enqueue_script('devdmbootstable-js', get_template_directory_uri() . '/assets/js/bootstable.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+ 
+
+        wp_enqueue_script('jsgrid-js', get_template_directory_uri() . '/assets/jsgrid-1.5.3/jsgrid.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+
+        wp_enqueue_script('jquery-ui-js', get_template_directory_uri() . '/assets/jquery-ui-1.12.1/jquery-ui.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+        // wp_enqueue_script('bootstrap-validate-js', get_template_directory_uri() . '/assets/bootstrap-validate/bootstrap-validate.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+
+        wp_enqueue_script('jquery-validate-js', get_template_directory_uri() . '/assets/jquery-validate/jquery.validate.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+
+        wp_enqueue_script('db-js', get_template_directory_uri() . '/assets/js/db.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+
+        wp_enqueue_script('jquery-lazy-js', get_template_directory_uri() . '/assets/jquery.lazy/jquery.lazy.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
 
 
         // Enqueue comment-reply
         if ( is_singular() && comments_open() && get_option('thread_comments') ) {
             wp_enqueue_script( 'comment-reply' );
         }
+
+        
     }
 }
+wp_enqueue_script('jquery');
+
 add_action( 'wp_enqueue_scripts', 'devdmbootstrap_scripts' );
 
 /**
@@ -243,7 +281,211 @@ if (!function_exists( 'devdmbootstrap_nav_walker' ) ) {
         }
     }
 }
+
 add_action('wp_enqueue_scripts','devdmbootstrap_nav_walker');
+add_action('wp_ajax_nopriv_registerSubmit', 'registerSubmit');
+add_action('wp_ajax_registerSubmit', 'registerSubmit');
+
+function registerSubmit(){
+
+    global $wpdb;
+
+    global $phpmailer;
+
+    // (Re)create it, if it's gone missing
+    if ( ! ( $phpmailer instanceof PHPMailer ) ) {
+        require_once ABSPATH . WPINC . '/class-phpmailer.php';
+        require_once ABSPATH . WPINC . '/class-smtp.php';
+    }
+    $phpmailer = new PHPMailer;
+    
+
+    error_log($_POST['retreatdata']);
+
+    $strRetreatdata = $_POST['retreatdata'];
+ 
+    $retreatArray = json_decode(stripslashes($strRetreatdata),true);
+
+  
+
+    $inputfirstname = $_POST['inputfirstname'];
+    $inputlastname = $_POST['inputlastname'];
+    $select_gender = $_POST['select_gender'];
+    $txtaddress = $_POST['txtaddress'];
+    $inputtelnumber = $_POST['inputtelnumber'];
+    $inputemail = $_POST['inputemail'];
+    $inputStart = $_POST['inputStart'];
+    $inputEnd = $_POST['inputEnd'];
+    $inputDOB = $_POST['inputDOB'];
+    $inputId = $_POST['inputId'];
+    $inputOccupation = $_POST['inputOccupation'];
+    $select_veget = $_POST['select_veget'];
+    $txtfood_allergy = $_POST['txtfood_allergy'];
+    $inputeme_name = $_POST['inputeme_name'];
+    $inputeme_address = $_POST['inputeme_address'];
+    $inputeme_telnumber = $_POST['inputeme_telnumber'];
+    $inputeme_email = $_POST['inputeme_email'];
+    $select_minsurance = $_POST['select_minsurance'];
+    $txtother_minsurance = $_POST['txtother_minsurance'];
+    $select_mental_issue = $_POST['select_mental_issue'];
+    $txtmental_issue = $_POST['txtmental_issue'];
+ 
+    try {
+        
+        $wpdb->query( "START TRANSACTION" );
+
+        if($wpdb->insert('wp_register',array(
+            'first_name'=>$inputfirstname,
+            'last_name'=>$inputlastname,
+            'gender'=>$select_gender,
+            'address'=>$txtaddress,
+            'phone'=>$inputtelnumber,
+            'email'=>$inputemail,
+            'start_retreat_date'=>$inputStart,
+            'end_retreat_date'=>$inputEnd,
+            'dob'=>$inputDOB,
+            'personal_id'=>$inputId,
+            'occupation'=>$inputOccupation,
+            'is_vegetarian'=>$select_veget,
+            'food_allergy'=>$txtfood_allergy,
+            'emerg_name'=>$inputeme_name,
+            'emerg_address'=>$inputeme_address,
+            'emerg_phone'=>$inputeme_telnumber,
+            'emerg_email'=>$inputeme_email,
+            'has_insurance'=>$select_minsurance,
+            'other_insurance'=>$txtother_minsurance,
+            'has_mental'=>$select_mental_issue,
+            'mental_health'=>$txtmental_issue
+        ))===FALSE){
+        
+            echo "Error";
+        
+        }
+        else 
+        {
+            echo "successfully added, row ID is ".$wpdb->insert_id;
+
+            foreach ($retreatArray as $key => $value ) {
+
+                error_log($value["TypeRetreat"]); 
+
+                if($wpdb->insert('wp_attended_retreats',array(
+                    'register_id'=>$wpdb->insert_id,
+                    'type'=>$value["TypeRetreat"],
+                    'teacher'=>$value["Teacher"],
+                    'location'=>$value["Location"],
+                    'attended_date'=>$value["WhenMMYY"],
+                    'duration'=>$value["Duration"]
+                    
+                    ))===FALSE){
+                    
+                        echo "Error";
+                    
+                }
+                else {
+                    echo "successfully added, row ID is ".$wpdb->id;
+                
+                }
+
+            }
+        }
+
+        $wpdb->query( "COMMIT" );
+
+
+        $options_results = $wpdb->get_results( 
+            "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
+        );
+       // error_log(print_r($options_results));
+
+
+        $host = ''; 
+        $username = ''; 
+        $password = ''; 
+        $CC = ''; 
+        foreach ( $options_results as $result )
+        {
+           
+            switch ($result->option_name) {
+                case "SMTP_username":
+                    $username = $result->option_value;
+                    break;
+                case "SMTP_password":
+                    $password = $result->option_value;
+                    break;
+                case "SMTP_CC":
+                    $CC = $result->option_value;
+                    break;
+                case "SMTP_host":
+                    $host = $result->option_value;
+                    break;
+            }
+        }
+
+
+        if ($host !== '' && $username !== ''  && $password !== '' && $CC !== '')
+        {
+            error_log($host);
+
+            error_log($username);
+            error_log($password);
+
+            error_log($CC);
+
+
+
+            $phpmailer->isSMTP();                    
+            $phpmailer->Host = $host;
+            $phpmailer->SMTPDebug = 1;
+            $phpmailer->SMTPAuth = true;
+            $phpmailer->Username = $username;
+            $phpmailer->Password =  $password ;
+            $phpmailer->SMTPSecure = 'ssl';
+            $phpmailer->Port = 465;
+    
+            $phpmailer->setFrom($username);
+    
+            // Add a recipient
+            $phpmailer->addAddress($inputemail);
+    
+            // Add cc or bcc 
+            $phpmailer->addCC($CC);
+     
+            // Set email format to HTML
+            $phpmailer->isHTML(true);
+    
+            // Email subject
+            $phpmailer->Subject = 'Registration Acknowldgement';
+    
+            // Email body content
+            $mailContent = "<h1>Registration Acknowledgement</h1>
+                <p>This is to acknowledge your application to attend the course(s). You'll be informed of the outcome soonest possible.
+                </p>
+                Thanks and regards,<br> 
+                Registration Admin <br>SMSC";
+            $phpmailer->Body    = $mailContent;
+    
+            if(!$phpmailer->send()){
+
+                error_log( 'Message could not be sent.');
+                error_log( 'Mailer Error: ' . $phpmailer->ErrorInfo);
+            }else{
+                error_log( 'Message has been sent');
+            }
+
+        }
+        
+
+    
+
+    } catch (Exception $e) {
+        // An exception has been thrown
+        // We must rollback the transaction
+        $wpdb->query( "ROLLBACK" );
+    }
+  
+    die();
+}
 
 /**
  * Custom Comment Walker

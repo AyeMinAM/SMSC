@@ -66,6 +66,33 @@
 
             </nav>
         </div>
+        
+<script>
+
+jQuery(document).ready(function () {
+
+    
+    jQuery('.lazy').lazy({
+
+      beforeLoad: function(element){
+
+            console.log('image "' +  element.data('src')  + '" is about to be loaded');
+      },
+      afterLoad: function(element) {
+             console.log('image "' + element.data('src') + '" was loaded successfully');
+      },
+      onError: function(element) {
+            console.log('image "' +  element.data('src') + '" could not be loaded');
+      },
+      onFinishedAll: function() {
+             console.log('lazy instance is about to be destroyed')
+      }
+  });
+
+});
+</script>
+
+
     </div>
 
 <?php /*endif;*/ ?>

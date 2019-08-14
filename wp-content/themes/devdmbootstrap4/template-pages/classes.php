@@ -127,7 +127,7 @@ Template Name: Classes Page
                 <div class="row">
                 <div class="col text-center">
                     <a href="#" class="btn btn-lg btn-beginner">
-                    Book</a> 
+                    Register</a> 
                     </div>
 
  
@@ -155,7 +155,7 @@ Template Name: Classes Page
         <div class="row">
         <div class="col text-center">
             <a href="#" class="btn btn-lg btn-beginner">
-            Book</a> 
+            Register</a> 
             </div>
 
 
@@ -184,7 +184,7 @@ Template Name: Classes Page
         <div class="row">
         <div class="col text-center">
             <a href="#" class="btn btn-lg btn-beginner">
-            Book</a> 
+            Register</a> 
             </div>
 
 

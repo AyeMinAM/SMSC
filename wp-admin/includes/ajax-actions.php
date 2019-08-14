@@ -7,6 +7,8 @@
  * @since 2.1.0
  */
 
+
+
 //
 // No-privilege Ajax handlers.
 //
@@ -19,6 +21,8 @@
  *
  * @since 3.6.0
  */
+
+ 
 function wp_ajax_nopriv_heartbeat() {
 	$response = array();
 
