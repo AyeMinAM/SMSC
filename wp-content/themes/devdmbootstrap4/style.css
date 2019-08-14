@@ -21,9 +21,14 @@ The default Bootstrap 4 CSS and JS files are enqueued inside the functions.php f
 
 .bypostauthor {}
 
+body{
+  font-family: 'Alegreya Sans', sans-serif;
+}
+body p{
+  font-family: 'Open Sans', sans-serif;
+}
 .smsc_header_title {
-    
-    font-family: AlegreyaSans;
+    font-family: 'Alegreya Sans', sans-serif;
     font-size: 20px;
     font-weight: bold;
     font-style: normal;
@@ -31,8 +36,7 @@ The default Bootstrap 4 CSS and JS files are enqueued inside the functions.php f
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    /*color: #f6f6f6;*/
-    color: red;
+    color: green;
     margin-top: 20px; 
   }
  
