@@ -3,9 +3,9 @@
     <div class="dmbs-header-nav-container" style="background-color: #932a0c;" >
 
 
-        <div class="d-flex justify-content-center"  >
+        <div class="d-flex container nav-container">
        
-            <nav class="navbar navbar-expand-lg dmbs-header-navbar" >
+            <nav class="navbar navbar-expand-lg dmbs-header-navbar menu-equally-divide">
 
                 <!-- Toggle Button -->
                 <button class="navbar-toggler dmbs-header-nav-mobile-toggle" type="button" data-toggle="collapse" data-target="#header-nav-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,15 +39,15 @@
                     );
   */
                     ?>
+                    <div class="menu-left">
 
-
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item active smsc_menu_left">
+                    <ul class="nav navbar-nav  ul-equally-divide">
+                        <li class="nav-item active smsc_menu_left one-quarter home menu-home-center ">
                             <a class="nav-link" href="<?php echo get_home_url(); ?>">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item dropdown smsc_menu_left">
+                        <li class="nav-item dropdown smsc_menu_left one-quarter programs">
                             <a class="nav-link dropdown-toggle" href="#"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Meditation Programs
+                            <span class="nav-text-break">Meditation</span><span >Programs</span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('beginner') ) ); ?>">Beginner</a>
@@ -62,9 +62,10 @@
                             </div>
                         </li>
 
-                        <li class="nav-item dropdown smsc_menu_left">
+                        <li class="nav-item dropdown smsc_menu_left one-quarter smsc">
                             <a class="nav-link dropdown-toggle" href="#"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SMSC Community
+                            <span class="nav-text-break nav-text-break-center">SMSC</span>
+                            <span > Community</span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('upcomingevents') ) ); ?>">Upcoming Events</a>
@@ -81,18 +82,18 @@
                         
                     </ul>
 
-                   
+                   </div>
 
-                    <img class="smsc_logo_img"  
+                    <div class="menu-center"><img class="smsc_logo_img"  
                     
                     src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" 
                          
-                    alt="Logo">
+                    alt="Logo"></div>
 
+                    <div class="menu-right">
+                    <ul class="nav navbar-nav navbar-right ul-equally-divide">
 
-                    <ul class="nav navbar-nav navbar-right">
-
-                    <li class="nav-item dropdown smsc_menu_right">
+                    <li class="nav-item dropdown smsc_menu_right one-quarter about">
                         <a class="nav-link dropdown-toggle" href="#"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About
                         </a>
@@ -108,11 +109,14 @@
                         <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('contactus') ) ); ?>">Contact SMSC</a>
                         </div>
                     </li>
-                    <li class="nav-item smsc_menu_right">
+                    <li class="nav-item smsc_menu_right one-quarter library">
                         <a class="nav-link" href="<?php echo get_site_url(); ?>/library/">Library</a>
                     </li>
+                    <li class="one-quarter donation">
                         <button class="btn navbar-btn button-donation smsc_margin" >Donation</button>
+                    </li>
                     </ul>
+                </div>
                 </div>
 
             </nav>

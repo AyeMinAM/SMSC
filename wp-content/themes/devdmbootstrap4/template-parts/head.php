@@ -30,7 +30,7 @@
             <?php endif; ?>
             
         </div>
-        <div class="row">
+        <!-- <div class="row">
 
                  <div class="col-sm-12">
                     <a href="https://www.meetup.com/" target="_blank" class="float-right smsc_logo_space">
@@ -45,7 +45,7 @@
                     </a>
 
                 </div>
-            </div>
+            </div> -->
     </div>
 
 <?php endif; ?>
