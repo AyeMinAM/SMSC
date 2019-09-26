@@ -4,12 +4,26 @@
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container">
-    <div class="row ">
-        <div class="lazy col-sm-12 smsc_header_img" data-src="<?php echo get_template_directory_uri(); ?>/images/hero-header.jpg">
+
+<div class="container-fluid lazy smsc_header_img" data-src="<?php echo get_template_directory_uri(); ?>/images/hero-header.jpg">
+    <!-- <div class="lazy col-sm-12 smsc_header_img" data-src="<?php echo get_template_directory_uri(); ?>/images/hero-header.jpg">
+    </div> -->
+    <span class="slogan">
+        <ul>
+            <li>Strive with Diligence</li>
+            <li>Live in Mindfulness</li>
+            <li>Rejoice in Heedfulness</li>
+        </ul>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/divider-white.png" class="smsc_img_divier_white" alt="divider">  
+        <div>
+        <a href="<?php echo get_site_url(); ?>/mprogram/" class="btn btn-lg btn-outline">
+                Our Meditation Programs</a>
+        </div>
+    </span><!--the end of slogan-->
+</div>
 
         <!-- <div   class="col-sm-12 smsc_header_img lazy"     > -->
-
+<!-- <div class="container">
         <div class="row" style="margin-top:200px;">
             <div class="col-sm-7"></div>
             <div  class="col-sm-5 text-center"> 
@@ -51,9 +65,10 @@
                 Our Meditation Programs</a>
             </div>
 
-        </div>
+        </div> -->
     
-    <div>
+    <div class="container">
+
     <div class="row" style="margin-top:320px;">
         <div class="col-sm-12 text-center">
                              <span class = "label label_prg_events_title">

@@ -1,7 +1,8 @@
 <?php if (get_theme_mod('devdmbootstrap4_show_header_setting', 1)) : ?>
 
     <div class="dmbs-header" style="background-color:#932a0c">
-        <div class="row">
+        
+     <!--    <div class="row"> -->
             <?php
                 $dmbsCustomLogoUrl = devdmbootstrap4_custom_logo();
                 print_r($dmbsCustomLogoUrl);
@@ -24,12 +25,12 @@
                         <h2 class="smsc_header_title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
                     <?php endif; ?>
 
-                    <h4 class="dmbs-header-description"><?php bloginfo( 'description' ); ?></h4>
+                    <!-- <h4 class="dmbs-header-description"><?php bloginfo( 'description' ); ?></h4> -->
 
                 </div>
             <?php endif; ?>
             
-        </div>
+        <!-- </div> -->
         <!-- <div class="row">
 
                  <div class="col-sm-12">
