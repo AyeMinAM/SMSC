@@ -1,6 +1,13 @@
 <?php if (get_theme_mod('devdmbootstrap4_show_header_setting', 1)) : ?>
 
     <div class="dmbs-header" style="background-color:#932a0c">
+          <button class="navbar-toggler dmbs-header-nav-mobile-toggle smsc-mobile-button" type="button" data-toggle="collapse" data-target="#header-nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                     <?php esc_html_e('Menu','devdmbootstrap4'); ?><span class="fa fa-bars"></span>
+                </button>
+
+        <div class="text-center smsc-hidden"><img class="img-fluid img-logo-on-head" src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" alt="Logo">
+        </div>
+
         
      <!--    <div class="row"> -->
             <?php

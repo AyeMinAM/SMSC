@@ -8,9 +8,9 @@
             <nav class="navbar navbar-expand-lg dmbs-header-navbar menu-equally-divide">
 
                 <!-- Toggle Button -->
-                <button class="navbar-toggler dmbs-header-nav-mobile-toggle" type="button" data-toggle="collapse" data-target="#header-nav-content" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fa fa-bars"></span> <?php esc_html_e('Menu','devdmbootstrap4'); ?>
-                </button>
+                <!-- <button class="navbar-toggler dmbs-header-nav-mobile-toggle" type="button" data-toggle="collapse" data-target="#header-nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                     <?php esc_html_e('Menu','devdmbootstrap4'); ?><span class="fa fa-bars"></span>
+                </button> -->
 
                 <!-- Nav Content -->
                 <div class="collapse navbar-collapse" id="header-nav-content">
