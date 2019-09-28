@@ -68,20 +68,38 @@
         </div> -->
     
     <div class="container">
-
-    <div class="row title-bg">
-        <div class="col-sm-12 text-center label label_prg_events_title">
-                        <h1 class="smsc-header">Programs & Events</h1>
-                        <div><img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">  </div>
+        <!--title-->
+        <div class="row title-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/title-background.png">
+            <div class="col-sm-12 text-center label label_prg_events_title">
+                            <h1 class="smsc-header">Programs & Events</h1>
+                            <div><img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">  </div>
+            </div>
         </div>
-    </div>
+
+        <!--first card-->
+        <section>
+            <div class="card card-smsc">
+              <div class="row">
+                 <div class="col-md-6 padding-adjust">
+                  <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
+                  </div>
+                </div>
+                <div class="col-md-6 vertical-center">
+                  <div class="card-block">
+                    <h4 class="card-title">Classes</h4>
+                    <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+                    <div class="col text-center">
+                    <a href="<?php echo get_site_url(); ?>/classes/" class="btn btn-lg btn-outline">
+                    Register</a> 
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+        </section>
  
-    <div class="row" style="margin-bottom:20px;">
-        <div class="col-sm-12 text-center">
-                     
-         </div>
-    </div>
-    <div class="row">
+   <!--  <div class="row">
         <div class="col-sm-6 text-center">
             <img 
             width="460" height="345"
@@ -110,15 +128,15 @@
                     </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
-    <div class="row" style="margin-top:20px;margin-bottom:20px;">
+   <!--  <div class="row" style="margin-top:20px;margin-bottom:20px;">
         <div class="col-sm-12 text-center">
         <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
         </div>
-    </div>
+    </div> -->
 
-    <div class="row">
+   <!--  <div class="row">
         <div class="col-sm-6">
             <div class="row" >
                     <div class="col">
@@ -147,7 +165,7 @@
             <img  width="460" height="345"
            data-src="<?php echo get_template_directory_uri(); ?>/images/retreat-daily.jpg" class="img-rounded smsc_img_beginner lazy" alt="retreat">
         </div>
-    </div>
+    </div> -->
     
     <div class="row" style="margin-top:20px;margin-bottom:20px;">
         <div class="col-sm-12 text-center">
@@ -284,7 +302,7 @@
                                 wp_link_pages();
                             ?>
 
-                        </div>
+    </div>
 
                         <footer class="card-footer dmbs-post-footer">
                             <?php get_template_part('template-parts/postmeta','footer'); ?>
