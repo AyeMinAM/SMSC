@@ -407,13 +407,14 @@ height: 22px;
     }
 }
 
-/*.padding-adjust{
-  padding-right:0;
-}*/
-
+@media (min-width:768px){
+  .padding-adjust-left{
+    padding-left:0;
+  }
+}
  @media only screen and (min-width: 768px) {
   .padding-adjust{
-           padding-right:0;
+      padding-right:0;
     }
 }
 
@@ -618,9 +619,43 @@ h1.smsc-header{
  }
 }
 
+
+.card-img-bottom-odd-card {
+  color: #fff;
+  height: 21rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@media (min-width: 990px){
+  .card-img-bottom-odd-card{
+    border-radius: 0 .5rem 0.5rem 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+ .card-img-bottom-odd-card{
+  height:26rem;
+  border-radius: 0 .5rem 0.5rem 0;
+ }
+}
+
 .card-block{
   padding:1rem;
 }
+
+.card-block-odd-card{
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+@media (min-width:768px){
+
+  .card-block-odd-card{
+   padding: 1rem 0 1rem 2rem;
+  }
+}
+
 /*FOOTER*/
 footer{
   font-family: 'Open Sans', sans-serif!important;
