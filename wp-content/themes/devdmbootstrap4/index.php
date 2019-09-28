@@ -264,50 +264,29 @@
     </div>
 
     <div class="row" style="margin-top:20px;" >
-        <div class="col-sm-12 text-center">
-                             <span class = "label label_prg_events_title">
-                             Check out our social media for news and update about our events and programs.</span>
-        </div>
+        <h4 class = "label smsc-title">Check out our social media for news and update about our events and programs.
+        </h4>
     </div>
-
-    <div class="row" style="margin-top:20px;" >
-        <div class="col text-center">
-        <a class="btn btn-lg px-5 border" href="#" role="button" >
-                <div class="row">
-                <span class = "col label label_prg_events_title" style="margin-top:20px;">
-                    SMSC on Meetup</span>
-                </div>
-                <div class="row">
-                <img class="col" style="width:200px;height:200px" src="<?php echo get_template_directory_uri(); ?>/images/meetup.png"  
-                 alt="Facebook">
-                 </div>
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-4 text-center">
+            <a class="btn social-media-button" href="#" role="button" >
+                    <h4 class = "col label smsc-title T-padding-5">SMSC on Meetup</span></h4>
+                    <img class="col social-media-icons"src="<?php echo get_template_directory_uri(); ?>/images/meetup.png" alt="Facebook">
             </a>            
         </div>
-        <div class="col text-center">
-        
-            <a class="btn btn-lg px-5 border" href="#" role="button" >
-                <div class="row">
-                <span class = "col label label_prg_events_title" style="margin-top:20px;">
-                    SMSC on Facebook</span>
-                </div>
-                <div class="row">
-                <img class="col" style="width:200px;height:200px" src="<?php echo get_template_directory_uri(); ?>/images/icons8-facebook-480.png"  
-                 alt="Facebook">
-                 </div>
-            </a>
-
-        </div>
-        <div class="col text-center">
-            <a class="btn btn-lg px-5 border" href="#" role="button" >
-                <div class="row">
-                <span class = "col label label_prg_events_title" style="margin-top:20px;">
-                    SMSC on Youtube</span>
-                </div>
-                <div class="row">
-                <img class="col" style="width:200px;height:200px" src="<?php echo get_template_directory_uri(); ?>/images/icons8-play-button-480.png"  
-                 alt="Facebook">
-                 </div>
+         <div class="col-md-4 text-center">
+            <a class="btn social-media-button" href="#" role="button" >
+                    <h4 class = "col label smsc-title T-padding-5">SMSC on Facebook</span></h4>
+                    <img class="col social-media-icons" src="<?php echo get_template_directory_uri(); ?>/images/icons8-facebook-480.png"  alt="Facebook">
             </a>            
+        </div>
+
+        <div class="col-md-4 text-center">
+            <a class="btn social-media-button" href="#" role="button" >
+                    <h4 class = "col label smsc-title T-padding-5">SMSC on Youtube</span></h4>
+                    <img class="col social-media-icons" src="<?php echo get_template_directory_uri(); ?>/images/icons8-play-button-480.png"  
+                 alt="Youtube">
+                </a>            
         </div>
     </div>
 

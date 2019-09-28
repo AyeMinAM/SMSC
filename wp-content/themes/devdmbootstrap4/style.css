@@ -190,7 +190,6 @@ body p{
 
  .label_prg_events_title {
     color: #932a0c;
-    font-weight: bold;
     letter-spacing: 0.05em;
     font-size: 24px; 
     padding:2rem 2rem;  
@@ -387,6 +386,9 @@ height: 22px;
 
 /*ayemin */
 /*GENERAL*/
+.T-padding-5{
+  padding-top:1rem;
+}
 .vertical-center{
   display: flex;
   align-items: center;
@@ -394,29 +396,28 @@ height: 22px;
 .card-title{
   color:#93210c;
 }
-
-.card-smsc{
-  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.17);
-  border:none;
-  border-radius: .5rem;
+.smsc-title{
+  color:#93210c;
+}
+.social-media-icons{
+  width:100px;
 }
 
- @media only screen and (min-width: 768px) {
-  .card-smsc{
-           padding-right:0;
-    }
+.social-media-button{
+ /* background:green;*/
+  border:1px solid #ededef;
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.17);
+  width:100%;
+  border-radius:.5rem;
+  margin-bottom: 1rem
 }
 
 @media (min-width:768px){
-  .padding-adjust-left{
-    padding-left:0;
+  .social-media-button{
+    margin-bottom: 0;
   }
 }
- @media only screen and (min-width: 768px) {
-  .padding-adjust{
-      padding-right:0;
-    }
-}
+
 
 /*NAV*/
 .smsc_header_title {
@@ -619,7 +620,6 @@ h1.smsc-header{
  }
 }
 
-
 .card-img-bottom-odd-card {
   color: #fff;
   height: 21rem;
@@ -654,6 +654,29 @@ h1.smsc-header{
   .card-block-odd-card{
    padding: 1rem 0 1rem 2rem;
   }
+}
+
+.card-smsc{
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.17);
+  border:none;
+  border-radius: .5rem;
+}
+
+ @media only screen and (min-width: 768px) {
+  .card-smsc{
+           padding-right:0;
+    }
+}
+
+@media (min-width:768px){
+  .padding-adjust-left{
+    padding-left:0;
+  }
+}
+ @media only screen and (min-width: 768px) {
+  .padding-adjust{
+      padding-right:0;
+    }
 }
 
 /*FOOTER*/
