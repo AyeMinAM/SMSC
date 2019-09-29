@@ -69,13 +69,14 @@
     
     <div class="container">
         <!--title-->
-        <div class="row title-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/title-background.png">
-            <div class="col-sm-12 text-center label label_prg_events_title">
+        <div class="title-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/title-background.png">
+            <div class="header-home">
                             <h1 class="smsc-header">Programs & Events</h1>
-                            <div><img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">  </div>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
             </div>
         </div>
-
+  </div>
+   <div class="container">
         <!--first card-->
         <section>
             <div class="card card-smsc">
@@ -104,7 +105,6 @@
             <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
             </div>
         </div>
-
         <!--second card-->
          <section>
             <div class="card card-smsc">
