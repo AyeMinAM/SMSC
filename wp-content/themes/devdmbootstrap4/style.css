@@ -51,31 +51,7 @@ body p{
 }
 
 
-.btn-register {
-  color: #ffffff;
-  background-color:#932a0c;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  font-family: OpenSans;
-  padding: 20px 120px; 
-  font-size: 18px;
-  
-}
-
-
-
   /*add*/
-
-  .btn-beginner {
-    color: #ffffff;
-    background-color:#932a0c;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    font-family: OpenSans;
-    padding: 10px 70px; 
-    font-size: 16px;
-    
-  }
 
   .label_prg_header {
     color: #ffffff;
@@ -85,31 +61,6 @@ body p{
     margin-left: 20px;    
     font-size: 22px;   
   }
- 
-  .label_beginner {
-    color: #ffffff;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    font-family: AlegreyaSans;
-    font-size: 25px;   
-
-  }
-
-  .label_beginner_20 {
-    color: #ffffff;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    font-family: AlegreyaSans;
-    font-size: 20px;   
-
-  }
-
-  .label_schedule_info {
-    letter-spacing: 0.05em;
-    font-family: AlegreyaSans;
-    font-size: 14px;   
-
-  }
 
   .label_schedule_title{
     color: #932a0c;    
@@ -117,18 +68,13 @@ body p{
     letter-spacing: 0.05em;
     font-family: AlegreyaSans;
     font-size: 14px;   
-
   }
 
-  .label_title_beginner{
-    color: #932a0c;    
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    font-family: AlegreyaSans;
-    font-size: 16px;   
-
+  .label_schedule_info {
+    font-family: 'Open Sans', sans-serif;
+    color:#000000;  
   }
-  
+
 .button-donation
 {
     padding: 0.5rem 2.5rem;
@@ -156,28 +102,6 @@ body p{
   height: 100px;
 }
 
-.smsc_beginner_img
-{
-  width: 100%;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-image: url('images/classes-beginner.jpg');
-
-}
-
-.smsc_beginner_saffu_img
-{
-  width: 100%;
-  height: 350px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-image: url('images/saffu.jpg');
-}
-
-
  .label_prg_events_title {
     color: #932a0c;
     letter-spacing: 0.05em;
@@ -198,27 +122,6 @@ img.lazy {
    
 }*/
       
-
-
-.smsc_img_beginner {
-  width: 100%;
-  height: 350px;
-}
-
-.smsc_img_divider {
-  width: 200px;
-  height: 30px;
-}
-
-.divider_beginner
-{
-  margin-top: 10px;
-  width: 300px;
-  height: 45px;
-  margin-bottom: 10px;
-
-}
-
 
 .smsc_img_divier_white {
   margin-top: 10px;
@@ -387,21 +290,6 @@ a:hover{
   align-items: center;
 }
 
-.btn-outline {
-    color: #ffffff;
-    background-color:#932a0c;
-    letter-spacing: 0.05em;
-    font-family: OpenSans;
-    padding: 1rem 1rem; 
-    font-size: 1.2rem;
-    margin-top:1rem;
-  }
-
-.btn-outline:hover{
-  background-color:#ff9933;
-  color:#ffffff;
-}
-
 .smsc-title{
   color:#93210c;
 }
@@ -424,7 +312,51 @@ a:hover{
   }
 }
 
+.smsc_img_divider {
+  width: 200px;
+  height: 30px;
+  margin:1rem 0;
+}
 
+.divider-other-programs{
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  margin:1rem auto;
+}
+
+@media (min-width: 768px){
+      .divider-other-programs{
+      display: none;
+    }
+}
+
+.btn-outline {
+    color: #ffffff;
+    background-color:#932a0c;
+    letter-spacing: 0.05em;
+    font-family: OpenSans;
+    padding: 1rem 1rem; 
+    font-size: 1.2rem;
+    margin-top:1rem;
+  }
+
+.btn-outline:hover{
+  background-color:#ff9933;
+  color:#ffffff;
+}
+.btn-register {
+  color: #ffffff;
+  background-color:#932a0c;
+  letter-spacing: 0.05em;
+  font-family: OpenSans;
+  padding: 20px 120px; 
+  font-size: 18px;
+}
+.btn-register:hover{
+  background-color:#ff9933;
+  color:#ffffff;
+}
 
 /*NAV*/
 
@@ -753,11 +685,22 @@ h1.smsc-header{
 .card-title{
   color:#93210c;
 }
-
-
+.card-o-programs-text{
+  height:10.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .card-img-bottom {
   color: #fff;
   height: 21rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: .5rem 0.5rem 0 0;
+}
+
+.card-o-programs-img-bottom {
+  color: #fff;
+  height: 15rem;
   background-size: cover;
   background-position: center;
   border-radius: .5rem 0.5rem 0 0;
@@ -834,6 +777,141 @@ h1.smsc-header{
       padding-right:0;
     }
 }
+
+
+/*BEGINNER*/
+.header-class-title{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-shadow: #5d5c58f2 1px 0 10px;
+}
+
+.header-class-title-height{
+  margin-top:8rem;
+}
+.programs-info-row{
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.programs-info-table{
+  margin-top:2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.row-100{
+  width:100%;
+  height: 100%;
+}
+
+.row-10{
+  width:10%;
+  height: 100%;
+  float: left;
+}
+.row-90{
+  width:90%;
+  height: 100%;
+  float:right;
+  overflow: hidden;
+}
+.row-align-v-middle{
+  display: flex;
+  align-items: center;
+}
+
+.card-smsc-description{
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.17);
+  border:none;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+}
+
+/*.card-smsc-others-programs-last{
+  margin-top: 2rem;
+}
+*/
+@media (min-width: 768px) and (max-width:990px) { 
+.card-smsc-others-programs-last{
+  margin-top: 2rem;
+  }
+}
+
+
+.btn-beginner {
+    color: #ffffff;
+    background-color:#932a0c;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 70px; 
+    font-size: 16px;
+  }
+
+  .label_beginner {
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    font-size: 25px;   
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .label_beginner_20 {
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 20px;   
+  }
+
+.smsc_beginner_img
+{
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('images/classes-beginner.jpg');
+}
+
+.smsc_beginner_saffu_img
+{
+  width: 100%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('images/saffu.jpg');
+}
+.label_title_beginner{
+    color: #932a0c;    
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 16px;   
+  }
+
+.divider_beginner
+{
+  margin-top: 10px;
+  width: 300px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.smsc_img_beginner {
+  width: 100%;
+  height: 350px;
+}
+
+
+
+
+
+
+
+
+
 
 /*FOOTER*/
 footer{
