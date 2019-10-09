@@ -171,7 +171,6 @@ height: 22px;
   font-size: 100px;
 }
 
-
 .img-container {
   width: 100%;
   height: 100%;
@@ -318,6 +317,12 @@ a:hover{
   margin:1rem 0;
 }
 
+.divider-flower{
+    width: 30px;
+    margin: 2rem auto;
+    text-align: center;
+    display: inherit;
+}
 .divider-other-programs{
   display: inline-block;
   width: 200px;
@@ -357,6 +362,20 @@ a:hover{
   background-color:#ff9933;
   color:#ffffff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*NAV*/
 
@@ -905,10 +924,20 @@ h1.smsc-header{
 }
 
 
+/*about*/
+.about-smsc-bg{
+padding: 1.5rem;
+margin:1rem auto;
+width: 100%;
+}
 
-
-
-
+@media (min-width:576px){
+  .about-smsc-bg{
+    padding: 2rem;
+    margin:2rem auto;
+    width: 80%;
+  }
+}
 
 
 
