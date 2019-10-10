@@ -19,9 +19,7 @@ Template Name: About SMSC Page
 
 <div class="container">
     <div class="card-smsc about-smsc-bg">
-        <h4 class="label smsc-title style="margin-bottom:1rem">About SMSC</h4>
-    
-        
+        <h4 class="label smsc-title style="margin-bottom:1rem">About SMSC</h4>    
         <p class="text-justify">The Satipatthana Meditation Society of Canada (SMSC) is a Buddhist organization based in Vancouver, British Columbia. The Society is incorporated under the Society Act in British Columbia and holds registered not-for-profit charity status through the Canada Revenue Agency.</p>
 
         <p class="text-justify">The purpose of the Society is to practice and discuss Theravada Buddhism with serious practitioners and to promote and provide education to anyone interested in exploring Theravada Buddhism. The Society&apos;s approach is built around Satipatthana Vipassana (Pure Vipassana) meditation, which is commonly known in the West as Insight Through Mindfulness meditation. The Society offers classes, sitting meditation, monthly residential retreats as the various formats of communication available to interested parties. </p>
