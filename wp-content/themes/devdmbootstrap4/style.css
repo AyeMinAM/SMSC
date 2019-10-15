@@ -228,24 +228,7 @@ height: 22px;
 
 
  
-.card-header .fa {
-  transition: .3s transform ease-in-out;
-}
-.card-header .collapsed .fa {
-  transform: rotate(90deg);
-}
 
- 
- .card-header {
-  padding: 12px 35px 12px 15px;
-  display: inline-block;
-  width: 100%;
-  background-color: #932a0c;
-  color: #ffffff;
-  position: relative;
-  text-decoration: none;
-  
-  }
 
 
 .home{
@@ -279,6 +262,7 @@ height: 22px;
 
 a:hover{
   color:#ffffff;
+  text-decoration: none;
 }
 
 .T-padding-5{
@@ -363,17 +347,20 @@ a:hover{
   color:#ffffff;
 }
 
+div.smsc-header-container{
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
+.mobile-margin{
+  margin-top:2rem;
+}
 
-
-
-
-
-
-
-
-
-
+@media (min-width: 991px){
+  .mobile-margin{
+  margin-top:0;
+  }
+}
 
 
 
@@ -659,43 +646,55 @@ h1.smsc_header_title a:hover{
 .header-home{
   text-align: center;
   padding:0;
+  margin-bottom: 1rem;
 }
 
-@media (min-width:991px){
+@media (min-width:1200px){
   .header-home{
   text-align: center;
-  padding:2rem;
+  padding:1.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 767px) and (max-width: 991px) { 
  .header-home{
   padding:1rem;
+  margin-bottom: 0;
   }
 }
 
 
 }
 .title-bg{
-   /*background-image: url('images/title-background.png'); */
+   background-image:none;
    margin-top:.5rem;
    background-size: contain;
    background-repeat: no-repeat;
 }
 
-.smsc_img_divider_line {
-  width: 30%;
+@media (min-width:991px){
+  .title-bg{
+  background-image: url('images/title-background.png'); 
+  }
 }
 
+.smsc_img_divider_line {
+  width: 300px;
+}
+
+
 h1.smsc-header{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color:#93210c;
   padding-top:.5rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 
 @media (min-width:991px){
     h1.smsc-header{
-    font-size: 1.5rem;
-    font-weight: bold;
+    
     color:#93210c;
   }
 }
@@ -961,9 +960,27 @@ width: 100%;
   }
 }
 
+/*archive*/
+.card-body{
+  font-family: 'OpenSans', sans-serif;
+}
 
+.card-header .fa {
+  transition: .3s transform ease-in-out;
+}
+.card-header .collapsed .fa {
+  transform: rotate(180deg);
+}
 
-
+.card-header >a {
+  padding: 12px 35px 12px 15px;
+  display: inline-block;
+  width: 100%;
+  background-color: #932a0c;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  }
 
 
 /*FOOTER*/

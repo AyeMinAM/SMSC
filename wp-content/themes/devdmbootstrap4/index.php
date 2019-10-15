@@ -69,10 +69,10 @@
     
     <div class="container">
         <!--title-->
-        <div class="title-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/title-background.png">
+        <div class="title-bg">
             <div class="header-home">
                             <h1 class="smsc-header">Programs & Events</h1>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line" alt="divider">
             </div>
         </div>
   </div>
