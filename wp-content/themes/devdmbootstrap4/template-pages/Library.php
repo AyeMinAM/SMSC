@@ -25,18 +25,19 @@ Template Name: Library Page
                 The SMSC Dhamma library contains some of the Dhamma talks as given by our Spiritual Advisor Chanmyay Sayadawgyi and the resident teacher Sa-yar Myat at beginner, intermediate and advanced meditation classes. This library is an attempt to portray the essence of the SMSC organization and its operations.</p>
                 </div>
             </div>
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center r-margin">
                     <div class="col-lg-2">
                         <div class="text-center">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-sound.png"  style="width:50px;" alt="beginner">
-                                <h4 class="card-title">Sound Resources</h4>
+                                <img class="icons-resources" src="<?php echo get_template_directory_uri(); ?>/images/icon-sound.png"  alt="beginner">
+                                <h5 class="label smsc-title">Sound Resources</h5>
                         </div>                        
                     </div>
                     <div class="col-lg-7">   
                         <div class="resources-text-container">
                                 <div class="resources-text">
-                                    <div id="summary">
-                                    <p class="collapse" id="collapseSummary">
+                                    <h5 class="label smsc-title"> Dhamma Talks by Chanmyay Sayadawgyi, Retreat 1992</h5>
+                                    <div id="r-more">
+                                    <p class="collapse" id="collapse-r-more">
                                         <a class="resource-links" href="sounds/vipassana_med1.mp3">
                                         1.&nbspHow to Practice Insight Meditation through Mindfulness I </a> </br>
                                          <a class="resource-links" href="sounds/vipassana_med2.mp3">              
@@ -76,17 +77,122 @@ Template Name: Library Page
                                         <a class="resource-links" href="sounds/vipassana_med19.mp3">
                                         19.&nbspClear Comprehension of Mind and Matter (The Five Aggregates)</a><br>
                                         <a class="resource-links" href="sounds/vipassana_med20.mp3">
-                                        20.&nbspSeven Benefits of Mindfulness-Insight Meditation</a><br>                                                                                      
-        </p>
-        <a class="resource-links collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
-      </div>
-                                                                     
-                                                                       
-                                                                
-                                                    </div><!--resource text-->
-                                                </div><!-- resouce container-->
-                                    </div><!--second col-->
+                                        20.&nbspSeven Benefits of Mindfulness-Insight Meditation</a><br>                          </p>
+                    <a class="resource-links collapsed" data-toggle="collapse" href="#collapse-r-more" aria-expanded="false" aria-controls="collapse-r-more"></a>
+                    </div> <!--end of summary-->
+                    </div><!--resource text-->
+                    </div><!-- resouce container-->
+                    </div><!--second col-->
             </div><!--end of row-->
+
+            <div class="row justify-content-md-center r-margin">
+                    <div class="col-lg-2">
+                        <div class="text-center">
+                                <img class="icons-resources" src="<?php echo get_template_directory_uri(); ?>/images/icon-articles.png"  alt="beginner">
+                                <h5 class="label smsc-title">Articles</h5>
+                        </div>                        
+                    </div>
+                    <div class="col-lg-7">   
+                        <div class="resources-text-container">
+                                <div class="resources-text">
+                                    <h5 class="label smsc-title"> Written by Sayar Myat</h5>
+                                    <div id="r-2-more">
+                                    <p class="collapse" id="collapse-r-2-more">
+                                        <a class="resource-links" href="../articles/01awakened.pdf">
+                                        The Awakened Mind </a> </br>
+                                         <a class="resource-links" href="../articles/02three.pdf">              
+                                        Three Pillars of Buddhism </a><br>
+                                         <a class="resource-links" href="../articles/03medi_time.pdf">                       
+                                        Meditation and the Concept of Time</a><br>
+                                        <a class="resource-links" href="../articles/04mindfulness.pdf">      
+                                        Mindfulness (Sati)                 
+                                        </a><br>
+                                         <a class="resource-links" href="../articles/05instruction.pdf">
+                                        Insight Meditation Instruction(Sitting &amp; Walking)</a><br>
+                                         <a class="resource-links" href="../articles/06On_Watching_Thoughts_during_Vipassana_Meditation.pdf">
+                                        On Watching Thoughts during Vipassana Meditation</a><br>
+                                         <a class="resource-links" href="../articles/07_Thirteen_Stages_of_Insight_Knowledge.pdf">Thirteen Stages of Insight Knowledge</a><br>
+                                         <a class="resource-links" href="../articles/The Four Noble Truths.pdf">                         
+                                        The Four Noble Truths</a><br>
+                                         
+                                     </p>
+                    <a class="resource-links collapsed" data-toggle="collapse" href="#collapse-r-2-more" aria-expanded="false" aria-controls="collapse-r-2-more"></a>
+                    </div> <!--end of summary-->
+                    </div><!--resource text-->
+                    </div><!-- resouce container-->
+                    </div><!--second col-->
+            </div><!--end of row-->
+
+            <div class="row justify-content-md-center r-margin">
+                    <div class="col-lg-2">
+                        <div class="text-center">
+                                <img class="icons-resources" src="<?php echo get_template_directory_uri(); ?>/images/icon-chants.png"  alt="beginner">
+                                <h5 class="label smsc-title">Articles</h5>
+                        </div>                        
+                    </div>
+                    <div class="col-lg-7">   
+                        <div class="resources-text-container">
+                                <div class="resources-text">
+                                    <h5 class="label smsc-title"> Chants</h5>
+                                    <div>
+                                    <p >
+                                        <a class="resource-links" href="../articles/06the_chant_metta.pdf">
+                                        Chant of Metta </a> </br>
+                                         <a class="resource-links" href="../articles/07_format_of_a_meditation_session.pdf">  
+                                       SMSC meditation format with chanting </a><br>
+                                     </p>
+                                     <div>All articles are available in PDF file format. Please click on the link you wish to open or download. <span><a class="pdf-link" href="http://get.adobe.com/reader/" target="_blank">Click here to install free PDF reader.</a></span></div>
+                   
+                    </div> <!--end of summary-->
+                    </div><!--resource text-->
+                    </div><!-- resouce container-->
+                    </div><!--second col-->
+            </div><!--end of row-->
+
+              <div class="row justify-content-md-center r-margin">
+                    <div class="col-lg-2">
+                        <div class="text-center">
+                                <img class="icons-resources" src="<?php echo get_template_directory_uri(); ?>/images/group-3.png"  alt="beginner">
+                                <h5 class="label smsc-title">Links</h5>
+                        </div>                        
+                    </div>
+                    <div class="col-lg-7">   
+                        <div class="resources-text-container">
+                                <div class="resources-text">
+                                    <a class="label smsc-title r-website" href="http://en.wikipedia.org/wiki/Mahasi_Sayadaw" target="_blank"> Mahasi Sayadaw</a>
+                                     <p>
+                                        The most eminent Burmese Theravada Buddhist monk and meditation master who had a significant impact on the teaching of Vipassana (Insight) meditation in the West and throughout Asia.
+                                     </p>
+
+                                     <a class="label smsc-title r-website" href="http://www.chanmyayusa.org/" target="_blank"> Chanmyay Satipatthana Vihara</a>
+                                     <p>
+                                       Satipatthana Vipassana Association (Springfield, Illinois, USA) dedicated to propagate Theravada Buddhism keeping Pure Insight Meditation (Mahasi Tradition) as central theme
+                                     </p>
+
+                                      <a class="label smsc-title r-website" href="http://www.chanmyay.org/" target="_blank"> Chanmyay Yeiktha Meditation Center</a>
+                                     <p>
+                                       Pure Vipassana meditation center in Myanmar. A great place for practitioners who wish to attend longer term retreats. Meditation, room and board are free of charge
+                                     </p>
+
+                                      <a class="label smsc-title r-website" href="dhammadownload.com" target="_blank"> dhammadownload.com</a>
+                                     <p>
+                                       Dhamma talks given by senior monks of Myanmar in audio, video and text in English and Myanmar.
+                                     </p>
+
+                                      <a class="label smsc-title r-website" href="http://www.myanmarnet.net/nibbana/#.Vcp8JRNViko" target="_blank"> nibbana.com</a>
+                                     <p>
+                                       Buddhism in Myanmar, one of the most comprehensive site for Buddha-Dhamma and Theravada Buddhism of Myanmar.
+                                     </p>
+
+                                      <a class="label smsc-title r-website" href="https://www.youtube.com/user/ChanmyayYeikthaBC" target="_blank"> youtube.com/user/ChanmyayYeikthaBC</a>
+                                     <p>
+                                       Videos uploaded by Satipatthana Meditation Society of Canada: Theravada Buddhism in General; the Society's activities.
+                                     </p>
+                                </div><!--resource text-->
+                    </div><!-- resouce container-->
+                    </div><!--second col-->
+            </div><!--end of row-->
+
     </div><!-- end of card-->
 </div><!--end of container-->
 

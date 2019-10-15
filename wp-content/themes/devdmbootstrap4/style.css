@@ -362,7 +362,15 @@ div.smsc-header-container{
   }
 }
 
+h5{
+  font-size: 1rem!important;
+  font-family: 'Open Sans', sans-serif;
+}
 
+.icons-resources{
+  width: 50px;
+  margin-bottom: 0.5rem;
+}
 
 /*NAV*/
 
@@ -1005,12 +1013,12 @@ a.resource-links:hover{
   color:#932a0c;
 }
 
-#summary {
+#r-more {
   font-size: 14px;
   line-height: 1.5;
 }
 
-#summary p.collapse:not(.show) {
+#r-more p.collapse:not(.show) {
     height: 5.1rem !important;
     overflow: hidden;
     display: -webkit-box;
@@ -1018,21 +1026,60 @@ a.resource-links:hover{
     -webkit-box-orient: vertical;  
 }
 
-#summary p.collapsing {
+#r-more p.collapsing {
     min-height: 42px !important;
 }
 
-#summary a.collapsed:after  {
+#r-more a.collapsed:after  {
     content: '+ More';
 }
 
-#summary a:last-child:not(.collapsed):after {
+#r-more a:last-child:not(.collapsed):after {
     content: '- Less';
 }
 
 
+#r-2-more {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#r-2-more p.collapse:not(.show) {
+    height: 5.1rem !important;
+    overflow: hidden;
+    display: -webkit-box;
+    /*-webkit-line-clamp: 2;*/
+    -webkit-box-orient: vertical;  
+}
+
+#r-2-more p.collapsing {
+    min-height: 42px !important;
+}
+
+#r-2-more a.collapsed:after  {
+    content: '+ More';
+}
+
+#r-2-more a:last-child:not(.collapsed):after {
+    content: '- Less';
+}
+
+.r-margin{
+  margin-top:2rem;
+}
 
 
+a.pdf-link, a.pdf-link:hover {
+  color:#000;
+  text-decoration: underline;
+}
+
+
+
+
+a.label.smsc-title.r-website:hover{
+color:#93210c;
+}
 
 
 
