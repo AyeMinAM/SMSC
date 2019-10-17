@@ -1,6 +1,6 @@
 <?php get_header();
 /*
-Template Name: Beginner Page
+Template Name: intermediate Page
 */
 ?>
 <?php get_template_part('template-parts/head'); ?>
@@ -8,11 +8,10 @@ Template Name: Beginner Page
 
 <div class="container-fluid" style="background-color: orange;">
     <div class="row">
-         <div class="lazy col-sm-12 smsc_beginner_img" data-src="<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
+         <div class="lazy col-sm-12 smsc_beginner_img" data-src="<?php echo get_template_directory_uri(); ?>/images/Intermediate-classes.jpg">
             <div class="text-center header-class-title-height">
                       <span class="header-class-title">
-                      Mindfulness Insight Meditation Classes</br>
-                      for Beginner 
+                      Intermediate Meditation Class (Weekly)
                       </span>
                       <div style="margin-top:2rem;"> 
                         <a href="<?php echo esc_url( get_permalink( get_page_by_title('registerclass') ) ); ?>" class="btn btn-lg btn-register">
@@ -183,14 +182,14 @@ Template Name: Beginner Page
         <div class="row">
                  <div class="col-lg-4 col-md-6 col-xs-12">
                   <div class="card card-smsc">
-                    <div class="card-o-programs-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/Intermediate-classes.jpg">
+                    <div class="card-o-programs-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
                     </div>
                     <div class="vertical-center">
                       <div class="card-block">
-                        <h4 class="card-title">Intermediate Class</h4>
+                        <h4 class="card-title">Beginner Class</h4>
                         <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. (word counts here)</p>
                         <div class="col text-center">
-                        <a href="<?php echo get_site_url(); ?>/intermediate" class="btn btn-lg btn-outline">
+                        <a href="<?php echo get_site_url(); ?>/beginner" class="btn btn-lg btn-outline">
                         View more</a> 
                         </div>
                       </div>
@@ -206,11 +205,11 @@ Template Name: Beginner Page
                         </div>
                         <div class="vertical-center">
                           <div class="card-block">
-                            <h4 class="card-title">Residential Reteat</h4>
+                            <h4 class="card-title">Residential Retreat</h4>
                             <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi.(word counts here)</p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
-                           View more</a> 
+                            View more</a> 
                             </div>
                           </div>
                       </div> <!--vertical center-->

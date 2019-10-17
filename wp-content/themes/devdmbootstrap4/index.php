@@ -91,7 +91,7 @@
                     <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/classes/" class="btn btn-lg btn-outline">
-                    Register</a> 
+                    View more</a> 
                     </div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@
             <div class="card card-smsc">
               <div class="row">
                 <div class="col-md-6 order-md-12 padding-adjust-left">
-                  <div class="card-img-bottom-odd-card smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
+                  <div class="card-img-bottom-odd-card smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/residential-retreat.jpg">
                   </div>
                 </div>
                 <div class="col-md-6 vertical-center order-md-1 ">
@@ -118,8 +118,8 @@
                     <h4 class="card-title">Retreats</h4>
                     <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
                     <div class="col text-center">
-                    <a href="<?php echo get_site_url(); ?>/classes/" class="btn btn-lg btn-outline">
-                    Register</a> 
+                    <a href="<?php echo get_site_url(); ?>/retreats/" class="btn btn-lg btn-outline">
+                    View more</a> 
                     </div>
                   </div>
                 </div>
@@ -139,7 +139,7 @@
             <div class="card card-smsc">
               <div class="row">
                  <div class="col-md-6 padding-adjust">
-                  <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
+                  <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/events.jpg">
                   </div>
                 </div>
                 <div class="col-md-6 vertical-center">
@@ -147,7 +147,7 @@
                     <h4 class="card-title">Events</h4>
                     <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
                     <div class="col text-center">
-                    <a href="<?php echo get_site_url(); ?>/classes/" class="btn btn-lg btn-outline">
+                    <a href="<?php echo get_site_url(); ?>/upcomingevents/" class="btn btn-lg btn-outline">
                     Find out more</a> 
                     </div>
                   </div>

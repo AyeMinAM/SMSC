@@ -16,7 +16,6 @@
                 <div class="collapse navbar-collapse" id="header-nav-content">
                 
                     <?php
- 
                     //grab the Theme Mod Setting for Enabling the Enhanced Menu Walker
                     $loadEnhancedMenu = get_theme_mod('devdmbootstrap4_enhanced_menu_setting', 1);
 
@@ -52,13 +51,11 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('beginner') ) ); ?>">Beginner</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Intermediate</a>
+                           <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('intermediate') ) ); ?>">Intermediate</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Day Retreat</a>
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('residential') ) ); ?>">Residential Retreat</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Monthly Retreat</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Annual Retreat</a>
+                           <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('annual') ) ); ?>">Annual Retreat</a>
                             </div>
                         </li>
 
@@ -113,7 +110,7 @@
                         <a class="nav-link" href="<?php echo get_site_url(); ?>/library/">Library</a>
                     </li>
                     <li class="one-quarter donation">
-                        <button class="btn navbar-btn button-donation smsc_margin" >Donation</button>
+                        <button class="btn navbar-btn button-donation smsc_margin"><a href="<?php echo get_site_url(); ?>/donation-new/">Donation</a></button>
                     </li>
                     </ul>
                 </div>
