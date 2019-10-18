@@ -110,7 +110,7 @@
                         <a class="nav-link" href="<?php echo get_site_url(); ?>/library/">Library</a>
                     </li>
                     <li class="one-quarter donation">
-                        <button class="btn navbar-btn button-donation smsc_margin"><a href="<?php echo get_site_url(); ?>/donation-new/">Donation</a></button>
+                        <button class="btn navbar-btn button-donation smsc_margin"><a href="<?php echo get_site_url(); ?>/donation">Donation</a></button>
                     </li>
                     </ul>
                 </div>

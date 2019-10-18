@@ -11,44 +11,45 @@ Template Name: Register Class Page
 
 <div class="container">
 
- 
+    <div class="smsc-header-container">
+              <h1 class="smsc-header">Register</h1>
+              <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
+    </div>   
 
-<!--     <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-                    <span class = "label label_prg_events_title">
-                    Register</span>
-          </div>
-    
-    </div>
-  
- 
+    <form id="registerSimple" method="post"  class="form-horizontal" action="" > 
     <div class="row" style="margin-top:20px;">  
         <div class="col-sm-12">
-             
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Full Name" aria-label="FullName" aria-describedby="basic-addon1">
+        <div class="row">
+                <div class="col-sm-4 input-group mb-3">
+                    <input id="inputfirstname" name="inputfirstname" type="text" class="form-control" placeholder="First Name" aria-label="FullName" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="col-sm-4 input-group mb-3">
+                    <input id="inputlastname" name="inputlastname" type="text" class="form-control" placeholder="Last Name" aria-label="FullName" aria-describedby="basic-addon1">
+                </div>
         </div>
+        
 
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+            <input id="inputemail" name="inputemail"  type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
             <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon2">@example.com</span>
             </div>
         </div>
 
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
+            <input id="inputphone" name="inputphone"  type="text" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
         </div>
  
-        <select class="custom-select my-1 mr-sm-2"   >
-            <option selected>Pick a program</option>
-            <option value="1">Begineer</option>
+        <select class="custom-select my-1 mr-sm-2" id="select_program" name="select_program"  >
+            <option value="">Pick a program</option>
+            <option value="1">Beginner</option>
             <option value="2">Intermediate</option>
         </select>
 
 
         <div class="input-group">
-            <textarea class="form-control"  placeholder="Write a few words about your previous meditation experience" aria-label="Message" rows="7"></textarea>
+            <textarea class="form-control" id="inputmessage" name="inputmessage"  placeholder="Write a few words about your previous meditation experience" aria-label="Message" rows="7"></textarea>
         </div>
         <br>
              
@@ -62,148 +63,165 @@ Template Name: Register Class Page
          <button type="submit" class="btn btn-register">Register</button>
 
           </div>
-    </div> -->
-  <!-- MultiStep Form -->
-<div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <form id="msform">
-            <!-- progressbar -->
-            <ul id="progressbar">
-                <li class="active">Personal Details</li>
-                <li>Social Profiles</li>
-                <li>Account Setup</li>
-            </ul>
-            <!-- fieldsets -->
-            <fieldset>
-                <h2 class="fs-title">Personal Details</h2>
-                <h3 class="fs-subtitle">Tell us something more about you</h3>
-                <input type="text" name="fname" placeholder="First Name"/>
-                <input type="text" name="lname" placeholder="Last Name"/>
-                <input type="text" name="phone" placeholder="Phone"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Social Profiles</h2>
-                <h3 class="fs-subtitle">Your presence on the social network</h3>
-                <input type="text" name="twitter" placeholder="Twitter"/>
-                <input type="text" name="facebook" placeholder="Facebook"/>
-                <input type="text" name="gplus" placeholder="Google Plus"/>
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Create your account</h2>
-                <h3 class="fs-subtitle">Fill in your credentials</h3>
-                <input type="text" name="email" placeholder="Email"/>
-                <input type="password" name="pass" placeholder="Password"/>
-                <input type="password" name="cpass" placeholder="Confirm Password"/>
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
-            </fieldset>
-        </form>
-        <!-- link to designify.me code snippets -->
-        <div class="dme_link">
-            <p><a href="http://designify.me/code-snippets-js/" target="_blank">More Code Snippets</a></p>
-        </div>
-        <!-- /.link to designify.me code snippets -->
     </div>
-</div>
-<!-- /.MultiStep Form -->
+  
+    </form>  
+</div><!--end of container-->
 
-
-       
+<div id="dialog" title="Info">
+        <div class="progress-label">Loading...</div>
+        <div id="progressbar"></div>
 </div>
+
+<style>
+
+.ui-dialog-titlebar-close {
+    display: none;
+  }
+</style>
+
 <script>
 
-jQuery(document).ready(function () {
+ 
+    jQuery(document).ready(function () {
 
-  
-//jQuery time
-var current_fs, next_fs, previous_fs; //fieldsets
-var left, opacity, scale; //fieldset properties which we will animate
-var animating; //flag to prevent quick multi-click glitches
-
-$(".next").click(function(){
-  if(animating) return false;
-  animating = true;
-  
-  current_fs = $(this).parent();
-  next_fs = $(this).parent().next();
-  
-  //activate next step on progressbar using the index of next_fs
-  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-  
-  //show the next fieldset
-  next_fs.show(); 
-  //hide the current fieldset with style
-  current_fs.animate({opacity: 0}, {
-    step: function(now, mx) {
-      //as the opacity of current_fs reduces to 0 - stored in "now"
-      //1. scale current_fs down to 80%
-      scale = 1 - (1 - now) * 0.2;
-      //2. bring next_fs from the right(50%)
-      left = (now * 50)+"%";
-      //3. increase opacity of next_fs to 1 as it moves in
-      opacity = 1 - now;
-      current_fs.css({
-        'transform': 'scale('+scale+')',
-        'position': 'absolute'
+        dialog = $( "#dialog" ).dialog({
+        autoOpen: false,
+        closeOnEscape: false,
+        resizable: false,
+        open: function() {
+        }
       });
-      next_fs.css({'left': left, 'opacity': opacity});
-    }, 
-    duration: 800, 
-    complete: function(){
-      current_fs.hide();
-      animating = false;
-    }, 
-    //this comes from the custom easing plugin
-    easing: 'easeInOutBack'
-  });
-});
+ 
+     
+    
+    $(document).ajaxStart(function(){
+        dialog.dialog( "open" );
+    });
 
-$(".previous").click(function(){
-  if(animating) return false;
-  animating = true;
-  
-  current_fs = $(this).parent();
-  previous_fs = $(this).parent().prev();
-  
-  //de-activate current step on progressbar
-  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-  
-  //show the previous fieldset
-  previous_fs.show(); 
-  //hide the current fieldset with style
-  current_fs.animate({opacity: 0}, {
-    step: function(now, mx) {
-      //as the opacity of current_fs reduces to 0 - stored in "now"
-      //1. scale previous_fs from 80% to 100%
-      scale = 0.8 + (1 - now) * 0.2;
-      //2. take current_fs to the right(50%) - from 0%
-      left = ((1-now) * 50)+"%";
-      //3. increase opacity of previous_fs to 1 as it moves in
-      opacity = 1 - now;
-      current_fs.css({'left': left});
-      previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-    }, 
-    duration: 800, 
-    complete: function(){
-      current_fs.hide();
-      animating = false;
-    }, 
-    //this comes from the custom easing plugin
-    easing: 'easeInOutBack'
-  });
-});
-
-$(".submit").click(function(){
-  return false;
-})
-
-});
+    $(document).ajaxComplete(function(){
+        dialog
+        .dialog( "close" );
+    });
 
 
+        $.validator.addMethod("regx", function(value, element, regexpr) {          
+        return regexpr.test(value);
+        }, "Please enter a valid phone number.");
+
+
+        jQuery( "#registerSimple" ).validate( {
+        ignore: ":hidden",
+        submitHandler: function (form) {
+     
+            $.ajax({
+                 type: "POST",
+                 url: '<?php echo admin_url("admin-ajax.php") ?>',
+                 data: $(form).serialize()  + '&action=registerSimple' ,
+                 error: function () {
+                    $( "<div title='Alert'>There is error in your submission. Please try to submit again or contact with Administrator</div>" ).dialog({
+                    modal: true,
+                    height: 200,
+			        width: 600,
+                    open: function( event, ui ) {
+                            //center the dialog within the viewport (i.e. visible area of the screen)
+                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
+                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
+                        jQuery(this).parent().css('top', top + "px");
+                        jQuery(this).parent().css('left', left + "px");
+                        jQuery(this).parent().css('position', 'fixed');                
+                    },
+                    buttons: {
+                        Ok: function() {
+                            
+                            $( this ).dialog( "close" );
+                           
+
+                        }
+                    }
+                    });
+                 },
+                 success: function () {
+
+                    $( "<div title='Alert'>You have submitted successfully!</div>" ).dialog({
+                    modal: true,
+                    height: 200,
+			        width: 600,
+                    open: function( event, ui ) {
+                            //center the dialog within the viewport (i.e. visible area of the screen)
+                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
+                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
+                        jQuery(this).parent().css('top', top + "px");
+                        jQuery(this).parent().css('left', left + "px");
+                        jQuery(this).parent().css('position', 'fixed');                
+                    },
+                    buttons: {
+                        Ok: function() {
+                            $( this ).dialog( "close" );
+                            window.location.href = "http://yellowbabykick.com/";
+
+                        }
+                    }
+                    });
+
+                  
+                 }
+             });
+           
+             return false; // required to block normal submit since you used ajax
+         },
+				rules: {
+					inputfirstname: "required",inputlastname: "required",
+					inputemail: {
+						required: true,
+						email: true
+                    },
+                    inputphone:{
+						required: true,
+						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
+                    },
+                    select_program:"required",
+                    inputmessage:"required" 
+				},
+				messages: {
+					inputfullname: "Please enter your name",
+                    inputmessage: "Please enter your message",
+                    select_program:  "Please select a program",
+					inputemail: "Please enter a valid email address",
+				},
+				errorElement: "em",
+				errorPlacement: function ( error, element ) {
+                    // Add the `help-block` class to the error element
+ 					error.addClass( "help-block" );
+
+					// Add `has-feedback` class to the parent div.form-group
+					// in order to add icons to inputs
+ 
+					if ( element.prop( "type" ) === "checkbox" ) {
+						error.insertAfter( element.parent( "label" ) );
+					} else {
+						error.insertAfter( element );
+					}
+
+					 
+				},
+				success: function ( label, element ) {
+					 
+				},
+				highlight: function ( element, errorClass, validClass ) {
+					$( element ).addClass( "is-invalid" )
+				},
+				unhighlight: function ( element, errorClass, validClass ) {
+					$( element ).removeClass( "is-invalid" );
+ 				}
+			} );
+
+
+
+    });
 </script>
+
+
 <?php get_template_part('template-parts/nav','footer'); ?>
 
 <?php get_footer(); ?>

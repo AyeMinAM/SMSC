@@ -20,7 +20,7 @@ Template Name: The Project Page
 <div class="container">
     <div class="card-smsc about-smsc-bg">
         <div class="smsc-header-container">
-            <h1 class="smsc-header">Donation</h1>
+            <h1 class="smsc-header">The Project</h1>
             <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
         </div>   
         <p class="text-justify">
@@ -28,8 +28,11 @@ Template Name: The Project Page
             </p>
             <p class="text-justify">
              SMSC solely depends on donations to operate the society and maintain the retreat center. If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through info(at)satipatthana.ca. As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors, and Canadian resident donors are able to claim tax deductions for their contributions.
+            </p>
+            <p class="text-justify">
              The retreat center is named Chanmyay Yeiktha, Canada in honor to our spiritual Advisor and teacher Chanmyay Sayadawgyi Ashin Janaka Bhivamsa of Chanmyay Yeiktha, Yangon, Myanmar. He came and officially opened the center on June 29, 2014. The center shall operate with his guidance.
             </p>
+            <p>Sadhu. Sadhu. Sadhu.</p>
              <div  class="col-sm-12 text-center"> 
 
                 <a href="#" class="btn btn-lg btn-register">

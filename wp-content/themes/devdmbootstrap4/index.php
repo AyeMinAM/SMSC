@@ -91,7 +91,7 @@
                     <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/classes/" class="btn btn-lg btn-outline">
-                    View more</a> 
+                    Find out more</a> 
                     </div>
                   </div>
                 </div>
@@ -119,7 +119,7 @@
                     <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/retreats/" class="btn btn-lg btn-outline">
-                    View more</a> 
+                    Find out more</a> 
                     </div>
                   </div>
                 </div>

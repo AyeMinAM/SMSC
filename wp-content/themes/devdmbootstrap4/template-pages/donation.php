@@ -1,7 +1,7 @@
 <?php get_header(); 
 
 /*
-Template Name: The Project Page
+Template Name: donation Page
 */
 ?>
  
@@ -9,35 +9,54 @@ Template Name: The Project Page
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <div class="col-sm-13">
             <img style="width: 100%" src="<?php echo get_template_directory_uri(); ?>/images/the-project.jpg" class="img-to-fit" >
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="container">
     <div class="card-smsc about-smsc-bg">
+        <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/pattern-quarter.png">
         <div class="smsc-header-container">
             <h1 class="smsc-header">Donation</h1>
             <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
         </div>   
-        <p class="text-justify">
-            Satipatthana Meditation Society of Canada (SMSC) is a registered charitable organization approved by Revenue Canada in 2008. Through the generous donations of many individuals as well as large contributions from members and Dhamma practitioners, the Society was able to acquire a property in Hope, BC as of November, 2012. It is located an hour and a half drive from Vancouver. It has one third of an acre land and a 2000 sq.ft building. The building has been renovated so that it will be conducive for meditation. Three resident yogis live and maintain the Centre. It is a steping-stone until we can purchase a larger building and larger land suitable to use for weekend, 10 days and longer term retreats. World-renowned Meditation masters of the Mahasi tradition will be invited to guide retreats whenever possible.
-            </p>
             <p class="text-justify">
-             SMSC solely depends on donations to operate the society and maintain the retreat center. If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through info(at)satipatthana.ca. As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors, and Canadian resident donors are able to claim tax deductions for their contributions.
-             The retreat center is named Chanmyay Yeiktha, Canada in honor to our spiritual Advisor and teacher Chanmyay Sayadawgyi Ashin Janaka Bhivamsa of Chanmyay Yeiktha, Yangon, Myanmar. He came and officially opened the center on June 29, 2014. The center shall operate with his guidance.
+            The Satipatthana Meditation Society of Canada (SMSC) is a registered non-profit Theravada Buddhist organization. The Society carries on business without purpose of material or monetary gain for its members and any profit or other accretions to the Society is used for promoting its purpose. Through the generosity of members, students, friends, family and the public we are able to offer all our classes and retreats free of charge.
             </p>
-             <div  class="col-sm-12 text-center"> 
+            <p>Those wishing to support our endeavours may do so with PayPal:</p>
+            
+                <div class="donation-container">
+                                <div class="different-donation">
+                                            <p>for general donation</p>
+                                            <a href="#" class="btn btn-donate-02">Donate</a>
+                                </div>
 
-                <a href="#" class="btn btn-lg btn-register">
-                Donation</a>
-            </div>
+                                <div class="different-donation">
+                                             <p>For the Project</p>
+                                            <a href="#" class="btn btn-donate-02">Donate</a>
+                                </div>
 
-    </div>
-</div>
+                                <div class="different-donation"> 
+                                             <p>For Membership</p>
+                                            <a href="#" class="btn btn-donate-02">Donate</a>
+                                </div>
+                </div>
+            
+                <div>
+                    <p class="text-justify">
+                     We wish to express our sincere appreciation and gratitude for the ongoing support we receive. It is through this kindness that we are able to continue to practice, discuss, promote and provide education about Theravada Buddhism.
+                    </p>
+                    <p class="text-justify">
+                     Please contact us at:  <a href="mailto:info@satipatthana.ca">info@satipatthana.ca</a> should you have any questions or require further information.
+                    </p>
+                    <p>Sadhu. Sadhu. Sadhu.</p>
+                </div>
+        </div><!--card-->
+</div><!--container-->
 
 <?php get_template_part('template-parts/nav','footer'); ?>
 
