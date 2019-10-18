@@ -2,9 +2,9 @@
     <div class="container-fluid" style="background-color:#932a0c;">
     <div class="container dropup dmbs-footer-nav-container">
         <footer class="row">
-            <nav class="navbar navbar-expand-lg dmbs-footer-navbar col-sm-12">
+            <nav class="navbar navbar-expand-lg dmbs-footer-navbar col-sm-12 align-top">
                 
-                    <div class="col-sm-4">
+                    <div class="col-md-4 col-sm-12">
                         <div class="footer-left">
                             <div>Address:</div>
                             <div>Chanmyay Yeiktha Canada</div>
@@ -13,8 +13,8 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-4 footer-middle">
-                        <img class="smsc_logo_img"  src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" 
+                    <div class="col-md-4 col-sm-12 footer-middle">
+                        <img class="smsc_logo_footer"  src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" 
                          alt="Logo">
                         <div class="footer-middle-text">
                         <div>Non- Profit Orginization Registeration No. S -53043</div>
@@ -22,20 +22,21 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-4 footer-right">
+                    <div class=" col-md-4 col-sm-12">
+                        <div class="footer-right">
                             <div>Made with love, Dāna  &amp; Mettā by</div>
-                            
                             <div>Sumi Kim, Min Min Thein,</div>
                             <div>Pengfei Shen &amp; AyeMin</div>
+                        </div>
                     </div>
 
         </footer>
 
 
                 <!-- Toggle Button -->
-                <button class="navbar-toggler dmbs-footer-nav-mobile-toggle" type="button" data-toggle="collapse" data-target="#footer-nav-content" aria-expanded="false" aria-label="Toggle navigation">
+             <!--    <button class="navbar-toggler dmbs-footer-nav-mobile-toggle" type="button" data-toggle="collapse" data-target="#footer-nav-content" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fa fa-bars"></span> <?php esc_html_e('Menu','devdmbootstrap4'); ?>
-                </button>
+                </button> -->
 
                 <!-- Nav Content -->
                 <div class="collapse navbar-collapse" id="footer-nav-content">

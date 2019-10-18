@@ -1099,6 +1099,15 @@ footer{
   font-family: 'Open Sans', sans-serif!important;
   color:#ffffff!important;
 }
+.footer-left{
+  text-align: center;
+}
+
+@media (min-width:768px){
+  .footer-left{
+    text-align:left;
+  }
+}
 
 .footer-middle{
   text-align: center;
@@ -1106,10 +1115,34 @@ footer{
   }
 
 .footer-right{
-  text-align: right;
+  text-align: center;
   }
 
-.footer-middle-text{
-  margin-top:10px;
+@media (min-width:768px){
+  .footer-right{
+    text-align:right;
+  }
 }
 
+.footer-middle-text{
+  margin-top:5px;
+}
+
+.smsc_logo_footer{
+  width: 75px;
+  height: 75px;
+  margin: .5rem 0;
+}
+
+@media (min-width:768px){
+  .smsc_logo_footer{
+    margin:auto;
+  }
+}
+
+
+footer .align-top{
+  display: flex;
+  align-items: flex-start;
+  padding:1rem;
+}
