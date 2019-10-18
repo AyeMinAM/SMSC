@@ -19,7 +19,7 @@ Template Name: donation Page
 
 <div class="container">
     <div class="card-smsc about-smsc-bg">
-        <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/pattern-quarter.png">
+       <!--  <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/pattern-quarter.png"> -->
         <div class="smsc-header-container">
             <h1 class="smsc-header">Donation</h1>
             <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
@@ -30,6 +30,7 @@ Template Name: donation Page
             <p>Those wishing to support our endeavours may do so with PayPal:</p>
             
                 <div class="donation-container">
+                    <!--  <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/pattern-quarter.png"> -->
                                 <div class="different-donation">
                                             <p>for general donation</p>
                                             <a href="#" class="btn btn-donate-02">Donate</a>

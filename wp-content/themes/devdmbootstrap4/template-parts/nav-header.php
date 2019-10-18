@@ -80,12 +80,12 @@
                     </ul>
 
                    </div>
-
-                    <div class="menu-center"><img class="smsc_logo_img"  
-                    
+                <a class="menu-center" href="<?php echo esc_url( home_url( '/' ) ); ?>"> 
+                    <div><img class="smsc_logo_img"
                     src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" 
-                         
-                    alt="Logo"></div>
+                    alt="Logo">
+                    </div>
+                </a>
 
                     <div class="menu-right">
                     <ul class="nav navbar-nav navbar-right ul-equally-divide">
@@ -110,7 +110,9 @@
                         <a class="nav-link" href="<?php echo get_site_url(); ?>/library/">Library</a>
                     </li>
                     <li class="one-quarter donation">
-                        <button class="btn navbar-btn button-donation smsc_margin"><a href="<?php echo get_site_url(); ?>/donation">Donation</a></button>
+                        <a href="<?php echo get_site_url(); ?>/donation">
+                        <button class="btn navbar-btn button-donation smsc_margin">Donation</button>
+                        </a>
                     </li>
                     </ul>
                 </div>

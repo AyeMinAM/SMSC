@@ -492,7 +492,6 @@ h1.smsc_header_title a:hover{
 
 .menu-center{
   width:10%;
-  /*background:purple;*/
   display:none;
 }
 
@@ -1072,15 +1071,22 @@ color:#93210c;
 padding: 2rem 0;
 }
 
-/*.donation-container p{
+.donation-container p{
   margin-bottom: 0.5rem;
 }
-*/
+
 
 .different-donation{
-  width:33%;
+  width:100%;
   float:left;
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px){
+.different-donation{
+  width:33%;
+  }
 }
 
 .btn-donate-02{

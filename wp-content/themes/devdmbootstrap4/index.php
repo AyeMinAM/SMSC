@@ -269,20 +269,20 @@
     </div>
     <div class="row" style="margin-top:20px;">
         <div class="col-md-4 text-center">
-            <a class="btn social-media-button" href="#" role="button" >
+            <a class="btn social-media-button" href="https://www.meetup.com/en-AU/Mindfulness-Insight-Vipassana/" target="_blank" role="button" >
                     <h4 class = "col label smsc-title T-padding-5">SMSC on Meetup</span></h4>
                     <img class="col social-media-icons"src="<?php echo get_template_directory_uri(); ?>/images/meetup.png" alt="Facebook">
             </a>            
         </div>
          <div class="col-md-4 text-center">
-            <a class="btn social-media-button" href="#" role="button" >
+            <a class="btn social-media-button" href="https://www.facebook.com/people/Chanmyay-Yeikthabc/100006727365131" target="_blank" role="button" >
                     <h4 class = "col label smsc-title T-padding-5">SMSC on Facebook</span></h4>
                     <img class="col social-media-icons" src="<?php echo get_template_directory_uri(); ?>/images/icons8-facebook-480.png"  alt="Facebook">
             </a>            
         </div>
 
         <div class="col-md-4 text-center">
-            <a class="btn social-media-button" href="#" role="button" >
+            <a class="btn social-media-button" href="https://www.youtube.com/user/ChanmyayYeikthaBC" target="_blank" role="button" >
                     <h4 class = "col label smsc-title T-padding-5">SMSC on Youtube</span></h4>
                     <img class="col social-media-icons" src="<?php echo get_template_directory_uri(); ?>/images/icons8-play-button-480.png"  
                  alt="Youtube">

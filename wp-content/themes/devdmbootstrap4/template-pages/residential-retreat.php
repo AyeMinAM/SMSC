@@ -190,7 +190,7 @@ Template Name: Residential Page
                         <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. (word counts here)</p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/annual" class="btn btn-lg btn-outline">
-                        View more</a> 
+                        View details</a> 
                         </div>
                       </div>
                   </div><!--vertical center-->
@@ -209,7 +209,7 @@ Template Name: Residential Page
                             <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi.(word counts here)</p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/beginner" class="btn btn-lg btn-outline">
-                            View more</a> 
+                            View details</a> 
                             </div>
                           </div>
                       </div> <!--vertical center-->
@@ -228,7 +228,7 @@ Template Name: Residential Page
                           <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. (word counts here) Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. (word counts here)</p>
                           <div class="col text-center">
                           <a href="<?php echo get_site_url(); ?>/intermediate" class="btn btn-lg btn-outline">
-                          View more</a> 
+                          View details</a> 
                           </div>
                         </div>
                      </div> <!--vertical center-->
