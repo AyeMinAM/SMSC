@@ -1,0 +1,410 @@
+/*
+Theme Name: devdmbootstrap4
+Theme URI: https://devdmbootstrap.com
+Author: Danny Machal
+Author URI: https://devdm.com/
+Description: A no frills theme for Developers using Twitter Bootstrap 4.
+Version: 1.71
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, sticky-post, translation-ready
+Text Domain: devdmbootstrap4
+GitHub Theme URI: https://github.com/dannymachal/devdmbootstrap4
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+The default Bootstrap 4 CSS and JS files are enqueued inside the functions.php file with the handles devdmbootstrap4-css and devdmbootstrap4-js
+*/
+
+.gallery-caption {}
+
+.bypostauthor {}
+
+.smsc_header_title {
+    
+    font-family: AlegreyaSans;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    /*color: #f6f6f6;*/
+    color: red;
+    margin-top: 20px; 
+  }
+ 
+
+ .topnav-right {
+  float: right;
+}
+ 
+
+.smsc_menu_left{
+  margin-left:30px;
+  margin-right:30px;
+}
+
+.smsc_menu_right{
+    margin-left:40px;
+    margin-right:40px;
+}
+
+
+.nav-link {
+    color: #ffffff; 
+}
+/*
+
+.dropdown-item {
+  color: #ffffff; 
+}*/
+
+.btn-register {
+  color: #ffffff;
+  background-color:#932a0c;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  font-family: OpenSans;
+  padding: 20px 120px; 
+  font-size: 18px;
+  
+}
+
+
+.btn-outline {
+    color: #ffffff;
+    background-color:#932a0c;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: OpenSans;
+    padding: 15px 30px; 
+    font-size: 18px;
+    
+  }
+
+  /*add*/
+
+  .btn-beginner {
+    color: #ffffff;
+    background-color:#932a0c;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: OpenSans;
+    padding: 10px 70px; 
+    font-size: 16px;
+    
+  }
+
+  .label_prg_header {
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    margin-left: 20px;    
+    font-size: 22px;   
+  }
+
+  .label_22 {
+    color: #932a0c;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    margin-left: 20px;    
+    font-size: 22px;   
+  }
+ 
+  .label_beginner {
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 25px;   
+
+  }
+
+  .label_beginner_20 {
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 20px;   
+
+  }
+
+  .label_schedule_info {
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 14px;   
+
+  }
+
+  .label_schedule_title{
+    color: #932a0c;    
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 14px;   
+
+  }
+
+  .label_title_beginner{
+    color: #932a0c;    
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 16px;   
+
+  }
+
+  
+  
+  .label_prg_events_title {
+    color: #932a0c;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 24px;   
+  }
+
+  .label_20 {
+    color: #932a0c;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-family: AlegreyaSans;
+    font-size: 20px;   
+  }
+
+  
+
+.button-donation
+{
+    font-family: AlegreyaSans;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    background-color:#ff9933
+}
+
+ 
+
+.smsc_header_title a
+{
+    color:#ffffff;
+}
+
+
+.smsc_logo_img {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.smsc_beginner_img
+{
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('images/classes-beginner.jpg');
+
+}
+
+.smsc_beginner_saffu_img
+{
+  width: 100%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('images/saffu.jpg');
+}
+.smsc_header_img {
+    width: 50%;
+    height: 506px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-image: url('images/hero-header.jpg'); */
+}
+/*
+div.lazy {
+  width: 100%; 
+  height: 706px; 
+  display: block;
+  
+}
+
+img.lazy {
+  display: block;
+   
+}*/
+      
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.smsc_img_beginner {
+  width: 100%;
+  height: 350px;
+}
+
+.smsc_img_divider {
+  width: 200px;
+  height: 30px;
+}
+
+.smsc_img_divider_line {
+  width: 300px;
+  height: 9px;
+ 
+}
+
+
+.divider_beginner
+{
+  margin-top: 10px;
+  width: 300px;
+  height: 45px;
+  margin-bottom: 10px;
+
+}
+
+
+.smsc_img_divier_white {
+  margin-top: 10px;
+  width: 280px;
+  height: 34px;
+  margin-bottom: 10px;
+  
+}
+
+
+
+.fb_logo {
+    width: 10px;
+    height: 19px;
+  }
+  
+
+.youtube_logo {
+width: 25px;
+height: 15px;
+}
+  
+
+.meetup_logo {
+width: 50px;
+height: 22px;
+}
+
+.smsc_logo_space{
+    margin-left:5px;
+    margin-right:5px;
+}
+
+
+.smsc_main_menu {
+  font-family: AlegreyaSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 100px;
+}
+
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  
+}
+.img-container .img-to-fit {
+  flex: 1;
+  height: 100%;
+}
+
+
+/* Gallery */
+#myCarousel .list-inline {
+  white-space:nowrap;
+  overflow-x:auto;
+  
+}
+
+#myCarousel .carousel-indicators {
+  position: static;
+  left: initial;
+  width: initial;
+  margin-top: 10px; 
+  margin-left: initial;
+  
+}
+
+#myCarousel .carousel-indicators > li {
+  width: initial;
+  height: initial;
+  text-indent: initial;
+}
+
+#myCarousel .carousel-indicators > li.active img {
+  opacity: 0.7;
+}
+
+ 
+.carousel .left > i,
+.carousel .right > i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel .right > i {
+  left: auto;
+  right: 20px;
+}
+
+
+
+ 
+.card-header .fa {
+  transition: .3s transform ease-in-out;
+}
+.card-header .collapsed .fa {
+  transform: rotate(90deg);
+}
+
+ 
+ .card-header {
+  padding: 12px 35px 12px 15px;
+  display: inline-block;
+  width: 100%;
+  background-color: #932a0c;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  
+  }
