@@ -315,7 +315,11 @@ Template Name: Ajax register
  
    
     
+<<<<<<< HEAD
     <!-- <form id="registerForm" method="post"  class="form-horizontal" action="" > -->
+=======
+    <form id="registerForm" method="post"  class="form-horizontal" action="" >
+>>>>>>> f6117e66978393e502370689ada8e961ca8e4d60
  
     <div id="jsGrid"></div>   
 
@@ -688,7 +692,11 @@ Template Name: Ajax register
             </div>
         </div>
     </fieldset>
+<<<<<<< HEAD
     <!-- </form> -->
+=======
+    </form>
+>>>>>>> f6117e66978393e502370689ada8e961ca8e4d60
 </div>
 
 

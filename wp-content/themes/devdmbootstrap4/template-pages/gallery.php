@@ -11,7 +11,7 @@ Template Name: Gallery Page
 
 
 
-<div class="container-fluid">
+<div class="container">
 <?php  
  
 

@@ -4,66 +4,168 @@
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container-fluid">
-    <div class="row" style="margin-top:10px">
-        <div class="col-sm-5 text-center">
-            <img 
-            width="460" height="345"
-            data-src="<?php echo get_template_directory_uri(); ?>/images/hero-header.jpg"  class="img-rounded smsc_img_beginner lazy"  alt="beginner">
+
+<div class="container-fluid lazy smsc_header_img" data-src="<?php echo get_template_directory_uri(); ?>/images/hero-header.jpg">
+    <!-- <div class="lazy col-sm-12 smsc_header_img" data-src="<?php echo get_template_directory_uri(); ?>/images/hero-header.jpg">
+    </div> -->
+    <span class="slogan">
+        <ul>
+            <li>Strive with Diligence</li>
+            <li>Live in Mindfulness</li>
+            <li>Rejoice in Heedfulness</li>
+        </ul>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/divider-white.png" class="smsc_img_divier_white" alt="divider">  
+        <div>
+        <a href="<?php echo get_site_url(); ?>/mprogram/" class="btn btn-lg btn-outline">
+                Our Meditation Programs</a>
         </div>
-        <div class="col-sm-7" >
- 
-             
-             <div class="row" style="margin-top:40px;" >
-                    <div class="col text-center">
-                    <span class="label_22">Strive with Diligence</span>
-                    </div>
+    </span><!--the end of slogan-->
+</div>
+
+        <!-- <div   class="col-sm-12 smsc_header_img lazy"     > -->
+<!-- <div class="container">
+        <div class="row" style="margin-top:200px;">
+            <div class="col-sm-7"></div>
+            <div  class="col-sm-5 text-center"> 
+
+                    <span class = "label label_prg_header">
+                            Strive with Diligence</span>
             </div>
-            <div class="row" >
-                    <div class="col text-center">
-                    <span class="label_22">Live in Mindfulness</span>
+        </div>
+        <div class="row">
+                <div class="col-sm-7"></div>
+                <div  class="col-sm-5 text-center"> 
+
+                            <span class = "label label_prg_header">
+                            Live in Mindfulness</span>
+                </div>
+        </div>
+
+
+        <div class="row">
+                    <div class="col-sm-7"></div>
+                    <div  class="col-sm-5 text-center"> 
+                            <span class = "label label_prg_header">
+                        Rejoice in Heedfulness</span>
                     </div>
-            </div>
-            <div class="row" >
-                    <div class="col text-center">
-                    <span class="label_22">Rejoice in Heedfulness</span>
-                    </div>
-            </div>
-            <div class="row">
-                     <div  class="col text-center"> 
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divier_white" alt="divider">           
+        </div>
+        <div class="row">
+                    <div class="col-sm-7"></div>
+                    <div  class="col-sm-5 text-center"> 
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/divider-white.png" class="smsc_img_divier_white" alt="divider">           
 
                     </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7"></div>
+            <div  class="col-sm-5 text-center"> 
+
+
+                <a href="<?php echo get_site_url(); ?>/mprogram/" class="btn btn-lg btn-outline">
+                Our Meditation Programs</a>
             </div>
-            <div class="row" style="margin-top:20px;">
+
+        </div> -->
+    
+    <div class="container">
+        <!--title-->
+        <div class="title-bg">
+            <div class="header-home">
+                            <h1 class="smsc-header">Programs & Events</h1>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line" alt="divider">
+            </div>
+        </div>
+  </div>
+   <div class="container">
+        <!--first card-->
+        <section>
+            <div class="card card-smsc">
+              <div class="row">
+                 <div class="col-md-6 padding-adjust">
+                  <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
+                  </div>
+                </div>
+                <div class="col-md-6 vertical-center">
+                  <div class="card-block">
+                    <h4 class="card-title">Classes</h4>
+                    <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/classes/" class="btn btn-lg btn-outline">
-                    Our Meditation Programs</a> 
+                    Find out more</a> 
                     </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+        </section>
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
             </div>
         </div>
-    </div>
-        
-    
-    <div class="row" style="margin-top:30px;">
-        <div class="col-sm-12 text-center">
-                             <span class = "label label_prg_events_title">
-                        Programs & Events</span>
+        <!--second card-->
+         <section>
+            <div class="card card-smsc">
+              <div class="row">
+                <div class="col-md-6 order-md-12 padding-adjust-left">
+                  <div class="card-img-bottom-odd-card smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/residential-retreat.jpg">
+                  </div>
+                </div>
+                <div class="col-md-6 vertical-center order-md-1 ">
+                  <div class="card-block-odd-card">
+                    <h4 class="card-title">Retreats</h4>
+                    <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+                    <div class="col text-center">
+                    <a href="<?php echo get_site_url(); ?>/retreats/" class="btn btn-lg btn-outline">
+                    Find out more</a> 
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+        </section>
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
+            </div>
         </div>
-    </div>
+
+        <!--third card-->
+         <section>
+            <div class="card card-smsc">
+              <div class="row">
+                 <div class="col-md-6 padding-adjust">
+                  <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/events.jpg">
+                  </div>
+                </div>
+                <div class="col-md-6 vertical-center">
+                  <div class="card-block">
+                    <h4 class="card-title">Events</h4>
+                    <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+                    <div class="col text-center">
+                    <a href="<?php echo get_site_url(); ?>/upcomingevents/" class="btn btn-lg btn-outline">
+                    Find out more</a> 
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+        </section>
+
+
  
-    <div class="row" style="margin-bottom:20px;">
-        <div class="col-sm-12 text-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line" alt="divider">           
-         </div>
-    </div>
-    <div class="row" >
-        <div class="col-sm-5 text-center">
+   <!--  <div class="row">
+        <div class="col-sm-6 text-center">
             <img 
             width="460" height="345"
             data-src="<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg"  class="img-rounded smsc_img_beginner lazy"  alt="beginner">
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-6">
             <div class="row">
                     <div class="col">
                              <span class = "label label_prg_events_title">
@@ -71,15 +173,10 @@
                     </div>
             </div>
              
-             <div class="row" style="margin-top:20px" >
+
+            <div class="row" style="margin-top:20px;" >
                     <div class="col">
-                    <p class="text-justify">
-
-                    Classes are an introduction to the meditation practice, to both beginners and the experienced practitioners with no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). 
-
-                    Classes are divided into series: Level 1 (4-6 weeks) Level 2 (4-6 weeks), Level 3 (6-8 weeks), Level 4 (50 weeks) and Level 5 (year around). Level 1-3 series is offered several times a year.
-                    All classes are offered free of charge.    
-                </p>
+                    <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
                     </div>
 
                     
@@ -91,17 +188,16 @@
                     </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
-    <div class="row" style="margin-top:20px;margin-bottom:20px;">
+   <!--  <div class="row" style="margin-top:20px;margin-bottom:20px;">
         <div class="col-sm-12 text-center">
         <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
         </div>
-    </div>
+    </div> -->
 
-    <div class="row">
-        
-        <div class="col-sm-7">
+   <!--  <div class="row">
+        <div class="col-sm-6">
             <div class="row" >
                     <div class="col">
                              <span class = "label label_prg_events_title">
@@ -112,10 +208,7 @@
 
             <div class="row" style="margin-top:20px;">
                     <div class="col">
-                    <p class="text-justify">
-                    Residential Retreats are 2 to 4 days long and holds every month. Longer residential retreats of 8 to 28 days are held one or two times per year.
-
-                    </p>
+                    <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
                     </div>
 
                     
@@ -127,25 +220,19 @@
                     </div>
             </div>
         </div>
-        <div class="col-sm-5 text-center">
+        <div class="col-sm-6 text-center">
              
             <img  width="460" height="345"
            data-src="<?php echo get_template_directory_uri(); ?>/images/retreat-daily.jpg" class="img-rounded smsc_img_beginner lazy" alt="retreat">
         </div>
-    </div>
+    </div> -->
     
-    <div class="row" style="margin-top:20px;margin-bottom:20px;">
-        <div class="col-sm-12 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-sm-5 text-center">
+   <!--  <div class="row">
+        <div class="col-sm-6 text-center">
             <img   width="460" height="345"
             data-src="<?php echo get_template_directory_uri(); ?>/images/events-02.jpg" class="img-rounded smsc_img_beginner lazy" alt="events">
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-6">
             <div class="row">
                     <div class="col">
                              <span class = "label label_prg_events_title">
@@ -168,59 +255,38 @@
                     </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
-    <div class="row" style="margin-top:20px;margin-bottom:20px;">
+    <div class="row">
         <div class="col-sm-12 text-center">
         <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
         </div>
     </div>
 
-    <div class="row" style="margin-top:20px;" >
-        <div class="col-sm-12 text-center">
-                             <span class = "label label_prg_events_title">
-                             Check out our social media for news and update about our events and programs.</span>
-        </div>
+    <div class="row">
+        <h4 class = "label smsc-title">Check out our social media for news and update about our events and programs.
+        </h4>
     </div>
-
-    <div class="row" style="margin-top:20px;" >
-        <div class="col text-center">
-        <a class="btn btn-sm px-5 border" href="#" role="button" >
-                <div class="row">
-                <span class = "col label_20" style="margin-top:20px;margin-bottom:20px">
-                    SMSC on Meetup</span>
-                </div>
-                <div class="row">
-                <img class="col" style="width:50px" src="<?php echo get_template_directory_uri(); ?>/images/meetup-225x150.png"  
-                 alt="Facebook">
-                 </div>
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-4 text-center">
+            <a class="btn social-media-button" href="https://www.meetup.com/en-AU/Mindfulness-Insight-Vipassana/" target="_blank" role="button" >
+                    <h4 class = "col label smsc-title T-padding-5">SMSC on Meetup</span></h4>
+                    <img class="col social-media-icons"src="<?php echo get_template_directory_uri(); ?>/images/meetup.png" alt="Facebook">
             </a>            
         </div>
-        <div class="col text-center">
-        
-            <a class="btn btn-sm px-5 border" href="#" role="button" >
-                <div class="row">
-                <span class = "col label_20" style="margin-top:20px;margin-bottom:20px">
-                    SMSC on Facebook</span>
-                </div>
-                <div class="row">
-                <img class="col" style="width:50px"  src="<?php echo get_template_directory_uri(); ?>/images/icons8-facebook-480-285x150.png"  
-                 alt="Facebook">
-                 </div>
-            </a>
-
-        </div>
-        <div class="col text-center">
-            <a class="btn btn-sm px-5 border" href="#" role="button" >
-                <div class="row">
-                <span class = "col label_20" style="margin-top:20px;margin-bottom:20px">
-                    SMSC on Youtube</span>
-                </div>
-                <div class="row">
-                <img class="col" style="width:50px" src="<?php echo get_template_directory_uri(); ?>/images/icons8-play-button-480-285x150.png"  
-                 alt="Facebook">
-                 </div>
+         <div class="col-md-4 text-center">
+            <a class="btn social-media-button" href="https://www.facebook.com/people/Chanmyay-Yeikthabc/100006727365131" target="_blank" role="button" >
+                    <h4 class = "col label smsc-title T-padding-5">SMSC on Facebook</span></h4>
+                    <img class="col social-media-icons" src="<?php echo get_template_directory_uri(); ?>/images/icons8-facebook-480.png"  alt="Facebook">
             </a>            
+        </div>
+
+        <div class="col-md-4 text-center">
+            <a class="btn social-media-button" href="https://www.youtube.com/user/ChanmyayYeikthaBC" target="_blank" role="button" >
+                    <h4 class = "col label smsc-title T-padding-5">SMSC on Youtube</span></h4>
+                    <img class="col social-media-icons" src="<?php echo get_template_directory_uri(); ?>/images/icons8-play-button-480.png"  
+                 alt="Youtube">
+                </a>            
         </div>
     </div>
 
@@ -269,7 +335,7 @@
                                 wp_link_pages();
                             ?>
 
-                        </div>
+    </div>
 
                         <footer class="card-footer dmbs-post-footer">
                             <?php get_template_part('template-parts/postmeta','footer'); ?>
@@ -299,9 +365,7 @@
 </div>
 
 <script>
-
     jQuery(document).ready(function () {
-
         
         jQuery('.lazy').lazy({
 

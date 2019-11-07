@@ -1,43 +1,42 @@
 <?php /*if ( has_nav_menu( 'footer_menu' ) ) : */?>
-
-    <div class="container-fluid dropup dmbs-footer-nav-container">
-        <div class="row"   >
-            <nav class="navbar navbar-expand-lg dmbs-footer-navbar col-sm-12" style="background-color:#932a0c;">
+    <div class="container-fluid" style="background-color:#932a0c;">
+    <div class="container dropup dmbs-footer-nav-container">
+        <footer class="row">
+            <nav class="navbar navbar-expand-lg dmbs-footer-navbar col-sm-12 align-top">
                 
-
-                <div class="row" style="color:#ffffff">
-                    <div class="col-sm-3">
-                    <p class="text-left">
-                    Chanmyay Yeiktha Canada
-                    19640 Silverhope Rd, Hope BC, Canada, V0X-1L2
-                    </p>
- 
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-left">
+                            <div>Address:</div>
+                            <div>Chanmyay Yeiktha Canada</div>
+                            <div>19640 Silverhope Rd, Hope BC</div>
+                            <div>Canada, V0X 1L2</div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 text-center">
-                    <img class="smsc_logo_img"  
-                    
-                    src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" 
-                         
-                    alt="Logo">
-                    <p class="text-center">
 
-                    Non- Profit Orginization Registeration Number . S -53043
-                    Copyright © Satipatthana Meditation Society of Canada
-                    </p>
+                    <div class="col-md-4 col-sm-12 footer-middle">
+                        <img class="smsc_logo_footer"  src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" 
+                         alt="Logo">
+                        <div class="footer-middle-text">
+                        <div>Non- Profit Orginization Registeration No. S -53043</div>
+                        <div>Copyright © Satipatthana Meditation Society of Canada</div>
+                        </div>
                     </div>
-                    <div class="col-sm-3"  >
-                    <p class="text-right" >
-                        Made with love, Dāna  &amp; Mettā by Sumi Kim, Min Min Thein, Pengfei Shen &amp; AyeMin.
-                    </p>
-</div>
 
-                </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <div class="footer-right">
+                            <div>Made with love, Dāna  &amp; Mettā by</div>
+                            <div>Sumi Kim, Min Min Thein,</div>
+                            <div>Pengfei Shen &amp; AyeMin</div>
+                        </div>
+                    </div>
+
+        </footer>
 
 
                 <!-- Toggle Button -->
-                <button class="navbar-toggler dmbs-footer-nav-mobile-toggle" type="button" data-toggle="collapse" data-target="#footer-nav-content" aria-expanded="false" aria-label="Toggle navigation">
+             <!--    <button class="navbar-toggler dmbs-footer-nav-mobile-toggle" type="button" data-toggle="collapse" data-target="#footer-nav-content" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fa fa-bars"></span> <?php esc_html_e('Menu','devdmbootstrap4'); ?>
-                </button>
+                </button> -->
 
                 <!-- Nav Content -->
                 <div class="collapse navbar-collapse" id="footer-nav-content">

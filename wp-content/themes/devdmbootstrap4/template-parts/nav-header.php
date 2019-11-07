@@ -1,150 +1,101 @@
 <?php /* if ( has_nav_menu( 'main_menu' ) ) :*/ ?>
+
+    <div class="dmbs-header-nav-container" style="background-color: #932a0c;" >
+
+
+        <div class="d-flex container nav-container">
+       
+            <nav class="navbar navbar-expand-lg dmbs-header-navbar menu-equally-divide">
+
+                <!-- Toggle Button -->
+                <!-- <button class="navbar-toggler dmbs-header-nav-mobile-toggle" type="button" data-toggle="collapse" data-target="#header-nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                     <?php esc_html_e('Menu','devdmbootstrap4'); ?><span class="fa fa-bars"></span>
+                </button> -->
+
+                <!-- Nav Content -->
+                <div class="collapse navbar-collapse" id="header-nav-content">
+                
+                    <?php
+                    //grab the Theme Mod Setting for Enabling the Enhanced Menu Walker
+                    $loadEnhancedMenu = get_theme_mod('devdmbootstrap4_enhanced_menu_setting', 1);
+
+                    if ($loadEnhancedMenu == 1) {
+                        $dmbswalker = new devdmbootstrap_enhanced_nav_walker();
+                    } else {
+                        $dmbswalker = new devdmbootstrap_nav_walker();
+                    }
+     
+ /*
+                    wp_nav_menu( array(
+                            'theme_location'    => 'main_menu',
+                            'depth'             => 2,
+                            'container'         => '',
+                            'container_class'   => '',
+                            'menu_class'        => 'dmbs-header-nav navbar-nav mr-auto',
+                            'walker'            => $dmbswalker,
+                            'item_sep' => '&middot;'
+                            )
+                    );
+  */
+                    ?>
+                    <div class="menu-left">
+
+                    <ul class="nav navbar-nav  ul-equally-divide">
+                        <li class="nav-item active smsc_menu_left one-quarter home menu-home-center ">
+                            <a class="nav-link" href="<?php echo get_home_url(); ?>">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown smsc_menu_left one-quarter programs">
+                            <a class="nav-link dropdown-toggle" href="#"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="nav-text-break">Meditation</span><span >Programs</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('beginner') ) ); ?>">Beginner</a>
+                            <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('intermediate') ) ); ?>">Intermediate</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('residential') ) ); ?>">Residential Retreat</a>
+                            <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('annual') ) ); ?>">Annual Retreat</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown smsc_menu_left one-quarter smsc">
+                            <a class="nav-link dropdown-toggle" href="#"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="nav-text-break nav-text-break-center">SMSC</span>
+                            <span > Community</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('upcomingevents') ) ); ?>">Upcoming Events</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('gallery') ) ); ?>">Photo Gallery</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('volunteer') ) ); ?>">Volunteers</a>
+                             
+                            </div>
+                        </li>
+
  
 
-<style>
-
-.topnav {
-  overflow: hidden;
-  background-color:  #932a0c;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
- 
-
-.topnav .icon {
-  display: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 17px;    
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:  #932a0c;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-
-.dropdown-content a:hover {
-  background-color: #C8C8C8;
-  color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-</style>
- 
-<div class="topnav" id="myTopnav">
-  <a class="active" href="<?php echo get_home_url(); ?>">Home <span class="sr-only">(current)</span></a>
-  <div class="dropdown">
-    <button class="dropbtn">Meditation Programs 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('beginner') ) ); ?>">Beginner</a>
-        <div class="dropdown-divider" ></div>
-        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('intermediate') ) ); ?>">Intermediate</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('dayretreat') ) ); ?>">Day Retreat</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('monthlyretreat') ) ); ?>">Monthly Retreat</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('annualretreat') ) ); ?>">Annual Retreat</a> 
-    </div>                          
-</div>
                         
-<div class="dropdown">
-    <button class="dropbtn"> SMSC Community 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('upcomingevents') ) ); ?>">Upcoming Events</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('gallery') ) ); ?>">Photo Gallery</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('volunteer') ) ); ?>">Volunteers</a>                  
-    </div>
-  </div> 
-  <a href="#img">
-  <img class="smsc_logo_img" src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" alt="Logo">
-  </a>
-  <div class="dropdown">
-    <button class="dropbtn"> About 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-    <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('aboutsmsc') ) ); ?>">About SMSC</a>
+                    </ul>
+
+                   </div>
+                <a class="menu-center" href="<?php echo esc_url( home_url( '/' ) ); ?>"> 
+                    <div><img class="smsc_logo_img"
+                    src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" 
+                    alt="Logo">
+                    </div>
+                </a>
+
+                    <div class="menu-right">
+                    <ul class="nav navbar-nav navbar-right ul-equally-divide">
+
+                    <li class="nav-item dropdown smsc_menu_right one-quarter about">
+                        <a class="nav-link dropdown-toggle" href="#"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('aboutsmsc') ) ); ?>">About SMSC</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('teacher') ) ); ?>">The Teachers</a>
                         <div class="dropdown-divider"></div>
@@ -152,30 +103,26 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('pastactivities') ) ); ?>">Past Activities</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('contactus') ) ); ?>">Contact SMSC</a>                
-    </div>
-  </div> 
+                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('contactus') ) ); ?>">Contact SMSC</a>
+                        </div>
+                    </li>
+                    <li class="nav-item smsc_menu_right one-quarter library">
+                        <a class="nav-link" href="<?php echo get_site_url(); ?>/library/">Library</a>
+                    </li>
+                    <li class="one-quarter donation">
+                        <a href="<?php echo get_site_url(); ?>/donation">
+                        <button class="btn navbar-btn button-donation smsc_margin">Donation</button>
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
 
- 
+            </nav>
+        </div>
 
-  <a href="<?php echo get_site_url(); ?>/library/">Library</a>
-
-  <a href="#donation"><button class="btn navbar-btn button-donation smsc_margin" >Donation</button></a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
-
- 
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
- 
 
 jQuery(document).ready(function () {
 
@@ -202,6 +149,7 @@ jQuery(document).ready(function () {
 
 
 
+    </div>
 
 <?php /* endif; */?>
  
