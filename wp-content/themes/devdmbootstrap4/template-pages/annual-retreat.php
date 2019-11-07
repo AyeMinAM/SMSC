@@ -167,7 +167,7 @@ Template Name: Annual Retreat Page
             </div>
         </div>
         <div class="col-sm-4 text-center">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/smsc-proverb.jpg">
+          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/smsc-proverb-04.jpg">
         </div>
     </div>
     <div class="row" style="margin-top:20px;">

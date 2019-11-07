@@ -884,7 +884,6 @@ h1.smsc-header{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url('images/classes-beginner.jpg');
 }
 
 .smsc_beginner_saffu_img
@@ -1098,7 +1097,15 @@ padding: 2rem 0;
     font-size: 1rem;
 }
 
-
+/*forms*/
+.card-smsc-forms{
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.17);
+  border:none;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  margin:1rem auto;
+  width: 100%;
+}
 
 /*FOOTER*/
 footer{

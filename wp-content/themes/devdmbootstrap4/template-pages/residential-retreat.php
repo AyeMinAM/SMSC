@@ -6,7 +6,7 @@ Template Name: Residential Page
 <?php get_template_part('template-parts/head'); ?>
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container-fluid" style="background-color: orange;">
+<div class="container-fluid">
     <div class="row">
          <div class="lazy col-sm-12 smsc_beginner_img" data-src="<?php echo get_template_directory_uri(); ?>/images/residential-retreat.jpg">
             <div class="text-center header-class-title-height">
@@ -167,7 +167,7 @@ Template Name: Residential Page
             </div>
         </div>
         <div class="col-sm-4 text-center">
-          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/smsc-proverb.jpg">
+          <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/smsc-proverb-03.jpg">
         </div>
     </div>
     <div class="row" style="margin-top:20px;">

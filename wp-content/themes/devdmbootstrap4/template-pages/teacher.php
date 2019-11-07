@@ -17,7 +17,7 @@ Template Name: The Teachers Page
         </div>
   <div class="row">  
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <div class="teacher-img smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/bio-chanmyay-sayadaw.jpg">
+            <div class="teacher-img smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/sayardaw.jpg">
             </div>
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">

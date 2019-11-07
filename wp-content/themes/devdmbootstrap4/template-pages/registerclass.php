@@ -11,12 +11,19 @@ Template Name: Register Class Page
 
 <div class="container">
 
-    <div class="smsc-header-container">
-              <h1 class="smsc-header">Register</h1>
-              <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
-    </div>   
+ 
 
-    <form id="registerSimple" method="post"  class="form-horizontal" action="" > 
+    <div class="row" style="margin-top:20px;" >
+         <div class="col-sm-12 text-center">
+                    <span class = "label label_prg_events_title">
+                    Register</span>
+          </div>
+    
+    </div>
+
+    <form id="registerSimple" method="post"  class="form-horizontal" action="" >
+
+ 
     <div class="row" style="margin-top:20px;">  
         <div class="col-sm-12">
         <div class="row">
@@ -65,8 +72,12 @@ Template Name: Register Class Page
           </div>
     </div>
   
-    </form>  
-</div><!--end of container-->
+    </form>
+
+   
+
+       
+</div>
 
 <div id="dialog" title="Info">
         <div class="progress-label">Loading...</div>
@@ -122,7 +133,7 @@ Template Name: Register Class Page
                     $( "<div title='Alert'>There is error in your submission. Please try to submit again or contact with Administrator</div>" ).dialog({
                     modal: true,
                     height: 200,
-			        width: 600,
+                    width: 600,
                     open: function( event, ui ) {
                             //center the dialog within the viewport (i.e. visible area of the screen)
                         var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
@@ -146,7 +157,7 @@ Template Name: Register Class Page
                     $( "<div title='Alert'>You have submitted successfully!</div>" ).dialog({
                     modal: true,
                     height: 200,
-			        width: 600,
+                    width: 600,
                     open: function( event, ui ) {
                             //center the dialog within the viewport (i.e. visible area of the screen)
                         var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
@@ -170,51 +181,51 @@ Template Name: Register Class Page
            
              return false; // required to block normal submit since you used ajax
          },
-				rules: {
-					inputfirstname: "required",inputlastname: "required",
-					inputemail: {
-						required: true,
-						email: true
+                rules: {
+                    inputfirstname: "required",inputlastname: "required",
+                    inputemail: {
+                        required: true,
+                        email: true
                     },
                     inputphone:{
-						required: true,
-						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
+                        required: true,
+                        regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
                     },
                     select_program:"required",
                     inputmessage:"required" 
-				},
-				messages: {
-					inputfullname: "Please enter your name",
+                },
+                messages: {
+                    inputfullname: "Please enter your name",
                     inputmessage: "Please enter your message",
                     select_program:  "Please select a program",
-					inputemail: "Please enter a valid email address",
-				},
-				errorElement: "em",
-				errorPlacement: function ( error, element ) {
+                    inputemail: "Please enter a valid email address",
+                },
+                errorElement: "em",
+                errorPlacement: function ( error, element ) {
                     // Add the `help-block` class to the error element
- 					error.addClass( "help-block" );
+                    error.addClass( "help-block" );
 
-					// Add `has-feedback` class to the parent div.form-group
-					// in order to add icons to inputs
+                    // Add `has-feedback` class to the parent div.form-group
+                    // in order to add icons to inputs
  
-					if ( element.prop( "type" ) === "checkbox" ) {
-						error.insertAfter( element.parent( "label" ) );
-					} else {
-						error.insertAfter( element );
-					}
+                    if ( element.prop( "type" ) === "checkbox" ) {
+                        error.insertAfter( element.parent( "label" ) );
+                    } else {
+                        error.insertAfter( element );
+                    }
 
-					 
-				},
-				success: function ( label, element ) {
-					 
-				},
-				highlight: function ( element, errorClass, validClass ) {
-					$( element ).addClass( "is-invalid" )
-				},
-				unhighlight: function ( element, errorClass, validClass ) {
-					$( element ).removeClass( "is-invalid" );
- 				}
-			} );
+                     
+                },
+                success: function ( label, element ) {
+                     
+                },
+                highlight: function ( element, errorClass, validClass ) {
+                    $( element ).addClass( "is-invalid" )
+                },
+                unhighlight: function ( element, errorClass, validClass ) {
+                    $( element ).removeClass( "is-invalid" );
+                }
+            } );
 
 
 

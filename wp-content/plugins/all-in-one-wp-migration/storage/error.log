@@ -1,51 +1,51 @@
-Oct 18 2019 02:54:13
+Oct 19 2019 05:49:46
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:13
+Oct 19 2019 05:49:47
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:13
+Oct 19 2019 05:49:47
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:13
+Oct 19 2019 05:49:47
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:13
+Oct 19 2019 05:49:47
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:14
+Oct 19 2019 05:49:48
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:16
+Oct 19 2019 05:49:50
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:19
+Oct 19 2019 05:49:54
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:24
+Oct 19 2019 05:49:57
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:24
+Oct 19 2019 05:49:58
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:27
+Oct 19 2019 05:50:00
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:28
+Oct 19 2019 05:50:02
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:28
+Oct 19 2019 05:50:03
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:28
+Oct 19 2019 05:50:03
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:29
+Oct 19 2019 05:50:03
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:29
+Oct 19 2019 05:50:04
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
-Oct 18 2019 02:54:32
+Oct 19 2019 05:50:04
 {"type":1024,"message":"wp_enqueue_script was called <strong>incorrectly<\/strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts<\/code>, <code>admin_enqueue_scripts<\/code>, or <code>login_enqueue_scripts<\/code> hooks. Please see <a href=\"https:\/\/codex.wordpress.org\/Debugging_in_WordPress\">Debugging in WordPress<\/a> for more information. (This message was added in version 3.3.0.)","file":"\/Applications\/MAMP\/htdocs\/SMSC\/wp-includes\/functions.php","line":4161}
 
