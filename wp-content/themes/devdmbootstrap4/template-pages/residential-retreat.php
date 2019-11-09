@@ -14,7 +14,7 @@ Template Name: Residential Page
                       Residential Retreat
                       </span>
                       <div style="margin-top:2rem;"> 
-                        <a href="<?php echo esc_url( get_permalink( get_page_by_title('registerclass') ) ); ?>" class="btn btn-lg btn-register">
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_title('register_retreat') ) ); ?>" class="btn btn-lg btn-register">
                           Register</a>
                       </div>
             </div>
