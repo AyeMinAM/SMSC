@@ -26,7 +26,7 @@
                         <div class="footer-right">
                             <div>Made with love, Dāna  &amp; Mettā by</div>
                             <div>Sumi Kim, Min Min Thein,</div>
-                            <div>Pengfei Shen &amp; AyeMin</div>
+                            <div>P. Shen &amp; AyeMin</div>
                         </div>
                     </div>
 

@@ -88,7 +88,8 @@
                 <div class="col-md-6 vertical-center">
                   <div class="card-block">
                     <h4 class="card-title">Classes</h4>
-                    <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+                    <p class="card-text">The SMSC operates on a year-round basis.  We offer weekly Mindfulness-Insight Course for Beginners and Intermediate Meditation classes.  Beginner classes are offered 4 times a year.  The Intermediate classes are year-round, weekly on Tuesday evenings.</p>
+                    <p>All classes are offered free of charge, but donations are always appreciated. As we are a registered charitable organization, all donors will be issued receipts for income tax purposes.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/classes/" class="btn btn-lg btn-outline">
                     Find out more</a> 
@@ -116,7 +117,8 @@
                 <div class="col-md-6 vertical-center order-md-1 ">
                   <div class="card-block-odd-card">
                     <h4 class="card-title">Retreats</h4>
-                    <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+                    <p class="card-text">Residential Retreats are offered 8 times a year, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Center in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for email notifications.</p>
+                    <p>Annual Retreats are usually held in summer of each year for 9 to 17 days, at Chanmyay Yeiktha Retreat Center in Hope, BC. Pre-registration and acceptance is required due to limited space.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/retreats/" class="btn btn-lg btn-outline">
                     Find out more</a> 
@@ -142,10 +144,10 @@
                   <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/events.jpg">
                   </div>
                 </div>
-                <div class="col-md-6 vertical-center">
-                  <div class="card-block">
+                <div class="col-md-6">
+                  <div class="card-block-events">
                     <h4 class="card-title">Events</h4>
-                    <p class="card-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+                    <p class="card-text">Special events are announced on the "Upcoming Events" page under SMSC Community.  If you wish to be notified by email, you are welcome to join our email list by sending us an email to enroll.  </p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/upcomingevents/" class="btn btn-lg btn-outline">
                     Find out more</a> 

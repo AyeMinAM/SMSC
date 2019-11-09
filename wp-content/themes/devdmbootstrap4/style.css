@@ -703,7 +703,7 @@ h1.smsc-header{
 }
 .card-img-bottom {
   color: #fff;
-  height: 21rem;
+  height: 22rem;
   background-size: cover;
   background-position: center;
   border-radius: .5rem 0.5rem 0 0;
@@ -725,14 +725,14 @@ h1.smsc-header{
 
 @media (min-width: 768px) and (max-width: 991px) { 
  .card-img-bottom{
-  height:26rem;
+  height:30rem;
   border-radius: .5rem 0 0 0.5rem;
  }
 }
 
 .card-img-bottom-odd-card {
   color: #fff;
-  height: 21rem;
+  height: 22rem;
   background-size: cover;
   background-position: center;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -746,7 +746,7 @@ h1.smsc-header{
 
 @media (min-width: 768px) and (max-width: 991px) { 
  .card-img-bottom-odd-card{
-  height:26rem;
+  height:30rem;
   border-radius: 0 .5rem 0.5rem 0;
  }
 }
@@ -755,6 +755,9 @@ h1.smsc-header{
   padding:1rem;
 }
 
+.card-block-events{
+  padding:2rem 1rem;
+}
 .card-block-odd-card{
   padding: 1rem 1rem 1rem 1rem;
 }
