@@ -224,12 +224,6 @@ height: 22px;
   right: 20px;
 }
 
-
-
- 
-
-
-
 .home{
   text-align: left;
 }
@@ -594,6 +588,9 @@ h1.smsc_header_title a:hover{
   }
 }
 
+.justify{
+  text-align: justify;
+}
 /*HERO HEADER*/
 .smsc_header_img {
     height: 400px;
@@ -699,7 +696,6 @@ h1.smsc-header{
 .card-o-programs-text{
   height:10.5rem;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .card-img-bottom {
   color: #fff;
