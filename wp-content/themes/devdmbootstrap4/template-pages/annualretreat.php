@@ -1,7 +1,7 @@
 <?php get_header(); 
 
 /*
-Template Name: Annual Retreat Page
+Template Name: Annual Retreat2 Page
 */
 ?>
  

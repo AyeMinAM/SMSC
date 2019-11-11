@@ -29,7 +29,7 @@ Template Name: Ajax register
   <!-- Tittle -->
     <div class="tittle">
       <h2>Online Application Form for the Residentail Meditation Retreat</h2>
-      <p>Download the form  <a href="http://example.com/files/myfile.pdf" target="_blank">here</a>   if you want to fill out on paper</p>
+      <p>Download the form  <a href="http://localhost/SMSC/wp-content/uploads/pdf/Lecture8_student_complete.pdf" target="_blank">here</a>   if you want to fill out on paper</p>
     </div>
     
     <div class="col-sm-12">
@@ -945,7 +945,7 @@ Template Name: Ajax register
                     }
                 }
             });
-            alert(form.valid())
+
             if (form.valid() == true){
 
                   //activate next step on progressbar using the index of next_fs
