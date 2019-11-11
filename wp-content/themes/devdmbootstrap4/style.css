@@ -1183,3 +1183,22 @@ footer .align-top{
   width: 100% !important;
 }
 }
+
+.box {
+  float:left;
+  width:25%;
+}
+
+
+.btnDiv {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.error
+{
+color:red !important;
+font-family:verdana, Helvetica;
+}
