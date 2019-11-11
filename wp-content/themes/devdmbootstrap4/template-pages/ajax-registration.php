@@ -29,7 +29,7 @@ Template Name: Ajax register
   <!-- Tittle -->
     <div class="tittle">
       <h2>Online Application Form for the Residentail Meditation Retreat</h2>
-      <p>Download the form  <a href="http://example.com/files/myfile.pdf" target="_blank">here</a>   if you want to fill out on paper</p>
+      <p>Download the form  <a href="http://localhost/SMSC/wp-content/uploads/pdf/Lecture8_student_complete.pdf" target="_blank">here</a>   if you want to fill out on paper</p>
     </div>
     
     <div class="col-sm-12">
@@ -45,7 +45,9 @@ Template Name: Ajax register
     </div>
     
     <!-- fieldsets -->
-    <fieldset>
+<div id="container">
+
+    <fieldset class="box">
     <h3>1. Personal Information</h3>
 
       <div class="form-row"> 
@@ -61,15 +63,19 @@ Template Name: Ajax register
         <div class="form-group col-md-1">
             Gender  
         </div>  
-        <div class="form-group col-md-10">
+         <div class="form-group col-md-10">
+          
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="rdo_male" id="rdo_male" value="Male">
+                <input class="form-check-input" type="radio" name="rdo_gender" id="rdo_male" value="Male">
                 <label class="form-check-label" >Male</label>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="rdo_female" id="rdo_female" value="Female">
-                <label class="form-check-label" >Female</label>
+            <div id="div_female_label" class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rdo_gender" id="rdo_female" value="Female">
+                <label  class="form-check-label" >Female</label>
             </div>
+            
+
+
         </div>  
       </div> 
 
@@ -146,13 +152,39 @@ Template Name: Ajax register
         </div> 
              </div> 
         </div> 
+        <button type="button" class="next action-button">Continue</button> 
 
-       <button type="button" class="next action-button">Continue</button>  
+        <div class="text-center btnDiv">
+         </div> 
     </fieldset>
-    <fieldset>
-    <h3>1. Additional Information</h3>
+    <fieldset class="box">
+    <h3>2. Additional Information</h3>
 
+    <div class="form-row"> 
+        <div class="form-group col-md-12">
+            Request retreat period  
+        </div> 
+    </div> 
+
+
+
+    <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control"   id="inputStart" name="inputRetreatFrom" placeholder="From"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="text" class="form-control" id="inputEnd" name="inputRetreatTo" placeholder="To">
+        </div> 
+      </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-12">
+        Emergency Contact  
+        </div> 
+      </div> 
 <div class="form-row"> 
+
+
   <div class="form-group col-md-6">  
   <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
   </div>  
@@ -162,18 +194,8 @@ Template Name: Ajax register
 </div> 
 
 <div class="form-row"> 
-  <div class="form-group col-md-1">
-      Gender  
-  </div>  
-  <div class="form-group col-md-10">
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="rdo_male" id="rdo_male" value="Male">
-          <label class="form-check-label" >Male</label>
-      </div>
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="rdo_female" id="rdo_female" value="Female">
-          <label class="form-check-label" >Female</label>
-      </div>
+  <div class="form-group col-md-12">  
+  <input type="text" class="form-control"   id="inputrelationship" name="inputrelationship" placeholder="Relationship to you">
   </div>  
 </div> 
 
@@ -217,486 +239,308 @@ Template Name: Ajax register
   <input type="email" class="form-control" id="inputemail" name="inputemail" placeholder="Email">
   </div> 
 </div> 
-
-<div class="form-row"> 
-  <div class="form-group col-md-6">  
-  <input type="text" class="form-control"   id="input_occupation" name="input_occupation" placeholder="Occupation"> 
-  </div>  
-  <div class="form-group col-md-6"> 
-  <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date of Birth">
-  </div> 
-</div> 
-
-  <div class="form-group col-md-12">
-      Please provide one of the identification documents. <br>
-      (Driver license for Canadians and valid passport page with photo on it for oversea yogis.)  
-  </div>  
-  <div class="form-row"> 
-      <div class="form-group col-md-6">  
-          <input type="text" class="form-control"   id="input_driver_no" name="input_driver_no" placeholder="Canadian Driver License No."> 
-      </div>  
-      <div class="form-group col-md-6"> 
-          <input type="text" class="form-control" id="input_passport" name="input_passport" placeholder="Passport No.">
-      </div> 
-  </div> 
-  <div class="form-row"> 
-      <div class="form-group col-md-6">  
-          <input type="text" class="form-control"   id="input_date_issue" name="input_date_issue" placeholder="Date of Issue"> 
-      </div>  
-      <div class="form-group col-md-6"> 
-      <div class="custom-file">
-    <input type="file" class="custom-file-input" id="upload">
-    <label class="custom-file-label" for="upload">Upload Government issued photo ID</label>
-  </div> 
-       </div> 
-  </div> 
-
+  
  
       <button type="button" class="action-button previous previous_button">Back</button> 
       <button type="button" class="next action-button">Continue</button>  
 
     </fieldset>  
-    <fieldset>
+    <fieldset class="box">
+    <div class="form-row"> 
+    <div class="form-group col-md-12">
+      Most recent meditation retreats attend (Theravada and non-Theravada), up to 5 retreats.   
+    </div> 
+</div> 
+
+    <div id="jsGrid"></div>   
+
+
     <button type="button" class="action-button previous previous previous_button">Back</button> 
     <button type="button" class="next action-button">Continue</button>  
 
     </fieldset>  
-    <fieldset>
-    <button type="button" class="action-button previous previous previous previous_button">Back</button> 
+    <fieldset class="box">
+    <h3>3. Meal and Medical Information</h3>
 
-    <a href="#" class="action-button">Finish</a> 
+    <div class="form-row"> 
+    <div class="form-group col-md-12">
+      Please answer a few more questions about meals and medical insurance so that we can provide you best based on your needs. 
+      All fields are mandatory
+    </div> 
+    </div> 
+<div class="form-row"> 
+  <div class="form-group col-md-2">
+      Are you Vegetarian?  
+  </div>  
+   <div class="form-group col-md-8">
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio_gender" id="rdo_male" value="Male">
+          <label class="form-check-label" >Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio_gender" id="rdo_female" value="Female">
+          <label    class="form-check-label" >No</label>
+      </div>
+  </div>  
+</div> 
+
+<div class="form-row"> 
+        <div class="form-group col-md-12">
+        Food Allergy (Please indicate.)  
+        </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-12">  
+   
+  <textarea class="form-control rounded-0" id="txtfood_allergy" name="txtfood_allergy" rows="3"></textarea>
+
+  </div>  
+ 
+</div> 
+
+<div class="form-row"> 
+    <div class="form-group col-md-12">
+      Do you have BC medical or Travel insurance? (for out-of-country yogis only). 
+    </div> 
+</div> 
+
+<div class="form-row"> 
+ 
+   <div class="form-group col-md-10">
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
+          <label class="form-check-label" >Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
+          <label class="form-check-label" >No</label>
+      </div>
+  </div>  
+</div> 
+
+
+<div class="form-row"> 
+        <div class="form-group col-md-12">
+        Do you have other medical insurance? Please specify.
+        </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-12">  
+   
+  <textarea class="form-control rounded-0" id="txt_other_insurance" name="txt_other_insurance" rows="3"></textarea>
+
+  </div>  
+ 
+</div> 
+
+
+<div class="form-row"> 
+    <div class="form-group col-md-12">
+      Do you have any physical or mental health issue SMSC should be made aware?. 
+    </div> 
+</div> 
+
+<div class="form-row"> 
+ 
+   <div class="form-group col-md-10">
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
+          <label class="form-check-label" >Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
+          <label class="form-check-label" >No</label>
+      </div>
+  </div>  
+</div> 
+
+
+<div class="form-row"> 
+        <div class="form-group col-md-12">
+        If yes, please specify
+        </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-12">  
+   
+  <textarea class="form-control rounded-0" id="txt_other_insurance" name="txt_other_insurance" rows="3"></textarea>
+
+  </div>  
+ 
+</div> 
+
+ 
+    <button type="button" class="action-button previous previous previous_button">Back</button> 
+    <button type="button" class="next action-button">Continue</button>  
 
     </fieldset>  
+    <fieldset  class="box">
+
+    <h3>4. Policy and agreement</h3>
+
+    <div class="form-row"> 
+        <div class="form-group col-md-12">
+            Please read this carefully before you submit this form online.  
+        </div> 
+    </div> 
+
+
+
+    <div class="form-row"> 
+        <div class="form-group col-md-12">
+                <p class="text-justify">I, THE UNDERSIGNED WAIVE AND ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF
+                AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREAT I WILL BE ATTENDING AT SMSC.     
+                </p> 
+        </div> 
+    </div> 
+      
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+            1.  
+        </div>  
+         <div class="form-group col-md-10">
+            I agree to abide to the following rules and structure : 
+        </div>  
+    </div> 
+
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Practice Mindfulness-Insight (Mahasi Tradition) only 
+        </div>  
+    </div>
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Strictly adhere to Nine Precepts
+        </div>  
+    </div>
+
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Maintain Noble Silence
+        </div>  
+    </div>
+
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Slow down all actions and behavior at all time 
+        </div>  
+    </div>
+
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Follow retreat schedule  
+        </div>  
+    </div>
+
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Anyone who becomes a disturbance to the retreat will be asked to leave  
+        </div>  
+    </div>
+    
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           2.  
+        </div>  
+         <div class="form-group col-md-10">
+            I am aware that I may be photographed or videotaped at retreat for sharing among SMSC 
+            participants, yogis and SMSC Dhamma friends. 
+        </div>  
+    </div> 
+
+
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           3.  
+        </div>  
+         <div class="form-group col-md-10">
+           This form will be kept on the SMSC file for future retreats you may 
+        attend. However, it will be deleted after current retreat upon request. 
+        Please keep your information up-to-date as you attend retreats. 
+        </div>  
+    </div> 
+
+    <div class="form-row"> 
+        <div class="form-group col-md-12">
+        Keep my personal information on the SMSC file.   
+
+        </div> 
+    </div> 
+ 
+      <div class="form-row"> 
+         <div class="form-group col-md-10">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
+                <label class="form-check-label" >Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
+                <label class="form-check-label" >No</label>
+            </div>
+        </div>  
+      </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-12">
+            I agree that by submitting this application, I am   
+            electronically signing this application. 
+        </div> 
+    </div> 
+
+
+
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
+        </div> 
+      </div> 
+
+
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date">
+        </div> 
+      </div> 
+
+
+
+
+    <button type="button" class="action-button previous previous previous previous_button">Back</button> 
+
+    <button href="#" class="action-button">Submit</button> 
+
+    </fieldset>  
+</div>
 
   </form>  
 </section> 
 <!-- End Multi step form -->   
 </div>
-
  
-    <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-                    <span class = "label label_prg_events_title">
-                    Application Form for the Meditation Retreat, SMSC</span>
-          </div>
-    
-    </div>
-    
-    <div class="row" style="margin-top:20px;" >
-
-        <div class="col-sm-13">
-        
-        <p class="text-justify">
-        
-        It is essential to have previous experience in Mahasi Meditation Method and to strictly adhere to the 9 precepts and retreat schedule.  Signed application needs to be received before coming to the center.  Final-acceptance by SMSC required.          </p>
-    
-            
-        <p class="text-justify">
-
-        I, THE UNDERSIGNED WAIVE ANY AND ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREAT I WILL BE ATTENDING AT SMSC.   I have read the rules and structure of SMSC retreat and agree to follow. I am aware that I may be photographed or videotaped only for the purpose of sharing the merit of SMSC retreat participants.        </div>
-    </div>
-    
-    
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-12 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
-        </div>
-    </div>
-
-    <div class="row" style="margin-top:20px;">
-                    <div class="col-sm-13">
-                             <span class = "label label_prg_events_title">
-                             MEDITATION RETREATS ATTENDED (THERAVADA AND NON THERAVADA):</span>
-                    </div> 
-    </div>
-
-    <div class="row" style="margin-top:20px;"> </div>
-
- 
-   
-    
-<<<<<<< HEAD
-    <!-- <form id="registerForm" method="post"  class="form-horizontal" action="" > -->
-=======
-    <form id="registerForm" method="post"  class="form-horizontal" action="" >
->>>>>>> f6117e66978393e502370689ada8e961ca8e4d60
- 
-    <div id="jsGrid"></div>   
-
-
-    <fieldset>
-
-        <div class="row" style="margin-top:20px;" >
-            <div class="col-sm-12 text-center">
-                        <span class = "label label_prg_events_title">
-                        Personal Information Form</span>
-            </div>
-        </div>
-    
-
- 								 
- 
-
-        <div class="row" style="margin-top:20px;">
-    
-            <label class="col-sm-3 control-label" for="inputfirstname">
-                FIRST NAME:
-                
-
-            </label>
-        
-            <div class="col-sm-8 text-center">
-                <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="Jane">
-            </div>  
-                        
-        </div>  
-    
-        <div class="row" style="margin-top:20px;">
-        
-            <label class="col-sm-3 control-label" for="inputlastname">
-            LAST NAME:
-                
-
-            </label>
-        
-
-            <div class="col-sm-8 text-center">
-            </div>  
-        </div> 
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">FULL ADDRESS:
-                </p>
-
-            </div>
-            <div class="col-sm-8 text-center">
-            <textarea class="form-control rounded-0" id="txtaddress" name="txtaddress" rows="3"></textarea>
-
-    
-            </div>  
-        </div> 
-
-
-
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">PHONE:
-                </p>
-
-            </div>
-            <div class="col-sm-8 text-center">
-            <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="inputtelnumber" name="inputtelnumber">
-
-    
-            </div>  
-        </div> 
-
-    
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">EMAIL:
-                </p>
-
-            </div>
-            <div class="col-sm-8 text-center">
-            <input class="form-control" type="email" placeholder="bootstrap@example.com" id="inputemail" name="inputemail">
-
-            </div>  
-        </div> 
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">DATES OF RETREAT:
-                </p>
-
-            </div>
-            <div class="col-sm-4">
-            FROM:<input type="text" class="form-control" id="inputStart" name="inputStart" >
-
-            </div>
-    
-            <div class="col-sm-4">
-            TO:<input   type="text" class="form-control" id="inputEnd" name="inputEnd">
-
-            </div>
-        </div> 
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-8">
-                <p class="text-justify">DATE OF BIRTH & ID (Canadian Drivers Licence; Passport Number and Country)
-                </p>
-
-            </div>
-            
-        </div> 
-
-        <div class="row" style="margin-top:-5px;">
-            <div class="col-sm-3">
-            
-            </div>
-            <div class="col-sm-4">
-            <input type="text" class="form-control" id="inputDOB" name="inputDOB">
-
-            </div>
-    
-            <div class="col-sm-4">
-            <input type="text" class="form-control" id="inputId" name="inputId">
-
-            </div>
-        </div> 
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">OCCUPATION:
-                </p>
-
-            </div>
-            <div class="col-sm-8 text-center">
-                <input type="text" class="form-control" id="inputOccupation" name="inputOccupation">
-            </div>  
-        </div> 
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">ARE YOU VEGETARIAN?
-                </p>
-
-            </div>
-            <div class="col-sm-8">
-                <select  style="width: 400px" id="select_veget" name="select_veget">
-                    <option value="">select</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                </select>        
-
-            </div>  
-        </div> 
- 
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                FOOD ALLERGY (Please indicate):
-                
-
-            </div>
-            <div class="col-sm-8 text-center">
-            
-        
-            <textarea class="form-control rounded-0" id="txtfood_allergy" name="txtfood_allergy" rows="3"></textarea>
-
-            </div>  
-        </div> 
-
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-8">
-                <p class="text-justify">FULL NAME AND RELATIONTHIP OF EMERGENCY CONTACT:
-                </p>
-
-            </div>
-    
-        </div> 
- 
-
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                    NAME
-            </div>
-    
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputeme_name" name="inputeme_name" >
-            </div>
-
-
-        </div> 
-
-    
-         
-
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">FULL ADDRESS:
-                </p>
-
-            </div>
-            <div class="col-sm-8 text-center">
-                <textarea class="form-control rounded-0" id="inputeme_address" name="inputeme_address" rows="3"></textarea>
-            </div>  
-        </div> 
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">PHONE:
-                </p>
-
-            </div>
-            <div class="col-sm-8 text-center">
-            <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="inputeme_telnumber" name="inputeme_telnumber">
-
-            </div>  
-        </div> 
-
-    
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-3">
-                <p class="text-justify">EMAIL:
-                </p>
-
-            </div>
-            <div class="col-sm-8 text-center">
-                <!-- <input class="form-control" type="email" placeholder="test@example.com" id="eme_email"> -->
-                <input class="form-control" type="email" placeholder="test@example.com" id="inputeme_email" name="inputeme_email">
-            </div>  
-        </div> 
-
-  
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-8">
-                <p class="text-justify">Do you have medical insurance of BC or traveling medical insurance for overseas yogis?    
-                </p>
-
-            </div>
-            
-        </div>
-
-        <div class="row" style="margin-top:-5px;">
-            <div class="col-sm-3">
-        
-            </div>
-            <div class="col-sm-8">
-                <select  style="width: 400px" id="select_minsurance" name="select_minsurance">
-                    <option value="">select</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                </select>        
-
-            </div>  
-        </div> 
-
-    
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-8">
-                <p class="text-justify">Do you have any other kind of medical insurance? Please specify.    
-                </p>
-
-            </div>
-            
-        </div>
-
-        <div class="row" style="margin-top:-5px;">
-            <div class="col-sm-3">
-        
-            </div>
-            <div class="col-sm-8 text-center">
-            
-            <textarea class="form-control rounded-0" id="txtother_minsurance" name="txtother_minsurance" rows="3"></textarea>
-
-            </div>  
-        </div> 
-
-
-    
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-8">
-                <p class="text-justify">Do you have any physical or mental health issues that the meditation centre should be aware of to ensure your health and safety and that of other yogis and instructors?   
-                </p>
-
-            </div>
-            
-        </div>
-
-        <div class="row" style="margin-top:-5px;">
-            <div class="col-sm-3">
-        
-            </div>
-            <div class="col-sm-8">
-                <select style="width: 400px" id="select_mental_issue" name="select_mental_issue">
-                    <option value="">select</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                </select>        
-            </div>  
-        </div> 
- 
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-8">
-                <p class="text-justify">If yes please describe briefly.    
-                </p>
-
-            </div>
-            
-        </div>
-
-        <div class="row" style="margin-top:-5px;">
-            <div class="col-sm-3">
-        
-            </div>
-            <div class="col-sm-8 text-center">
-            
-            <textarea class="form-control rounded-0" id="txtmental_issue" name="txtmental_issue" rows="3"></textarea>
-
-            </div>  
-        </div> 
-
-
-    
-
-        <div class="row" style="margin-top:20px;" >
-            <div class="col-sm-12 text-center">
-                        <span class = "label label_prg_events_title">
-                        ** PLEASE TAKE THIS FORM WITH YOU WHEN YOU LEAVE THE RETREAT CENTRE **</span>
-            </div>
-        </div>
-
-
-        <div class="row" style="margin-top:20px;" >
-            <div class="col-sm-12 text-center">
-                        <span class = "label label_prg_events_title">
-                        ** AND REUSE FOR NEXT RETREAT **</span>
-            </div>
-        </div>
-
-        <div class="row" style="margin-top:20px;" >
-            <div class="col-sm-12 text-center">
-                        <span class = "label label_prg_events_title">
-                        *** Alternatively with your permission this information is kept on file at SMSC for use in your future retreats. ****</span>
-            </div>
-        </div>
-
-
-        <div class="row" style="margin-top:20px;" >
-            <div class="col-sm-12 text-center">
-                  <input class="form-check-input" type="checkbox" value="" id="chk_agree" name='chk_agree' />
-                <label class="form-check-label label_prg_events_title" for="chk_agree" >
-                    Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                    You must agree before submitting.
-                </div>
-                <p>
-                <br>
-                <button class="btn btn-primary btn-lg" style="padding: 20px 80px;font-size:20px; border-radius: 10px;"  type="submit">Submit</button>
-
-            </div>
-        </div>
-    
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-12 text-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
-            </div>
-        </div>
-    </fieldset>
-<<<<<<< HEAD
-    <!-- </form> -->
-=======
-    </form>
->>>>>>> f6117e66978393e502370689ada8e961ca8e4d60
 </div>
 
 
@@ -706,7 +550,8 @@ Template Name: Ajax register
 </div>
  
 <style>
-      /* .ui-datepicker-calendar {
+
+/* .ui-datepicker-calendar {
         display: none;
     }   */
 
@@ -728,6 +573,17 @@ Template Name: Ajax register
  
     jQuery(document).ready(function () {
 
+
+
+    $(function () {
+            var H = 0;
+            $("div").each(function (i) {
+                var h = $(".box").eq(i).height();
+                if (h > H) H = h;
+            });
+            $(".box").height(H);
+            
+    });
  
         dialog = $( "#dialog" ).dialog({
         autoOpen: false,
@@ -772,9 +628,6 @@ Template Name: Ajax register
         itemTemplate: function(value) {
             return new Date(value).toDateString();
         },
- 
-       
-
         insertTemplate: function(value) {
             return this._insertPicker = $("<input>").datepicker(
                 { defaultDate: new Date() ,
@@ -1047,46 +900,63 @@ Template Name: Ajax register
         var animating; //flag to prevent quick multi-click glitches
 
         $(".next").click(function () {
-            if (animating) return false;
-            animating = true;
+           // if (animating) return false;
+            //animating = true;
 
             current_fs = $(this).parent();
             next_fs = $(this).parent().next();
 
-            //activate next step on progressbar using the index of next_fs
-            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+          
+            var form = $("#msform");
+            form.validate({
+                rules: {
+                    inputfirstname: "required",
+					inputlastname: "required",
+                    rdo_gender: "required" ,
+                    inputaddline1:"required",
+                    inputprovince:"required",
+                    inputcity:"required",
+                    inputphone: { required: true,
+                    regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/ },
+                    inputemail: {
+						required: true,
+						email: true
+					},
+                    inputDOB: {
+                        lessThanToday: new Date(),
+						required: true,
+						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+					},
+                },
+                messages: {
+                    inputfirstname: "Please enter your First Name",
+					inputlastname: "Please enter your Last Name",
+                    inputaddline1: "Please enter Address line 1",
+                    inputprovince:"Please enter Province/Territory",
+                    inputcity:"Please enter City",
+                    inputemail: "Please enter a valid email address",
 
-            //show the next fieldset
-            next_fs.show();
-            //hide the current fieldset with style
-            current_fs.animate({
-                opacity: 0
-            }, {
-                step: function (now, mx) {
-                    //as the opacity of current_fs reduces to 0 - stored in "now"
-                    //1. scale current_fs down to 80%
-                    scale = 1 - (1 - now) * 0.2;
-                    //2. bring next_fs from the right(50%)
-                    left = (now * 50) + "%";
-                    //3. increase opacity of next_fs to 1 as it moves in
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'transform': 'scale(' + scale + ')',
-                        'position': 'absolute'
-                    });
-                    next_fs.css({
-                        'left': left,
-                        'opacity': opacity
-                    });
-                },
-                duration: 800,
-                complete: function () {
-                    current_fs.hide();
-                    animating = false;
-                },
-                //this comes from the custom easing plugin
-                easing: 'easeInOutBack'
+                 } 
+                ,  errorPlacement: function(error, element) {
+                    if (element.attr("name") == "rdo_gender") {
+                    error.insertAfter("#div_female_label");
+                    } else {
+                    error.insertAfter(element);
+                    }
+                }
             });
+
+            if (form.valid() == true){
+
+                  //activate next step on progressbar using the index of next_fs
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                //show the next fieldset
+                next_fs.show();
+                current_fs.hide();
+ 
+            }
+ 
         });
 
         $(".previous").click(function () {
@@ -1139,8 +1009,8 @@ Template Name: Ajax register
     //* Add Phone no select
     function phoneNoselect(){
         if ( $('#msform').length ){   
-            $("#phone").intlTelInput(); 
-            $("#phone").intlTelInput("setNumber", "+880"); 
+          // $("#inputphone").intlTelInput(); 
+        //  $("#inputphone").intlTelInput("setNumber", "+880"); 
         };
     }; 
     //* Select js

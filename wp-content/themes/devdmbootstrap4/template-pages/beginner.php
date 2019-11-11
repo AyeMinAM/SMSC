@@ -125,6 +125,20 @@ Template Name: Beginner Page
                  <div class="col-sm-2"></div>
                  <div class="col">
                              <span class = "label label_schedule_title">
+                             Teacher
+                             </span></div>
+            </div>
+            <div class="row">
+                 <div class="col-sm-2"> </div>
+                    <div class="col">
+                             <span class = "label label_schedule_info">
+                             <?php echo get_post_meta( get_the_ID(), 'teacher', true ); ?></span>
+                    </div>
+            </div>
+            <div class="row programs-info-row">
+                 <div class="col-sm-2"></div>
+                 <div class="col">
+                             <span class = "label label_schedule_title">
                              Additional Info
                              </span></div>
             </div>  

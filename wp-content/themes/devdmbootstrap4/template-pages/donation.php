@@ -33,18 +33,30 @@ Template Name: donation Page
                     <!--  <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/pattern-quarter.png"> -->
                                 <div class="different-donation">
                                             <p>for general donation</p>
-                                            <a href="#" class="btn btn-donate-02">Donate</a>
-                                </div>
+                                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                                <input type="hidden" name="cmd" value="_s-xclick">
+                                                <input type="hidden" name="hosted_button_id" value="J9R72EW48K3ZG">
+                                                <input class="btn btn-donate-02" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                            </form>
+                                 </div>
 
                                 <div class="different-donation">
                                              <p>For the Project</p>
-                                            <a href="#" class="btn btn-donate-02">Donate</a>
+                                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                                <input type="hidden" name="cmd" value="_s-xclick">
+                                                <input type="hidden" name="hosted_button_id" value="233ZK6MB4K9ZU">
+                                                <input class="btn btn-donate-02" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">	
+                                            </form>
                                 </div>
 
                                 <div class="different-donation"> 
                                              <p>For Membership</p>
-                                            <a href="#" class="btn btn-donate-02">Donate</a>
-                                </div>
+                                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                                <input type="hidden" name="cmd" value="_s-xclick">
+                                                <input type="hidden" name="hosted_button_id" value="QE4U9RQLGFTYY">
+                                                <input class="btn btn-donate-02" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                            </form>
+                                    </div>
                 </div>
             
                 <div>
