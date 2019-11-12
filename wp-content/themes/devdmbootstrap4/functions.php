@@ -290,7 +290,7 @@ add_action('wp_ajax_registerSubmit', 'registerSubmit');
 add_action('wp_ajax_nopriv_sendEmail', 'sendEmail');
 add_action('wp_ajax_sendEmail', 'sendEmail');
 
-add_action('wp_ajax_nopriv_registerSimple', 'register_Simple');
+add_action('wp_ajax_nopriv_registerSimple', 'registerSimple');
 add_action('wp_ajax_registerSimple', 'registerSimple');
 
 
