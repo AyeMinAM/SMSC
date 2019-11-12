@@ -169,7 +169,8 @@ Template Name: Register Class Page
                     buttons: {
                         Ok: function() {
                             $( this ).dialog( "close" );
-                            window.location.href = "http://yellowbabykick.com/";
+                            //window.location.href = "http://yellowbabykick.com/";
+                            window.history.back(); 
 
                         }
                     }
