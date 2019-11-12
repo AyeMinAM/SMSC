@@ -202,7 +202,7 @@ Template Name: Beginner Page
                     <div class="vertical-center">
                       <div class="card-block">
                         <h4 class="card-title">Intermediate Class</h4>
-                        <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. (word counts here)</p>
+                        <p class="card-o-programs-text justify">Intermediate Weekly Class is 2-hour long, involving a 60-minute meditation time and a Dhamma talk (lecture about the practice with a Q and A period).  The Intermediate class is year-round, weekly on Tuesday evenings.</p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/intermediate" class="btn btn-lg btn-outline">
                         View details</a> 
@@ -221,7 +221,8 @@ Template Name: Beginner Page
                         <div class="vertical-center">
                           <div class="card-block">
                             <h4 class="card-title">Residential Reteat</h4>
-                            <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi.(word counts here)</p>
+                            <p class="card-o-programs-text justify">Residential Retreat are usually held once a month, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Center in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for e-mail notifications.
+</p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
                            View details</a> 
@@ -240,7 +241,7 @@ Template Name: Beginner Page
                        <div class="vertical-center">
                         <div class="card-block">
                           <h4 class="card-title">Annual Retreat</h4>
-                          <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. (word counts here) Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. (word counts here)</p>
+                          <p class="card-o-programs-text justify">Annual Retreat are usually held in summer of each year for 9 to 17 days, at Chanmyay Yeiktha Retreat Center in Hope, BC. Pre-registration and acceptance is required. Limited space.</p>
                           <div class="col text-center">
                           <a href="<?php echo get_site_url(); ?>/annual" class="btn btn-lg btn-outline">
                           View details</a> 

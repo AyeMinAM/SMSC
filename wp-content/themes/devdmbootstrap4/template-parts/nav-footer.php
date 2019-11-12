@@ -17,7 +17,7 @@
                         <img class="smsc_logo_footer"  src="<?php echo get_template_directory_uri(); ?>/images/logo-300x300.png" 
                          alt="Logo">
                         <div class="footer-middle-text">
-                        <div>Non- Profit Orginization Registeration No. S -53043</div>
+                        <div>Not-for-Profit Organization Registration No. S -53043</div>
                         <div>Copyright © Satipatthana Meditation Society of Canada</div>
                         </div>
                     </div>
