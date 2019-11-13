@@ -5,7 +5,7 @@
                      <?php esc_html_e('','devdmbootstrap4'); ?><i class="fas fa-bars"></i>
          </button>
          <span class="social-media-icons-top">
-             <a href="https://www.meetup.com/en-AU/Mindfulness-Insight-Vipassana/" target="_blank"><i class="fab fa-meetup"></i></a>
+             <!-- <a href="https://www.meetup.com/en-AU/Mindfulness-Insight-Vipassana/" target="_blank"><i class="fab fa-meetup"></i></a> -->
               <a href="https://www.facebook.com/people/Chanmyay-Yeikthabc/100006727365131" target="_blank"><i class="fab fa-facebook-square"></i></a>
               <a href="https://www.youtube.com/user/ChanmyayYeikthaBC" target="_blank"><i class="fab fa-youtube"></i></a>
          </span>

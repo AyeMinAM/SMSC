@@ -27,14 +27,9 @@ Template Name: Beginner Page
 </div>
 
 <div class="container">
-    <div class="row programs-info-table">
-        <div class="col-sm-6">
-            <?php
-                // Start the loop.
-            while ( have_posts() ) : the_post(); 
-            ?>
+    <div class="row programs-info-table justify-content-lg-center">
+        <div class="col-md-6 col-lg-5">
             <div class="row programs-info-row">
-                 <div class="col-sm-2"> </div>
                     <div class="col row-100">
                               <div class="row-10 row-align-v-middle">
                                 <i class = "icon icon ion-ios-calendar" style="font-size:25px;color:#932a0c;"></i>
@@ -46,7 +41,7 @@ Template Name: Beginner Page
                     </div>
             </div>
             <div class="row programs-info-row">
-                 <div class="col-sm-2"> </div>
+                 
                     <div class="col row-100">
                             <div class="row-10 row-align-v-middle">
                               <i class = "icon icon ion-ios-timer" style="font-size: 25px;color:#932a0c;"></i>
@@ -58,7 +53,7 @@ Template Name: Beginner Page
                     </div>
             </div>
             <div class="row programs-info-row">
-                 <div class="col-sm-2"> </div>
+              
                     <div class="col row-100">
                           <div class="row-10 row-align-v-middle">
                             <i class = "icon icon ion-card" style="font-size: 25px;color:#932a0c;"></i>
@@ -69,36 +64,11 @@ Template Name: Beginner Page
                           </div>
                     </div>
             </div>
-            <div class="row programs-info-row">
-                 <div class="col-sm-2"> </div>
-                 <div class="col">
-                             <span class = "label label_schedule_title">
-                             Prerequisite
-                             </span> 
-            </div>
-            </div>  
-            <div class="row ">
-                 <div class="col-sm-2"> </div>
-                    <div class="col">
-                             <span class = "label label_schedule_info">
-                             <?php echo get_post_meta( get_the_ID(), 'Prerequisite', true ); ?></span>
-                    </div>
-            </div>
-           
-            <?php           
-            endwhile;  
-            ?>
         </div>
 
-
-        <div class="col-sm-6">
-        <?php
-                // Start the loop.
-            while ( have_posts() ) : the_post(); 
-            ?>
-              
+        <div class="col-md-6 col-lg-5">        
             <div class="row programs-info-row">
-                 <div class="col-sm-2"></div>
+               
                     <div class="col row-100">
                        <div class="row-10 row-align-v-middle">
                             <i class = "icon icon ion-ios-stopwatch" style="font-size: 25px;color:#932a0c;"></i>
@@ -110,7 +80,7 @@ Template Name: Beginner Page
                     </div>
             </div>
             <div class="row programs-info-row">
-                 <div class="col-sm-2"></div>
+           
                     <div class="col row-100">
                         <div class="row-10 row-align-v-middle">
                              <i class="icon icon ion-ios-location" style="font-size: 25px;color:#932a0c;"></i>
@@ -121,41 +91,57 @@ Template Name: Beginner Page
                         </div>
                     </div>
             </div>
-            <div class="row programs-info-row">
-                 <div class="col-sm-2"></div>
-                 <div class="col">
-                             <span class = "label label_schedule_title">
-                             Teacher
-                             </span></div>
-            </div>
-            <div class="row">
-                 <div class="col-sm-2"> </div>
-                    <div class="col">
-                             <span class = "label label_schedule_info">
+
+             <div class="row programs-info-row">
+                 
+                    <div class="col row-100">
+                        <div class="row-10 row-align-v-middle">
+                             <img class="teacher-icon" src="<?php echo get_template_directory_uri(); ?>/images/teacher-icon.png">
+                        </div>
+                        <div class="row-90 row-align-v-middle">
+                             <span class="label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'teacher', true ); ?></span>
+                        </div>
                     </div>
             </div>
+        </div>
+    </div> <!--the end of header and customized option.-->
+
+    <div class="row programs-info-table-2 justify-content-lg-center">
+      <div class="col-md-6 col-lg-5">
             <div class="row programs-info-row">
-                 <div class="col-sm-2"></div>
+                
+                 <div class="col">
+                             <span class = "label label_schedule_title">
+                             Prerequisite
+                             </span> 
+                </div>
+            </div>  
+            <div class="row">
+                
+                    <div class="col">
+                             <span class = "label label_schedule_info">
+                             <?php echo get_post_meta( get_the_ID(), 'Prerequisite', true ); ?></span>
+                    </div>
+            </div>
+        </div><!--the end of sm-6-->
+        <div class="col-md-6 col-lg-5">
+              <div class="row programs-info-row">
+                
                  <div class="col">
                              <span class = "label label_schedule_title">
                              Additional Info
                              </span></div>
             </div>  
             <div class="row">
-                 <div class="col-sm-2"> </div>
+                
                     <div class="col">
                              <span class = "label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'Additional_Info', true ); ?></span>
                     </div>
             </div>
-            <?php           
-            endwhile;  
-            ?>
-         
-        </div>
-    </div> <!--the end of header and customized option.-->
-    
+        </div><!--the end of sm-6-->
+    </div>
     
     <div class="row" style="margin-top:20px;">
         <div class="col-sm-12 text-center">
@@ -163,10 +149,11 @@ Template Name: Beginner Page
         </div>
     </div>
 </div>
-
+ 
 <div class="container">
     <div class="row">  
-        <div class="col-sm-8 card-smsc-description">
+        <div class="col-md-8">
+          <div class="card-smsc-description">
           <h1 class = "smsc-header">Description</h1>
             <div class="row">
                     <div class="col">
@@ -180,8 +167,9 @@ Template Name: Beginner Page
                     </p>
                     </div>
             </div>
-        </div>
-        <div class="col-sm-4 text-center">
+          </div><!--end card-smsc-description-->
+        </div><!--end column-->
+        <div class="col-md-4 text-center proverb">
           <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/smsc-proverb.jpg">
         </div>
     </div>

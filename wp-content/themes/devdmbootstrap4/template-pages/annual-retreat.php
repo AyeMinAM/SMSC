@@ -26,14 +26,9 @@ Template Name: Annual Retreat Page
 </div>
 
 <div class="container">
-    <div class="row programs-info-table">
-        <div class="col-sm-6">
-            <?php
-                // Start the loop.
-            while ( have_posts() ) : the_post(); 
-            ?>
+    <div class="row programs-info-table justify-content-lg-center">
+        <div class="col-md-6 col-lg-5">
             <div class="row programs-info-row">
-                 <div class="col-sm-2"> </div>
                     <div class="col row-100">
                               <div class="row-10 row-align-v-middle">
                                 <i class = "icon icon ion-ios-calendar" style="font-size:25px;color:#932a0c;"></i>
@@ -45,7 +40,7 @@ Template Name: Annual Retreat Page
                     </div>
             </div>
             <div class="row programs-info-row">
-                 <div class="col-sm-2"> </div>
+                 
                     <div class="col row-100">
                             <div class="row-10 row-align-v-middle">
                               <i class = "icon icon ion-ios-timer" style="font-size: 25px;color:#932a0c;"></i>
@@ -57,7 +52,7 @@ Template Name: Annual Retreat Page
                     </div>
             </div>
             <div class="row programs-info-row">
-                 <div class="col-sm-2"> </div>
+              
                     <div class="col row-100">
                           <div class="row-10 row-align-v-middle">
                             <i class = "icon icon ion-card" style="font-size: 25px;color:#932a0c;"></i>
@@ -68,36 +63,11 @@ Template Name: Annual Retreat Page
                           </div>
                     </div>
             </div>
-            <div class="row programs-info-row">
-                 <div class="col-sm-2"> </div>
-                 <div class="col">
-                             <span class = "label label_schedule_title">
-                             Prerequisite
-                             </span> 
-            </div>
-            </div>  
-            <div class="row ">
-                 <div class="col-sm-2"> </div>
-                    <div class="col">
-                             <span class = "label label_schedule_info">
-                             <?php echo get_post_meta( get_the_ID(), 'Prerequisite', true ); ?></span>
-                    </div>
-            </div>
-           
-            <?php           
-            endwhile;  
-            ?>
         </div>
 
-
-        <div class="col-sm-6">
-        <?php
-                // Start the loop.
-            while ( have_posts() ) : the_post(); 
-            ?>
-              
+        <div class="col-md-6 col-lg-5">        
             <div class="row programs-info-row">
-                 <div class="col-sm-2"></div>
+               
                     <div class="col row-100">
                        <div class="row-10 row-align-v-middle">
                             <i class = "icon icon ion-ios-stopwatch" style="font-size: 25px;color:#932a0c;"></i>
@@ -109,7 +79,7 @@ Template Name: Annual Retreat Page
                     </div>
             </div>
             <div class="row programs-info-row">
-                 <div class="col-sm-2"></div>
+           
                     <div class="col row-100">
                         <div class="row-10 row-align-v-middle">
                              <i class="icon icon ion-ios-location" style="font-size: 25px;color:#932a0c;"></i>
@@ -121,41 +91,56 @@ Template Name: Annual Retreat Page
                     </div>
             </div>
 
-            <div class="row programs-info-row">
-                 <div class="col-sm-2"></div>
-                 <div class="col">
-                             <span class = "label label_schedule_title">
-                             Teacher
-                             </span></div>
-            </div>
-            <div class="row">
-                 <div class="col-sm-2"> </div>
-                    <div class="col">
-                             <span class = "label label_schedule_info">
+             <div class="row programs-info-row">
+                 
+                    <div class="col row-100">
+                        <div class="row-10 row-align-v-middle">
+                             <img class="teacher-icon" src="<?php echo get_template_directory_uri(); ?>/images/teacher-icon.png">
+                        </div>
+                        <div class="row-90 row-align-v-middle">
+                             <span class="label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'teacher', true ); ?></span>
+                        </div>
                     </div>
             </div>
+        </div>
+    </div> <!--the end of header and customized option.-->
+
+    <div class="row programs-info-table-2 justify-content-lg-center">
+      <div class="col-md-6 col-lg-5">
             <div class="row programs-info-row">
-                 <div class="col-sm-2"></div>
+                
+                 <div class="col">
+                             <span class = "label label_schedule_title">
+                             Prerequisite
+                             </span> 
+                </div>
+            </div>  
+            <div class="row">
+                
+                    <div class="col">
+                             <span class = "label label_schedule_info">
+                             <?php echo get_post_meta( get_the_ID(), 'Prerequisite', true ); ?></span>
+                    </div>
+            </div>
+        </div><!--the end of sm-6-->
+        <div class="col-md-6 col-lg-5">
+              <div class="row programs-info-row">
+                
                  <div class="col">
                              <span class = "label label_schedule_title">
                              Additional Info
                              </span></div>
             </div>  
             <div class="row">
-                 <div class="col-sm-2"> </div>
+                
                     <div class="col">
                              <span class = "label label_schedule_info">
                              <?php echo get_post_meta( get_the_ID(), 'Additional_Info', true ); ?></span>
                     </div>
             </div>
-            <?php           
-            endwhile;  
-            ?>
-         
-        </div>
-    </div> <!--the end of header and customized option.-->
-    
+        </div><!--the end of sm-6-->
+    </div>
     
     <div class="row" style="margin-top:20px;">
         <div class="col-sm-12 text-center">
@@ -163,10 +148,11 @@ Template Name: Annual Retreat Page
         </div>
     </div>
 </div>
-
+ 
 <div class="container">
     <div class="row">  
-        <div class="col-sm-8 card-smsc-description">
+        <div class="col-md-8">
+          <div class="card-smsc-description">
           <h1 class = "smsc-header">Description</h1>
             <div class="row">
                     <div class="col">
@@ -180,8 +166,9 @@ Template Name: Annual Retreat Page
                     </p>
                     </div>
             </div>
-        </div>
-        <div class="col-sm-4 text-center">
+          </div><!--end card-smsc-description-->
+        </div><!--end column-->
+        <div class="col-md-4 text-center proverb">
           <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/smsc-proverb-04.jpg">
         </div>
     </div>
@@ -202,7 +189,7 @@ Template Name: Annual Retreat Page
                     <div class="vertical-center">
                       <div class="card-block">
                         <h4 class="card-title">Residential Retreat</h4>
-                        <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. (word counts here)</p>
+                        <p class="card-o-programs-text">Residential Retreat are usually held once a month, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Center in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for e-mail notifications.</p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
                         View details</a> 
@@ -221,7 +208,7 @@ Template Name: Annual Retreat Page
                         <div class="vertical-center">
                           <div class="card-block">
                             <h4 class="card-title">Beginner Classes</h4>
-                            <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi.(word counts here)</p>
+                            <p class="card-o-programs-text">Beginners Classes are an introduction to the meditation practice, to both beginners and the experienced practitioners with no previous exposure to Mahasi tradition. The program consists of six weekly sessions, 2-hour long, involving guided meditation and lectures about the practice with Q & A.  This course is offered several times a year.</p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/Beginner" class="btn btn-lg btn-outline">
                             View details</a> 
@@ -240,7 +227,7 @@ Template Name: Annual Retreat Page
                        <div class="vertical-center">
                         <div class="card-block">
                           <h4 class="card-title">Intermediate Classes</h4>
-                          <p class="card-o-programs-text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. (word counts here) Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. (word counts here)</p>
+                          <p class="card-o-programs-text">Intermediate Weekly Class is 2-hour long, involving a 60-minute meditation time and a Dhamma talk (lecture about the practice with a Q and A period).  The Intermediate class is year-round, weekly on Tuesday evenings.</p>
                           <div class="col text-center">
                           <a href="<?php echo get_site_url(); ?>/intermediate" class="btn btn-lg btn-outline">
                           View details</a> 
