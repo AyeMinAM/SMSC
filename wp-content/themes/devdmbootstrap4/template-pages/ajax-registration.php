@@ -10,10 +10,10 @@ Template Name: Ajax register
 <?php get_template_part('template-parts/nav','header'); ?>
 
 <div class="container">
-<div class="row"  >
+    <div class="row"  >
 
   <!-- Multi step form --> 
-<section class="col-sm-12 multi_step_form">  
+<section class="col-sm-12 multi_step_form" style="background-color:red">  
   <form id="msform"> 
   
     <!-- progressbar -->
