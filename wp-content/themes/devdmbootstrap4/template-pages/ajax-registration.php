@@ -13,7 +13,7 @@ Template Name: Ajax register
     <div class="row"  >
 
   <!-- Multi step form --> 
-<section class="col-sm-12 multi_step_form" style="background-color:red">  
+<section class="col-sm-12 multi_step_form" >  
   <form id="msform"> 
   
     <!-- progressbar -->
@@ -171,10 +171,16 @@ Template Name: Ajax register
                 <input type="text" class="form-control"   id="input_date_issue" name="input_date_issue" placeholder="Date of Issue"> 
             </div>  
             <div class="form-group col-md-6"> 
-            <div class="custom-file">
-          <input type="file" class="custom-file-input" id="upload">
-          <label class="custom-file-label" for="upload">Upload Government issued photo ID</label>
-        </div> 
+                <div class="custom-file">
+                    <div class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
+                            href=javascript:void(0) class=custom-file-container__image-clear
+                            title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
+                            type=file class=custom-file-container__custom-file__custom-file-input id=customFile accept=image/*
+                            aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=10485760> <span
+                            class=custom-file-container__custom-file__custom-file-control></span></label>
+                        <div class=custom-file-container__image-preview></div>
+                    </div>
+                </div> 
              </div> 
         </div> 
         <button type="button" class="next action-button">Continue</button> 
@@ -599,24 +605,23 @@ Template Name: Ajax register
     jQuery(document).ready(function () {
 
 
-
-    $(function () {
+    function adjustBox() {
             var H = 0;
             $("div").each(function (i) {
                 var h = $(".box").eq(i).height();
                 if (h > H) H = h;
             });
-            $(".box").height(H);
-            
-    });
+            $(".box").height(H+200);
+    }; 
+    //adjustBox();
  
-        dialog = $( "#dialog" ).dialog({
+    dialog = $( "#dialog" ).dialog({
         autoOpen: false,
         closeOnEscape: false,
         resizable: false,
         open: function() {
         }
-      });
+    });
  
      
     
@@ -743,6 +748,11 @@ Template Name: Ajax register
     }, "Please enter a valid date format.");
 
  
+
+    $.validator.addMethod("regxCountry", function(value, element, regexpr) {          
+    return regexpr.test(value);
+    }, "Please select country.");
+
 
     jQuery( "#registerForm" ).validate( {
         ignore: ":hidden",
@@ -981,7 +991,9 @@ Template Name: Ajax register
                 }
             });
 
-            if (form.valid() == true){
+            alert($("#dropdown-country-button").text()); 
+
+           if (form.valid() == true){
 
                   //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -991,12 +1003,10 @@ Template Name: Ajax register
                 current_fs.hide();
  
             }
- 
+           
         });
 
         $(".previous").click(function () {
-            if (animating) return false;
-            animating = true;
 
             current_fs = $(this).parent();
             previous_fs = $(this).parent().prev();
@@ -1006,34 +1016,8 @@ Template Name: Ajax register
 
             //show the previous fieldset
             previous_fs.show();
-            //hide the current fieldset with style
-            current_fs.animate({
-                opacity: 0
-            }, {
-                step: function (now, mx) {
-                    //as the opacity of current_fs reduces to 0 - stored in "now"
-                    //1. scale previous_fs from 80% to 100%
-                    scale = 0.8 + (1 - now) * 0.2;
-                    //2. take current_fs to the right(50%) - from 0%
-                    left = ((1 - now) * 50) + "%";
-                    //3. increase opacity of previous_fs to 1 as it moves in
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'left': left
-                    });
-                    previous_fs.css({
-                        'transform': 'scale(' + scale + ')',
-                        'opacity': opacity
-                    });
-                },
-                duration: 800,
-                complete: function () {
-                    current_fs.hide();
-                    animating = false;
-                },
-                //this comes from the custom easing plugin
-                easing: 'easeInOutBack'
-            });
+            current_fs.hide();
+
         });
 
         $(".submit").click(function () {
