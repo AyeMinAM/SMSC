@@ -203,10 +203,10 @@ Template Name: Ajax register
 
     <div class="form-row"> 
         <div class="form-group col-md-6">  
-        <input type="text" class="form-control"   id="inputStart" name="inputRetreatFrom" placeholder="From"> 
+        <input type="text" class="form-control"   id="inputRetreatFrom" name="inputRetreatFrom" placeholder="From"> 
         </div>  
         <div class="form-group col-md-6"> 
-        <input type="text" class="form-control" id="inputEnd" name="inputRetreatTo" placeholder="To">
+        <input type="text" class="form-control" id="inputRetreatTo" name="inputRetreatTo" placeholder="To">
         </div> 
       </div> 
 
@@ -219,10 +219,10 @@ Template Name: Ajax register
 
 
   <div class="form-group col-md-6">  
-  <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
+  <input type="text" class="form-control"   id="input_e_firstname" name="input_e_firstname" placeholder="First Name"> 
   </div>  
   <div class="form-group col-md-6"> 
-  <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
+  <input type="text" class="form-control" id="input_e_lastname" name="input_e_lastname" placeholder="Last Name">
   </div> 
 </div> 
 
@@ -639,12 +639,16 @@ Template Name: Ajax register
     jQuery( "#chk_agree" ).checkboxradio();
 
 
-    jQuery( "#inputStart" ).datepicker({ dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
+ 
+    $('#inputRetreatFrom').datetimepicker({
+        format: 'DD/MM/YYYY'
+    });
 
 
-    jQuery( "#inputEnd" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
+    $('#inputRetreatTo').datetimepicker({
+        format: 'DD/MM/YYYY'
+    });
 
-   // jQuery( "#inputDOB" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
 
    $('#inputDOB').datetimepicker({
         format: 'DD/MM/YYYY',
@@ -1022,7 +1026,7 @@ Template Name: Ajax register
 
            // alert($("#dropdown-country-button").text()); 
 
-           if (form.valid() == true){
+         //  if (form.valid() == true){
 
                   //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -1031,7 +1035,7 @@ Template Name: Ajax register
                 next_fs.show();
                 current_fs.hide();
  
-            }
+          //  }
            
         });
 
