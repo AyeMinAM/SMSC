@@ -109,8 +109,8 @@ Template Name: Ajax register
         <div class="form-group col-md-6"> 
        
         <div class="dropdown hierarchy-select" id="dropdown-country">
-    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown-country-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-    <div class="dropdown-menu" aria-labelledby="dropdown-country-button">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+    <div class="dropdown-menu" aria-labelledby="dropdown_country_button">
         <div class="hs-searchbox">
             <input type="text" class="form-control" autocomplete="off">
         </div>
@@ -172,6 +172,8 @@ Template Name: Ajax register
             </div>  
             <div class="form-group col-md-6"> 
                 <div class="custom-file">
+                <div style='display:none'><a href=javascript:void(0) class="upload-info-button upload-info-button--first">Get first file info</a></div>
+                
                     <div class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
                             href=javascript:void(0) class=custom-file-container__image-clear
                             title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
@@ -645,15 +647,19 @@ Template Name: Ajax register
    // jQuery( "#inputDOB" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
 
    $('#inputDOB').datetimepicker({
-                format: 'DD/MM/YYYY',
-                maxDate : 'now'
-                });
+        format: 'DD/MM/YYYY',
+        maxDate : 'now'
+    });
 
+
+    $('#input_date_issue').datetimepicker({
+        format: 'DD/MM/YYYY'
+    });
 
     $('#dropdown-country').hierarchySelect({
         hierarchy: false,
         width: 'auto',
-        width: 200
+        width: 400
     });
 
 
@@ -749,7 +755,8 @@ Template Name: Ajax register
 
  
 
-    $.validator.addMethod("regxCountry", function(value, element, regexpr) {          
+    $.validator.addMethod("regxCountry", function(value, element, regexpr) { 
+    alert(value);         
     return regexpr.test(value);
     }, "Please select country.");
 
@@ -853,7 +860,10 @@ Template Name: Ajax register
              return false; // required to block normal submit since you used ajax
          },
 				rules: {
-					inputfirstname: "required",
+					inputfirstname: {
+						required: true,
+                        maxlength: 1,
+                    },
 					inputlastname: "required",
 					select_gender: "required" ,
                     txtaddress:"required",
@@ -956,10 +966,19 @@ Template Name: Ajax register
             var form = $("#msform");
             form.validate({
                 rules: {
-                    inputfirstname: "required",
-					inputlastname: "required",
+                    inputfirstname: {
+						required: true,
+                        maxlength: 100,
+                    },
+                    inputlastname: {
+						required: true,
+                        maxlength: 100,
+                    },
                     rdo_gender: "required" ,
-                    inputaddline1:"required",
+                    inputaddline1:{
+						required: true,
+                        maxlength: 255,
+                    },
                     inputprovince:"required",
                     inputcity:"required",
                     inputphone: { required: true,
@@ -971,11 +990,21 @@ Template Name: Ajax register
                     inputDOB: {
 						required: true,
 						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
-					},
+					}, 
+                    dropdown_country_button:
+                    {
+                        regxCountry:/^\b(?!Select Country)\b\S+$/
+                    }
                 },
                 messages: {
-                    inputfirstname: "Please enter your First Name",
-					inputlastname: "Please enter your Last Name",
+                    inputfirstname: {
+                        required: "Please enter your First Name",
+                        maxlength: 'First Name is too long and it is allow only less than or equal to 100'
+                    },
+                    inputlastname: {
+                        required: "Please enter your Last Name",
+                        maxlength: 'Last Name is too long and it is allow only less than or equal to 100'
+                    },
                     inputaddline1: "Please enter Address line 1",
                     inputprovince:"Please enter Province/Territory",
                     inputcity:"Please enter City",
