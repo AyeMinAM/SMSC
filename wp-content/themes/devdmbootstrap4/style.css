@@ -261,6 +261,10 @@ a:hover{
 .T-padding-5{
   padding-top:1rem;
 }
+
+.T-margin-1{
+  margin-top:1rem;
+}
 .vertical-center{
   display: flex;
   align-items: center;
@@ -1209,5 +1213,7 @@ footer .align-top{
 .error
 {
 color:red !important;
-font-family:verdana, Helvetica;
+font-family:"OpenSans", sans-serif;
+margin-bottom: 0;
+font-size:0.8rem;
 }
