@@ -13,7 +13,7 @@ Template Name: Ajax register
     <div class="row"  >
 
   <!-- Multi step form --> 
-<section class="col-sm-12 multi_step_form" style="background-color:red">  
+<section class="col-sm-12 multi_step_form" >  
   <form id="msform"> 
   
     <!-- progressbar -->
@@ -107,9 +107,34 @@ Template Name: Ajax register
         <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
         </div>  
         <div class="form-group col-md-6"> 
-        <input type="text" class="form-control" id="inputcountry" name="inputcountry" placeholder="Country">
-        </div> 
+       
+        <div class="dropdown hierarchy-select" id="dropdown-country">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+    <div class="dropdown-menu" aria-labelledby="dropdown_country_button">
+        <div class="hs-searchbox">
+            <input type="text" class="form-control" autocomplete="off">
+        </div>
+        <div class="hs-menu-inner">
+            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
+            <?php global $wpdb;
+            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
+            foreach($result as $wp_country){?> 
+                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
+                <?php echo  $wp_country->Name; ?>
+                </a>
+            <?php
+            }
+            ?> 
+           
+
+        </div>
+    </div>
+    <input class="d-none" name="dropdown-country" readonly="readonly" aria-hidden="true" type="text"/>
+</div>
+
       </div> 
+
+      </div>
 
       <div class="form-row"> 
         <div class="form-group col-md-6">  
@@ -146,10 +171,18 @@ Template Name: Ajax register
                 <input type="text" class="form-control"   id="input_date_issue" name="input_date_issue" placeholder="Date of Issue"> 
             </div>  
             <div class="form-group col-md-6"> 
-            <div class="custom-file">
-          <input type="file" class="custom-file-input" id="upload">
-          <label class="custom-file-label" for="upload">Upload Government issued photo ID</label>
-        </div> 
+                <div class="custom-file">
+                <div style='display:none'><a href=javascript:void(0) class="upload-info-button upload-info-button--first">Get first file info</a></div>
+                
+                    <div class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
+                            href=javascript:void(0) class=custom-file-container__image-clear
+                            title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
+                            type=file class=custom-file-container__custom-file__custom-file-input id=customFile accept=image/*
+                            aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=10485760> <span
+                            class=custom-file-container__custom-file__custom-file-control></span></label>
+                        <div class=custom-file-container__image-preview></div>
+                    </div>
+                </div> 
              </div> 
         </div> 
         <button type="button" class="next action-button">Continue</button> 
@@ -574,24 +607,23 @@ Template Name: Ajax register
     jQuery(document).ready(function () {
 
 
-
-    $(function () {
+    function adjustBox() {
             var H = 0;
             $("div").each(function (i) {
                 var h = $(".box").eq(i).height();
                 if (h > H) H = h;
             });
-            $(".box").height(H);
-            
-    });
+            $(".box").height(H+200);
+    }; 
+    //adjustBox();
  
-        dialog = $( "#dialog" ).dialog({
+    dialog = $( "#dialog" ).dialog({
         autoOpen: false,
         closeOnEscape: false,
         resizable: false,
         open: function() {
         }
-      });
+    });
  
      
     
@@ -612,9 +644,24 @@ Template Name: Ajax register
 
     jQuery( "#inputEnd" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
 
-    jQuery( "#inputDOB" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
+   // jQuery( "#inputDOB" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
 
-    
+   $('#inputDOB').datetimepicker({
+        format: 'DD/MM/YYYY',
+        maxDate : 'now'
+    });
+
+
+    $('#input_date_issue').datetimepicker({
+        format: 'DD/MM/YYYY'
+    });
+
+    $('#dropdown-country').hierarchySelect({
+        hierarchy: false,
+        width: 'auto',
+        width: 400
+    });
+
 
     var DateField = function(config) {
         jsGrid.Field.call(this, config);
@@ -707,6 +754,12 @@ Template Name: Ajax register
     }, "Please enter a valid date format.");
 
  
+
+    $.validator.addMethod("regxCountry", function(value, element, regexpr) { 
+    alert(value);         
+    return regexpr.test(value);
+    }, "Please select country.");
+
 
     jQuery( "#registerForm" ).validate( {
         ignore: ":hidden",
@@ -807,7 +860,10 @@ Template Name: Ajax register
              return false; // required to block normal submit since you used ajax
          },
 				rules: {
-					inputfirstname: "required",
+					inputfirstname: {
+						required: true,
+                        maxlength: 1,
+                    },
 					inputlastname: "required",
 					select_gender: "required" ,
                     txtaddress:"required",
@@ -910,10 +966,19 @@ Template Name: Ajax register
             var form = $("#msform");
             form.validate({
                 rules: {
-                    inputfirstname: "required",
-					inputlastname: "required",
+                    inputfirstname: {
+						required: true,
+                        maxlength: 100,
+                    },
+                    inputlastname: {
+						required: true,
+                        maxlength: 100,
+                    },
                     rdo_gender: "required" ,
-                    inputaddline1:"required",
+                    inputaddline1:{
+						required: true,
+                        maxlength: 255,
+                    },
                     inputprovince:"required",
                     inputcity:"required",
                     inputphone: { required: true,
@@ -923,14 +988,23 @@ Template Name: Ajax register
 						email: true
 					},
                     inputDOB: {
-                        lessThanToday: new Date(),
 						required: true,
 						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
-					},
+					}, 
+                    dropdown_country_button:
+                    {
+                        regxCountry:/^\b(?!Select Country)\b\S+$/
+                    }
                 },
                 messages: {
-                    inputfirstname: "Please enter your First Name",
-					inputlastname: "Please enter your Last Name",
+                    inputfirstname: {
+                        required: "Please enter your First Name",
+                        maxlength: 'First Name is too long and it is allow only less than or equal to 100'
+                    },
+                    inputlastname: {
+                        required: "Please enter your Last Name",
+                        maxlength: 'Last Name is too long and it is allow only less than or equal to 100'
+                    },
                     inputaddline1: "Please enter Address line 1",
                     inputprovince:"Please enter Province/Territory",
                     inputcity:"Please enter City",
@@ -946,7 +1020,9 @@ Template Name: Ajax register
                 }
             });
 
-            if (form.valid() == true){
+           // alert($("#dropdown-country-button").text()); 
+
+           if (form.valid() == true){
 
                   //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -956,12 +1032,10 @@ Template Name: Ajax register
                 current_fs.hide();
  
             }
- 
+           
         });
 
         $(".previous").click(function () {
-            if (animating) return false;
-            animating = true;
 
             current_fs = $(this).parent();
             previous_fs = $(this).parent().prev();
@@ -971,34 +1045,8 @@ Template Name: Ajax register
 
             //show the previous fieldset
             previous_fs.show();
-            //hide the current fieldset with style
-            current_fs.animate({
-                opacity: 0
-            }, {
-                step: function (now, mx) {
-                    //as the opacity of current_fs reduces to 0 - stored in "now"
-                    //1. scale previous_fs from 80% to 100%
-                    scale = 0.8 + (1 - now) * 0.2;
-                    //2. take current_fs to the right(50%) - from 0%
-                    left = ((1 - now) * 50) + "%";
-                    //3. increase opacity of previous_fs to 1 as it moves in
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'left': left
-                    });
-                    previous_fs.css({
-                        'transform': 'scale(' + scale + ')',
-                        'opacity': opacity
-                    });
-                },
-                duration: 800,
-                complete: function () {
-                    current_fs.hide();
-                    animating = false;
-                },
-                //this comes from the custom easing plugin
-                easing: 'easeInOutBack'
-            });
+            current_fs.hide();
+
         });
 
         $(".submit").click(function () {

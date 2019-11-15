@@ -246,7 +246,7 @@ Template Name: Contact Us Page
 					if ( element.prop( "type" ) === "checkbox" ) {
 						error.insertAfter( element.parent( "label" ) );
 					} else {
-						error.insertAfter( element );
+						error.insertAfter( element.parent( "div" ) );
 					}
 
 					 

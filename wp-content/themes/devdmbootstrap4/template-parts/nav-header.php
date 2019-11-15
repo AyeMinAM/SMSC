@@ -48,14 +48,14 @@
                             <a class="nav-link dropdown-toggle" href="#"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="nav-text-break">Meditation</span><span >Programs</span>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('beginner') ) ); ?>">Beginner</a>
+                            <div class="dropdown-menu main-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('beginner') ) ); ?>">Beginner</a>
                             <div class="dropdown-divider"></div>
-                           <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('intermediate') ) ); ?>">Intermediate</a>
+                           <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('intermediate') ) ); ?>">Intermediate</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('residential') ) ); ?>">Residential Retreat</a>
+                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('residential') ) ); ?>">Residential Retreat</a>
                             <div class="dropdown-divider"></div>
-                           <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('annual') ) ); ?>">Annual Retreat</a>
+                           <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('annual') ) ); ?>">Annual Retreat</a>
                             </div>
                         </li>
 
@@ -64,12 +64,12 @@
                             <span class="nav-text-break nav-text-break-center">SMSC</span>
                             <span > Community</span>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('upcomingevents') ) ); ?>">Upcoming Events</a>
+                            <div class="dropdown-menu main-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('upcomingevents') ) ); ?>">Upcoming Events</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('gallery') ) ); ?>">Photo Gallery</a>
+                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('gallery') ) ); ?>">Photo Gallery</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('volunteer') ) ); ?>">Volunteers</a>
+                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('volunteer') ) ); ?>">Volunteers</a>
                              
                             </div>
                         </li>
@@ -94,16 +94,16 @@
                         <a class="nav-link dropdown-toggle" href="#"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('aboutsmsc') ) ); ?>">About SMSC</a>
+                        <div class="dropdown-menu main-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('aboutsmsc') ) ); ?>">About SMSC</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('teacher') ) ); ?>">The Teachers</a>
+                        <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('teacher') ) ); ?>">The Teachers</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('project') ) ); ?>">The Project</a>
+                        <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('project') ) ); ?>">The Project</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('pastactivities') ) ); ?>">Past Activities</a>
+                        <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('pastactivities') ) ); ?>">Past Activities</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo esc_url( get_permalink( get_page_by_title('contactus') ) ); ?>">Contact SMSC</a>
+                        <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('contactus') ) ); ?>">Contact SMSC</a>
                         </div>
                     </li>
                     <li class="nav-item smsc_menu_right one-quarter library">
