@@ -991,7 +991,7 @@ Template Name: Ajax register
                 }
             });
 
-            alert($("#dropdown-country-button").text()); 
+           // alert($("#dropdown-country-button").text()); 
 
            if (form.valid() == true){
 
