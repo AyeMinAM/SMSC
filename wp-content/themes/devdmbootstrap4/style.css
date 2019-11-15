@@ -551,24 +551,26 @@ h1.smsc_header_title a:hover{
   }
 }
 
-.dropdown-menu{
+
+.main-menu{
     background-color:#932a0ccf;
     border:none;
     padding:0;
 }
-.dropdown-item {
+
+.main-menu-item{
   color: #ffffff; 
   padding:0.75rem 0.75rem 0.75rem 0.75rem;
 }
 
 @media(min-width:991px){
-.dropdown-item {
+.main-menu-item {
   color: #ffffff; 
   padding:0.75rem 4rem 0.75rem 1.5rem!important;
 }
 }
 
-.dropdown-item:hover, .dropdown-item:focus{
+.main-menu-item:hover, .main-menu-item:focus{
   color:#ffffff;
   background-color:#FF9933;
   padding:;

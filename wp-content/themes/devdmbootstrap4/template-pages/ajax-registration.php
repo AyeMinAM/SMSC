@@ -107,9 +107,34 @@ Template Name: Ajax register
         <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
         </div>  
         <div class="form-group col-md-6"> 
-        <input type="text" class="form-control" id="inputcountry" name="inputcountry" placeholder="Country">
-        </div> 
+       
+        <div class="dropdown hierarchy-select" id="dropdown-country">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown-country-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+    <div class="dropdown-menu" aria-labelledby="dropdown-country-button">
+        <div class="hs-searchbox">
+            <input type="text" class="form-control" autocomplete="off">
+        </div>
+        <div class="hs-menu-inner">
+            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
+            <?php global $wpdb;
+            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
+            foreach($result as $wp_country){?> 
+                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
+                <?php echo  $wp_country->Name; ?>
+                </a>
+            <?php
+            }
+            ?> 
+           
+
+        </div>
+    </div>
+    <input class="d-none" name="dropdown-country" readonly="readonly" aria-hidden="true" type="text"/>
+</div>
+
       </div> 
+
+      </div>
 
       <div class="form-row"> 
         <div class="form-group col-md-6">  
@@ -612,9 +637,20 @@ Template Name: Ajax register
 
     jQuery( "#inputEnd" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
 
-    jQuery( "#inputDOB" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
+   // jQuery( "#inputDOB" ).datepicker({dateFormat: 'dd-mm-yy' , defaultDate: new Date()});
 
-    
+   $('#inputDOB').datetimepicker({
+                format: 'DD/MM/YYYY',
+                maxDate : 'now'
+                });
+
+
+    $('#dropdown-country').hierarchySelect({
+        hierarchy: false,
+        width: 'auto',
+        width: 200
+    });
+
 
     var DateField = function(config) {
         jsGrid.Field.call(this, config);
@@ -923,7 +959,6 @@ Template Name: Ajax register
 						email: true
 					},
                     inputDOB: {
-                        lessThanToday: new Date(),
 						required: true,
 						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
 					},

@@ -158,6 +158,14 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
 
         wp_enqueue_style('jsgrid-theme-css', get_template_directory_uri() . '/assets/jsgrid-1.5.3/jsgrid-theme.min.css');
 
+
+        wp_enqueue_style('bootstrap-datetimepicker-css', get_template_directory_uri() . '/assets/bootstrap4-datetimepicker/bootstrap-datetimepicker.min.css');
+
+
+        wp_enqueue_style('hierarchy-select-css', get_template_directory_uri() . '/assets/hierarchy-select-2/hierarchy-select.min.css');
+
+
+
         wp_enqueue_style('jquery-ui-css', get_template_directory_uri() . '/assets/jquery-ui-1.12.1/jquery-ui.css');
 
         // wp_enqueue_style('bootstrapValidator-css', get_template_directory_uri() . '/assets/bootstrapValidator/css/bootstrapValidator.min.css');
@@ -179,7 +187,8 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         }
 
 
-        
+        wp_enqueue_script('moment-js', get_template_directory_uri() . '/assets/js/moment.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
 
         wp_enqueue_style('devdmbootstrap4-ionicons', get_template_directory_uri() . '/assets/ionicons-2.0.1/css/ionicons.min.css');
 
@@ -196,6 +205,12 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
 
         // wp_enqueue_script('devdmbootstable-js', get_template_directory_uri() . '/assets/js/bootstable.js', array('jquery'), $wpTheme->get( 'Version' ), true);
  
+
+        wp_enqueue_script('hierarchy-select-2-js', get_template_directory_uri() . '/assets/hierarchy-select-2/hierarchy-select.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+        
+        wp_enqueue_script('bootstrap-datetimepicker-js', get_template_directory_uri() . '/assets/bootstrap4-datetimepicker/bootstrap-datetimepicker.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
 
         wp_enqueue_script('jsgrid-js', get_template_directory_uri() . '/assets/jsgrid-1.5.3/jsgrid.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
 
