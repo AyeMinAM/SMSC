@@ -9,501 +9,541 @@ Template Name: Ajax register
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container T-margin-1">
-<div class="row">
+<div class="container">
+    <div class="row"  >
+
   <!-- Multi step form --> 
-  <div class="multi_step_form-bg"> 
-<section class="col-sm-12 multi_step_form"> 
+<section class="col-sm-12 multi_step_form" style="background-color:red">  
   <form id="msform"> 
+  
     <!-- progressbar -->
     <ul id="progressbar">
-      <li class="active">1.</br>Personal</br> Information</li>  
-      <li>2.</br>Additional</br> Information</li> 
-      <li>3.</br>Most Recent</br> Meditation Retreats</li> 
+      <li class="active">Personal Information</li>  
+      <li>Additional Information</li> 
+      <li>Most Recent Meditation Retreats</li> 
 
-      <li>4.</br>Meal and Medical</br> Information</li>
-      <li>5.</br>Policy, Agreement </br>and Submission</li>
+      <li>Meal and Medical Information</li>
+      <li>Policy, Agreement and Submission</li>
+
     </ul>
-    <!-- Tittle -->
-    <div class="form-padding">
+  <!-- Tittle -->
+    <div class="tittle">
+      <h2>Online Application Form for the Residentail Meditation Retreat</h2>
+      <p>Download the form  <a href="http://localhost/SMSC/wp-content/uploads/pdf/Lecture8_student_complete.pdf" target="_blank">here</a>   if you want to fill out on paper</p>
+    </div>
+    
+    <div class="col-sm-12">
+        
+        <p class="text-justify">
+        
+        It is essential to have previous experience in Mahasi Meditation Method and 
+        to strictly adhere to the 9 precepts and retreat schedule.  
+        Signed application needs to be received before coming to the center.  
+        Final-acceptance by SMSC required. (If you have no access to 
+        sign on-line can sign on arrival to the Retreat Center)</p>
+    
+    </div>
+    
+    <!-- fieldsets -->
+<div id="container">
+
+    <fieldset class="box">
+    <h3>1. Personal Information</h3>
+
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
+        </div> 
+      </div> 
+ 
+      <div class="form-row"> 
+        <div class="form-group col-md-1">
+            Gender  
+        </div>  
+         <div class="form-group col-md-10">
+          
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rdo_gender" id="rdo_male" value="Male">
+                <label class="form-check-label" >Male</label>
+            </div>
+            <div id="div_female_label" class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rdo_gender" id="rdo_female" value="Female">
+                <label  class="form-check-label" >Female</label>
+            </div>
+            
+
+
+        </div>  
+      </div> 
+
+ 
+      <div class="form-row"> 
+        <div class="form-group col-md-12">  
+        <input type="text" class="form-control"   id="inputaddline1" name="inputaddline1" placeholder="Address line 1">
+        </div>  
+       
+      </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-12"> 
+        <input type="text" class="form-control" id="inputaddline2" name="inputaddline2" placeholder="Address line 2">
+        </div> 
+      </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control"   id="inputpcode" name="inputpcode" placeholder="Postal Code"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="text" class="form-control" id="inputprovince" name="inputprovince" placeholder="Province/Territory">
+        </div> 
+      </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="text" class="form-control" id="inputcountry" name="inputcountry" placeholder="Country">
+        </div> 
+      </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="tel" class="form-control"   id="inputphone" name="inputphone" placeholder="Phone"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="email" class="form-control" id="inputemail" name="inputemail" placeholder="Email">
+        </div> 
+      </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control"   id="input_occupation" name="input_occupation" placeholder="Occupation"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date of Birth">
+        </div> 
+      </div> 
+
+        <div class="form-group col-md-12">
+            Please provide one of the identification documents. <br>
+            (Driver license for Canadians and valid passport page with photo on it for oversea yogis.)  
+        </div>  
+        <div class="form-row"> 
+            <div class="form-group col-md-6">  
+                <input type="text" class="form-control"   id="input_driver_no" name="input_driver_no" placeholder="Canadian Driver License No."> 
+            </div>  
+            <div class="form-group col-md-6"> 
+                <input type="text" class="form-control" id="input_passport" name="input_passport" placeholder="Passport No.">
+            </div> 
+        </div> 
+        <div class="form-row"> 
+            <div class="form-group col-md-6">  
+                <input type="text" class="form-control"   id="input_date_issue" name="input_date_issue" placeholder="Date of Issue"> 
+            </div>  
+            <div class="form-group col-md-6"> 
+            <div class="custom-file">
+          <input type="file" class="custom-file-input" id="upload">
+          <label class="custom-file-label" for="upload">Upload Government issued photo ID</label>
+        </div> 
+             </div> 
+        </div> 
+        <button type="button" class="next action-button">Continue</button> 
+
+        <div class="text-center btnDiv">
+         </div> 
+    </fieldset>
+    <fieldset class="box">
+    <h3>2. Additional Information</h3>
+
+    <div class="form-row"> 
+        <div class="form-group col-md-12">
+            Request retreat period  
+        </div> 
+    </div> 
+
+
+
+    <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control"   id="inputStart" name="inputRetreatFrom" placeholder="From"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="text" class="form-control" id="inputEnd" name="inputRetreatTo" placeholder="To">
+        </div> 
+      </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-12">
+        Emergency Contact  
+        </div> 
+      </div> 
+<div class="form-row"> 
+
+
+  <div class="form-group col-md-6">  
+  <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
+  </div>  
+  <div class="form-group col-md-6"> 
+  <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
+  </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-12">  
+  <input type="text" class="form-control"   id="inputrelationship" name="inputrelationship" placeholder="Relationship to you">
+  </div>  
+</div> 
+
+
+<div class="form-row"> 
+  <div class="form-group col-md-12">  
+  <input type="text" class="form-control"   id="inputaddline1" name="inputaddline1" placeholder="Address line 1">
+  </div>  
+ 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-12"> 
+  <input type="text" class="form-control" id="inputaddline2" name="inputaddline2" placeholder="Address line 2">
+  </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-6">  
+  <input type="text" class="form-control"   id="inputpcode" name="inputpcode" placeholder="Postal Code"> 
+  </div>  
+  <div class="form-group col-md-6"> 
+  <input type="text" class="form-control" id="inputprovince" name="inputprovince" placeholder="Province/Territory">
+  </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-6">  
+  <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
+  </div>  
+  <div class="form-group col-md-6"> 
+  <input type="text" class="form-control" id="inputcountry" name="inputcountry" placeholder="Country">
+  </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-6">  
+  <input type="tel" class="form-control"   id="inputphone" name="inputphone" placeholder="Phone"> 
+  </div>  
+  <div class="form-group col-md-6"> 
+  <input type="email" class="form-control" id="inputemail" name="inputemail" placeholder="Email">
+  </div> 
+</div> 
+  
+ 
+      <button type="button" class="action-button previous previous_button">Back</button> 
+      <button type="button" class="next action-button">Continue</button>  
+
+    </fieldset>  
+    <fieldset class="box">
+    <div class="form-row"> 
+    <div class="form-group col-md-12">
+      Most recent meditation retreats attend (Theravada and non-Theravada), up to 5 retreats.   
+    </div> 
+</div> 
+
+    <div id="jsGrid"></div>   
+
+
+    <button type="button" class="action-button previous previous previous_button">Back</button> 
+    <button type="button" class="next action-button">Continue</button>  
+
+    </fieldset>  
+    <fieldset class="box">
+    <h3>3. Meal and Medical Information</h3>
+
+    <div class="form-row"> 
+    <div class="form-group col-md-12">
+      Please answer a few more questions about meals and medical insurance so that we can provide you best based on your needs. 
+      All fields are mandatory
+    </div> 
+    </div> 
+<div class="form-row"> 
+  <div class="form-group col-md-2">
+      Are you Vegetarian?  
+  </div>  
+   <div class="form-group col-md-8">
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio_gender" id="rdo_male" value="Male">
+          <label class="form-check-label" >Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio_gender" id="rdo_female" value="Female">
+          <label    class="form-check-label" >No</label>
+      </div>
+  </div>  
+</div> 
+
+<div class="form-row"> 
+        <div class="form-group col-md-12">
+        Food Allergy (Please indicate.)  
+        </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-12">  
+   
+  <textarea class="form-control rounded-0" id="txtfood_allergy" name="txtfood_allergy" rows="3"></textarea>
+
+  </div>  
+ 
+</div> 
+
+<div class="form-row"> 
+    <div class="form-group col-md-12">
+      Do you have BC medical or Travel insurance? (for out-of-country yogis only). 
+    </div> 
+</div> 
+
+<div class="form-row"> 
+ 
+   <div class="form-group col-md-10">
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
+          <label class="form-check-label" >Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
+          <label class="form-check-label" >No</label>
+      </div>
+  </div>  
+</div> 
+
+
+<div class="form-row"> 
+        <div class="form-group col-md-12">
+        Do you have other medical insurance? Please specify.
+        </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-12">  
+   
+  <textarea class="form-control rounded-0" id="txt_other_insurance" name="txt_other_insurance" rows="3"></textarea>
+
+  </div>  
+ 
+</div> 
+
+
+<div class="form-row"> 
+    <div class="form-group col-md-12">
+      Do you have any physical or mental health issue SMSC should be made aware?. 
+    </div> 
+</div> 
+
+<div class="form-row"> 
+ 
+   <div class="form-group col-md-10">
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
+          <label class="form-check-label" >Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
+          <label class="form-check-label" >No</label>
+      </div>
+  </div>  
+</div> 
+
+
+<div class="form-row"> 
+        <div class="form-group col-md-12">
+        If yes, please specify
+        </div> 
+</div> 
+
+<div class="form-row"> 
+  <div class="form-group col-md-12">  
+   
+  <textarea class="form-control rounded-0" id="txt_other_insurance" name="txt_other_insurance" rows="3"></textarea>
+
+  </div>  
+ 
+</div> 
+
+ 
+    <button type="button" class="action-button previous previous previous_button">Back</button> 
+    <button type="button" class="next action-button">Continue</button>  
+
+    </fieldset>  
+    <fieldset  class="box">
+
+    <h3>4. Policy and agreement</h3>
+
+    <div class="form-row"> 
+        <div class="form-group col-md-12">
+            Please read this carefully before you submit this form online.  
+        </div> 
+    </div> 
+
+
+
+    <div class="form-row"> 
+        <div class="form-group col-md-12">
+                <p class="text-justify">I, THE UNDERSIGNED WAIVE AND ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF
+                AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREAT I WILL BE ATTENDING AT SMSC.     
+                </p> 
+        </div> 
+    </div> 
       
-      <div class="col-sm-12">
-        <div class="tittle">
-        <h2>Online Application Form for the Residentail Meditation Retreat</h2>
-        <p>Download the form  <a href="http://localhost/SMSC/wp-content/uploads/pdf/Lecture8_student_complete.pdf" target="_blank">here</a>   if you want to fill out on paper</p>
-      </div>
-          <p class="text-justify">
-          It is essential to have previous experience in Mahasi Meditation Method and 
-          to strictly adhere to the 9 precepts and retreat schedule.  
-          Signed application needs to be received before coming to the center.  
-          Final-acceptance by SMSC required. (If you have no access to 
-          sign on-line can sign on arrival to the Retreat Center)
-         </p>
-      </div>
-      <!-- fieldsets -->
-          <div id="container">
-              <fieldset class="box">
-                    <h3>1. Personal Information</h3>
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
-                        </div> 
-                      </div> 
-                 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-1">
-                            Gender  
-                        </div>  
-                         <div class="form-group col-md-10">
-                          
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="rdo_gender" id="rdo_male" value="Male">
-                                <label class="form-check-label" >Male</label>
-                            </div>
-                            <div id="div_female_label" class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="rdo_gender" id="rdo_female" value="Female">
-                                <label  class="form-check-label" >Female</label>
-                            </div>
-                        </div>  
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-12">  
-                        <input type="text" class="form-control"   id="inputaddline1" name="inputaddline1" placeholder="Address line 1">
-                        </div>  
-                      </div> 
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+            1.  
+        </div>  
+         <div class="form-group col-md-10">
+            I agree to abide to the following rules and structure : 
+        </div>  
+    </div> 
 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-12"> 
-                        <input type="text" class="form-control" id="inputaddline2" name="inputaddline2" placeholder="Address line 2">
-                        </div> 
-                      </div> 
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Practice Mindfulness-Insight (Mahasi Tradition) only 
+        </div>  
+    </div>
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Strictly adhere to Nine Precepts
+        </div>  
+    </div>
 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="text" class="form-control"   id="inputpcode" name="inputpcode" placeholder="Postal Code"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="text" class="form-control" id="inputprovince" name="inputprovince" placeholder="Province/Territory">
-                        </div> 
-                      </div> 
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Maintain Noble Silence
+        </div>  
+    </div>
 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="text" class="form-control" id="inputcountry" name="inputcountry" placeholder="Country">
-                        </div> 
-                      </div> 
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Slow down all actions and behavior at all time 
+        </div>  
+    </div>
 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="tel" class="form-control"   id="inputphone" name="inputphone" placeholder="Phone"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="email" class="form-control" id="inputemail" name="inputemail" placeholder="Email">
-                        </div> 
-                      </div> 
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Follow retreat schedule  
+        </div>  
+    </div>
 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="text" class="form-control"   id="input_occupation" name="input_occupation" placeholder="Occupation"> 
-                        </div>  
-                        <!-- <div class="form-group col-md-6"> 
-                        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date of Birth">
-                        </div> --> 
-                      </div> 
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           
+        </div>  
+         <div class="form-group col-md-10">
+         - Anyone who becomes a disturbance to the retreat will be asked to leave  
+        </div>  
+    </div>
+    
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           2.  
+        </div>  
+         <div class="form-group col-md-10">
+            I am aware that I may be photographed or videotaped at retreat for sharing among SMSC 
+            participants, yogis and SMSC Dhamma friends. 
+        </div>  
+    </div> 
 
-                        <div class="form-group col-md-12">
-                            Please provide one of the identification documents. <br>
-                            (Driver license for Canadians and valid passport page with photo on it for oversea yogis.)  
-                        </div>  
-                        <div class="form-row"> 
-                            <div class="form-group col-md-6">  
-                                <input type="text" class="form-control"   id="input_driver_no" name="input_driver_no" placeholder="Canadian Driver License No."> 
-                            </div>  
-                            <div class="form-group col-md-6"> 
-                                <input type="text" class="form-control" id="input_passport" name="input_passport" placeholder="Passport No.">
-                            </div> 
-                        </div> 
-                        <div class="form-row"> 
-                            <div class="form-group col-md-6">  
-                                <input type="text" class="form-control"   id="input_date_issue" name="input_date_issue" placeholder="Date of Issue"> 
-                            </div>  
-                            <div class="form-group col-md-6"> 
-                            <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="upload">
-                          <label class="custom-file-label" for="upload">Upload Government issued photo ID</label>
-                        </div> 
-                             </div> 
-                        </div> 
-                        <button type="button" class="next action-button">Continue</button> 
 
-                        <div class="text-center btnDiv">
-                         </div> 
-              </fieldset> <!--fieldset one-->
+    <div class="form-row"> 
+        <div class="form-group col-sm-0">
+           3.  
+        </div>  
+         <div class="form-group col-md-10">
+           This form will be kept on the SMSC file for future retreats you may 
+        attend. However, it will be deleted after current retreat upon request. 
+        Please keep your information up-to-date as you attend retreats. 
+        </div>  
+    </div> 
 
-              <fieldset class="box">
-                    <h3>2. Additional Information</h3>
-                      <div class="form-row"> 
-                          <div class="form-group col-md-12">
-                              Request retreat period  
-                          </div> 
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="text" class="form-control"   id="inputStart" name="inputRetreatFrom" placeholder="From"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="text" class="form-control" id="inputEnd" name="inputRetreatTo" placeholder="To">
-                        </div> 
-                      </div> 
+    <div class="form-row"> 
+        <div class="form-group col-md-12">
+        Keep my personal information on the SMSC file.   
 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-12">
-                        Emergency Contact  
-                        </div> 
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
-                        </div> 
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-12">  
-                        <input type="text" class="form-control"   id="inputrelationship" name="inputrelationship" placeholder="Relationship to you">
-                        </div>  
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-12">  
-                        <input type="text" class="form-control"   id="inputaddline1" name="inputaddline1" placeholder="Address line 1">
-                        </div>  
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-12"> 
-                        <input type="text" class="form-control" id="inputaddline2" name="inputaddline2" placeholder="Address line 2">
-                        </div> 
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="text" class="form-control"   id="inputpcode" name="inputpcode" placeholder="Postal Code"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="text" class="form-control" id="inputprovince" name="inputprovince" placeholder="Province/Territory">
-                        </div> 
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="text" class="form-control" id="inputcountry" name="inputcountry" placeholder="Country">
-                        </div> 
-                      </div> 
-                      <div class="form-row"> 
-                        <div class="form-group col-md-6">  
-                        <input type="tel" class="form-control"   id="inputphone" name="inputphone" placeholder="Phone"> 
-                        </div>  
-                        <div class="form-group col-md-6"> 
-                        <input type="email" class="form-control" id="inputemail" name="inputemail" placeholder="Email">
-                        </div> 
-                      </div> 
+        </div> 
+    </div> 
+ 
+      <div class="form-row"> 
+         <div class="form-group col-md-10">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
+                <label class="form-check-label" >Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
+                <label class="form-check-label" >No</label>
+            </div>
+        </div>  
+      </div> 
 
-                      <button type="button" class="action-button previous previous_button">Back</button> 
-                      <button type="button" class="next action-button">Continue</button>  
-              </fieldset>  <!--fieldset two-->
-
-              <fieldset class="box">
-                  <div class="form-row"> 
-                  <div class="form-group col-md-12">
-                    Most recent meditation retreats attend (Theravada and non-Theravada), up to 5 retreats.   
-                  </div> 
-                  </div> 
-
-                  <div id="jsGrid"></div>   
-                  <button type="button" class="action-button previous previous previous_button">Back</button> 
-                  <button type="button" class="next action-button">Continue</button>  
-              </fieldset>  <!--fieldset three-->
-
-              <fieldset class="box">
-                  <h3>3. Meal and Medical Information</h3>
-
-                    <div class="form-row"> 
-                    <div class="form-group col-md-12">
-                      Please answer a few more questions about meals and medical insurance so that we can provide you best based on your needs. 
-                      All fields are mandatory
-                    </div> 
-                    </div> 
-                    <div class="form-row"> 
-                        <div class="form-group col-md-2">
-                            Are you Vegetarian?  
-                        </div>  
-                         <div class="form-group col-md-8">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="radio_gender" id="rdo_male" value="Male">
-                                <label class="form-check-label" >Yes</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="radio_gender" id="rdo_female" value="Female">
-                                <label    class="form-check-label" >No</label>
-                            </div>
-                        </div>  
-                    </div> 
-
-                    <div class="form-row"> 
-                            <div class="form-group col-md-12">
-                            Food Allergy (Please indicate.)  
-                            </div> 
-                    </div> 
-
-                    <div class="form-row"> 
-                      <div class="form-group col-md-12">  
-                       
-                      <textarea class="form-control rounded-0" id="txtfood_allergy" name="txtfood_allergy" rows="3"></textarea>
-
-                      </div>  
-                     
-                    </div> 
-
-                    <div class="form-row"> 
-                        <div class="form-group col-md-12">
-                          Do you have BC medical or Travel insurance? (for out-of-country yogis only). 
-                        </div> 
-                    </div> 
-                    <div class="form-row"> 
-                     
-                       <div class="form-group col-md-10">
-                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
-                              <label class="form-check-label" >Yes</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
-                              <label class="form-check-label" >No</label>
-                          </div>
-                      </div>  
-                    </div> 
-                      <div class="form-row"> 
-                              <div class="form-group col-md-12">
-                              Do you have other medical insurance? Please specify.
-                              </div> 
-                      </div> 
-
-                      <div class="form-row"> 
-                        <div class="form-group col-md-12">  
-                         
-                        <textarea class="form-control rounded-0" id="txt_other_insurance" name="txt_other_insurance" rows="3"></textarea>
-
-                        </div>  
-                       
-                      </div> 
-                      <div class="form-row"> 
-                          <div class="form-group col-md-12">
-                            Do you have any physical or mental health issue SMSC should be made aware?. 
-                          </div> 
-                      </div> 
-
-                      <div class="form-row"> 
-                       
-                         <div class="form-group col-md-10">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
-                                <label class="form-check-label" >Yes</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
-                                <label class="form-check-label" >No</label>
-                            </div>
-                        </div>  
-                      </div> 
-                      <div class="form-row"> 
-                              <div class="form-group col-md-12">
-                              If yes, please specify
-                              </div> 
-                      </div> 
-
-                    <div class="form-row"> 
-                      <div class="form-group col-md-12">  
-                       
-                      <textarea class="form-control rounded-0" id="txt_other_insurance" name="txt_other_insurance" rows="3"></textarea>
-
-                      </div>  
-                     
-                    </div> 
-
-                  <button type="button" class="action-button previous previous previous_button">Back</button> 
-                      <button type="button" class="next action-button">Continue</button>  
-              </fieldset>  <!--fieldset four-->
-              <fieldset  class="box">
-
-                          <h3>4. Policy and agreement</h3>
-
-                          <div class="form-row"> 
-                              <div class="form-group col-md-12">
-                                  Please read this carefully before you submit this form online.  
-                              </div> 
-                          </div> 
+      <div class="form-row"> 
+        <div class="form-group col-md-12">
+            I agree that by submitting this application, I am   
+            electronically signing this application. 
+        </div> 
+    </div> 
 
 
 
-                          <div class="form-row"> 
-                              <div class="form-group col-md-12">
-                                      <p class="text-justify">I, THE UNDERSIGNED WAIVE AND ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF
-                                      AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREAT I WILL BE ATTENDING AT SMSC.     
-                                      </p> 
-                              </div> 
-                          </div> 
-                            
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                  1.  
-                              </div>  
-                               <div class="form-group col-md-10">
-                                  I agree to abide to the following rules and structure : 
-                              </div>  
-                          </div> 
-
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                 
-                              </div>  
-                               <div class="form-group col-md-10">
-                               - Practice Mindfulness-Insight (Mahasi Tradition) only 
-                              </div>  
-                          </div>
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                 
-                              </div>  
-                               <div class="form-group col-md-10">
-                               - Strictly adhere to Nine Precepts
-                              </div>  
-                          </div>
-
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                 
-                              </div>  
-                               <div class="form-group col-md-10">
-                               - Maintain Noble Silence
-                              </div>  
-                          </div>
-
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                 
-                              </div>  
-                               <div class="form-group col-md-10">
-                               - Slow down all actions and behavior at all time 
-                              </div>  
-                          </div>
-
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                 
-                              </div>  
-                               <div class="form-group col-md-10">
-                               - Follow retreat schedule  
-                              </div>  
-                          </div>
-
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                 
-                              </div>  
-                               <div class="form-group col-md-10">
-                               - Anyone who becomes a disturbance to the retreat will be asked to leave  
-                              </div>  
-                          </div>
-                          
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                 2.  
-                              </div>  
-                               <div class="form-group col-md-10">
-                                  I am aware that I may be photographed or videotaped at retreat for sharing among SMSC 
-                                  participants, yogis and SMSC Dhamma friends. 
-                              </div>  
-                          </div> 
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+        <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
+        </div> 
+      </div> 
 
 
-                          <div class="form-row"> 
-                              <div class="form-group col-sm-0">
-                                 3.  
-                              </div>  
-                               <div class="form-group col-md-10">
-                                 This form will be kept on the SMSC file for future retreats you may 
-                              attend. However, it will be deleted after current retreat upon request. 
-                              Please keep your information up-to-date as you attend retreats. 
-                              </div>  
-                          </div> 
-
-                          <div class="form-row"> 
-                              <div class="form-group col-md-12">
-                              Keep my personal information on the SMSC file.   
-
-                              </div> 
-                          </div> 
-                       
-                            <div class="form-row"> 
-                               <div class="form-group col-md-10">
-                                  <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
-                                      <label class="form-check-label" >Yes</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
-                                      <label class="form-check-label" >No</label>
-                                  </div>
-                              </div>  
-                            </div> 
-
-                            <div class="form-row"> 
-                              <div class="form-group col-md-12">
-                                  I agree that by submitting this application, I am   
-                                  electronically signing this application. 
-                              </div> 
-                          </div> 
-
-
-
-                            <div class="form-row"> 
-                              <div class="form-group col-md-6">  
-                              <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
-                              </div>  
-                              <div class="form-group col-md-6"> 
-                              <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
-                              </div> 
-                            </div> 
-
-
-                            <div class="form-row"> 
-                              <div class="form-group col-md-6">  
-                              <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date">
-                              </div> 
-                            </div> 
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date">
+        </div> 
+      </div> 
 
 
 
 
-                          <button type="button" class="action-button previous previous previous previous_button">Back</button> 
+    <button type="button" class="action-button previous previous previous previous_button">Back</button> 
 
-                          <button href="#" class="action-button">Submit</button> 
-              </fieldset>  
-        </div> <!--end of container02-->
-      </div> <!--the end of form-padding-->
+    <button href="#" class="action-button">Submit</button> 
+
+    </fieldset>  
+</div>
+
   </form>  
 </section> 
-</div>
 <!-- End Multi step form -->   
-</div> <!--end of mega row-->
-</div> <!--end of container01-->
+</div>
+ 
+</div>
+
+
 <div id="dialog" title="Info">
   <div class="progress-label">Loading...</div>
   <div id="progressbar"></div>
