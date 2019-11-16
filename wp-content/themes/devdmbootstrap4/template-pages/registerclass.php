@@ -175,7 +175,8 @@ Template Name: Register Class Page
                     inputmessage:"required" 
 				},
 				messages: {
-					inputfullname: "Please enter your name",
+                    inputfullname: "Please enter your name",
+                    inputphone:"Please enter your valid phone number.",
                     inputmessage: "Please enter your message",
                     select_program:  "Please select a program",
 					inputemail: "Please enter a valid email address",

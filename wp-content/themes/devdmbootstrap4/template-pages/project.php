@@ -21,7 +21,7 @@ Template Name: The Project Page
     <div class="card-smsc about-smsc-bg">
         <div class="smsc-header-container">
             <h1 class="smsc-header">The Project</h1>
-            <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
         </div>   
         <p class="text-justify">
             Satipatthana Meditation Society of Canada (SMSC) is a registered charitable organization approved by Revenue Canada in 2008. Through the generous donations of many individuals as well as large contributions from members and Dhamma practitioners, the Society was able to acquire a property in Hope, BC as of November, 2012. It is located an hour and a half drive from Vancouver. It has one third of an acre land and a 2000 sq.ft building. The building has been renovated so that it will be conducive for meditation. Three resident yogis live and maintain the Centre. It is a stepping-stone until we can purchase a larger building and larger land suitable to use for weekend, 10 days and longer term retreats. World-renowned Meditation masters of the Mahasi tradition will be invited to guide retreats whenever possible.

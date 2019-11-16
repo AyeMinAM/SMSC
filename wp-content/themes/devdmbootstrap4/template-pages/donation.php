@@ -22,7 +22,7 @@ Template Name: donation Page
        <!--  <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/pattern-quarter.png"> -->
         <div class="smsc-header-container">
             <h1 class="smsc-header">Donation</h1>
-            <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
         </div>   
             <p class="text-justify">
             The Satipatthana Meditation Society of Canada (SMSC) is a registered non-profit Theravada Buddhist organization. The Society carries on business without purpose of material or monetary gain for its members and any profit or other accretions to the Society is used for promoting its purpose. Through the generosity of members, students, friends, family and the public we are able to offer all our classes and retreats free of charge.

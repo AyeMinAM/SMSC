@@ -74,7 +74,7 @@ Template Name: Contact Us Page
    <div class="card-smsc teacher-smsc-bg">
    <div class="smsc-header-container">
         <h1 class="smsc-header">Contact Us</h1>
-        <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
    </div>
 
     <div class="row">  
@@ -227,12 +227,17 @@ Template Name: Contact Us Page
 					inputemail: {
 						required: true,
 						email: true
-					},
+                    },
+                    inputphone:{
+						required: true,
+						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
+                    },
                     inputmessage:"required" 
 				},
 				messages: {
 					inputfullname: "Please enter your name.",
-					inputmessage: "Please enter your message.",
+                    inputmessage: "Please enter your message.",
+                    inputphone:"Please enter your valid phone number.",
 					inputemail: "Please enter a valid email address.",
 				},
 				errorElement: "div",
