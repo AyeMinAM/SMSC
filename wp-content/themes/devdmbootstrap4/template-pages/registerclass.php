@@ -27,32 +27,34 @@ Template Name: Register Class Page
     <div class="row" style="margin-top:20px;">  
         <div class="col-sm-12">
         <div class="row">
-                <div class="col-sm-4 input-group mb-3">
+                <div class="input-group mb-3">
                     <input id="inputfirstname" name="inputfirstname" type="text" class="form-control" placeholder="First Name" aria-label="FullName" aria-describedby="basic-addon1">
                 </div>
-
-                <div class="col-sm-4 input-group mb-3">
+        </div>
+         <div class="row">
+                <div class="input-group mb-3">
                     <input id="inputlastname" name="inputlastname" type="text" class="form-control" placeholder="Last Name" aria-label="FullName" aria-describedby="basic-addon1">
                 </div>
         </div>
-        
 
         <div class="input-group mb-3">
             <input id="inputemail" name="inputemail"  type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
-            <div class="input-group-append">
+            <!-- <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon2">@example.com</span>
-            </div>
+            </div> -->
         </div>
 
         <div class="input-group mb-3">
             <input id="inputphone" name="inputphone"  type="text" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
         </div>
- 
-        <select class="custom-select my-1 mr-sm-2" id="select_program" name="select_program"  >
-            <option value="">Pick a program</option>
-            <option value="1">Beginner</option>
-            <option value="2">Intermediate</option>
-        </select>
+
+        <div class="input-group mb-3">
+            <select class="custom-select my-1 mr-sm-2" id="select_program" name="select_program"  >
+                <option value="">Pick a program</option>
+                <option value="1">Beginner</option>
+                <option value="2">Intermediate</option>
+            </select>
+        </div>
 
 
         <div class="input-group">
@@ -212,7 +214,8 @@ Template Name: Register Class Page
 					if ( element.prop( "type" ) === "checkbox" ) {
 						error.insertAfter( element.parent( "label" ) );
 					} else {
-						error.insertAfter( element );
+						// error.insertAfter( element );
+                        error.insertAfter( element.parent( "div" ) );
 					}
 
 					 

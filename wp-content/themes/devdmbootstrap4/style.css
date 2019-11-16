@@ -56,17 +56,15 @@ body p{
     color: #ffffff;
     font-weight: bold;
     letter-spacing: 0.05em;
-    font-family: AlegreyaSans;
+    font-family: 'Alegreya Sans', sans-serif;
     margin-left: 20px;    
     font-size: 22px;   
   }
 
   .label_schedule_title{
     color: #932a0c;    
-    font-weight: bold;
     letter-spacing: 0.05em;
-    font-family: AlegreyaSans;
-    font-size: 14px;   
+    font-family: 'Alegreya Sans', sans-serif;
   }
 
   .label_schedule_info {
@@ -155,7 +153,7 @@ height: 22px;
 
 
 .smsc_main_menu {
-  font-family: AlegreyaSans;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
   font-style: normal;
@@ -257,6 +255,9 @@ a:hover{
   color:#ffffff;
   text-decoration: none;
 }
+.T-margin-1{
+  margin-top:1rem;
+}
 
 .T-padding-5{
   padding-top:1rem;
@@ -319,7 +320,7 @@ a:hover{
     color: #ffffff;
     background-color:#932a0c;
     letter-spacing: 0.05em;
-    font-family: OpenSans;
+    font-family: 'OpenSans',sans-serif;
     padding: 1rem 1rem; 
     font-size: 1.2rem;
     margin-top:1rem;
@@ -333,7 +334,7 @@ a:hover{
   color: #ffffff;
   background-color:#932a0c;
   letter-spacing: 0.05em;
-  font-family: OpenSans;
+  font-family: "OpenSans", sans-serif;
   padding: 20px 120px; 
   font-size: 18px;
 }
@@ -683,7 +684,8 @@ h1.smsc-header{
   color:#93210c;
   padding-bottom: 0;
   margin-bottom: 0;
-  font-weight: bold;
+  font-weight: 'Alegreya Sans', sans-serif;
+
 }
 
 /*@media (min-width:991px){
@@ -886,7 +888,7 @@ h1.smsc-header{
     color: #ffffff;
     font-weight: bold;
     letter-spacing: 0.05em;
-    font-family: AlegreyaSans;
+    font-family: 'Alegreya Sans', sans-serif;
     font-size: 20px;   
   }
 
@@ -912,7 +914,7 @@ h1.smsc-header{
     color: #932a0c;    
     font-weight: bold;
     letter-spacing: 0.05em;
-    font-family: AlegreyaSans;
+    font-family: 'Alegreya Sans', sans-serif;
     font-size: 16px;   
   }
 
@@ -1120,6 +1122,22 @@ padding: 2rem 0;
   width: 100%;
 }
 
+.ui-widget-header{
+  background-color:transparent!important;
+  border:none!important;
+}
+
+form ::placeholder{
+  font-family: "OpenSans", sans-serif;
+}
+
+.input-group>.form-control, 
+.input-group>.custom-select, 
+.input-group>.custom-file{
+  font-family: "OpenSans", sans-serif;
+  color:#000;
+}
+
 /*FOOTER*/
 footer{
   font-family: 'Open Sans', sans-serif!important;
@@ -1211,5 +1229,8 @@ footer .align-top{
 .error
 {
 color:red !important;
-font-family:verdana, Helvetica;
+font-family:"OpenSans", sans-serif;
+margin-bottom: 0;
+font-size:0.8rem;
 }
+

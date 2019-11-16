@@ -81,19 +81,19 @@ Template Name: Contact Us Page
         
         <div class=" col-lg-6 col-md-12 col-sm-12">
             <form id="sendEmail" method="post"  class="form-horizontal" action="">
-            <div class="input-group mb-3">
+            <div class="input-group">
                 <input id="inputfullname" name="inputfullname" type="text" class="form-control" placeholder="Full Name" aria-label="FullName" aria-describedby="basic-addon1">
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group T-margin-1">
                 <input type="text" class="form-control" id="inputemail" name="inputemail" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
-                <div class="input-group-append">
+                <!-- <div class="input-group-append">
                     <span class="input-group-text" id="basic-addon2">@example.com</span>
-                </div>
+                </div> -->
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group T-margin-1">
                 <input type="text" id="inputphone" name="inputphone" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
             </div>
-            <div class="input-group">
+            <div class="input-group T-margin-1">
                 <textarea class="form-control" id="inputmessage" name="inputmessage"  placeholder="Message" aria-label="Message" rows="7"></textarea>
             </div>
         <br>
@@ -197,7 +197,7 @@ Template Name: Contact Us Page
                  },
                  success: function () {
 
-                    $( "<div title='Alert'>You have submitted successfully!</div>" ).dialog({
+                    $( "<div title=''>You have submitted successfully!</div>" ).dialog({
                     modal: true,
                     height: 200,
 			        width: 600,
@@ -231,9 +231,9 @@ Template Name: Contact Us Page
                     inputmessage:"required" 
 				},
 				messages: {
-					inputfullname: "Please enter your name",
-					inputmessage: "Please enter your message",
-					inputemail: "Please enter a valid email address",
+					inputfullname: "Please enter your name.",
+					inputmessage: "Please enter your message.",
+					inputemail: "Please enter a valid email address.",
 				},
 				errorElement: "div",
 				errorPlacement: function ( error, element ) {
