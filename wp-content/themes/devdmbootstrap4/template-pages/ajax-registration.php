@@ -198,7 +198,7 @@ Template Name: Ajax register
             <div class="custom-file">
             <div style='display:none'><a href=javascript:void(0) class="upload-info-button upload-info-button--first">Get first file info</a></div>
             
-                <div class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
+                <div id="custom-file-container-image" class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
                         href=javascript:void(0) class=custom-file-container__image-clear
                         title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
                         type=file class=custom-file-container__custom-file__custom-file-input id=customFile accept=image/*
