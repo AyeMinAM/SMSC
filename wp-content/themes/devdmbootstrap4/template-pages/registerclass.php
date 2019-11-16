@@ -49,7 +49,9 @@ Template Name: Register Class Page
                         </div>
                         <br>
                          <div class="col-sm-12 text-center">
-                         <button type="submit" class="btn btn-register">Register</button>
+                         <div id="message"> </div>
+
+                         <button id="registerSubmit" type="submit" class="btn btn-register">Register</button>
 
                     </div>
                 </form> 
@@ -62,36 +64,19 @@ Template Name: Register Class Page
 
 
 
-<div id="dialog" title="Info">
-        <div class="progress-label">Loading...</div>
-        <div id="progressbar"></div>
-</div>
-<style>
-.ui-dialog-titlebar-close {
-    display: none;
-  }
-</style>
+ 
 
 <script>
     jQuery(document).ready(function () {
 
-        dialog = $( "#dialog" ).dialog({
-        autoOpen: false,
-        closeOnEscape: false,
-        resizable: false,
-        open: function() {
-        }
-      });
- 
+        
      
     
     $(document).ajaxStart(function(){
-        dialog.dialog( "open" );
-    });
+     });
 
     $(document).ajaxComplete(function(){
-        dialog
-        .dialog( "close" );
+         
     });
 
 
@@ -103,59 +88,49 @@ Template Name: Register Class Page
         jQuery( "#registerSimple" ).validate( {
         ignore: ":hidden",
         submitHandler: function (form) {
+
+            var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> Submitting...';
+            if ($("#registerSubmit").html() !== loadingText) {
+                $("#registerSubmit").data('original-text', $("#registerSubmit").html());
+                $("#registerSubmit").html(loadingText);
+            }
+
+            $("#registerSubmit").attr("disabled", true);
+
+
      
             $.ajax({
                  type: "POST",
                  url: '<?php echo admin_url("admin-ajax.php") ?>',
                  data: $(form).serialize()  + '&action=registerSimple' ,
                  error: function () {
-                    $( "<div title='Alert'>There is error in your submission. Please try to submit again or contact with Administrator</div>" ).dialog({
-                    modal: true,
-                    height: 200,
-			        width: 600,
-                    open: function( event, ui ) {
-                            //center the dialog within the viewport (i.e. visible area of the screen)
-                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
-                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
-                        jQuery(this).parent().css('top', top + "px");
-                        jQuery(this).parent().css('left', left + "px");
-                        jQuery(this).parent().css('position', 'fixed');                
-                    },
-                    buttons: {
-                        Ok: function() {
-                            
-                            $( this ).dialog( "close" );
-                           
+                   
+                    $("#registerSubmit").attr("disabled", false);
 
-                        }
-                    }
-                    });
+                    $('.btn').html($("#registerSubmit").data('original-text'));
+
+                    $( "#message" ).html('<div class="alert alert-danger" role="alert">There is error in your submission. Please try to submit again or contact with Administrator</div>');
+
+
                  },
                  success: function () {
 
-                    $( "<div title='Alert'>You have submitted successfully!</div>" ).dialog({
-                    modal: true,
-                    height: 200,
-			        width: 600,
-                    open: function( event, ui ) {
-                            //center the dialog within the viewport (i.e. visible area of the screen)
-                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
-                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
-                        jQuery(this).parent().css('top', top + "px");
-                        jQuery(this).parent().css('left', left + "px");
-                        jQuery(this).parent().css('position', 'fixed');                
-                    },
-                    buttons: {
-                        Ok: function() {
-                            $( this ).dialog( "close" );
-                            //window.location.href = "http://yellowbabykick.com/";
-                            window.history.back(); 
+                    $("#registerSubmit").attr("disabled", false);
 
-                        }
-                    }
-                    });
+ 
+                    $( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
 
-                  
+                    $('.btn').html($("#registerSubmit").data('original-text'));
+
+
+                    $('#inputfirstname').val("");
+                    $('#inputlastname').val("");
+                    $('#inputemail').val("");
+                    $('#select_program').prop('selectedIndex',0);
+                    $('#inputphone').val("")
+                    $('#inputmessage').val("");
+
+ 
                  }
              });
            

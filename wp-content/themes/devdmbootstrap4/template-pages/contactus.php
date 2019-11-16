@@ -94,8 +94,12 @@ Template Name: Contact Us Page
                     <textarea class="form-control" id="inputmessage" name="inputmessage"  placeholder="Message" aria-label="Message" rows="7"></textarea>
                 </div>
                 <br>
+                
                 <div class="text-center">
-                    <button type="submit" class="btn btn-register">Submit</button>
+             
+                    <div id="message"> </div>
+
+                    <button  id="emailsubmit" type="submit" class="btn btn-register">Submit</button>
                 </div>
             </form>
          </div>
@@ -122,37 +126,38 @@ Template Name: Contact Us Page
 </div> <!--background-->
 </div> <!--container-->
 
-
-<div id="dialog" title="Info">
-        <div class="progress-label">Loading...</div>
-        <div id="progressbar"></div>
-</div>
-
-
+ 
 <script>
 
  
     jQuery(document).ready(function () {
 
 
-        dialog = $( "#dialog" ).dialog({
+    /*    dialog = $( "#dialog" ).dialog({
         autoOpen: false,
         closeOnEscape: false,
         resizable: false,
         open: function() {
         }
-      });
+      });*/
  
      
     
     $(document).ajaxStart(function(){
-        dialog.dialog( "open" );
-    });
+
+     });
 
     $(document).ajaxComplete(function(){
-        dialog
-        .dialog( "close" );
+
     });
+ 
+
+
+    $.validator.addMethod("regx", function(value, element, regexpr) {          
+    return regexpr.test(value);
+    }, "Please enter a valid phone number.");
+ 
+ 
 
 
     
@@ -160,11 +165,27 @@ Template Name: Contact Us Page
         ignore: ":hidden",
         submitHandler: function (form) {
 
+            
+            var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> Submitting...';
+            if ($("#emailsubmit").html() !== loadingText) {
+                $("#emailsubmit").data('original-text', $("#emailsubmit").html());
+                $("#emailsubmit").html(loadingText);
+            }
+
+            $("#emailsubmit").attr("disabled", true);
+
+
             $.ajax({
                  type: "POST",
                  url: '<?php echo admin_url("admin-ajax.php") ?>',
                  data: $(form).serialize()  + '&action=sendEmail' ,
                  error: function () {
+                    $("#emailsubmit").attr("disabled", false);
+
+                    $('.btn').html($("#emailsubmit").data('original-text'));
+
+                    $( "#message" ).html('<div class="alert alert-danger" role="alert">There is error in your submission. Please try to submit again or contact with Administrator</div>');
+                    /*
                     $( "<div title='Alert'>There is error in your submission. Please try to submit again or contact with Administrator</div>" ).dialog({
                     modal: true,
                     height: 200,
@@ -185,9 +206,24 @@ Template Name: Contact Us Page
 
                         }
                     }
-                    });
+                    });*/
                  },
                  success: function () {
+                    $("#emailsubmit").attr("disabled", false);
+
+ 
+                    $( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
+                    
+                    $('.btn').html($("#emailsubmit").data('original-text'));
+
+
+                    $('#inputfullname').val("");
+                    $('#inputemail').val("");
+                    $('#inputphone').val("")
+                    $('#inputmessage').val("");
+
+
+                     /*
 
                     $( "<div title=''>You have submitted successfully!</div>" ).dialog({
                     modal: true,
@@ -203,10 +239,14 @@ Template Name: Contact Us Page
                     },
                     buttons: {
                         Ok: function() {
+
+                             window.history.back(); 
+
                             $( this ).dialog( "close" );
+
                         }
                     }
-                    });
+                    });*/
 
                   
                  }
@@ -249,7 +289,7 @@ Template Name: Contact Us Page
 					 
 				},
 				success: function ( label, element ) {
-					 
+
 				},
 				highlight: function ( element, errorClass, validClass ) {
 					$( element ).addClass( "is-invalid" )
