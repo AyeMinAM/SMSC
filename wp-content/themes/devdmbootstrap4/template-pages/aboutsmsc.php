@@ -21,7 +21,7 @@ Template Name: About SMSC Page
     <div class="card-smsc about-smsc-bg">
         <div class="smsc-header-container">
             <h1 class="smsc-header">About SMSC</h1>
-            <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
         </div>   
         <p class="text-justify">The Satipatthana Meditation Society of Canada (SMSC) is a Buddhist organization based in Vancouver, British Columbia. The Society is incorporated under the Society Act in British Columbia and holds registered not-for-profit charity status through the Canada Revenue Agency.</p>
 

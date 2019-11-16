@@ -13,7 +13,7 @@ Template Name: Library Page
     <div class="card-smsc teacher-smsc-bg">
             <div class="smsc-header-container" style="margin-top:2rem;">
                     <h1 class="smsc-header">Dhamma Library</h1>
-                    <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
             </div>  
 
             <div class="row">

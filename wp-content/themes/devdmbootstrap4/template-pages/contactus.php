@@ -6,8 +6,8 @@ Template Name: Contact Us Page
 ?>
  
 <?php get_template_part('template-parts/head'); ?>
-
 <?php get_template_part('template-parts/nav','header'); ?>
+
 <!--KMMT code-->
 <!-- <div class="container-fluid">
     <div class="row" style="margin-top:20px;" >
@@ -72,35 +72,36 @@ Template Name: Contact Us Page
 <!--AM code-->
 <div class="container">
    <div class="card-smsc teacher-smsc-bg">
-   <div class="smsc-header-container">
-        <h1 class="smsc-header">Contact Us</h1>
-        <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
-   </div>
+        <div class="smsc-header-container">
+                <h1 class="smsc-header">Contact Us</h1>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
+        </div>
 
     <div class="row">  
         
         <div class=" col-lg-6 col-md-12 col-sm-12">
-            <form id="sendEmail" method="post"  class="form-horizontal" action="">
-            <div class="input-group">
-                <input id="inputfullname" name="inputfullname" type="text" class="form-control" placeholder="Full Name" aria-label="FullName" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group T-margin-1">
-                <input type="text" class="form-control" id="inputemail" name="inputemail" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
-                <!-- <div class="input-group-append">
-                    <span class="input-group-text" id="basic-addon2">@example.com</span>
-                </div> -->
-            </div>
-            <div class="input-group T-margin-1">
-                <input type="text" id="inputphone" name="inputphone" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group T-margin-1">
-                <textarea class="form-control" id="inputmessage" name="inputmessage"  placeholder="Message" aria-label="Message" rows="7"></textarea>
-            </div>
-        <br>
-        <div class="text-center">
-            <button type="submit" class="btn btn-register">Submit</button>
-        </div>
-         </form>
+            <form id="sendEmail" method="post" class="form-horizontal">
+                <div class="input-group">
+                    <input id="inputfullname" name="inputfullname" type="text" class="form-control" placeholder="Full Name" aria-label="FullName" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group T-margin-1">
+                    <input type="text" class="form-control" id="inputemail" name="inputemail" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+                </div>
+                <div class="input-group T-margin-1">
+                    <input type="text" id="inputphone" name="inputphone" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group T-margin-1">
+                    <textarea class="form-control" id="inputmessage" name="inputmessage"  placeholder="Message" aria-label="Message" rows="7"></textarea>
+                </div>
+                <br>
+                
+                <div class="text-center">
+             
+                    <div id="message"> </div>
+
+                    <button  id="emailsubmit" type="submit" class="btn btn-register">Submit</button>
+                </div>
+            </form>
          </div>
     
 
@@ -125,54 +126,66 @@ Template Name: Contact Us Page
 </div> <!--background-->
 </div> <!--container-->
 
-
-<div id="dialog" title="Info">
-        <div class="progress-label">Loading...</div>
-        <div id="progressbar"></div>
-</div>
-
-<!-- <style>
-.ui-dialog-titlebar-close {
-    display: none;
-  }
-</style> -->
-
+ 
 <script>
 
  
     jQuery(document).ready(function () {
 
 
-        dialog = $( "#dialog" ).dialog({
+    /*    dialog = $( "#dialog" ).dialog({
         autoOpen: false,
         closeOnEscape: false,
         resizable: false,
         open: function() {
         }
-      });
+      });*/
  
      
     
     $(document).ajaxStart(function(){
-        dialog.dialog( "open" );
-    });
+
+     });
 
     $(document).ajaxComplete(function(){
-        dialog
-        .dialog( "close" );
+
     });
+ 
+
+
+    $.validator.addMethod("regx", function(value, element, regexpr) {          
+    return regexpr.test(value);
+    }, "Please enter a valid phone number.");
+ 
+ 
 
 
     
-        jQuery( "#sendEmail" ).validate( {
+    jQuery( "#sendEmail" ).validate( {
         ignore: ":hidden",
         submitHandler: function (form) {
-     
+
+            
+            var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> Submitting...';
+            if ($("#emailsubmit").html() !== loadingText) {
+                $("#emailsubmit").data('original-text', $("#emailsubmit").html());
+                $("#emailsubmit").html(loadingText);
+            }
+
+            $("#emailsubmit").attr("disabled", true);
+
+
             $.ajax({
                  type: "POST",
                  url: '<?php echo admin_url("admin-ajax.php") ?>',
                  data: $(form).serialize()  + '&action=sendEmail' ,
                  error: function () {
+                    $("#emailsubmit").attr("disabled", false);
+
+                    $('.btn').html($("#emailsubmit").data('original-text'));
+
+                    $( "#message" ).html('<div class="alert alert-danger" role="alert">There is error in your submission. Please try to submit again or contact with Administrator</div>');
+                    /*
                     $( "<div title='Alert'>There is error in your submission. Please try to submit again or contact with Administrator</div>" ).dialog({
                     modal: true,
                     height: 200,
@@ -193,9 +206,24 @@ Template Name: Contact Us Page
 
                         }
                     }
-                    });
+                    });*/
                  },
                  success: function () {
+                    $("#emailsubmit").attr("disabled", false);
+
+ 
+                    $( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
+                    
+                    $('.btn').html($("#emailsubmit").data('original-text'));
+
+
+                    $('#inputfullname').val("");
+                    $('#inputemail').val("");
+                    $('#inputphone').val("")
+                    $('#inputmessage').val("");
+
+
+                     /*
 
                     $( "<div title=''>You have submitted successfully!</div>" ).dialog({
                     modal: true,
@@ -211,10 +239,14 @@ Template Name: Contact Us Page
                     },
                     buttons: {
                         Ok: function() {
+
+                             window.history.back(); 
+
                             $( this ).dialog( "close" );
+
                         }
                     }
-                    });
+                    });*/
 
                   
                  }
@@ -227,12 +259,17 @@ Template Name: Contact Us Page
 					inputemail: {
 						required: true,
 						email: true
-					},
+                    },
+                    inputphone:{
+						required: true,
+						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
+                    },
                     inputmessage:"required" 
 				},
 				messages: {
 					inputfullname: "Please enter your name.",
-					inputmessage: "Please enter your message.",
+                    inputmessage: "Please enter your message.",
+                    inputphone:"Please enter your valid phone number.",
 					inputemail: "Please enter a valid email address.",
 				},
 				errorElement: "div",
@@ -252,7 +289,7 @@ Template Name: Contact Us Page
 					 
 				},
 				success: function ( label, element ) {
-					 
+
 				},
 				highlight: function ( element, errorClass, validClass ) {
 					$( element ).addClass( "is-invalid" )

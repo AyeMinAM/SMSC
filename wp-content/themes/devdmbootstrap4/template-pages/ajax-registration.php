@@ -104,36 +104,32 @@ Template Name: Ajax register
 
       <div class="form-row"> 
         <div class="form-group col-md-6">  
-        <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
+            <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
         </div>  
         <div class="form-group col-md-6"> 
        
-        <div class="dropdown hierarchy-select" id="dropdown-country">
-    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-    <div class="dropdown-menu" aria-labelledby="dropdown_country_button">
-        <div class="hs-searchbox">
-            <input type="text" class="form-control" autocomplete="off">
-        </div>
-        <div class="hs-menu-inner">
-            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
-            <?php global $wpdb;
-            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
-            foreach($result as $wp_country){?> 
-                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
-                <?php echo  $wp_country->Name; ?>
-                </a>
-            <?php
-            }
-            ?> 
-           
-
-        </div>
-    </div>
-    <input class="d-none" name="dropdown-country" readonly="readonly" aria-hidden="true" type="text"/>
-</div>
-
-      </div> 
-
+            <div class="dropdown hierarchy-select" id="dropdown_country">
+                <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdown_country_button">
+                        <div class="hs-searchbox">
+                            <input type="text" class="form-control" autocomplete="off">
+                        </div>
+                        <div class="hs-menu-inner">
+                            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
+                            <?php global $wpdb;
+                            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
+                            foreach($result as $wp_country){?> 
+                                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
+                                <?php echo  $wp_country->Name; ?>
+                                </a>
+                            <?php
+                            }
+                            ?> 
+                        </div>
+                    </div>
+                    <input class="d-none" name="dropdown_country" readonly="readonly" aria-hidden="true" type="text"/>
+            </div>
+        </div> 
       </div>
 
       <div class="form-row"> 
@@ -162,29 +158,58 @@ Template Name: Ajax register
             <div class="form-group col-md-6">  
                 <input type="text" class="form-control"   id="input_driver_no" name="input_driver_no" placeholder="Canadian Driver License No."> 
             </div>  
-            <div class="form-group col-md-6"> 
-                <input type="text" class="form-control" id="input_passport" name="input_passport" placeholder="Passport No.">
-            </div> 
         </div> 
         <div class="form-row"> 
-            <div class="form-group col-md-6">  
+             <div class="form-group col-md-4"> 
+                <input type="text" class="form-control" id="input_passport" name="input_passport" placeholder="Passport No.">
+            </div> 
+            <div class="form-group col-md-3">  
                 <input type="text" class="form-control"   id="input_date_issue" name="input_date_issue" placeholder="Date of Issue"> 
             </div>  
-            <div class="form-group col-md-6"> 
-                <div class="custom-file">
-                <div style='display:none'><a href=javascript:void(0) class="upload-info-button upload-info-button--first">Get first file info</a></div>
-                
-                    <div class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
-                            href=javascript:void(0) class=custom-file-container__image-clear
-                            title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
-                            type=file class=custom-file-container__custom-file__custom-file-input id=customFile accept=image/*
-                            aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=10485760> <span
-                            class=custom-file-container__custom-file__custom-file-control></span></label>
-                        <div class=custom-file-container__image-preview></div>
+            <div class="form-group col-md-4"> 
+       
+            <div class="dropdown hierarchy-select" id="dropdown_origin_country">
+                <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_origin_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdown_origin_country_button">
+                        <div class="hs-searchbox">
+                            <input type="text" class="form-control" autocomplete="off">
+                        </div>
+                        <div class="hs-menu-inner">
+                            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
+                            <?php global $wpdb;
+                            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
+                            foreach($result as $wp_country){?> 
+                                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
+                                <?php echo  $wp_country->Name; ?>
+                                </a>
+                            <?php
+                            }
+                            ?> 
+                        </div>
                     </div>
-                </div> 
-             </div> 
+                    <input class="d-none" name="dropdown_origin_country" readonly="readonly" aria-hidden="true" type="text"/>
+            </div>
         </div> 
+                
+        </div> 
+        <div class="form-row"> 
+        <div class="form-group col-md-6"> 
+            
+            <div class="custom-file">
+            <div style='display:none'><a href=javascript:void(0) class="upload-info-button upload-info-button--first">Get first file info</a></div>
+            
+                <div id="custom-file-container-image" class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
+                        href=javascript:void(0) class=custom-file-container__image-clear
+                        title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
+                        type=file class=custom-file-container__custom-file__custom-file-input id=customFile accept=image/*
+                        aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=10485760> <span
+                        class=custom-file-container__custom-file__custom-file-control></span></label>
+                    <div class=custom-file-container__image-preview></div>
+                </div>
+            </div> 
+         </div> 
+          
+        </div>
         <button type="button" class="next action-button">Continue</button> 
 
         <div class="text-center btnDiv">
@@ -228,48 +253,70 @@ Template Name: Ajax register
 
 <div class="form-row"> 
   <div class="form-group col-md-12">  
-  <input type="text" class="form-control"   id="inputrelationship" name="inputrelationship" placeholder="Relationship to you">
+  <input type="text" class="form-control"   id="input_e_relationship" name="input_e_relationship" placeholder="Relationship to you">
   </div>  
 </div> 
 
 
 <div class="form-row"> 
   <div class="form-group col-md-12">  
-  <input type="text" class="form-control"   id="inputaddline1" name="inputaddline1" placeholder="Address line 1">
+  <input type="text" class="form-control"   id="input_e_addline1" name="input_e_addline1" placeholder="Address line 1">
   </div>  
  
 </div> 
 
 <div class="form-row"> 
   <div class="form-group col-md-12"> 
-  <input type="text" class="form-control" id="inputaddline2" name="inputaddline2" placeholder="Address line 2">
+  <input type="text" class="form-control" id="input_e_addline2" name="input_e_addline2" placeholder="Address line 2">
   </div> 
 </div> 
 
 <div class="form-row"> 
   <div class="form-group col-md-6">  
-  <input type="text" class="form-control"   id="inputpcode" name="inputpcode" placeholder="Postal Code"> 
+  <input type="text" class="form-control"   id="input_e_pcode" name="input_e_pcode" placeholder="Postal Code"> 
   </div>  
   <div class="form-group col-md-6"> 
-  <input type="text" class="form-control" id="inputprovince" name="inputprovince" placeholder="Province/Territory">
+  <input type="text" class="form-control" id="input_e_province" name="input_e_province" placeholder="Province/Territory">
   </div> 
 </div> 
 
 <div class="form-row"> 
   <div class="form-group col-md-6">  
-  <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
+  <input type="text" class="form-control"   id="input_e_city" name="input_e_city" placeholder="City"> 
   </div>  
   <div class="form-group col-md-6"> 
-  <input type="text" class="form-control" id="inputcountry" name="inputcountry" placeholder="Country">
-  </div> 
+
+  <div class="dropdown hierarchy-select" id="dropdown_e_origin_country">
+                <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_e_origin_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdown_e_origin_country_button">
+                        <div class="hs-searchbox">
+                            <input type="text" class="form-control" autocomplete="off">
+                        </div>
+                        <div class="hs-menu-inner">
+                            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
+                            <?php global $wpdb;
+                            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
+                            foreach($result as $wp_country){?> 
+                                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
+                                <?php echo  $wp_country->Name; ?>
+                                </a>
+                            <?php
+                            }
+                            ?> 
+                        </div>
+                    </div>
+                    <input class="d-none" name="dropdown_e_origin_country" readonly="readonly" aria-hidden="true" type="text"/>
+</div>
+
+</div> 
 </div> 
 
 <div class="form-row"> 
   <div class="form-group col-md-6">  
-  <input type="tel" class="form-control"   id="inputphone" name="inputphone" placeholder="Phone"> 
+  <input type="tel" class="form-control"   id="input_e_phone" name="input_e_phone" placeholder="Phone"> 
   </div>  
   <div class="form-group col-md-6"> 
-  <input type="email" class="form-control" id="inputemail" name="inputemail" placeholder="Email">
+  <input type="email" class="form-control" id="input_e_email" name="input_e_email" placeholder="Email">
   </div> 
 </div> 
   
@@ -660,11 +707,29 @@ Template Name: Ajax register
         format: 'DD/MM/YYYY'
     });
 
-    $('#dropdown-country').hierarchySelect({
+    $('#dropdown_country').hierarchySelect({
         hierarchy: false,
         width: 'auto',
         width: 400
     });
+
+
+    $('#dropdown_origin_country').hierarchySelect({
+        hierarchy: false,
+        width: 'auto',
+        width: 400
+    });
+
+
+    $('#dropdown_e_origin_country').hierarchySelect({
+        hierarchy: false,
+        width: 'auto',
+        width: 400
+    });
+
+    
+
+    
 
 
     var DateField = function(config) {
