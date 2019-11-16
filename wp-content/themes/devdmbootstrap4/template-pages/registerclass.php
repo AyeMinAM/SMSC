@@ -9,93 +9,70 @@ Template Name: Register Class Page
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container">
-
- 
-
-    <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-                    <span class = "label label_prg_events_title">
-                    Register</span>
-          </div>
+<div class="container" style="margin-top:1rem;">
     
-    </div>
+        <div class="row justify-content-md-center">
+            <div class="col-lg-8 col-sm-12">
+                <div class="card-smsc">
+                    <div class="form-register-class-padding">
+                        <h4 class="label smsc-title">Online registeration form for meditation classes.</h4>
+                    <form id="registerSimple" method="post"  class="form-horizontal" action="" >
+                  
+                                <div class="input-group T-margin-1">
+                                    <input id="inputfirstname" name="inputfirstname" type="text" class="form-control" placeholder="First Name" aria-label="FullName" aria-describedby="basic-addon1">
+                                </div>
+                        
+                        
+                                <div class="input-group T-margin-1">
+                                    <input id="inputlastname" name="inputlastname" type="text" class="form-control" placeholder="Last Name" aria-label="FullName" aria-describedby="basic-addon1">
+                                </div>
+                       
 
-    <form id="registerSimple" method="post"  class="form-horizontal" action="" >
+                        <div class="input-group T-margin-1">
+                            <input id="inputemail" name="inputemail"  type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+                        </div>
 
- 
-    <div class="row" style="margin-top:20px;">  
-        <div class="col-sm-12">
-        <div class="row">
-                <div class="input-group mb-3">
-                    <input id="inputfirstname" name="inputfirstname" type="text" class="form-control" placeholder="First Name" aria-label="FullName" aria-describedby="basic-addon1">
-                </div>
-        </div>
-         <div class="row">
-                <div class="input-group mb-3">
-                    <input id="inputlastname" name="inputlastname" type="text" class="form-control" placeholder="Last Name" aria-label="FullName" aria-describedby="basic-addon1">
-                </div>
-        </div>
+                        <div class="input-group T-margin-1">
+                            <input id="inputphone" name="inputphone"  type="text" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
+                        </div>
 
-        <div class="input-group mb-3">
-            <input id="inputemail" name="inputemail"  type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
-            <!-- <div class="input-group-append">
-                <span class="input-group-text" id="basic-addon2">@example.com</span>
-            </div> -->
-        </div>
+                        <div class="input-group T-margin-1">
+                            <select class="custom-select my-1 mr-sm-2" id="select_program" name="select_program"  >
+                                <option value="">Pick a program</option>
+                                <option value="1">Beginner</option>
+                                <option value="2">Intermediate</option>
+                            </select>
+                        </div>
 
-        <div class="input-group mb-3">
-            <input id="inputphone" name="inputphone"  type="text" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
-        </div>
+                        <div class="input-group T-margin-1">
+                            <textarea class="form-control" id="inputmessage" name="inputmessage"  placeholder="Write a few words about your previous meditation experience" aria-label="Message" rows="7"></textarea>
+                        </div>
+                        <br>
+                         <div class="col-sm-12 text-center">
+                         <button type="submit" class="btn btn-register">Register</button>
 
-        <div class="input-group mb-3">
-            <select class="custom-select my-1 mr-sm-2" id="select_program" name="select_program"  >
-                <option value="">Pick a program</option>
-                <option value="1">Beginner</option>
-                <option value="2">Intermediate</option>
-            </select>
-        </div>
+                    </div>
+                </form> 
+            </div>
+            </div><!--shadow-->
+        </div>  <!--column-->
+    </div> <!--row-->
+</div> <!--container-->
 
 
-        <div class="input-group">
-            <textarea class="form-control" id="inputmessage" name="inputmessage"  placeholder="Write a few words about your previous meditation experience" aria-label="Message" rows="7"></textarea>
-        </div>
-        <br>
-             
 
-         </div>
-         
-     </div>
-
-     <div class="row" style="margin-top:20px;" >
-         <div class="col-sm-12 text-center">
-         <button type="submit" class="btn btn-register">Register</button>
-
-          </div>
-    </div>
-  
-    </form>
-
-   
-
-       
-</div>
 
 <div id="dialog" title="Info">
         <div class="progress-label">Loading...</div>
         <div id="progressbar"></div>
 </div>
-
 <style>
-
 .ui-dialog-titlebar-close {
     display: none;
   }
 </style>
 
 <script>
-
- 
     jQuery(document).ready(function () {
 
         dialog = $( "#dialog" ).dialog({
