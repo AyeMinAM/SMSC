@@ -463,20 +463,11 @@ Template Name: Ajax register
 
     <div class="form-row"> 
         <div class="form-group col-md-12">
-            Please read this carefully before you submit this form online.  
+            Please read this waiver form carefully before you submit it online.
         </div> 
     </div> 
 
 
-
-    <div class="form-row"> 
-        <div class="form-group col-md-12">
-                <p class="text-justify">I, THE UNDERSIGNED WAIVE AND ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF
-                AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREAT I WILL BE ATTENDING AT SMSC.     
-                </p> 
-        </div> 
-    </div> 
-      
     <div class="form-row"> 
         <div class="form-group col-sm-0">
             1.  
@@ -526,7 +517,7 @@ Template Name: Ajax register
            
         </div>  
          <div class="form-group col-md-10">
-         - Follow retreat schedule  
+         - Follow retreat schedule
         </div>  
     </div>
 
@@ -550,20 +541,20 @@ Template Name: Ajax register
     </div> 
 
 
-    <div class="form-row"> 
+    <!-- <div class="form-row"> 
         <div class="form-group col-sm-0">
            3.  
         </div>  
          <div class="form-group col-md-10">
            This form will be kept on the SMSC file for future retreats you may 
         attend. However, it will be deleted after current retreat upon request. 
-        Please keep your information up-to-date as you attend retreats. 
+        
         </div>  
-    </div> 
+    </div>  -->
 
     <div class="form-row"> 
         <div class="form-group col-md-12">
-        Keep my personal information on the SMSC file.   
+        3. I agree to keep my personal information on the SMSC file.   
 
         </div> 
     </div> 
@@ -578,16 +569,27 @@ Template Name: Ajax register
                 <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
                 <label class="form-check-label" >No</label>
             </div>
+            <div>
+           If no, you will need to fill up this form at every future retreat you attend.
+        
+        </div>  
         </div>  
       </div> 
 
       <div class="form-row"> 
         <div class="form-group col-md-12">
+                <p class="text-justify">BY SUBMITTING THIS ELECTRONIC APPLICATION  I WAIVE ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREATS I WILL BE ATTENDING AT SMSC.
+     
+                </p> 
+        </div> 
+    </div> 
+      <!-- <div class="form-row"> 
+        <div class="form-group col-md-12">
             I agree that by submitting this application, I am   
             electronically signing this application. 
         </div> 
     </div> 
-
+ -->
 
 
       <div class="form-row"> 

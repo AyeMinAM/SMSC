@@ -12,7 +12,7 @@ Template Name: Beginner Page
             <div class="text-center header-class-title-height">
                       <span class="header-class-title">
                       Mindfulness Insight Meditation Classes</br>
-                      for Beginner 
+                      for Beginners
                       </span>
                       <div style="margin-top:2rem;"> 
                         <a href="<?php echo esc_url( get_permalink( get_page_by_title('registerclass') ) ); ?>" class="btn btn-lg btn-register">
