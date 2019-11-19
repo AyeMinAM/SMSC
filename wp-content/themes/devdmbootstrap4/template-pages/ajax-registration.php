@@ -902,8 +902,8 @@ jQuery(document).ready(function ()
             var start =  moment(value, "DD/MM/YYYY");
             var end =  moment($(params).val(), "DD/MM/YYYY");
 
-             console.log(start > end);
-            return start > end;
+             console.log(start >= end);
+            return start >= end;
         }
         else
         return true; 
@@ -921,8 +921,8 @@ jQuery(document).ready(function ()
             var start =  moment(value, "DD/MM/YYYY");
             var end =  moment($(params).val(), "DD/MM/YYYY");
 
-            console.log(start < end);
-            return start < end;
+            console.log(start <= end);
+            return start <= end;
         }
         else
         return true; 
@@ -1120,7 +1120,7 @@ jQuery(document).ready(function ()
 
            if (form.valid() == true){
 
-               // alert($('fieldset:visible').attr('id'));
+                //alert($('fieldset:visible').attr('id'));
 
                   //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
