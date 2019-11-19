@@ -20,16 +20,18 @@ Template Name: Ajax register
     <ul id="progressbar">
       <li class="active">Personal Information</li>  
       <li>Additional Information</li> 
-      <li>Most Recent Meditation Retreats</li> 
-
       <li>Meal and Medical Information</li>
       <li>Policy, Agreement and Submission</li>
 
     </ul>
-  <!-- Tittle -->
+ 
+    <!-- fieldsets -->
+<div id="container">
+
+    <fieldset class="box" id="1">
+         <!-- Tittle -->
     <div class="tittle">
-      <h2>Online Application Form for the Residentail Meditation Retreat</h2>
-      <p>Download the form  <a href="http://localhost/SMSC/wp-content/uploads/pdf/Lecture8_student_complete.pdf" target="_blank">here</a>   if you want to fill out on paper</p>
+      <h2>Online Application Form for the Meditation Retreat</h2>
     </div>
     
     <div class="col-sm-12">
@@ -44,10 +46,6 @@ Template Name: Ajax register
     
     </div>
     
-    <!-- fieldsets -->
-<div id="container">
-
-    <fieldset class="box">
     <h3>1. Personal Information</h3>
 
       <div class="form-row"> 
@@ -107,28 +105,19 @@ Template Name: Ajax register
             <input type="text" class="form-control"   id="inputcity" name="inputcity" placeholder="City"> 
         </div>  
         <div class="form-group col-md-6"> 
-       
-            <div class="dropdown hierarchy-select" id="dropdown_country">
-                <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu" aria-labelledby="dropdown_country_button">
-                        <div class="hs-searchbox">
-                            <input type="text" class="form-control" autocomplete="off">
-                        </div>
-                        <div class="hs-menu-inner">
-                            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
-                            <?php global $wpdb;
-                            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
-                            foreach($result as $wp_country){?> 
-                                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
-                                <?php echo  $wp_country->Name; ?>
-                                </a>
-                            <?php
-                            }
-                            ?> 
-                        </div>
-                    </div>
-                    <input class="d-none" name="dropdown_country" readonly="readonly" aria-hidden="true" type="text"/>
-            </div>
+            <select id="selectcountry" name="selectcountry" style="width:100%">
+                <option value="Select Country">Select Country</option>
+                <?php global $wpdb;
+                $result = $wpdb->get_results("SELECT * FROM wp_country order by Name");
+                foreach($result as $wp_country){?> 
+                    <option value="<?php echo $wp_country->Code; ?>">
+                        <?php echo  $wp_country->Name; ?>
+                    </option>
+                <?php
+                }
+                ?> 
+            </select>
+            <div id="error_selectcountry"> </div>
         </div> 
       </div>
 
@@ -166,31 +155,23 @@ Template Name: Ajax register
             <div class="form-group col-md-3">  
                 <input type="text" class="form-control"   id="input_date_issue" name="input_date_issue" placeholder="Date of Issue"> 
             </div>  
-            <div class="form-group col-md-4"> 
-       
-            <div class="dropdown hierarchy-select" id="dropdown_origin_country">
-                <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_origin_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu" aria-labelledby="dropdown_origin_country_button">
-                        <div class="hs-searchbox">
-                            <input type="text" class="form-control" autocomplete="off">
-                        </div>
-                        <div class="hs-menu-inner">
-                            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
-                            <?php global $wpdb;
-                            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
-                            foreach($result as $wp_country){?> 
-                                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
-                                <?php echo  $wp_country->Name; ?>
-                                </a>
-                            <?php
-                            }
-                            ?> 
-                        </div>
-                    </div>
-                    <input class="d-none" name="dropdown_origin_country" readonly="readonly" aria-hidden="true" type="text"/>
-            </div>
-        </div> 
-                
+            <div class="form-group col-md-5"> 
+                <select id="select_origin_country" name="select_origin_country" style="width:100%">
+                    <option value="Select Origin Country">Select Origin Country</option>
+
+                    <?php global $wpdb;
+                    $result = $wpdb->get_results("SELECT * FROM wp_country order by Name");
+                    foreach($result as $wp_country){?> 
+                        <option value="<?php echo $wp_country->Code; ?>">
+                            <?php echo  $wp_country->Name; ?>
+                        </option>
+                    <?php
+                    }
+                    ?> 
+                </select>
+                <div id="error_select_origin_country"> </div>
+
+            </div>      
         </div> 
         <div class="form-row"> 
         <div class="form-group col-md-6"> 
@@ -201,12 +182,13 @@ Template Name: Ajax register
                 <div id="custom-file-container-image" class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
                         href=javascript:void(0) class=custom-file-container__image-clear
                         title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
-                        type=file class=custom-file-container__custom-file__custom-file-input id=customFile accept=image/*
+                        type=file class=custom-file-container__custom-file__custom-file-input id=customFile name=customFile accept=image/*
                         aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=10485760> <span
                         class=custom-file-container__custom-file__custom-file-control></span></label>
                     <div class=custom-file-container__image-preview></div>
                 </div>
             </div> 
+            <div id="error_customFile"></div>
          </div> 
           
         </div>
@@ -215,7 +197,7 @@ Template Name: Ajax register
         <div class="text-center btnDiv">
          </div> 
     </fieldset>
-    <fieldset class="box">
+    <fieldset class="box" id="2">
     <h3>2. Additional Information</h3>
 
     <div class="form-row"> 
@@ -284,31 +266,22 @@ Template Name: Ajax register
   <div class="form-group col-md-6">  
   <input type="text" class="form-control"   id="input_e_city" name="input_e_city" placeholder="City"> 
   </div>  
-  <div class="form-group col-md-6"> 
+    <div class="form-group col-md-6"> 
+        <select id="select_e_country" name="select_e_country" style="width:100%">
+                    <option value="Select Country">Select Country</option>
+                    <?php global $wpdb;
+                    $result = $wpdb->get_results("SELECT * FROM wp_country order by Name");
+                    foreach($result as $wp_country){?> 
+                        <option value="<?php echo $wp_country->Code; ?>">
+                            <?php echo  $wp_country->Name; ?>
+                        </option>
+                    <?php
+                    }
+                    ?> 
+        </select>
+        <div id="error_select_e_country"> </div>
 
-  <div class="dropdown hierarchy-select" id="dropdown_e_origin_country">
-                <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown_e_origin_country_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu" aria-labelledby="dropdown_e_origin_country_button">
-                        <div class="hs-searchbox">
-                            <input type="text" class="form-control" autocomplete="off">
-                        </div>
-                        <div class="hs-menu-inner">
-                            <a class="dropdown-item" data-value="" data-default-selected="" href="#">Select Country</a>
-                            <?php global $wpdb;
-                            $result = $wpdb->get_results("SELECT Name FROM wp_country order by Name");
-                            foreach($result as $wp_country){?> 
-                                <a class="dropdown-item" data-value="<?php echo $wp_country->Code; ?>" href="#">
-                                <?php echo  $wp_country->Name; ?>
-                                </a>
-                            <?php
-                            }
-                            ?> 
-                        </div>
-                    </div>
-                    <input class="d-none" name="dropdown_e_origin_country" readonly="readonly" aria-hidden="true" type="text"/>
-</div>
-
-</div> 
+    </div> 
 </div> 
 
 <div class="form-row"> 
@@ -319,27 +292,30 @@ Template Name: Ajax register
   <input type="email" class="form-control" id="input_e_email" name="input_e_email" placeholder="Email">
   </div> 
 </div> 
+
+<div class="form-row"> 
+    <div class="form-group col-md-12">
+      Most recent meditation retreats attend (Theravada and non-Theravada), up to 5 retreats.   
+    </div> 
+</div> 
+
+<div class="form-row"> 
+
+  <div class="form-group col-md-12">  
+   
+  <textarea class="form-control rounded-0" id="txt_retreats" name="txt_retreats" rows="3"></textarea>
+
+  </div>  
+ 
+</div> 
   
  
       <button type="button" class="action-button previous previous_button">Back</button> 
       <button type="button" class="next action-button">Continue</button>  
 
     </fieldset>  
-    <fieldset class="box">
-    <div class="form-row"> 
-    <div class="form-group col-md-12">
-      Most recent meditation retreats attend (Theravada and non-Theravada), up to 5 retreats.   
-    </div> 
-</div> 
 
-    <div id="jsGrid"></div>   
-
-
-    <button type="button" class="action-button previous previous previous_button">Back</button> 
-    <button type="button" class="next action-button">Continue</button>  
-
-    </fieldset>  
-    <fieldset class="box">
+    <fieldset class="box" id="3">
     <h3>3. Meal and Medical Information</h3>
 
     <div class="form-row"> 
@@ -354,11 +330,11 @@ Template Name: Ajax register
   </div>  
    <div class="form-group col-md-8">
       <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="radio_gender" id="rdo_male" value="Male">
+          <input class="form-check-input" type="radio" name="radio_vegetarian"  value="1">
           <label class="form-check-label" >Yes</label>
       </div>
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="radio_gender" id="rdo_female" value="Female">
+      <div id="div_vegetarian" class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio_vegetarian" value="0">
           <label    class="form-check-label" >No</label>
       </div>
   </div>  
@@ -366,11 +342,23 @@ Template Name: Ajax register
 
 <div class="form-row"> 
         <div class="form-group col-md-12">
-        Food Allergy (Please indicate.)  
+        Do you have food or other allergies? If yes, please specify. 
+
         </div> 
+        <div class="form-group col-md-8">
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio_allergies"  value="1">
+          <label class="form-check-label" >Yes</label>
+      </div>
+      <div id="div_allergies" class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio_allergies"  value="0">
+          <label    class="form-check-label" >No</label>
+      </div>
+  </div>  
 </div> 
 
 <div class="form-row"> 
+
   <div class="form-group col-md-12">  
    
   <textarea class="form-control rounded-0" id="txtfood_allergy" name="txtfood_allergy" rows="3"></textarea>
@@ -381,35 +369,16 @@ Template Name: Ajax register
 
 <div class="form-row"> 
     <div class="form-group col-md-12">
-      Do you have BC medical or Travel insurance? (for out-of-country yogis only). 
+    Do you have BC or any other type of health insurance? Please specify type of health insurance. 
+    <br>
+    (It is imperative to have health insurance.) 
     </div> 
-</div> 
-
-<div class="form-row"> 
- 
-   <div class="form-group col-md-10">
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
-          <label class="form-check-label" >Yes</label>
-      </div>
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
-          <label class="form-check-label" >No</label>
-      </div>
-  </div>  
-</div> 
-
-
-<div class="form-row"> 
-        <div class="form-group col-md-12">
-        Do you have other medical insurance? Please specify.
-        </div> 
 </div> 
 
 <div class="form-row"> 
   <div class="form-group col-md-12">  
    
-  <textarea class="form-control rounded-0" id="txt_other_insurance" name="txt_other_insurance" rows="3"></textarea>
+  <textarea class="form-control rounded-0" id="txt_insurance" name="txt_insurance" rows="3"></textarea>
 
   </div>  
  
@@ -426,11 +395,11 @@ Template Name: Ajax register
  
    <div class="form-group col-md-10">
       <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
+          <input class="form-check-input" type="radio" name="radio_issue_MP"    value="1">
           <label class="form-check-label" >Yes</label>
       </div>
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
+      <div id="div_issue_mp" class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio_issue_MP"  value="0">
           <label class="form-check-label" >No</label>
       </div>
   </div>  
@@ -446,7 +415,7 @@ Template Name: Ajax register
 <div class="form-row"> 
   <div class="form-group col-md-12">  
    
-  <textarea class="form-control rounded-0" id="txt_other_insurance" name="txt_other_insurance" rows="3"></textarea>
+  <textarea class="form-control rounded-0" id="txt_issue_MP" name="txt_issue_MP" rows="3"></textarea>
 
   </div>  
  
@@ -457,7 +426,7 @@ Template Name: Ajax register
     <button type="button" class="next action-button">Continue</button>  
 
     </fieldset>  
-    <fieldset  class="box">
+    <fieldset  class="box" id="4">
 
     <h3>4. Policy and agreement</h3>
 
@@ -467,16 +436,6 @@ Template Name: Ajax register
         </div> 
     </div> 
 
-
-
-    <div class="form-row"> 
-        <div class="form-group col-md-12">
-                <p class="text-justify">I, THE UNDERSIGNED WAIVE AND ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF
-                AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREAT I WILL BE ATTENDING AT SMSC.     
-                </p> 
-        </div> 
-    </div> 
-      
     <div class="form-row"> 
         <div class="form-group col-sm-0">
             1.  
@@ -555,27 +514,18 @@ Template Name: Ajax register
            3.  
         </div>  
          <div class="form-group col-md-10">
-           This form will be kept on the SMSC file for future retreats you may 
-        attend. However, it will be deleted after current retreat upon request. 
-        Please keep your information up-to-date as you attend retreats. 
+         I agree to keep my personal information on the SMSC file. 
         </div>  
-    </div> 
-
-    <div class="form-row"> 
-        <div class="form-group col-md-12">
-        Keep my personal information on the SMSC file.   
-
-        </div> 
     </div> 
  
       <div class="form-row"> 
          <div class="form-group col-md-10">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="optradio" id="rdo_male" value="Male">
+                <input class="form-check-input" type="radio" name="radio_save"   value="1">
                 <label class="form-check-label" >Yes</label>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="optradio" id="rdo_female" value="Female">
+            <div id="div_save" class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="radio_save" id="rdo_female" value="0">
                 <label class="form-check-label" >No</label>
             </div>
         </div>  
@@ -583,8 +533,13 @@ Template Name: Ajax register
 
       <div class="form-row"> 
         <div class="form-group col-md-12">
-            I agree that by submitting this application, I am   
-            electronically signing this application. 
+        If "No", you will need to fill up this form at every future retreat you attend.
+        </div> 
+    </div> 
+
+      <div class="form-row"> 
+        <div class="form-group col-md-12">
+        BY SUBMITTING THIS ELECTRONIC APPLICATION I WAIVE ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREATS I WILL BE ATTENDING AT SMSC.
         </div> 
     </div> 
 
@@ -592,17 +547,17 @@ Template Name: Ajax register
 
       <div class="form-row"> 
         <div class="form-group col-md-6">  
-        <input type="text" class="form-control"   id="inputfirstname" name="inputfirstname" placeholder="First Name"> 
+        <input type="text" class="form-control"   id="input_ack_firstname" name="input_ack_firstname" placeholder="First Name"> 
         </div>  
         <div class="form-group col-md-6"> 
-        <input type="text" class="form-control" id="inputlastname" name="inputlastname" placeholder="Last Name">
+        <input type="text" class="form-control" id="input_ack_lastname" name="input_ack_lastname" placeholder="Last Name">
         </div> 
       </div> 
 
 
       <div class="form-row"> 
         <div class="form-group col-md-6">  
-        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date">
+        <input type="text" class="form-control" id="input_ack_date" name="input_ack_date" placeholder="Date">
         </div> 
       </div> 
 
@@ -611,7 +566,8 @@ Template Name: Ajax register
 
     <button type="button" class="action-button previous previous previous previous_button">Back</button> 
 
-    <button href="#" class="action-button">Submit</button> 
+    <button id="registerSubmit" type="submit" class="btn action-button">Submit</button>
+    <div id="message"> </div>
 
     </fieldset>  
 </div>
@@ -622,36 +578,19 @@ Template Name: Ajax register
 </div>
  
 </div>
-
-
-<div id="dialog" title="Info">
-  <div class="progress-label">Loading...</div>
-  <div id="progressbar"></div>
-</div>
  
 <style>
 
-/* .ui-datepicker-calendar {
-        display: none;
-    }   */
+ 
+   
 
-/* .has-error input[type=text], 
-.has-error input[type=email], 
-.has-error select {
-    border-color: #2f2f2f;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-} */
-
-.ui-dialog-titlebar-close {
-    display: none;
-  }
 </style>
 
 <script>
 
  
-    jQuery(document).ready(function () {
+jQuery(document).ready(function () 
+{
 
 
     function adjustBox() {
@@ -663,37 +602,27 @@ Template Name: Ajax register
             $(".box").height(H+200);
     }; 
     //adjustBox();
- 
-    dialog = $( "#dialog" ).dialog({
-        autoOpen: false,
-        closeOnEscape: false,
-        resizable: false,
-        open: function() {
-        }
-    });
- 
-     
-    
+  
     $(document).ajaxStart(function(){
-        dialog.dialog( "open" );
+        
     });
 
     $(document).ajaxComplete(function(){
-        dialog
-        .dialog( "close" );
+        
     });
  
     jQuery( "#chk_agree" ).checkboxradio();
 
 
+
  
     $('#inputRetreatFrom').datetimepicker({
-        format: 'DD/MM/YYYY'
+        format: 'DD/MM/YYYY' 
     });
 
 
     $('#inputRetreatTo').datetimepicker({
-        format: 'DD/MM/YYYY'
+        format: 'DD/MM/YYYY' 
     });
 
 
@@ -707,29 +636,57 @@ Template Name: Ajax register
         format: 'DD/MM/YYYY'
     });
 
-    $('#dropdown_country').hierarchySelect({
-        hierarchy: false,
-        width: 'auto',
-        width: 400
+    $('#input_ack_date').datetimepicker({
+        format: 'DD/MM/YYYY'
     });
 
+    function submit() 
+    {
+            var form = $("#msform");
 
-    $('#dropdown_origin_country').hierarchySelect({
-        hierarchy: false,
-        width: 'auto',
-        width: 400
-    });
+            var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> Submitting...';
+                if ($("#registerSubmit").html() !== loadingText) {
+                    $("#registerSubmit").data('original-text', $("#registerSubmit").html());
+                    $("#registerSubmit").html(loadingText);
+                }
+
+            $("#registerSubmit").attr("disabled", true);
+ 
+            $.ajax({
+                type: "POST",
+                url: '<?php echo admin_url("admin-ajax.php") ?>',
+                data: $(form).serialize()  + '&action=registerSubmit' ,
+                error: function () {
+                $("#registerSubmit").attr("disabled", false);
+
+                $('.btn').html($("#registerSubmit").data('original-text'));
+
+                $( "#message" ).html('<div class="alert alert-danger" role="alert">There is error in your submission. Please try to submit again or contact with Administrator</div>');
+
+                
+                },
+                success: function () {
+
+                $("#registerSubmit").attr("disabled", false);
+
+                $( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
+
+                $('.btn').html($("#registerSubmit").data('original-text'));
+
+                }
+            });
+        
+    }
+ 
 
 
-    $('#dropdown_e_origin_country').hierarchySelect({
-        hierarchy: false,
-        width: 'auto',
-        width: 400
-    });
 
-    
+    $('#selectcountry').select2();
 
-    
+    $('#select_origin_country').select2();
+ 
+
+    $('#select_e_country').select2();
 
 
     var DateField = function(config) {
@@ -761,11 +718,11 @@ Template Name: Ajax register
             return this._editPicker = $("<input>").datepicker(
 
                 { 
-                  changeMonth: true,
-                changeYear: true,
-                   showButtonPanel: true,
-                   dateFormat: 'MM yy',
-                   onClose: function(dateText, inst) { 
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    dateFormat: 'MM yy',
+                    onClose: function(dateText, inst) { 
                 $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
             }
                 }
@@ -792,6 +749,7 @@ Template Name: Ajax register
 
     var jsGridData = $("#jsGrid").jsGrid({
         width: "100%",
+        height: "90%",
         paging: true,
         pageSize: 15,
         inserting: true,
@@ -802,12 +760,13 @@ Template Name: Ajax register
         data: clients,
  
         fields: [
+            { type: "control" },
             { name: "TypeRetreat", title: "Type of Retreat", type: "text", width: 150, validate: "required" },
             { name: "Teacher", type: "text", width: 200,validate: "required"},
             { name: "Location", type: "text", width: 200,validate: "required" },
              { name: "WhenMMYY",  title: "When(month, Year)", type: "DateField", width: 100, align: "center" },
-            { name: "Duration",title: "Duration(How many days?)", type: "text",width: 100  },
-            { type: "control" }
+            { name: "Duration",title: "Duration(How many days?)", type: "text",width: 100  }
+           
         ]
     });
 
@@ -823,200 +782,157 @@ Template Name: Ajax register
     }, "Please enter a valid date format.");
 
  
-
-    $.validator.addMethod("regxCountry", function(value, element, regexpr) { 
-    alert(value);         
-    return regexpr.test(value);
-    }, "Please select country.");
-
-
-    jQuery( "#registerForm" ).validate( {
-        ignore: ":hidden",
-        submitHandler: function (form) {
-            var count =  clients.length;
-
-             if(count>0)
-            {
-                var jsonData = JSON.stringify(clients);
-
-                 var input = $("<input>")
-               .attr("type", "hidden")
-               .attr("name", "retreatdata").val(jsonData);
-               $(form).append(input);
-
-                $.ajax({
-                 type: "POST",
-                 url: '<?php echo admin_url("admin-ajax.php") ?>',
-                 data: $(form).serialize()  + '&action=registerSubmit' ,
-                 error: function () {
-                    $( "<div title='Alert'>There is error in your submission. Please try to submit again or contact with Administrator</div>" ).dialog({
-                    modal: true,
-                    height: 200,
-			        width: 600,
-                    open: function( event, ui ) {
-                            //center the dialog within the viewport (i.e. visible area of the screen)
-                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
-                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
-                        jQuery(this).parent().css('top', top + "px");
-                        jQuery(this).parent().css('left', left + "px");
-                        jQuery(this).parent().css('position', 'fixed');                
-                    },
-                    buttons: {
-                        Ok: function() {
-                            
-                            $( this ).dialog( "close" );
-                            window.location.href = "http://yellowbabykick.com/";
-                           
-
-                        }
-                    }
-                    });
-                 },
-                 success: function () {
-
-                    $( "<div title='Alert'>You have submitted successfully! Please check your email for acknowledge and wait for the reply.</div>" ).dialog({
-                    modal: true,
-                    height: 200,
-			        width: 600,
-                    open: function( event, ui ) {
-                            //center the dialog within the viewport (i.e. visible area of the screen)
-                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
-                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
-                        jQuery(this).parent().css('top', top + "px");
-                        jQuery(this).parent().css('left', left + "px");
-                        jQuery(this).parent().css('position', 'fixed');                
-                    },
-                    buttons: {
-                        Ok: function() {
-                            $( this ).dialog( "close" );
-                            window.location.href = "http://yellowbabykick.com/";
-                           
-
-                        }
-                    }
-                    });
-
-                  
-                 }
-             });
-            }
-            else
-            {
-               
-                $( "<div title='Alert'>Please add your history records for MEDITATION RETREATS ATTENDED (THERAVADA AND NON THERAVADA)</div>" ).dialog({
-                    modal: true,
-                    height: 200,
-			        width: 600,
-                    open: function( event, ui ) {
-                            //center the dialog within the viewport (i.e. visible area of the screen)
-                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
-                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
-                        jQuery(this).parent().css('top', top + "px");
-                        jQuery(this).parent().css('left', left + "px");
-                        jQuery(this).parent().css('position', 'fixed');                
-                    },
-                    buttons: {
-                        Ok: function() {
-                        $( this ).dialog( "close" );
-                        }
-                    }
-                    });
+    $.validator.addMethod("checkCountry", function(value) {
+		return value !== "Select Country";
+	}, 'Please select Country');
  
-                // alert("Please add your history records for MEDITATION RETREATS ATTENDED (THERAVADA AND NON THERAVADA)");
-            }
-
-            
-             return false; // required to block normal submit since you used ajax
-         },
-				rules: {
-					inputfirstname: {
-						required: true,
-                        maxlength: 1,
-                    },
-					inputlastname: "required",
-					select_gender: "required" ,
-                    txtaddress:"required",
-                    inputtelnumber:{
-						required: true,
-						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
-					},
-					inputemail: {
-						required: true,
-						email: true
-					},
-                    inputStart: {
-						required: true,
-						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
-					},
-                    inputEnd: {
-						required: true,
-						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
-					},
-                    inputDOB: {
-                        lessThanToday: new Date(),
-						required: true,
-						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
-					},
-                    inputId:"required",
-                    inputOccupation:"required",
-                    select_veget:"required",
-                    txtfood_allergy:"required",
-                    inputeme_name:"required",
-                    inputeme_address:"required",
-                    inputeme_telnumber:{
-						required: true,
-						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
-					},
-                    select_minsurance:"required",
-                    txtother_minsurance:"required",
-                    select_mental_issue:"required",
-                    txtmental_issue:"required",
-                    inputeme_email: {
-						required: true,
-						email: true
-					},
-					chk_agree: "required"
-				},
-				messages: {
-					inputfirstname: "Please enter your firstname",
-					inputlastname: "Please enter your lastname",
-					select_gender:  "Please select gender",
-                    select_veget: "Please answer for Vegetarian",
-                    select_minsurance:  "Please answer for insurance",
-                    select_mental_issue:  "Please answer for health and safety",
-					inputemail: "Please enter a valid email address",
-					chk_agree: "Please accept our policy"
-				},
-				errorElement: "em",
-				errorPlacement: function ( error, element ) {
-                    // Add the `help-block` class to the error element
- 					error.addClass( "help-block" );
-
-					// Add `has-feedback` class to the parent div.form-group
-					// in order to add icons to inputs
  
-					if ( element.prop( "type" ) === "checkbox" ) {
-						error.insertAfter( element.parent( "label" ) );
-					} else {
-						error.insertAfter( element );
-					}
 
-					 
-				},
-				success: function ( label, element ) {
-					 
-				},
-				highlight: function ( element, errorClass, validClass ) {
-					$( element ).addClass( "is-invalid" )
-				},
-				unhighlight: function ( element, errorClass, validClass ) {
-					$( element ).removeClass( "is-invalid" );
- 				}
-            } );
-            
-            ;(function($) {
-    "use strict";  
     
+    $.validator.addMethod("checkDriverNo", function(value) {
+
+       if($.trim($("#input_passport").val())=="") 
+       {
+            return $.trim($("#input_driver_no").val())!="";
+      
+       }
+       else
+       {
+           return true; 
+       }
+	}, 'Please enter Canadian Driver License No. or Passport No.');
+ 
+
+    $.validator.addMethod("checkPassportNo", function(value) {
+
+    if($.trim($("#input_driver_no").val())=="") 
+    {
+        return $.trim($("#input_passport").val())!="";
+
+    }
+    else
+    {
+        return true; 
+    }
+    }, 'Please enter Canadian Driver License No. or Passport No.');
+
+
+
+    $.validator.addMethod("checkFoodAllergy", function(value) {
+    
+    
+
+    console.log( $('input[name=radio_allergies]:checked', '#msform').val());
+
+
+    if($('input[name=radio_allergies]:checked', '#msform').val()=="1") 
+    {
+        return $.trim($("#txtfood_allergy").val())!="";
+
+    }
+    else
+    {
+        return true; 
+    }
+    }, 'Please specify food or other allergies.');
+
+
+
+    $.validator.addMethod("checkIssueMP", function(value) {
+
+        console.log( $('input[name=radio_issue_MP]:checked', '#msform').val());
+
+
+    if($('input[name=radio_issue_MP]:checked', '#msform').val()=="1") 
+    {
+        return $.trim($("#txt_issue_MP").val())!="";
+
+    }
+    else
+    {
+        return true; 
+    }
+    }, 'Please specify any physical or mental health issue.');
+
+
+
+
+    
+    $.validator.addMethod("checkIssueDate", function(value) {
+
+    if($.trim($("#input_passport").val())!="") 
+    {
+        if($.trim($("#input_date_issue").val())!="") 
+        {
+            regexpr = /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+            return regexpr.test(value);
+        }
+        else
+            return false; 
+
+    }
+    else
+    {
+        return true; 
+    }
+    }, 'Please enter valid date of issue');
+
+
+
+    $.validator.addMethod("checkOriginCountry", function(value) {
+
+    if($.trim($("#input_passport").val())!="") 
+    {
+        return value != "Select Origin Country"; 
+
+    }
+    else
+    {
+        return true; 
+    }
+    }, 'Please select Origin Country');
+
+
+
+    $.validator.addMethod("greaterThan", 
+    function(value, element, params) {
+
+        if($.trim($(params).val())!="") 
+        {
+            var start =  moment(value, "DD/MM/YYYY");
+            var end =  moment($(params).val(), "DD/MM/YYYY");
+
+             console.log(start > end);
+            return start > end;
+        }
+        else
+        return true; 
+
+       
+        
+    },'Must be greater than {0}.');
+
+
+    $.validator.addMethod("lessThan", 
+    function(value, element, params) {
+
+        if($.trim($(params).val())!="") 
+        {
+            var start =  moment(value, "DD/MM/YYYY");
+            var end =  moment($(params).val(), "DD/MM/YYYY");
+
+            console.log(start < end);
+            return start < end;
+        }
+        else
+        return true; 
+
+      
+    },'Must be less than {0}.');
+
+
+
+
     //* Form js
     function verificationForm(){
         //jQuery time
@@ -1025,73 +941,186 @@ Template Name: Ajax register
         var animating; //flag to prevent quick multi-click glitches
 
         $(".next").click(function () {
-           // if (animating) return false;
-            //animating = true;
-
+ 
             current_fs = $(this).parent();
+           
             next_fs = $(this).parent().next();
 
-          
             var form = $("#msform");
-            form.validate({
-                rules: {
-                    inputfirstname: {
-						required: true,
-                        maxlength: 100,
-                    },
-                    inputlastname: {
-						required: true,
-                        maxlength: 100,
-                    },
-                    rdo_gender: "required" ,
-                    inputaddline1:{
-						required: true,
-                        maxlength: 255,
-                    },
-                    inputprovince:"required",
-                    inputcity:"required",
-                    inputphone: { required: true,
-                    regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/ },
-                    inputemail: {
-						required: true,
-						email: true
-					},
-                    inputDOB: {
-						required: true,
-						regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
-					}, 
-                    dropdown_country_button:
-                    {
-                        regxCountry:/^\b(?!Select Country)\b\S+$/
-                    }
-                },
-                messages: {
-                    inputfirstname: {
-                        required: "Please enter your First Name",
-                        maxlength: 'First Name is too long and it is allow only less than or equal to 100'
-                    },
-                    inputlastname: {
-                        required: "Please enter your Last Name",
-                        maxlength: 'Last Name is too long and it is allow only less than or equal to 100'
-                    },
-                    inputaddline1: "Please enter Address line 1",
-                    inputprovince:"Please enter Province/Territory",
-                    inputcity:"Please enter City",
-                    inputemail: "Please enter a valid email address",
 
-                 } 
-                ,  errorPlacement: function(error, element) {
-                    if (element.attr("name") == "rdo_gender") {
-                    error.insertAfter("#div_female_label");
-                    } else {
-                    error.insertAfter(element);
-                    }
-                }
-            });
+            form.validate(
+                        {
+                        debug: true,
+                        ignore: ':hidden',
+                        submitHandler: function (form) {
+                            return false; 
+                        },
+                        rules: {
+                            inputfirstname: {
+                                required: true,
+                                maxlength: 100,
+                            },
+                            inputlastname: {
+                                required: true,
+                                maxlength: 100,
+                            },
+                            rdo_gender: "required" ,
+                            inputaddline1:{
+                                required: true,
+                                maxlength: 255,
+                            },
+                            inputprovince:"required",
+                            inputcity:"required",
+                            inputphone: { required: true,
+                            regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/ },
+                            inputemail: {
+                                required: true,
+                                email: true
+                            },
+                            inputDOB: {
+                                required: true,
+                                regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+                            }, 
+                            selectcountry: "checkCountry" ,
+                            customFile: {
+                                required: true
+                            },
+                            input_driver_no: "checkDriverNo" ,
+                            input_passport: "checkPassportNo" ,
+                            input_date_issue:"checkIssueDate", 
+                            select_origin_country:"checkOriginCountry",
+                            inputRetreatFrom: {
+                                required: true,
+                                regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/,
+                                lessThan:"#inputRetreatTo"
+                            }, 
+                            inputRetreatTo: {
+                                required: true,
+                                regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/,
+                                greaterThan:"#inputRetreatFrom"
 
-           // alert($("#dropdown-country-button").text()); 
+                            }, 
+                            input_e_firstname: {
+                                required: true,
+                                maxlength: 100,
+                            },
+                            input_e_lastname: {
+                                required: true,
+                                maxlength: 100,
+                            },
+                            input_e_relationship:{
+                                required: true,
+                                maxlength: 100,
+                            },
+                            input_e_addline1:{
+                                required: true,
+                                maxlength: 255,
+                            },
+                            input_e_province:"required",
+                            input_e_city:"required",
+                            select_e_country: "checkCountry",
+                            input_e_phone: { required: true,
+                            regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/ },
+                            input_e_email: {
+                                required: true,
+                                email: true
+                            }, 
+                            radio_vegetarian:"required",
+                            radio_allergies:"required",
+                            radio_issue_MP:"required",
+                            txtfood_allergy:"checkFoodAllergy",
+                            txt_issue_MP:"checkIssueMP",
+                            radio_save:"required",
+                            input_ack_firstname:"required",
+                            input_ack_lastname:"required",
+                            input_ack_date: {
+                                required: true,
+                                regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+                            }, 
 
-         //  if (form.valid() == true){
+                        },
+                        messages: {
+                            inputfirstname: {
+                                required: "Please enter your First Name",
+                                maxlength: 'First Name is too long and it is allow only less than or equal to 100'
+                            },
+                            inputlastname: {
+                                required: "Please enter your Last Name",
+                                maxlength: 'Last Name is too long and it is allow only less than or equal to 100'
+                            },
+                            inputaddline1: "Please enter Address line 1",
+                            inputprovince:"Please enter Province/Territory",
+                            inputcity:"Please enter City",
+                            inputemail: "Please enter a valid email address",
+                            customFile: "Please upload government issued photo",
+                            inputDOB: "Please enter Date of Birth",
+                            inputphone: "Please enter your valid phone number",
+                            inputRetreatFrom: "Please enter valid the start date of retreat",
+                            inputRetreatTo: "Please enter valid the end date of retreat",
+                            input_e_firstname: {
+                                required: "Please enter your First Name",
+                                maxlength: 'First Name is too long and it is allow only less than or equal to 100'
+                            },
+                            input_e_lastname: {
+                                required: "Please enter your Last Name",
+                                maxlength: 'Last Name is too long and it is allow only less than or equal to 100'
+                            },
+                            input_e_relationship: "Please enter relationship to you", 
+                            input_e_addline1: "Please enter Address line 1",
+                            input_e_province:"Please enter Province/Territory",
+                            input_e_city:"Please enter City",
+                            input_e_email: "Please enter a valid email address",
+                            input_e_phone: "Please enter your valid phone number",
+                            input_ack_firstname:"Please enter your sign for First Name",
+                            input_ack_lastname:"Please enter your sign for First Name",
+                            input_ack_date:"Please enter valid sign date"
+
+                        } 
+                        ,  errorPlacement: function(error, element) {
+                            if (element.attr("name") == "rdo_gender") {
+                                error.insertAfter("#div_female_label");
+                            } else if (element.attr("name") == "selectedcountry") {
+                            
+                                error.insertAfter("#error_selectcountry");
+                    
+                            } else if (element.attr("name") == "customFile") {
+                                error.insertAfter("#error_customFile");
+
+                            }
+                            else if (element.attr("name")=="selectcountry")
+                            {
+                                error.insertAfter("#error_selectcountry");  
+
+                            } else if (element.attr("name")=="select_origin_country")
+                            {
+
+                                error.insertAfter("#error_select_origin_country");  
+                            } 
+                            else if (element.attr("name") == "select_e_country") {
+                            
+                            error.insertAfter("#error_select_e_country");
+                
+                            } else if (element.attr("name") == "radio_vegetarian") {
+                                error.insertAfter("#div_vegetarian");
+                            }
+                            else if (element.attr("name") == "radio_allergies") {
+                                error.insertAfter("#div_allergies");
+                            }
+                            else if (element.attr("name") == "radio_issue_MP") {
+                                error.insertAfter("#div_issue_mp");
+                            }
+                            else if (element.attr("name") == "radio_save") {
+                                error.insertAfter("#div_save");
+                            }
+                            else {
+                                error.insertAfter(element);
+                            }
+                        }
+                    });
+
+           if (form.valid() == true){
+
+               // alert($('fieldset:visible').attr('id'));
 
                   //activate next step on progressbar using the index of next_fs
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -1100,7 +1129,7 @@ Template Name: Ajax register
                 next_fs.show();
                 current_fs.hide();
  
-          //  }
+            }
            
         });
 
@@ -1118,32 +1147,19 @@ Template Name: Ajax register
 
         });
 
-        $(".submit").click(function () {
-            return false;
-        })
-    }; 
-    
-    //* Add Phone no select
-    function phoneNoselect(){
-        if ( $('#msform').length ){   
-          // $("#inputphone").intlTelInput(); 
-        //  $("#inputphone").intlTelInput("setNumber", "+880"); 
-        };
-    }; 
-    //* Select js
-    function nice_Select(){
-        if ( $('.product_select').length ){ 
-            $('select').niceSelect();
-        };
-    }; 
+       
+    }
+     
     /*Function Calls*/  
     verificationForm ();
-    phoneNoselect ();
-    nice_Select ();
-})(jQuery); 
 
-  
+    $("form").submit(function(){
+         submit();
+    });
+
+ 
 });
+
 </script>
 
 

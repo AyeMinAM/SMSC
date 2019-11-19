@@ -165,7 +165,7 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         wp_enqueue_style('bootstrap-datetimepicker-css', get_template_directory_uri() . '/assets/bootstrap4-datetimepicker/bootstrap-datetimepicker.min.css');
 
 
-        wp_enqueue_style('hierarchy-select-css', get_template_directory_uri() . '/assets/hierarchy-select-2/hierarchy-select.min.css');
+        wp_enqueue_style('select2-css', get_template_directory_uri() . '/assets/select2/select2.min.css');
 
 
 
@@ -209,7 +209,7 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         // wp_enqueue_script('devdmbootstable-js', get_template_directory_uri() . '/assets/js/bootstable.js', array('jquery'), $wpTheme->get( 'Version' ), true);
  
 
-        wp_enqueue_script('hierarchy-select-2-js', get_template_directory_uri() . '/assets/hierarchy-select-2/hierarchy-select.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+        wp_enqueue_script('select2-js', get_template_directory_uri() . '/assets/select2/select2.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
 
         wp_enqueue_script('file-upload-with-preview-master-vendor-js', get_template_directory_uri() . '/assets/file-upload-with-preview-master/vendor.e990ab0e5e609130e9c2.js', array('jquery'), $wpTheme->get( 'Version' ), true);
 
@@ -226,7 +226,10 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         // wp_enqueue_script('bootstrap-validate-js', get_template_directory_uri() . '/assets/bootstrap-validate/bootstrap-validate.js', array('jquery'), $wpTheme->get( 'Version' ), true);
 
 
-        wp_enqueue_script('jquery-validate-js', get_template_directory_uri() . '/assets/jquery-validate/jquery.validate.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+        wp_enqueue_script('jquery-validate-js', get_template_directory_uri() . '/assets/jquery-validate/jquery.validate.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
+        wp_enqueue_script('jquery-validate-add-js', get_template_directory_uri() . '/assets/jquery-validate/additional-methods.min.js', array('jquery'), $wpTheme->get( 'Version' ), true);
+
 
 
         wp_enqueue_script('db-js', get_template_directory_uri() . '/assets/js/db.js', array('jquery'), $wpTheme->get( 'Version' ), true);
