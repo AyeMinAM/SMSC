@@ -14,7 +14,7 @@ Template Name: Ajax register
 
   <!-- Multi step form --> 
 <section class="col-sm-12 multi_step_form" >  
-  <form id="msform"> 
+  <form id="msform" enctype="multipart/form-data" > 
   
     <!-- progressbar -->
     <ul id="progressbar">
@@ -183,7 +183,7 @@ Template Name: Ajax register
                         href=javascript:void(0) class=custom-file-container__image-clear
                         title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
                         type=file class=custom-file-container__custom-file__custom-file-input id=customFile name=customFile accept=image/*
-                        aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=10485760> <span
+                        aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=2097152> <span
                         class=custom-file-container__custom-file__custom-file-control></span></label>
                     <div class=custom-file-container__image-preview></div>
                 </div>
@@ -640,9 +640,12 @@ jQuery(document).ready(function ()
         format: 'DD/MM/YYYY'
     });
 
+
+    var form = $("#msform");
+
     function submit() 
     {
-            var form = $("#msform");
+            
 
             var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> Submitting...';
                 if ($("#registerSubmit").html() !== loadingText) {
@@ -652,6 +655,9 @@ jQuery(document).ready(function ()
 
             $("#registerSubmit").attr("disabled", true);
  
+            console.log($(form).serialize());
+
+
             $.ajax({
                 type: "POST",
                 url: '<?php echo admin_url("admin-ajax.php") ?>',
@@ -960,7 +966,7 @@ jQuery(document).ready(function ()
            
             next_fs = $(this).parent().next();
 
-            var form = $("#msform");
+            
 
             form.validate(
                         {
@@ -1168,7 +1174,10 @@ jQuery(document).ready(function ()
     verificationForm ();
 
     $("form").submit(function(){
-         submit();
+        if (form.valid() == true){
+            submit();
+        }
+        
     });
 
  

@@ -439,9 +439,10 @@ function registerSimple(){
     $inputlastname = $_POST['inputlastname'];
     $inputemail = $_POST['inputemail'];
     $inputphone = $_POST['inputphone'];
-    $select_program = $_POST['select_program'];
+    $select_program =  $_POST['select_program'] = "1" ?  "beginner": "intermediate";
     $inputmessage = $_POST['inputmessage'];
-    
+    $inputaddline1 = $_POST['inputaddress'];
+
     try {
         
         $wpdb->query( "START TRANSACTION" );
@@ -451,7 +452,9 @@ function registerSimple(){
             'last_name'=>$inputlastname,
             'email'=>$inputemail,
             'phone'=>$inputphone,
-            'program'=>$select_program            
+            'addressline1'=> $inputaddline1,
+            'program'=>$select_program,
+            'message'=>$inputmessage
         ))===FALSE){
         
             echo "Error";
@@ -570,64 +573,109 @@ function registerSubmit(){
         require_once ABSPATH . WPINC . '/class-smtp.php';
     }
     $phpmailer = new PHPMailer;
-    
-
-    error_log($_POST['retreatdata']);
-
-    $strRetreatdata = $_POST['retreatdata'];
- 
-    $retreatArray = json_decode(stripslashes($strRetreatdata),true);
-
+     
   
-
     $inputfirstname = $_POST['inputfirstname'];
     $inputlastname = $_POST['inputlastname'];
-    $select_gender = $_POST['select_gender'];
-    $txtaddress = $_POST['txtaddress'];
-    $inputtelnumber = $_POST['inputtelnumber'];
+    $select_gender = $_POST['rdo_gender'];
+    $inputaddline1 = $_POST['inputaddline1'];
+    $inputaddline1 = $_POST['inputaddline1'];
+    $inputpcode = $_POST['inputpcode'];
+    $inputprovince = $_POST['inputprovince'];
+    $inputcity = $_POST['inputcity'];
+    $selectcountry = $_POST['selectcountry'];
+    $inputphone = $_POST['inputphone'];
     $inputemail = $_POST['inputemail'];
-    $inputStart = $_POST['inputStart'];
-    $inputEnd = $_POST['inputEnd'];
+    $input_occupation = $_POST['input_occupation'];
     $inputDOB = $_POST['inputDOB'];
-    $inputId = $_POST['inputId'];
-    $inputOccupation = $_POST['inputOccupation'];
-    $select_veget = $_POST['select_veget'];
+    $input_driver_no = $_POST['input_driver_no'];
+    $input_passport = $_POST['input_passport'];
+    $input_date_issue = $_POST['input_date_issue'];
+    $select_origin_country =  $_POST['select_origin_country'] = "Select Country" ?  "": $_POST['select_origin_country'];
+
+    $inputRetreatFrom = $_POST['inputRetreatFrom'];
+    $inputRetreatTo = $_POST['inputRetreatTo'];
+
+    $input_e_firstname = $_POST['input_e_firstname'];
+    $input_e_lastname = $_POST['input_e_lastname'];
+    $input_e_relationship = $_POST['input_e_relationship'];
+    $input_e_addline1 = $_POST['input_e_addline1'];
+    $input_e_addline2 = $_POST['input_e_addline2'];
+    $input_e_pcode = $_POST['input_e_pcode'];
+    $input_e_province = $_POST['input_e_province'];
+    $input_e_city = $_POST['input_e_city'];
+    $select_e_country = $_POST['select_e_country'];
+    $input_e_phone = $_POST['input_e_phone'];
+    $input_e_email = $_POST['input_e_email'];
+    $txt_retreats = $_POST['txt_retreats'];
+    
+    $radio_vegetarian =  $_POST['radio_vegetarian'] = "1" ?  "Y": "N";
+    $radio_allergies =  $_POST['radio_allergies'] = "1" ?  "Y": "N";
+
     $txtfood_allergy = $_POST['txtfood_allergy'];
-    $inputeme_name = $_POST['inputeme_name'];
-    $inputeme_address = $_POST['inputeme_address'];
-    $inputeme_telnumber = $_POST['inputeme_telnumber'];
-    $inputeme_email = $_POST['inputeme_email'];
-    $select_minsurance = $_POST['select_minsurance'];
-    $txtother_minsurance = $_POST['txtother_minsurance'];
-    $select_mental_issue = $_POST['select_mental_issue'];
-    $txtmental_issue = $_POST['txtmental_issue'];
+
+    $txt_insurance = $_POST['txt_insurance'];
+
+    $radio_issue_MP =  $_POST['radio_issue_MP'] = "1" ?  "Y": "N";
+
+    $txt_issue_MP = $_POST['txt_issue_MP'];
+
+    $radio_save =  $_POST['radio_save'] = "1" ?  "Y": "N";
+
+    $input_ack_date = $_POST['input_ack_date'];
+
+
+ 
  
     try {
         
         $wpdb->query( "START TRANSACTION" );
 
         if($wpdb->insert('wp_register',array(
+            'program'=>"retreat",
             'first_name'=>$inputfirstname,
             'last_name'=>$inputlastname,
             'gender'=>$select_gender,
-            'address'=>$txtaddress,
-            'phone'=>$inputtelnumber,
+            'addressline1'=>$inputaddline1,
+            'addressline2'=>$inputaddline2,
+            'postalcode'=>$inputpcode,
+            'province_territory'=>$inputprovince,
+            'city'=>$inputcity,
+            'country'=>$selectcountry,
+            'phone'=>$inputphone,
             'email'=>$inputemail,
-            'start_retreat_date'=>$inputStart,
-            'end_retreat_date'=>$inputEnd,
+            'occupation'=>$input_occupation,
             'dob'=>$inputDOB,
-            'personal_id'=>$inputId,
-            'occupation'=>$inputOccupation,
-            'is_vegetarian'=>$select_veget,
+            'driver_license'=>$input_driver_no,
+            'passport_no'=>$input_passport,
+            'passport_issue_date'=>$input_date_issue,
+            'country_origin'=>$select_origin_country,
+            'gov_issue_photo'=>$select_origin_country,
+            'start_retreat_date'=>$inputRetreatFrom,
+            'end_retreat_date'=>$inputRetreatTo,
+            'e_first_name'=>$input_e_firstname,
+            'e_last_ name'=>$input_e_lastname,
+            'e_relationship'=>$input_e_relationship,
+            'e_addressline1'=>$input_e_addline1,
+            'e_addressline2'=>$input_e_addline2,
+            'e_postalcode'=>$input_e_pcode,
+            'e_province_territory'=>$input_e_province,
+            'e_city'=>$input_e_city,
+            'e_country'=>$select_e_country,
+            'e_phone'=>$input_e_phone,
+            'e_email'=>$input_e_email,
+            'attended_retreats'=>$txt_retreats,
+            'is_vegetarian'=>$radio_vegetarian,
+            'has_allergy'=>$radio_allergies,
             'food_allergy'=>$txtfood_allergy,
-            'emerg_name'=>$inputeme_name,
-            'emerg_address'=>$inputeme_address,
-            'emerg_phone'=>$inputeme_telnumber,
-            'emerg_email'=>$inputeme_email,
-            'has_insurance'=>$select_minsurance,
-            'other_insurance'=>$txtother_minsurance,
-            'has_mental'=>$select_mental_issue,
-            'mental_health'=>$txtmental_issue
+            'insurance'=>$txt_insurance,
+            'has_issue_MP'=>$radio_issue_MP,
+            'MP_health'=>$txt_issue_MP,
+            'status'=>$radio_save,
+            'ack_date'=>$input_ack_date,
+            'inserted_datetime'=> date("Y-m-d H:i:s"),
+            'inserted_by'=>$inputemail
+
         ))===FALSE){
         
             echo "Error";
@@ -637,29 +685,6 @@ function registerSubmit(){
         {
             echo "successfully added, row ID is ".$wpdb->insert_id;
 
-            foreach ($retreatArray as $key => $value ) {
-
-                error_log($value["TypeRetreat"]); 
-
-                if($wpdb->insert('wp_attended_retreats',array(
-                    'register_id'=>$wpdb->insert_id,
-                    'type'=>$value["TypeRetreat"],
-                    'teacher'=>$value["Teacher"],
-                    'location'=>$value["Location"],
-                    'attended_date'=>$value["WhenMMYY"],
-                    'duration'=>$value["Duration"]
-                    
-                    ))===FALSE){
-                    
-                        echo "Error";
-                    
-                }
-                else {
-                    echo "successfully added, row ID is ".$wpdb->id;
-                
-                }
-
-            }
         }
 
         $wpdb->query( "COMMIT" );
