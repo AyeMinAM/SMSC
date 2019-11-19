@@ -9,7 +9,7 @@ Template Name: Ajax register
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container">
+<div id= "divbody" class="container">
     <div class="row"  >
 
   <!-- Multi step form --> 
@@ -686,7 +686,7 @@ jQuery(document).ready(function ()
                     url: "<?php echo esc_url( get_permalink( get_page_by_title('successful') ) ); ?>" ,
                     success: function(data) {
                         // data is ur summary
-                        $('#container').html(data);
+                        $('#divbody').html(data);
                     }
 
                     });
