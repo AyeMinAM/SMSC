@@ -13,7 +13,7 @@ Template Name: Register Class Page
     
         <div class="row justify-content-md-center">
             <div class="col-lg-8 col-sm-12">
-                <div class="card-smsc">
+                <div id="divRegister" class="card-smsc">
                     <div class="form-register-class-padding">
                         <h4 class="label smsc-title">Online registeration form for meditation classes.</h4>
                     <form id="registerSimple" method="post"  class="form-horizontal" action="" >
@@ -33,7 +33,11 @@ Template Name: Register Class Page
                         </div>
 
                         <div class="input-group T-margin-1">
-                            <input id="inputphone" name="inputphone"  type="text" class="form-control" placeholder="Phone Number" aria-label="PhNumber" aria-describedby="basic-addon1">
+                            <input id="inputphone" name="inputphone"  type="text" class="form-control" placeholder="Phone Number" aria-label="inputphone" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group T-margin-1">
+                            <input id="inputaddress" name="inputaddress"  type="text" class="form-control" placeholder="Address" aria-label="inputaddress" aria-describedby="basic-addon1">
                         </div>
 
                         <div class="input-group T-margin-1">
@@ -116,19 +120,32 @@ Template Name: Register Class Page
                  success: function () {
 
                     $("#registerSubmit").attr("disabled", false);
-
- 
-                    $( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
-
                     $('.btn').html($("#registerSubmit").data('original-text'));
 
-
+/*
                     $('#inputfirstname').val("");
                     $('#inputlastname').val("");
                     $('#inputemail').val("");
                     $('#select_program').prop('selectedIndex',0);
                     $('#inputphone').val("")
-                    $('#inputmessage').val("");
+                    $('#inputmessage').val("");*/
+
+
+                    $.ajax({
+
+                    type: "GET",
+                    url: "<?php echo esc_url( get_permalink( get_page_by_title('successful') ) ); ?>" ,
+                    success: function(data) {
+                        // data is ur summary
+                        $('#divRegister').html(data);
+                    }
+
+                    });
+ 
+                    //$( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
+
+
+
 
  
                  }
@@ -146,15 +163,22 @@ Template Name: Register Class Page
 						required: true,
 						regx: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
                     },
+                    inputaddress:{
+                                required: true,
+                                maxlength: 255,
+                    },
                     select_program:"required",
                     inputmessage:"required" 
 				},
 				messages: {
-                    inputfullname: "Please enter your name",
+                    inputfirstname: "Please enter your first name",
+                    inputlastname: "Please enter your last name",
+                    inputemail: "Please enter a valid email address",
                     inputphone:"Please enter your valid phone number.",
                     inputmessage: "Please enter your message",
                     select_program:  "Please select a program",
-					inputemail: "Please enter a valid email address",
+                    inputemail: "Please enter a valid email address",
+                    inputaddress:"Please enter your address",
 				},
 				errorElement: "em",
 				errorPlacement: function ( error, element ) {

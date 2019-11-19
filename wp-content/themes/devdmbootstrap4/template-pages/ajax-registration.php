@@ -667,11 +667,25 @@ jQuery(document).ready(function ()
                 },
                 success: function () {
 
-                $("#registerSubmit").attr("disabled", false);
 
-                $( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
+                    $("#registerSubmit").attr("disabled", false);
 
-                $('.btn').html($("#registerSubmit").data('original-text'));
+                    //$( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
+
+                    $('.btn').html($("#registerSubmit").data('original-text'));
+
+                    $.ajax({
+
+                    type: "GET",
+                    url: "<?php echo esc_url( get_permalink( get_page_by_title('successful') ) ); ?>" ,
+                    success: function(data) {
+                        // data is ur summary
+                        $('#container').html(data);
+                    }
+
+                    });
+
+             
 
                 }
             });
