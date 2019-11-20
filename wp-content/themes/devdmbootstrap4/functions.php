@@ -454,7 +454,9 @@ function registerSimple(){
             'phone'=>$inputphone,
             'addressline1'=> $inputaddline1,
             'program'=>$select_program,
-            'message'=>$inputmessage
+            'message'=>$inputmessage,
+            'inserted_datetime'=> date("Y-m-d H:i:s"),
+            'inserted_by'=>$inputemail
         ))===FALSE){
         
             echo "Error";
