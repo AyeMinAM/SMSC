@@ -28,7 +28,7 @@ Template Name: Ajax register
     <!-- fieldsets -->
 <div id="container">
 
-    <fieldset class="box" id="1">
+    <fieldset class="box" id="1" >
          <!-- Tittle -->
     <div class="tittle">
       <h2>Online Application Form for the Meditation Retreat</h2>
@@ -173,7 +173,7 @@ Template Name: Ajax register
 
             </div>      
         </div> 
-        <div class="form-row"> 
+        <div class="form-row" style="height:370px"> 
         <div class="form-group col-md-6"> 
             
             <div class="custom-file">
@@ -188,14 +188,13 @@ Template Name: Ajax register
                     <div class=custom-file-container__image-preview></div>
                 </div>
             </div> 
-            <div id="error_customFile"></div>
-         </div> 
-          
-        </div>
-        <button type="button" class="next action-button">Continue</button> 
 
-        <div class="text-center btnDiv">
          </div> 
+         <div id="error_customFile"></div>
+
+        </div>
+       
+         <button type="button" class="next action-button">Continue</button> 
     </fieldset>
     <fieldset class="box" id="2">
     <h3>2. Additional Information</h3>

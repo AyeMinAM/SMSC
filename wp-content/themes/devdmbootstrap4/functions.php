@@ -330,11 +330,49 @@ function sendEmail(){
         require_once ABSPATH . WPINC . '/class-smtp.php';
     }
     $phpmailer = new PHPMailer;
+
     
-    $fullname = $_POST['inputfullname'];
-    $email = $_POST['inputemail'];
-    $phone = $_POST['inputphone'];
-    $message = $_POST['inputmessage'];
+    if(IsNullOrEmptyString( $_POST['inputfullname']))
+    {
+       echo 'Error: Full name is empty.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputemail']))
+    {
+       echo 'Error: email is empty.' ;
+       die(); 
+    }
+    else
+    {
+
+        if(!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^",$_POST['inputemail']))
+        {
+            echo 'Error: email is invalid.' ;
+            die(); 
+
+        }
+
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputphone']))
+    {
+       echo 'Error: phone number is empty.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputmessage']))
+    {
+       echo 'Error: message is empty.' ;
+       die(); 
+    }
+
+
+    
+    $inputfullname = $_POST['inputfullname'];
+    $inputemail = $_POST['inputemail'];
+    $inputphone = $_POST['inputphone'];
+    $inputmessage = $_POST['inputmessage'];
 
     $options_results = $wpdb->get_results( 
         "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
@@ -345,7 +383,7 @@ function sendEmail(){
     $host = ''; 
     $username = ''; 
     $password = ''; 
-    $CC = ''; 
+    $BCC = ''; 
     foreach ( $options_results as $result )
     {
        
@@ -356,8 +394,8 @@ function sendEmail(){
             case "SMTP_password":
                 $password = $result->option_value;
                 break;
-            case "SMTP_CC":
-                $CC = $result->option_value;
+            case "SMTP_BCC":
+                $BCC = $result->option_value;
                 break;
             case "SMTP_host":
                 $host = $result->option_value;
@@ -366,14 +404,14 @@ function sendEmail(){
     }
 
 
-    if ($host !== '' && $username !== ''  && $password !== '' && $CC !== '')
+    if ($host !== '' && $username !== ''  && $password !== '' && $BCC !== '')
     {
         error_log($host);
 
         error_log($username);
         error_log($password);
 
-        error_log($CC);
+        error_log($BCC);
 
 
 
@@ -391,35 +429,73 @@ function sendEmail(){
         // Add a recipient
         $phpmailer->addAddress($username);
 
-        // Add cc or bcc 
-        $phpmailer->addCC($email);
-        $phpmailer->addCC($CC);
+
+        if ($BCC != '') {
+            $indiBCC = explode(",", $BCC);
+          
+            foreach ($indiBCC as $key => $value) {
+                try {
+                    $phpmailer->addBCC($value);
+                } catch (phpmailerException $e) {
+                    echo 'Error: '. $e->getMessage();
+                }
+            }
+        }
+
+
+        $phpmailer->Subject = 'Contact Us';
+
 
         // Set email format to HTML
         $phpmailer->isHTML(true);
 
         // Email subject
-        $phpmailer->Subject = 'Enquiry from ' . $fullname ;
+        $path = get_template_directory_uri() ; 
+
+        $body = file_get_contents($path . '/html_template/email_contactus.html');
+
+
+        $body = str_replace('{inputfullname}', $inputfullname, $body);
+        $body = str_replace('{inputemail}', $inputemail, $body);
+        $body = str_replace('{inputphone}', $inputphone, $body);
+        $body = str_replace('{inputmessage}', $inputmessage, $body);
+
+
+        $phpmailer->Body = $body;
+
 
         // Email body content
-        $mailContent = sprintf("<h1>Name:%s,Phone:%s</h1> <p>%s</p>",$fullname,$phone,$message); 
+        //$mailContent = sprintf("<h1>Name:%s,Phone:%s</h1> <p>%s</p>",$fullname,$phone,$message); 
            
-        $phpmailer->Body    = $mailContent ;
+        //$phpmailer->Body    = $mailContent ;
 
         if(!$phpmailer->send()){
 
             error_log( 'Message could not be sent.');
             error_log( 'Mailer Error: ' . $phpmailer->ErrorInfo);
+            echo 'Error: Mailer->'. $phpmailer->ErrorInfo;
+
         }else{
+            echo 'Success:Message has been sent' ; 
             error_log( 'Message has been sent');
         }
 
     }
- 
+    else
+    {
+
+    echo 'Error: Mailer config is missing' ; 
+
+    }
+
+    die();
+
 
 }
 
-
+function IsNullOrEmptyString($str){
+    return (!isset($str) || trim($str) === '');
+}
 
 function registerSimple(){
 
@@ -435,6 +511,62 @@ function registerSimple(){
     $phpmailer = new PHPMailer;
     
 
+
+
+    if(IsNullOrEmptyString($_POST['inputfirstname']))
+    {
+       echo 'Error: first name is empty.' ;
+       die();
+    }
+    
+    if(IsNullOrEmptyString( $_POST['inputlastname']))
+    {
+       echo 'Error: last name is empty.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputemail']))
+    {
+       echo 'Error: email is empty.' ;
+       die(); 
+    }
+    else
+    {
+
+        if(!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^",$_POST['inputemail']))
+        {
+            echo 'Error: email is invalid.' ;
+            die(); 
+
+        }
+
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputphone']))
+    {
+       echo 'Error: phone number is empty.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['select_program']))
+    {
+       echo 'Error: program is empty.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputmessage']))
+    {
+       echo 'Error: message is empty.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputaddress']))
+    {
+       echo 'Error: address is empty.' ;
+       die(); 
+    }
+
+
     $inputfirstname = $_POST['inputfirstname'];
     $inputlastname = $_POST['inputlastname'];
     $inputemail = $_POST['inputemail'];
@@ -443,9 +575,10 @@ function registerSimple(){
     $inputmessage = $_POST['inputmessage'];
     $inputaddline1 = $_POST['inputaddress'];
 
+
     try {
         
-        $wpdb->query( "START TRANSACTION" );
+        //$wpdb->query( "START TRANSACTION" );
 
         if($wpdb->insert('wp_register',array(
             'first_name'=>$inputfirstname,
@@ -459,14 +592,14 @@ function registerSimple(){
             'inserted_by'=>$inputemail
         ))===FALSE){
         
-            echo "Error";
-        
+            echo "Error:database insert error.";
+         
         }
         else 
         {
-            echo "successfully added, row ID is ".$wpdb->insert_id;
+            error_log("successfully added, row ID is ".$wpdb->insert_id);
 
-            $wpdb->query( "COMMIT" );
+           // $wpdb->query( "COMMIT" );
 
             $options_results = $wpdb->get_results( 
                 "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
@@ -477,7 +610,7 @@ function registerSimple(){
             $host = ''; 
             $username = ''; 
             $password = ''; 
-            $CC = ''; 
+            $BCC = ''; 
             foreach ( $options_results as $result )
             {
                
@@ -488,8 +621,8 @@ function registerSimple(){
                     case "SMTP_password":
                         $password = $result->option_value;
                         break;
-                    case "SMTP_CC":
-                        $CC = $result->option_value;
+                    case "SMTP_BCC":
+                        $BCC = $result->option_value;
                         break;
                     case "SMTP_host":
                         $host = $result->option_value;
@@ -498,14 +631,14 @@ function registerSimple(){
             }
     
     
-            if ($host !== '' && $username !== ''  && $password !== '' && $CC !== '')
+            if ($host !== '' && $username !== ''  && $password !== '' && $BCC !== '')
             {
                 error_log($host);
     
                 error_log($username);
                 error_log($password);
     
-                error_log($CC);
+                error_log($BCC);
     
     
                 $phpmailer->isSMTP();                    
@@ -521,32 +654,70 @@ function registerSimple(){
         
                 // Add a recipient
                 $phpmailer->addAddress($inputemail);
+
+                if ($BCC != '') {
+                    $indiBCC = explode(",", $BCC);
+                  
+                    foreach ($indiBCC as $key => $value) {
+                        try {
+                            $phpmailer->addBCC($value);
+                        } catch (phpmailerException $e) {
+                            echo 'Error: '. $e->getMessage();
+                        }
+                    }
+                }
+
         
                 // Add cc or bcc 
-                $phpmailer->addCC($CC);
          
                 // Set email format to HTML
                 $phpmailer->isHTML(true);
         
                 // Email subject
-                $phpmailer->Subject = 'Registration Acknowldgement';
+                $phpmailer->Subject = 'Registration Acknowledgement';
         
+                
                 // Email body content
                 $mailContent = "<h1>Registration Acknowledgement</h1>
-                    <p>This is to acknowledge your application to attend the course(s). You'll be informed of the outcome soonest possible.
+                    <p>This is to acknowledge your registration is confirmed.
                     </p>
                     Thanks and regards,<br> 
                     Registration Admin <br>SMSC";
-                $phpmailer->Body    = $mailContent;
+               // $phpmailer->Body    = $mailContent;
+
+
+                $path = get_template_directory_uri() ; 
+
+                $body = file_get_contents($path . '/html_template/email_small.html');
+
+
+                $body = str_replace('{inputfirstname}', $inputfirstname, $body);
+                $body = str_replace('{inputlastname}', $inputlastname, $body);
+                $body = str_replace('{inputemail}', $inputemail, $body);
+                $body = str_replace('{inputphone}', $inputphone, $body);
+                $body = str_replace('{select_program}', $select_program, $body);
+                $body = str_replace('{inputmessage}', $inputmessage, $body);
+                $body = str_replace('{inputaddline1}', $inputaddline1, $body);
+
+
+                $phpmailer->Body = $body;
         
                 if(!$phpmailer->send()){
     
                     error_log( 'Message could not be sent.');
                     error_log( 'Mailer Error: ' . $phpmailer->ErrorInfo);
+                    echo 'Error: Mailer->'. $phpmailer->ErrorInfo;
+
                 }else{
+                    echo 'Success:Message has been sent' ; 
                     error_log( 'Message has been sent');
                 }
     
+            }
+            else
+            {
+                echo 'Error: Mailer config is missing' ; 
+                
             }
  
         }
@@ -555,7 +726,7 @@ function registerSimple(){
     } catch (Exception $e) {
         // An exception has been thrown
         // We must rollback the transaction
-        $wpdb->query( "ROLLBACK" );
+       echo 'Error: '. $e->getMessage();
     }
   
     die();
