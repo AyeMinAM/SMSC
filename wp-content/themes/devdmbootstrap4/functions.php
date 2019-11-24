@@ -795,7 +795,102 @@ function registerSubmit(){
     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], dirname( __FILE__ ) . '/uploads/' .  $newfilename);
         
    
+    if(IsNullOrEmptyString($_POST['inputfirstname']))
+    {
+       echo 'Error: first name is empty.' ;
+       die();
+    }
     
+    if(IsNullOrEmptyString( $_POST['inputlastname']))
+    {
+       echo 'Error: last name is empty.' ;
+       die(); 
+    }
+
+    
+
+    if(IsNullOrEmptyString( $_POST['rdo_gender']))
+    {
+       echo 'Error: Gender is empty.' ;
+       die(); 
+    }
+
+
+    if(IsNullOrEmptyString( $_POST['inputaddline1']))
+    {
+       echo 'Error: Address line 1 is empty.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputprovince']))
+    {
+       echo 'Error: Province/Territory is empty.' ;
+       die(); 
+    }
+
+
+    if(IsNullOrEmptyString( $_POST['inputcity']))
+    {
+       echo 'Error: City is empty.' ;
+       die(); 
+    }
+
+
+    if(IsNullOrEmptyString( $_POST['selectcountry']))
+    {
+       echo 'Error: Country is empty.' ;
+       die(); 
+    }
+
+
+    if(IsNullOrEmptyString( $_POST['inputphone']))
+    {
+       echo 'Error: phone number is empty.' ;
+       die(); 
+    }
+ 
+
+    if(IsNullOrEmptyString( $_POST['inputemail']))
+    {
+       echo 'Error: email is empty.' ;
+       die(); 
+    }
+    else
+    {
+
+        if(!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^",$_POST['inputemail']))
+        {
+            echo 'Error: email is invalid.' ;
+            die(); 
+
+        }
+
+    }
+
+
+    if(IsNullOrEmptyString( $_POST['input_occupation']))
+    {
+       echo 'Error: Occupation is empty.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['inputDOB']))
+    {
+       echo 'Error: DOB is empty.' ;
+       die(); 
+    }
+    else
+    {
+        error_log("DOB:" . $_POST['inputDOB']);
+
+        if(!preg_match("/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{4})$/",$_POST['inputDOB']))
+        {
+            echo 'Error: DOB is invalid.' ;
+            die(); 
+
+        }
+    }
+
  
     $inputfirstname = $_POST['inputfirstname'];
     $inputlastname = $_POST['inputlastname'];
