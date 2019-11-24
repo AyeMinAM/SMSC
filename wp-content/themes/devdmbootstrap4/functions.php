@@ -7,6 +7,10 @@
 /**
  * Setup the theme defaults.
  */
+require_once(dirname( __FILE__ ) .'/TCPDF/tcpdf.php');
+require_once(dirname( __FILE__ ) .'/TCPDF/config/tcpdf_config_alt.php');
+
+ 
 
 if (!function_exists( 'devdmbootstrap_setup' ) ) {
     /**
@@ -243,8 +247,7 @@ if (!function_exists( 'devdmbootstrap_scripts' ) ) {
         if ( is_singular() && comments_open() && get_option('thread_comments') ) {
             wp_enqueue_script( 'comment-reply' );
         }
-
-        
+   
     }
 }
 wp_enqueue_script('jquery');
@@ -469,6 +472,7 @@ function sendEmail(){
            
         //$phpmailer->Body    = $mailContent ;
 
+         
         if(!$phpmailer->send()){
 
             error_log( 'Message could not be sent.');
@@ -478,7 +482,8 @@ function sendEmail(){
         }else{
             echo 'Success:Message has been sent' ; 
             error_log( 'Message has been sent');
-        }
+
+        } 
 
     }
     else
@@ -746,19 +751,62 @@ function registerSubmit(){
         require_once ABSPATH . WPINC . '/class-smtp.php';
     }
     $phpmailer = new PHPMailer;
-     
-  
+
+ 
+    $inputemail = $_POST['inputemail'];
+
+
+    if(!isset($_FILES['fileToUpload'])) {
+        echo 'Error:file upload is missing';
+        die();
+    }  
+
+
+    $errors     = array();
+    $maxsize    = 2097152;
+    $acceptable = array(
+        'image/jpeg',
+        'image/jpg',
+        'image/gif',
+        'image/png'
+    );
+
+    if(($_FILES['fileToUpload']['size'] >= $maxsize) || ($_FILES["fileToUpload"]["size"] == 0)) {
+        echo 'Error:File too large. File must be less than 2 megabytes.';
+        die();
+    }
+
+    if((!in_array($_FILES['fileToUpload']['type'], $acceptable)) && (!empty($_FILES["fileToUpload"]["type"]))) {
+        echo 'Error:Invalid file type. Only JPG, GIF and PNG types are accepted.';
+        die();
+    }
+
+
+    $temp = explode(".", $_FILES["fileToUpload"]["name"]);
+
+    $useremail= explode("@", $inputemail)[0];
+
+
+    $newfilename = $useremail .  '.' . end($temp);
+
+    error_log($newfilename);
+
+
+    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], dirname( __FILE__ ) . '/uploads/' .  $newfilename);
+        
+   
+    
+ 
     $inputfirstname = $_POST['inputfirstname'];
     $inputlastname = $_POST['inputlastname'];
     $select_gender = $_POST['rdo_gender'];
     $inputaddline1 = $_POST['inputaddline1'];
-    $inputaddline1 = $_POST['inputaddline1'];
+    $inputaddline2 = $_POST['inputaddline2'];
     $inputpcode = $_POST['inputpcode'];
     $inputprovince = $_POST['inputprovince'];
     $inputcity = $_POST['inputcity'];
     $selectcountry = $_POST['selectcountry'];
     $inputphone = $_POST['inputphone'];
-    $inputemail = $_POST['inputemail'];
     $input_occupation = $_POST['input_occupation'];
     $inputDOB = $_POST['inputDOB'];
     $input_driver_no = $_POST['input_driver_no'];
@@ -796,13 +844,14 @@ function registerSubmit(){
     $radio_save =  $_POST['radio_save'] = "1" ?  "Y": "N";
 
     $input_ack_date = $_POST['input_ack_date'];
+    $input_ack_firstname = $_POST['input_ack_firstname'];
+    $input_ack_lastname = $_POST['input_ack_lastname'];
 
 
- 
- 
+
     try {
         
-        $wpdb->query( "START TRANSACTION" );
+        //$wpdb->query( "START TRANSACTION" );
 
         if($wpdb->insert('wp_register',array(
             'program'=>"retreat",
@@ -851,107 +900,308 @@ function registerSubmit(){
 
         ))===FALSE){
         
-            echo "Error";
-        
+            echo "Error:database insert error.";
+            die();
+
         }
         else 
         {
-            echo "successfully added, row ID is ".$wpdb->insert_id;
+            error_log("successfully added, row ID is ".$wpdb->insert_id);
 
-        }
-
-        $wpdb->query( "COMMIT" );
+            // $wpdb->query( "COMMIT" );
 
 
-        $options_results = $wpdb->get_results( 
-            "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
-        );
-       // error_log(print_r($options_results));
+            $options_results = $wpdb->get_results( 
+                "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
+            );
+            // error_log(print_r($options_results));
 
 
-        $host = ''; 
-        $username = ''; 
-        $password = ''; 
-        $CC = ''; 
-        foreach ( $options_results as $result )
-        {
-           
-            switch ($result->option_name) {
-                case "SMTP_username":
-                    $username = $result->option_value;
-                    break;
-                case "SMTP_password":
-                    $password = $result->option_value;
-                    break;
-                case "SMTP_CC":
-                    $CC = $result->option_value;
-                    break;
-                case "SMTP_host":
-                    $host = $result->option_value;
-                    break;
-            }
-        }
-
-
-        if ($host !== '' && $username !== ''  && $password !== '' && $CC !== '')
-        {
-            error_log($host);
-
-            error_log($username);
-            error_log($password);
-
-            error_log($CC);
-
-
-
-            $phpmailer->isSMTP();                    
-            $phpmailer->Host = $host;
-            $phpmailer->SMTPDebug = 1;
-            $phpmailer->SMTPAuth = true;
-            $phpmailer->Username = $username;
-            $phpmailer->Password =  $password ;
-            $phpmailer->SMTPSecure = 'ssl';
-            $phpmailer->Port = 465;
-    
-            $phpmailer->setFrom($username);
-    
-            // Add a recipient
-            $phpmailer->addAddress($inputemail);
-    
-            // Add cc or bcc 
-            $phpmailer->addCC($CC);
-     
-            // Set email format to HTML
-            $phpmailer->isHTML(true);
-    
-            // Email subject
-            $phpmailer->Subject = 'Registration Acknowldgement';
-    
-            // Email body content
-            $mailContent = "<h1>Registration Acknowledgement</h1>
-                <p>This is to acknowledge your application to attend the course(s). You'll be informed of the outcome soonest possible.
-                </p>
-                Thanks and regards,<br> 
-                Registration Admin <br>SMSC";
-            $phpmailer->Body    = $mailContent;
-    
-            if(!$phpmailer->send()){
-
-                error_log( 'Message could not be sent.');
-                error_log( 'Mailer Error: ' . $phpmailer->ErrorInfo);
-            }else{
-                error_log( 'Message has been sent');
+            $host = ''; 
+            $username = ''; 
+            $password = ''; 
+            $BCC = ''; 
+            foreach ( $options_results as $result )
+            {
+            
+                switch ($result->option_name) {
+                    case "SMTP_username":
+                        $username = $result->option_value;
+                        break;
+                    case "SMTP_password":
+                        $password = $result->option_value;
+                        break;
+                    case "SMTP_BCC":
+                        $BCC = $result->option_value;
+                        break;
+                    case "SMTP_host":
+                        $host = $result->option_value;
+                        break;
+                }
             }
 
-        }
+
+            if ($host !== '' && $username !== ''  && $password !== '' && $BCC !== '')
+            {
+                error_log($host);
+
+                error_log($username);
+                error_log($password);
+
+                error_log($BCC);
+
+
+
+                $phpmailer->isSMTP();                    
+                $phpmailer->Host = $host;
+                $phpmailer->SMTPDebug = 1;
+                $phpmailer->SMTPAuth = true;
+                $phpmailer->Username = $username;
+                $phpmailer->Password =  $password ;
+                $phpmailer->SMTPSecure = 'ssl';
+                $phpmailer->Port = 465;
         
+                $phpmailer->setFrom($username);
+        
+                // Add a recipient
+                $phpmailer->addAddress($inputemail);
+        
+                // Add cc or bcc 
+                //$phpmailer->addCC($CC);
+        
+                // Set email format to HTML
+                $phpmailer->isHTML(true);
+        
+                // Email subject
+                $phpmailer->Subject = 'Registration Acknowldgement';
+        
+                // Email body content
+                $mailContent = "<h1>Registration Acknowledgement</h1>
+                    <p>This is to acknowledge your application to attend the retreat is received. We will contact you soon regarding the outcome.
+                    </p>
+                    Thanks and regards,<br> 
+                    SMSC Admin";
+                $phpmailer->Body    = $mailContent;
+        
+                if(!$phpmailer->send()){
 
+                    error_log( 'Message could not be sent.');
+                    error_log( 'Mailer Error: ' . $phpmailer->ErrorInfo);
+                    echo 'Error: Mailer->'. $phpmailer->ErrorInfo;
+
+
+
+                }else{
+                    //echo 'Success:Message has been sent' ; 
+                    error_log( 'Message has been sent');
+
+                    $phpmailer->ClearAllRecipients();
+
+
+                    if ($BCC != '') {
+                        $indiBCC = explode(",", $BCC);
+                      
+                        foreach ($indiBCC as $key => $value) {
+                            try {
+                                $phpmailer->AddAddress($value);
+                            } catch (phpmailerException $e) {
+                                echo 'Error: '. $e->getMessage();
+                            }
+                        }
+                    }
+
+                    $path = get_template_directory_uri() ; 
+
+                    $body = file_get_contents($path . '/html_template/email_big.html');
+
+
+                    $body = str_replace('{inputfirstname}', $inputfirstname, $body);
+                    $body = str_replace('{inputlastname}', $inputlastname, $body);
+                    $body = str_replace('{select_gender}', $select_gender, $body);
+                    $body = str_replace('{inputaddline1}', $inputaddline1, $body);
+                    $body = str_replace('{inputaddline2}', $inputaddline2, $body);
+                    $body = str_replace('{inputpcode}', $inputpcode, $body);
+                    $body = str_replace('{inputprovince}', $inputprovince, $body);
+                    $body = str_replace('{inputcity}', $inputcity, $body);
+
+                    $countryName = $wpdb->get_row( 
+                        "SELECT * FROM wp_country WHERE Code='" . $selectcountry . "'"
+                    );
+
+                    $body = str_replace('{selectcountry}', $countryName->Name, $body);
+                    $body = str_replace('{inputphone}', $inputphone, $body);
+                    $body = str_replace('{inputemail}', $inputemail, $body);
+                    $body = str_replace('{input_occupation}', $input_occupation, $body);
+                    $body = str_replace('{inputDOB}', $inputDOB, $body);
+                    $body = str_replace('{input_driver_no}', $input_driver_no, $body);
+                    $body = str_replace('{input_passport}', $input_passport, $body);
+                    $body = str_replace('{input_date_issue}', $input_date_issue, $body);
+
+                   if($select_origin_country!="")
+                   {
+                        $o_countryName = $wpdb->get_row( 
+                            "SELECT * FROM wp_country WHERE Code='" . $select_origin_country . "'"
+                        );
+
+                        $body = str_replace('{select_origin_country}', $o_countryName->Name, $body);
+
+                   }
+                   else
+                   {
+                        $body = str_replace('{select_origin_country}', '', $body);
+
+                   }
+                   
+                    $image_path = get_template_directory_uri() . "/uploads/" . $newfilename ; 
+
+                    error_log( 'image_path: ' . $image_path);
+
+
+ 
+                    $body = str_replace('{gov_issue_photo}', $image_path, $body);
+                    $body = str_replace('{inputRetreatFrom}', $inputRetreatFrom, $body);
+                    $body = str_replace('{inputRetreatTo}', $inputRetreatTo, $body);
+                    $body = str_replace('{input_e_firstname}', $input_e_firstname, $body);
+                    $body = str_replace('{input_e_lastname}', $input_e_lastname, $body);
+                    $body = str_replace('{input_e_relationship}', $input_e_relationship, $body);
+                    $body = str_replace('{input_e_addline1}', $input_e_addline1, $body);
+                    $body = str_replace('{input_e_addline2}', $input_e_addline2, $body);
+                    $body = str_replace('{input_e_pcode}', $input_e_pcode, $body);
+                    $body = str_replace('{input_e_province}', $input_e_province, $body);
+                    $body = str_replace('{input_e_city}', $input_e_city, $body);
+
+                    $e_countryName = $wpdb->get_row( 
+                        "SELECT * FROM wp_country WHERE Code='" . $select_e_country . "'"
+                    );
+
+                    $body = str_replace('{select_e_country}', $e_countryName->Name, $body);
+                    $body = str_replace('{input_e_phone}', $input_e_phone, $body);
+                    $body = str_replace('{input_e_email}', $input_e_email, $body);
+                    $body = str_replace('{txt_retreats}', $txt_retreats, $body);
+                    $body = str_replace('{radio_vegetarian}',  ($radio_vegetarian = "Y" ?  "Yes": "No"), $body);
+                    $body = str_replace('{radio_allergies}', ($radio_allergies = "Y" ?  "Yes": "No") , $body);
+                    $body = str_replace('{txtfood_allergy}', $txtfood_allergy, $body);
+                    $body = str_replace('{txt_insurance}', $txt_insurance, $body);
+                    $body = str_replace('{radio_issue_MP}', ($radio_issue_MP = "Y" ?  "Yes": "No"), $body);
+                    $body = str_replace('{txt_issue_MP}', $txt_issue_MP, $body);
+                    $body = str_replace('{radio_save}', ($radio_save = "Y" ?  "Yes": "No") , $body);
+                    $body = str_replace('{input_ack_date}', $input_ack_date, $body);
+                    $body = str_replace('{input_ack_firstname}', $input_ack_firstname, $body);
+                    $body = str_replace('{input_ack_lastname}', $input_ack_lastname, $body);
+
+  
+
+                    $phpmailer->Body = $body;
+
+
+                    $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+                    // set document information
+                    $pdf->SetCreator(PDF_CREATOR);
+                    $pdf->SetAuthor('SMSC');
+     
+                    // set default header data
+                    //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING, array(0,64,255), array(0,64,128));
+                    //$pdf->setFooterData(array(0,64,0), array(0,64,128));
+                
+                    // set header and footer fonts
+                    $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+                    $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+                
+                    // set default monospaced font
+                    $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+                
+                    // set margins
+                    $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+                    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+                    $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+                
+                    // set auto page breaks
+                    $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+                
+                    // set image scale factor
+                    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+                
+                    // set some language-dependent strings (optional)
+                    if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
+                        require_once(dirname(__FILE__).'/lang/eng.php');
+                        $pdf->setLanguageArray($l);
+                    }
+                
+                    // ---------------------------------------------------------
+                
+                    // set default font subsetting mode
+                    $pdf->setFontSubsetting(true);
+                
+                    // Set font
+                    // dejavusans is a UTF-8 Unicode font, if you only need to
+                    // print standard ASCII chars, you can use core fonts like
+                    // helvetica or times to reduce file size.
+                    $pdf->SetFont('helvetica', '', 12, '', true);
+                
+                    // Add a page
+                    // This method has several options, check the source code documentation for more information.
+                    $pdf->AddPage();
+                
+                    // set text shadow effect
+                    $pdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'color'=>array(196,196,196), 'opacity'=>1, 'blend_mode'=>'Normal'));
+                                
+                    
+                    // Print text using writeHTMLCell()
+                    $pdf->writeHTMLCell(0, 0, '', '', $body, 0, 1, 0, true, '', true);
+                
+                    // ---------------------------------------------------------
+                
+                    // Close and output PDF document
+                    // This method has several options, check the source code documentation for more information.
+                    $filename = dirname( __FILE__ ) . '/GeneratePDF/' . $useremail  . '.pdf'; 
+                
+                    $pdf->Output($filename , 'F');
+                
+                    
+                    // Email subject
+                    $phpmailer->Subject = 'New registration is received';
+            
+                    // Email body content
+                    $mailContent = "<h1>New Registration</h1>
+                        <p>Please see the attached file.
+                        </p>";
+                    $phpmailer->Body    = $mailContent;
+
+                    $phpmailer->AddAttachment($filename);
+                
+
+                    if(!$phpmailer->send()){
+
+                        error_log( 'Message could not be sent.');
+                        error_log( 'Mailer Error: ' . $phpmailer->ErrorInfo);
+                        echo 'Error: Mailer->'. $phpmailer->ErrorInfo;
+        
+                    }
+                    else
+                    {
+                        echo 'Success:Message has been sent' ; 
+                        error_log( 'Message has been sent');    
+
+                    }
+
+                }
+
+            }
+            else
+            {
+                echo 'Error: Mailer config is missing' ; 
+
+            }
+        
+        }
     
 
     } catch (Exception $e) {
         // An exception has been thrown
         // We must rollback the transaction
-        $wpdb->query( "ROLLBACK" );
+        echo 'Error: '. $e->getMessage();
+
     }
   
     die();
