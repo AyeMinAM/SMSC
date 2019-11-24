@@ -899,6 +899,30 @@ jQuery(document).ready(function ()
 
 
 
+    $('input[type=radio][name=radio_allergies]').change(function() {
+        if (this.value == '0') {
+            $("#txtfood_allergy").attr('disabled',true);
+            $("#txtfood_allergy").val('');
+        }
+        else
+        {
+            $("#txtfood_allergy").attr('disabled',false);
+
+        }
+    });
+
+    $('input[type=radio][name=radio_issue_MP]').change(function() {
+        if (this.value == '0') {
+            $("#txt_issue_MP").attr('disabled',true);
+            $("#txt_issue_MP").val('');
+        }
+        else
+        {
+            $("#txt_issue_MP").attr('disabled',false);
+
+        }
+    });
+
 
     
     $.validator.addMethod("checkIssueDate", function(value) {

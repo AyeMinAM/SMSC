@@ -841,6 +841,13 @@ function registerSubmit(){
        echo 'Error: Country is empty.' ;
        die(); 
     }
+    else if($_POST['selectcountry']=='Select Country')
+    {
+
+        echo 'Error: Please select country.' ;
+        die(); 
+    }
+    
 
 
     if(IsNullOrEmptyString( $_POST['inputphone']))
@@ -855,17 +862,13 @@ function registerSubmit(){
        echo 'Error: email is empty.' ;
        die(); 
     }
-    else
+    else if(!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^",$_POST['inputemail']))
     {
-
-        if(!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^",$_POST['inputemail']))
-        {
-            echo 'Error: email is invalid.' ;
-            die(); 
-
-        }
+        echo 'Error: email is invalid.' ;
+        die(); 
 
     }
+
 
 
     if(IsNullOrEmptyString( $_POST['input_occupation']))
@@ -874,23 +877,224 @@ function registerSubmit(){
        die(); 
     }
 
+    error_log("DOB:" . $_POST['inputDOB']);
+
+
     if(IsNullOrEmptyString( $_POST['inputDOB']))
     {
        echo 'Error: DOB is empty.' ;
        die(); 
     }
-    else
+    else if(!preg_match("/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{4})$/",$_POST['inputDOB']))
     {
-        error_log("DOB:" . $_POST['inputDOB']);
+        echo 'Error: DOB is invalid.' ;
+        die(); 
 
-        if(!preg_match("/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{4})$/",$_POST['inputDOB']))
+    }
+    
+
+    if(IsNullOrEmptyString($_POST['input_driver_no']) && IsNullOrEmptyString($_POST['input_passport']))
+    {
+ 
+           echo 'Error: Please enter Canadian Driver License No. or Passport No.' ;
+           die(); 
+    }
+    else if (IsNullOrEmptyString($_POST['input_driver_no']) && !IsNullOrEmptyString($_POST['input_passport']))
+    {
+        if(IsNullOrEmptyString($_POST['input_date_issue']))
         {
-            echo 'Error: DOB is invalid.' ;
+            echo 'Error: Date of Issue is required.' ;
             die(); 
+        } else if(!preg_match("/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{4})$/",$_POST['input_date_issue']))
+        {
+                echo 'Error: Date of Issue is invalid.' ;
+                die(); 
 
+        }
+        
+
+
+        if(IsNullOrEmptyString($_POST['select_origin_country']))
+        {
+            echo 'Error: Origin Country is required.' ;
+            die(); 
+        }
+        else if($_POST['select_origin_country']=='Select Origin Country')
+        {
+
+            echo 'Error: Please select origin country.' ;
+            die(); 
         }
     }
 
+    if(IsNullOrEmptyString($_POST['inputRetreatFrom']))
+    {
+        echo 'Error: Retreat start date is required.' ;
+        die(); 
+    } else if(!preg_match("/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{4})$/",$_POST['inputRetreatFrom']))
+    {
+        echo 'Error: Retreat start date is invalid.' ;
+        die(); 
+
+    }
+
+    if(IsNullOrEmptyString($_POST['inputRetreatTo']))
+    {
+        echo 'Error: Retreat end date is required.' ;
+        die(); 
+    } else if(!preg_match("/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{4})$/",$_POST['inputRetreatTo']))
+    {
+        echo 'Error: Retreat end date is invalid.' ;
+        die(); 
+    }
+
+
+    if ($_POST['inputRetreatFrom'] > $_POST['inputRetreatTo']) 
+    {
+        echo 'Error: Please enter valid start and end date for retreat.' ;
+        die(); 
+    }
+     
+
+    if(IsNullOrEmptyString( $_POST['input_e_firstname']))
+    {
+       echo 'Error: Emergency Contact First Name is required.' ;
+       die(); 
+    }
+
+
+    if(IsNullOrEmptyString( $_POST['input_e_lastname']))
+    {
+       echo 'Error: Emergency Contact Last Name is required.' ;
+       die(); 
+    }
+
+
+    if(IsNullOrEmptyString( $_POST['input_e_relationship']))
+    {
+       echo 'Error: Emergency Contact Relationship is required.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['input_e_addline1']))
+    {
+       echo 'Error: Emergency Contact Address line 1 is required.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['input_e_province']))
+    {
+       echo 'Error: Emergency Contact Province/Territory is required.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['input_e_city']))
+    {
+       echo 'Error: Emergency Contact City is required.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['select_e_country']))
+    {
+       echo 'Error: Emergency Contact Country is required.' ;
+       die(); 
+    }
+    else if($_POST['select_e_country']=='Select Country')
+    {
+
+        echo 'Error: Please select Emergency Contact Country.' ;
+        die(); 
+    }
+    
+
+
+    if(IsNullOrEmptyString( $_POST['input_e_phone']))
+    {
+       echo 'Error: Emergency Contact phone number is empty.' ;
+       die(); 
+    }
+ 
+
+    if(IsNullOrEmptyString( $_POST['input_e_email']))
+    {
+       echo 'Error: Emergency Contact email is empty.' ;
+       die(); 
+    }
+    else if(!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^",$_POST['input_e_email']))
+    {
+        echo 'Error: Emergency Contact email is invalid.' ;
+        die(); 
+
+    }
+
+    if(IsNullOrEmptyString( $_POST['radio_vegetarian']))
+    {
+       echo 'Error: Are you Vegetarian? is required to answer.' ;
+       die(); 
+    }
+ 
+
+    if(IsNullOrEmptyString( $_POST['radio_allergies']))
+    {
+       echo 'Error: Do you have food or other allergies? is required to answer.' ;
+       die(); 
+    }
+    else if($_POST['radio_allergies']=='1')
+    {
+        if(IsNullOrEmptyString( $_POST['txtfood_allergy']))
+        {
+            echo 'Error: food or other allergies is required.' ;
+            die();
+        }
+
+    }
+
+
+    if(IsNullOrEmptyString( $_POST['radio_issue_MP']))
+    {
+       echo 'Error: Do you have any physical or mental health issue SMSC should be made aware? is required to answer.' ;
+       die(); 
+    }
+    else if($_POST['radio_issue_MP']=='1')
+    {
+        if(IsNullOrEmptyString( $_POST['txt_issue_MP']))
+        {
+            echo 'Error: any physical or mental health issue is required.' ;
+            die();
+        }
+
+    }
+
+    if(IsNullOrEmptyString( $_POST['radio_save']))
+    {
+       echo 'Error: I agree to keep my personal information on the SMSC file. is required to answer.' ;
+       die(); 
+    }
+
+    if(IsNullOrEmptyString( $_POST['input_ack_firstname']))
+    {
+       echo 'Error: sign for first name is required.' ;
+       die(); 
+    }
+ 
+
+    if(IsNullOrEmptyString( $_POST['input_ack_lastname']))
+    {
+       echo 'Error: sign for last name is required.' ;
+       die(); 
+    }
+ 
+    if(IsNullOrEmptyString($_POST['input_ack_date']))
+    {
+        echo 'Error: sign date is required.' ;
+        die(); 
+    } else if(!preg_match("/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{4})$/",$_POST['input_ack_date']))
+    {
+        echo 'Error: sign date is invalid.' ;
+        die(); 
+
+    }
+ 
  
     $inputfirstname = $_POST['inputfirstname'];
     $inputlastname = $_POST['inputlastname'];
@@ -967,7 +1171,7 @@ function registerSubmit(){
             'passport_no'=>$input_passport,
             'passport_issue_date'=>$input_date_issue,
             'country_origin'=>$select_origin_country,
-            'gov_issue_photo'=>$select_origin_country,
+            'gov_issue_photo'=>$newfilename,
             'start_retreat_date'=>$inputRetreatFrom,
             'end_retreat_date'=>$inputRetreatTo,
             'e_first_name'=>$input_e_firstname,
