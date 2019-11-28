@@ -15,7 +15,14 @@ Template Name: Gallery Page
 <?php  
  
 
- if ($dir = opendir(get_template_directory().'/gallery')) {
+
+$upload_dir = wp_upload_dir();
+$upload_path = $upload_dir['path'];
+$explode = explode('uploads', $upload_path);
+$upload_path =  rtrim($upload_path ,end($explode)) ;
+
+
+ if ($dir = opendir($upload_path .'/gallery')) {
 	$images = array();
 	while (false !== ($file = readdir($dir))) {
 		if ($file != "." && $file != "..") {
@@ -42,7 +49,7 @@ Template Name: Gallery Page
                              
                     ?> 
                     <div class="<?php echo $active;?> item carousel-item" data-slide-number="<?php echo $slideNo; ?>">
-                        <img src="<?php echo get_template_directory_uri().'/gallery/'.$image ; ?>" class="img-fluid">
+                        <img src="<?php echo  get_site_url() .'/wp-content/uploads/gallery/'.$image ; ?>" class="img-fluid">
                     </div>
                      <?php
                             $slideNo +=1; 
@@ -67,7 +74,7 @@ Template Name: Gallery Page
                     ?> 
                     <li class="list-inline-item <?php echo $active;?>">
                         <a id="carousel-selector-0" <?php echo $selected;?> data-slide-to="<?php echo $slideNo; ?>" data-target="#myCarousel">
-                            <img src="<?php echo get_template_directory_uri().'/gallery/'.$image ; ?>" class="img-fluid">
+                            <img src="<?php  echo  get_site_url() .'/wp-content/uploads/gallery/'.$image ; ?>" class="img-fluid">
                         </a>
                     </li>
                     <?php

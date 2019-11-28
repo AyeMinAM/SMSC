@@ -1,0 +1,450 @@
+<style>
+table {
+  line-height: 1.6;
+}
+
+div.terms{
+
+  padding: 10px;
+
+}
+
+</style>
+
+
+<table border="1"   cellpadding="4">
+   
+    <tr>
+        <td align="center" colspan="4" ><h4>Online Application Form for the Meditation Retreat</h4>
+        </td>
+        
+    </tr>
+       
+    <tr>
+        <td  colspan="4" > 
+             It is essential to have previous experience in Mahasi Meditation Method and 
+            to strictly adhere to the 9 precepts and retreat schedule.  
+            Signed application needs to be received before coming to the center.  
+            Final-acceptance by SMSC required. (If you have no access to 
+            sign on-line can sign on arrival to the Retreat Center) 
+         </td>
+        
+    </tr>
+    <tr>
+        <td  colspan="4"> 
+        
+            1. Personal Information
+
+        </td> 
+    </tr>
+    <tr>
+        <td  > 
+            First Name
+        </td> 
+        <td  align="left" colspan="3">{inputfirstname}
+        </td> 
+       
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Last Name
+        </td> 
+        <td  align="left" colspan="3" >{inputlastname}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Gender
+        </td> 
+        <td  align="left" colspan="3">{select_gender}
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" > 
+            Address line 1
+        </td> 
+        <td  align="left" colspan="3">{inputaddline1}
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" > 
+            Address line 2
+
+        </td> 
+        <td  align="left" colspan="3">{inputaddline2}
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" > 
+            Postal Code
+        </td> 
+        <td  align="left" colspan="3">{inputpcode}
+        </td> 
+       
+    </tr>
+    <tr>
+
+        <td  align="left">Province/Territory
+          </td> 
+          <td  align="left" colspan="3">{inputprovince}
+          </td> 
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            City
+        </td> 
+        <td  align="left" colspan="3">{inputcity}
+        </td> 
+       
+    </tr>
+
+    <tr>
+            <td  align="left" > 
+                Country
+            </td> 
+            <td  align="left" colspan="3">{selectcountry}
+            </td> 
+           
+    </tr>
+    
+
+    <tr>
+        <td  align="left" > 
+            Phone
+        </td> 
+        <td  align="left" colspan="3" >{inputphone}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Email
+        </td> 
+        <td  align="left" colspan="3" >{inputemail}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Occupation
+        </td> 
+        <td  align="left" colspan="3" >{input_occupation}
+        </td> 
+
+    </tr>
+
+ 
+    <tr>
+        <td  align="left" > 
+            Date of Birth
+        </td> 
+        <td  align="left" colspan="3" >{inputDOB}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+
+              Canadian Driver <br>License No.
+
+        </td> 
+        <td  align="left" colspan="3" >{input_driver_no}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+            Passport No.
+        </td> 
+        <td  align="left" colspan="3" >{input_passport}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Date of Issue
+        </td> 
+        <td  align="left" colspan="3" >{input_date_issue}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Origin Country
+        </td> 
+        <td  align="left" colspan="3" >{select_origin_country}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+              Government issued <br>photo ID
+        </td> 
+        <td  align="left" colspan="3" ><img src="{gov_issue_photo}" > 
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" colspan="4"> 
+        
+            2. Additional Information
+
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" colspan="4"> 
+        
+            Request retreat period
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" > 
+            From Date
+        </td> 
+        <td  align="left" colspan="3" >{inputRetreatFrom}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+            To Date
+        </td> 
+        <td  align="left" colspan="3" >{inputRetreatTo}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" colspan="4"> 
+        
+            Emergency Contact
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" > 
+            First Name
+        </td> 
+        <td  align="left" colspan="3" >{input_e_firstname}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+            Last Name
+        </td> 
+        <td  align="left" colspan="3" >{input_e_lastname}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+            Relationship to you
+        </td> 
+        <td  align="left" colspan="3" >{input_e_relationship}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+            Address line 1
+        </td> 
+        <td  align="left" colspan="3" >{input_e_addline1}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+            Address line 2
+        </td> 
+        <td  align="left" colspan="3" >{input_e_addline2}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Postal Code
+        </td> 
+        <td  align="left" colspan="3" >{input_e_pcode}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Province/Territory
+        </td> 
+        <td  align="left" colspan="3" >{input_e_province}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" > 
+            City
+        </td> 
+        <td  align="left" colspan="3" >{input_e_city}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Country
+        </td> 
+        <td  align="left" colspan="3" >{select_e_country}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Phone
+        </td> 
+        <td  align="left" colspan="3" >{input_e_phone}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Email
+        </td> 
+        <td  align="left" colspan="3" >{input_e_email}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" colspan="4"> 
+        
+            Most recent meditation retreats attend (Theravada and non-Theravada), up to 5 retreats.
+          </td> 
+    </tr>
+    <tr>
+       
+        <td  align="left" colspan="4" >{txt_retreats}
+        </td> 
+
+    </tr>
+    <tr>
+        <td  align="left" colspan="4"> 
+        
+            3. Meal and Medical Information
+
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" colspan="4"> 
+        
+            Please answer a few more questions about meals and medical insurance so that we can provide you best based on your needs. 
+            All fields are mandatory
+        </td> 
+    </tr>
+
+    <tr>
+        <td  align="left" > 
+            Are you Vegetarian?  
+        </td> 
+        <td  align="left" colspan="3" >{radio_vegetarian}
+        </td> 
+
+    </tr>
+
+    <tr>
+        <td  align="left" colspan="3"> 
+        
+            Do you have food or other allergies? If yes, please specify. 
+
+        </td> 
+        <td  align="left" > 
+        
+            {radio_allergies}
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" colspan="4">
+            {txtfood_allergy}
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" colspan="4">
+            Do you have BC or any other type of health insurance? Please specify type of health insurance. 
+            <br>
+            (It is imperative to have health insurance.) 
+        </td> 
+    </tr>
+
+    <tr>
+        <td  align="left" colspan="4">
+            {txt_insurance}
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" colspan="3">
+            Do you have any physical or mental health issue SMSC should be made aware?. If yes, please specify
+          </td> 
+          <td  align="left" > 
+        
+              {radio_issue_MP}
+          </td> 
+    </tr>
+    <tr>
+        <td  align="left" colspan="4">
+            {txt_issue_MP}
+        </td> 
+    </tr>
+    <tr>
+        <td  align="left" colspan="4">
+            4. Policy and agreement
+            <br />
+            Please read this carefully before you submit this form online.  
+            <br />
+            <br/>
+            1. I agree to abide to the following rules and structure : 
+            <br />
+            <br />
+
+            - Practice Mindfulness-Insight (Mahasi Tradition) only 
+            <br />
+            - Strictly adhere to Nine Precepts
+            <br />
+            - Maintain Noble Silence
+            <br />
+            - Slow down all actions and behavior at all time 
+            <br />
+            - Follow retreat schedule  
+            <br />
+            - Anyone who becomes a disturbance to the retreat will be asked to leave  
+            <br />
+            <br/>
+            2.  I am aware that I may be photographed or videotaped at retreat for sharing among SMSC 
+            participants, yogis and SMSC Dhamma friends. 
+            <br />
+            <br />
+
+            3. I agree to keep my personal information on the SMSC file.
+            <br />
+            If "No", you will need to fill up this form at every future retreat you attend.
+            <br />
+            {radio_save}
+            <br />
+            <br />
+
+            <br />
+            BY SUBMITTING THIS ELECTRONIC APPLICATION I WAIVE ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREATS I WILL BE ATTENDING AT SMSC.
+            <br />
+            <br />
+            <br />
+
+            First Name : {input_ack_firstname} , Last Name : {input_ack_lastname}
+            <br />
+            Date : {input_ack_date}
+        </td> 
+    </tr>
+</table>

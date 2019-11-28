@@ -178,76 +178,38 @@ Template Name: Contact Us Page
             $.ajax({
                  type: "POST",
                  url: '<?php echo admin_url("admin-ajax.php") ?>',
-                 data: $(form).serialize()  + '&action=sendEmail' ,
+                 data:  $(form).serialize() +  '&action=sendEmail' ,
                  error: function () {
                     $("#emailsubmit").attr("disabled", false);
 
                     $('.btn').html($("#emailsubmit").data('original-text'));
 
                     $( "#message" ).html('<div class="alert alert-danger" role="alert">There is error in your submission. Please try to submit again or contact with Administrator</div>');
-                    /*
-                    $( "<div title='Alert'>There is error in your submission. Please try to submit again or contact with Administrator</div>" ).dialog({
-                    modal: true,
-                    height: 200,
-			        width: 600,
-                    open: function( event, ui ) {
-                            //center the dialog within the viewport (i.e. visible area of the screen)
-                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
-                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
-                        jQuery(this).parent().css('top', top + "px");
-                        jQuery(this).parent().css('left', left + "px");
-                        jQuery(this).parent().css('position', 'fixed');                
-                    },
-                    buttons: {
-                        Ok: function() {
-                            
-                            $( this ).dialog( "close" );
-                           
-
-                        }
-                    }
-                    });*/
+                     
                  },
-                 success: function () {
+                 success: function (response) {
                     $("#emailsubmit").attr("disabled", false);
 
- 
-                    $( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
-                    
                     $('.btn').html($("#emailsubmit").data('original-text'));
 
 
-                    $('#inputfullname').val("");
-                    $('#inputemail').val("");
-                    $('#inputphone').val("")
-                    $('#inputmessage').val("");
+                    if ( response.startsWith('Error:') ) 
+                    {
 
+                        $( "#message" ).html('<div class="alert alert-danger" role="alert">' + response + '</div>');
 
-                     /*
+                    }  
+                    else
+                    {
 
-                    $( "<div title=''>You have submitted successfully!</div>" ).dialog({
-                    modal: true,
-                    height: 200,
-			        width: 600,
-                    open: function( event, ui ) {
-                            //center the dialog within the viewport (i.e. visible area of the screen)
-                        var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
-                        var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
-                        jQuery(this).parent().css('top', top + "px");
-                        jQuery(this).parent().css('left', left + "px");
-                        jQuery(this).parent().css('position', 'fixed');                
-                    },
-                    buttons: {
-                        Ok: function() {
-
-                             window.history.back(); 
-
-                            $( this ).dialog( "close" );
-
-                        }
+                        $( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
+                        $('#inputfullname').val("");
+                        $('#inputemail').val("");
+                        $('#inputphone').val("")
+                        $('#inputmessage').val("");
                     }
-                    });*/
 
+ 
                   
                  }
              });

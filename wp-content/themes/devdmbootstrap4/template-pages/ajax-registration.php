@@ -9,7 +9,7 @@ Template Name: Ajax register
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container">
+<div id= "divbody" class="container">
     <div class="row"  >
 
   <!-- Multi step form --> 
@@ -28,7 +28,7 @@ Template Name: Ajax register
     <!-- fieldsets -->
 <div id="container">
 
-    <fieldset class="box" id="1">
+    <fieldset class="box" id="1" >
          <!-- Tittle -->
     <div class="tittle">
       <h2>Online Application Form for the Meditation Retreat</h2>
@@ -173,29 +173,35 @@ Template Name: Ajax register
 
             </div>      
         </div> 
-        <div class="form-row"> 
-        <div class="form-group col-md-6"> 
-            
+        <div class="form-row" > 
+        <div class="form-group col-md-6"  style="height:370px"> 
+  
             <div class="custom-file">
             <div style='display:none'><a href=javascript:void(0) class="upload-info-button upload-info-button--first">Get first file info</a></div>
             
                 <div id="custom-file-container-image" class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
                         href=javascript:void(0) class=custom-file-container__image-clear
                         title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
-                        type=file class=custom-file-container__custom-file__custom-file-input id=customFile name=customFile accept=image/*
+                        type="file" class="custom-file-container__custom-file__custom-file-input" id="fileToUpload" name="fileToUpload" accept=image/*
                         aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=2097152> <span
                         class=custom-file-container__custom-file__custom-file-control></span></label>
                     <div class=custom-file-container__image-preview></div>
                 </div>
             </div> 
-            <div id="error_customFile"></div>
          </div> 
-          
-        </div>
-        <button type="button" class="next action-button">Continue</button> 
+         <div id="error_file"></div>
 
-        <div class="text-center btnDiv">
+        </div>
+       <!-- <div class="form-row">
+        <div class="form-group col-md-6">
+         <input type="file" name="fileToUpload"  accept="image/*" id="fileToUpload">
+
+         
+
          </div> 
+        </div>-->
+       
+         <button type="button" class="next action-button">Continue</button> 
     </fieldset>
     <fieldset class="box" id="2">
     <h3>2. Additional Information</h3>
@@ -369,9 +375,7 @@ Template Name: Ajax register
 
 <div class="form-row"> 
     <div class="form-group col-md-12">
-    Do you have BC or any other type of health insurance? Please specify type of health insurance. 
-    <br>
-    (It is imperative to have health insurance.) 
+    Do you have BC or any other type of health insurance? Please specify type of health insurance.(It is imperative to have health insurance.) 
     </div> 
 </div> 
 
@@ -655,14 +659,24 @@ jQuery(document).ready(function ()
 
             $("#registerSubmit").attr("disabled", true);
  
-            console.log($(form).serialize());
 
+            var formData = new FormData(form[0]);
+            //formData.append($(form).serialize());
+
+            formData.append('action', 'registerSubmit');
+
+            //console.log($(formData).serialize());
 
             $.ajax({
                 type: "POST",
-                url: '<?php echo admin_url("admin-ajax.php") ?>',
-                data: $(form).serialize()  + '&action=registerSubmit' ,
-                error: function () {
+                contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+                processData: false,
+                url: '<?php echo admin_url("admin-ajax.php")   ?>',
+                data: formData ,
+                error: function (response) {
+
+                    console.log(response);
+
                 $("#registerSubmit").attr("disabled", false);
 
                 $('.btn').html($("#registerSubmit").data('original-text'));
@@ -671,27 +685,36 @@ jQuery(document).ready(function ()
 
                 
                 },
-                success: function () {
+                success: function (response) {
 
-
+                   // alert(response); 
+                    console.log(response);
                     $("#registerSubmit").attr("disabled", false);
-
-                    //$( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
-
                     $('.btn').html($("#registerSubmit").data('original-text'));
 
-                    $.ajax({
 
-                    type: "GET",
-                    url: "<?php echo esc_url( get_permalink( get_page_by_title('successful') ) ); ?>" ,
-                    success: function(data) {
-                        // data is ur summary
-                        $('#container').html(data);
+                    if (response.indexOf('Error:') !==-1  ) 
+                    {
+
+                        $( "#message" ).html('<div class="alert alert-danger" role="alert">' + response + '</div>');
+
+                    }  
+                    else
+                    {
+
+                        $.ajax({
+
+                        type: "GET",
+                        url: "<?php echo esc_url( get_permalink( get_page_by_title('successful') ) ); ?>" ,
+                        success: function(data) {
+                            // data is ur summary
+                            $('#divbody').html(data);
+                        }
+
+                        });
+    
                     }
-
-                    });
-
-             
+ 
 
                 }
             });
@@ -876,6 +899,30 @@ jQuery(document).ready(function ()
 
 
 
+    $('input[type=radio][name=radio_allergies]').change(function() {
+        if (this.value == '0') {
+            $("#txtfood_allergy").attr('disabled',true);
+            $("#txtfood_allergy").val('');
+        }
+        else
+        {
+            $("#txtfood_allergy").attr('disabled',false);
+
+        }
+    });
+
+    $('input[type=radio][name=radio_issue_MP]').change(function() {
+        if (this.value == '0') {
+            $("#txt_issue_MP").attr('disabled',true);
+            $("#txt_issue_MP").val('');
+        }
+        else
+        {
+            $("#txt_issue_MP").attr('disabled',false);
+
+        }
+    });
+
 
     
     $.validator.addMethod("checkIssueDate", function(value) {
@@ -1002,7 +1049,7 @@ jQuery(document).ready(function ()
                                 regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
                             }, 
                             selectcountry: "checkCountry" ,
-                            customFile: {
+                            fileToUpload: {
                                 required: true
                             },
                             input_driver_no: "checkDriverNo" ,
@@ -1072,7 +1119,7 @@ jQuery(document).ready(function ()
                             inputprovince:"Please enter Province/Territory",
                             inputcity:"Please enter City",
                             inputemail: "Please enter a valid email address",
-                            customFile: "Please upload government issued photo",
+                            fileToUpload: "Please upload government issued photo",
                             inputDOB: "Please enter Date of Birth",
                             inputphone: "Please enter your valid phone number",
                             inputRetreatFrom: "Please enter valid the start date of retreat",
@@ -1103,8 +1150,8 @@ jQuery(document).ready(function ()
                             
                                 error.insertAfter("#error_selectcountry");
                     
-                            } else if (element.attr("name") == "customFile") {
-                                error.insertAfter("#error_customFile");
+                            } else if (element.attr("name") == "fileToUpload") {
+                                error.insertAfter("#error_file");
 
                             }
                             else if (element.attr("name")=="selectcountry")

@@ -106,8 +106,10 @@ Template Name: Register Class Page
             $.ajax({
                  type: "POST",
                  url: '<?php echo admin_url("admin-ajax.php") ?>',
-                 data: $(form).serialize()  + '&action=registerSimple' ,
-                 error: function () {
+                 data:  $(form).serialize() + '&action=registerSimple' ,
+                 error: function (response) {
+                    console.log(response);
+
                    
                     $("#registerSubmit").attr("disabled", false);
 
@@ -117,33 +119,34 @@ Template Name: Register Class Page
 
 
                  },
-                 success: function () {
+                 success: function (response) {
 
+                    console.log(response);
                     $("#registerSubmit").attr("disabled", false);
                     $('.btn').html($("#registerSubmit").data('original-text'));
 
-/*
-                    $('#inputfirstname').val("");
-                    $('#inputlastname').val("");
-                    $('#inputemail').val("");
-                    $('#select_program').prop('selectedIndex',0);
-                    $('#inputphone').val("")
-                    $('#inputmessage').val("");*/
 
+                    if ( response.startsWith('Error:') ) 
+                    {
 
-                    $.ajax({
+                        $( "#message" ).html('<div class="alert alert-danger" role="alert">' + response + '</div>');
 
-                    type: "GET",
-                    url: "<?php echo esc_url( get_permalink( get_page_by_title('successful') ) ); ?>" ,
-                    success: function(data) {
-                        // data is ur summary
-                        $('#divRegister').html(data);
+                    }  
+                    else
+                    {
+
+                        $.ajax({
+
+                        type: "GET",
+                        url: "<?php echo esc_url( get_permalink( get_page_by_title('successful') ) ); ?>" ,
+                        success: function(data) {
+                            // data is ur summary
+                            $('#divRegister').html(data);
+                        }
+
+                        });
+    
                     }
-
-                    });
- 
-                    //$( "#message" ).html('<div class="alert alert-success" role="alert">You have submitted successfully!</div>');
-
 
 
 
