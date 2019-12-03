@@ -898,6 +898,18 @@ jQuery(document).ready(function ()
     }, 'Please specify any physical or mental health issue.');
 
 
+    $.validator.addMethod("checkFirstName", function(value) {
+        console.log("value:" + value);
+        console.log("value:" + $('#inputfirstname').val());
+        return $.trim($('#inputfirstname').val())===$.trim(value);
+    },'Please check your sign first name and it must be same as your first name.');
+
+    $.validator.addMethod("checkLastName", function(value) {
+        return $.trim($('#inputlastname').val())===$.trim(value);
+    }, 'Please check your sign last name and it must be same as your last name.');
+
+
+
 
     $('input[type=radio][name=radio_allergies]').change(function() {
         if (this.value == '0') {
@@ -999,6 +1011,12 @@ jQuery(document).ready(function ()
 
 
 
+    $.validator.addMethod('filesize', function (value, element, param) {
+        console.log("element.files[0].size:" + element.files[0].size);
+        console.log("param:" + param);
+
+    return this.optional(element) || (element.files[0].size <= param)
+    }, 'File size must be less than {0}');
 
     //* Form js
     function verificationForm(){
@@ -1050,7 +1068,9 @@ jQuery(document).ready(function ()
                             }, 
                             selectcountry: "checkCountry" ,
                             fileToUpload: {
-                                required: true
+                                required: true,
+                                extension: "jpg,jpeg,gif,png",
+                                filesize:2097152
                             },
                             input_driver_no: "checkDriverNo" ,
                             input_passport: "checkPassportNo" ,
@@ -1098,8 +1118,8 @@ jQuery(document).ready(function ()
                             txtfood_allergy:"checkFoodAllergy",
                             txt_issue_MP:"checkIssueMP",
                             radio_save:"required",
-                            input_ack_firstname:"required",
-                            input_ack_lastname:"required",
+                            input_ack_firstname:"checkFirstName",
+                            input_ack_lastname:"checkLastName",
                             input_ack_date: {
                                 required: true,
                                 regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
@@ -1119,7 +1139,7 @@ jQuery(document).ready(function ()
                             inputprovince:"Please enter Province/Territory",
                             inputcity:"Please enter City",
                             inputemail: "Please enter a valid email address",
-                            fileToUpload: "Please upload government issued photo",
+                            fileToUpload: "Please upload valid government issued photo. File size must be less than 2MB. Only JPG, GIF and PNG types are accepted",
                             inputDOB: "Please enter Date of Birth",
                             inputphone: "Please enter your valid phone number",
                             inputRetreatFrom: "Please enter valid the start date of retreat",
@@ -1138,8 +1158,8 @@ jQuery(document).ready(function ()
                             input_e_city:"Please enter City",
                             input_e_email: "Please enter a valid email address",
                             input_e_phone: "Please enter your valid phone number",
-                            input_ack_firstname:"Please enter your sign for First Name",
-                            input_ack_lastname:"Please enter your sign for First Name",
+                            input_ack_firstname:"Please check your sign for first name and it must be the same as your first name.",
+                            input_ack_lastname:"Please check your sign for last name and it must be the same as your last name.",
                             input_ack_date:"Please enter valid sign date"
 
                         } 
