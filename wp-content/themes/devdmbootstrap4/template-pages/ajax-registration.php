@@ -9,20 +9,20 @@ Template Name: Ajax register
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div id= "divbody" class="container">
-    <div class="row"  >
+<div id="divbody" class="container" style="margin-top:1rem;">
+    <div class="row justify-content-md-center">
 
   <!-- Multi step form --> 
-<section class="col-sm-12 multi_step_form" >  
+<section class=" col-lg-10 col-sm-12 multi_step_form T-margin-1 multi_step_form-bg">  
   <form id="msform" enctype="multipart/form-data" > 
   
     <!-- progressbar -->
     <ul id="progressbar">
-      <li class="active">Personal Information</li>  
-      <li>Additional Information</li> 
-      <li>Meal and Medical Information</li>
-      <li>Policy, Agreement and Submission</li>
-
+     <li class="active">1.</br><span class="mobile-disappear">Personal</br> Information</span></li>  
+      <li>2.</br><span class="mobile-disappear">Additional</br> Information</span></li> 
+      <li>3.</br><span class="mobile-disappear">Most Recent</br> Meditation Retreats</span></li> 
+      <li>4.</br><span class="mobile-disappear">Meal and Medical</br> Information</span></li>
+      <li>5.</br><span class="mobile-disappear">Policy, Agreement </br>and Submission</span></li>
     </ul>
  
     <!-- fieldsets -->
@@ -34,7 +34,7 @@ Template Name: Ajax register
       <h2>Online Application Form for the Meditation Retreat</h2>
     </div>
     
-    <div class="col-sm-12">
+    <div>
         
         <p class="text-justify">
         
@@ -152,10 +152,10 @@ Template Name: Ajax register
              <div class="form-group col-md-4"> 
                 <input type="text" class="form-control" id="input_passport" name="input_passport" placeholder="Passport No.">
             </div> 
-            <div class="form-group col-md-3">  
+            <div class="form-group col-md-4">  
                 <input type="text" class="form-control"   id="input_date_issue" name="input_date_issue" placeholder="Date of Issue"> 
             </div>  
-            <div class="form-group col-md-5"> 
+            <div class="form-group col-md-4"> 
                 <select id="select_origin_country" name="select_origin_country" style="width:100%">
                     <option value="Select Origin Country">Select Origin Country</option>
 
@@ -203,6 +203,12 @@ Template Name: Ajax register
        
          <button type="button" class="next action-button">Continue</button> 
     </fieldset>
+
+<!--fieldset 01-->
+
+
+
+<!--fieldset 02-->
     <fieldset class="box" id="2">
     <h3>2. Additional Information</h3>
 
@@ -320,7 +326,11 @@ Template Name: Ajax register
       <button type="button" class="next action-button">Continue</button>  
 
     </fieldset>  
+<!--fieldset 02-->
 
+
+
+<!--fieldset 03-->
     <fieldset class="box" id="3">
     <h3>3. Meal and Medical Information</h3>
 
@@ -429,7 +439,14 @@ Template Name: Ajax register
     <button type="button" class="action-button previous previous previous_button">Back</button> 
     <button type="button" class="next action-button">Continue</button>  
 
-    </fieldset>  
+    </fieldset> 
+
+<!--fieldset 03-->
+
+
+
+
+<!--fieldset 04-->
     <fieldset  class="box" id="4">
 
     <h3>4. Policy and agreement</h3>
@@ -574,11 +591,12 @@ Template Name: Ajax register
     <div id="message"> </div>
 
     </fieldset>  
+    <!--fieldset 04-->
 </div>
 
   </form>  
 </section> 
-<!-- End Multi step form -->   
+<!-- End Multi step form -->  
 </div>
  
 </div>
