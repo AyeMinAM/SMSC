@@ -1076,6 +1076,12 @@ function registerSubmit(){
        echo 'Error: sign for first name is required.' ;
        die(); 
     }
+    if($_POST['input_ack_firstname']!=$_POST['inputfirstname'])
+    {
+        echo 'Error: Please check your sign for first name and it must be the same as your first name.' ;
+        die(); 
+
+    }
  
 
     if(IsNullOrEmptyString( $_POST['input_ack_lastname']))
@@ -1083,6 +1089,14 @@ function registerSubmit(){
        echo 'Error: sign for last name is required.' ;
        die(); 
     }
+
+    if($_POST['input_ack_lastname']!=$_POST['inputlastname'])
+    {
+        echo 'Error: Please check your sign for last name and it must be the same as your last name.' ;
+        die(); 
+        
+    }
+
  
     if(IsNullOrEmptyString($_POST['input_ack_date']))
     {
