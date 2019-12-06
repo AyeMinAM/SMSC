@@ -24,14 +24,36 @@ Template Name: The Project Page
             <img src="<?php echo get_template_directory_uri(); ?>/images/divider-line.png" class="smsc_img_divider_line img-fluid" alt="divider">
         </div>   
         <p class="text-justify">
-            Satipatthana Meditation Society of Canada (SMSC) is a registered charitable organization approved by Revenue Canada in 2008. Through the generous donations of many individuals as well as large contributions from members and Dhamma practitioners, the Society was able to acquire a property in Hope, BC as of November, 2012. It is located an hour and a half drive from Vancouver. It has one third of an acre land and a 2000 sq.ft building. The building has been renovated so that it will be conducive for meditation. Three resident yogis live and maintain the Centre. It is a stepping-stone until we can purchase a larger building and larger land suitable to use for weekend, 10 days and longer term retreats. World-renowned Meditation masters of the Mahasi tradition will be invited to guide retreats whenever possible.
+            The Satipatthana Meditation Society of Canada (SMSC) is a registered charitable organization approved by Revenue Canada in 2008.  Through the generous donations of many individuals, as well as large contributions by members and Dhamma practitioners, in 2012 the Society was able to acquire property for a mediation/retreat centre in Hope, BC.  Chanmyay Yeiktha, Canada, has successfully operated since that time.
+
             </p>
             <p class="text-justify">
-             SMSC solely depends on donations to operate the society and maintain the retreat center. If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through info(at)satipatthana.ca. As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors, and Canadian resident donors are able to claim tax deductions for their contributions.
+             <strong>With the Hope retreat centre now well established, the SMSC is envisioning the launch of a new project: 
+
             </p>
             <p class="text-justify">
-             The retreat center is named Chanmyay Yeiktha, Canada in honor to our spiritual Advisor and teacher Chanmyay Sayadawgyi Ashin Janaka Bhivamsa of Chanmyay Yeiktha, Yangon, Myanmar. He came and officially opened the center on June 29, 2014. The center shall operate with his guidance.
+             To locate and acquire a property in either North Vancouver, East Vancouver or Burnaby, BC.  
             </p>
+            <p class="text-justify">
+                The preferred specifications being a 1,500 to 2,000 sq. ft. facility, ideally consisting of a large hall, a small kitchen, a 3-piece bathroom, and an additional small room for office space.
+            </p>
+             <p class="text-justify">
+                The purpose of this new city meditation centre would be to expand the reach of the Society to conduct:
+                    <ul class="new-project">
+                        <li>beginner and intermediate meditation classes;</li>
+                        <li>day and weekend retreats;</li>
+                        <li>weekend Dhamma workshops;</li>
+                        <li>advance Dhamma programs. </li>
+                    </ul>
+
+            </p></strong>
+             <p class="text-justify">
+                If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through info(at)satipatthana.ca.  As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors (Canadian resident donors are able to claim tax deductions for their contributions). 
+            </p>
+             <p class="text-justify">
+                If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through info(at)satipatthana.ca.  As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors (Canadian resident donors are able to claim tax deductions for their contributions). 
+            </p>
+
             <p>Sadhu. Sadhu. Sadhu.</p>
              <div  class="col-sm-12 text-center"> 
 
