@@ -378,7 +378,7 @@ function sendEmail(){
     $inputmessage = $_POST['inputmessage'];
 
     $options_results = $wpdb->get_results( 
-        "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
+        "SELECT * FROM " . $wpdb->prefix . "options WHERE option_name LIKE 'SMTP_%'"
     );
    // error_log(print_r($options_results));
 
@@ -585,7 +585,7 @@ function registerSimple(){
         
         //$wpdb->query( "START TRANSACTION" );
 
-        if($wpdb->insert('wp_register',array(
+        if($wpdb->insert( $wpdb->prefix . 'register',array(
             'first_name'=>$inputfirstname,
             'last_name'=>$inputlastname,
             'email'=>$inputemail,
@@ -607,7 +607,7 @@ function registerSimple(){
            // $wpdb->query( "COMMIT" );
 
             $options_results = $wpdb->get_results( 
-                "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
+                "SELECT * FROM " . $wpdb->prefix . "options WHERE option_name LIKE 'SMTP_%'"
             );
            // error_log(print_r($options_results));
     
@@ -643,7 +643,6 @@ function registerSimple(){
                 error_log($username);
                 error_log($password);
     
-                error_log($BCC);
     
     
                 $phpmailer->isSMTP();                    
@@ -662,8 +661,11 @@ function registerSimple(){
 
                 if ($BCC != '') {
                     $indiBCC = explode(",", $BCC);
+
                   
                     foreach ($indiBCC as $key => $value) {
+                        error_log($value);
+
                         try {
                             $phpmailer->addBCC($value);
                         } catch (phpmailerException $e) {
@@ -1166,7 +1168,7 @@ function registerSubmit(){
         
         //$wpdb->query( "START TRANSACTION" );
 
-        if($wpdb->insert('wp_register',array(
+        if($wpdb->insert($wpdb->prefix . 'register',array(
             'program'=>"retreat",
             'first_name'=>$inputfirstname,
             'last_name'=>$inputlastname,
@@ -1225,7 +1227,7 @@ function registerSubmit(){
 
 
             $options_results = $wpdb->get_results( 
-                "SELECT * FROM wp_options WHERE option_name LIKE 'SMTP_%'"
+                "SELECT * FROM " . $wpdb->prefix . "options WHERE option_name LIKE 'SMTP_%'"
             );
             // error_log(print_r($options_results));
 
