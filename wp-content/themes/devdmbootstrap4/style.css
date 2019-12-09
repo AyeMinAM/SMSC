@@ -1265,3 +1265,9 @@ font-size:0.8rem;
 .new-project{
   font-family: "OpenSans", sans-serif;
 }
+
+.list-inline-item img {
+  width: auto;
+  height: 50px;
+  max-height: 50px;
+}
