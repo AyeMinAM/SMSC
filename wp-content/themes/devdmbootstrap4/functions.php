@@ -667,7 +667,7 @@ function registerSimple(){
                         error_log($value);
 
                         try {
-                            $phpmailer->addBCC($value);
+                            $phpmailer->addBCC(trim($value));
                         } catch (phpmailerException $e) {
                             echo 'Error: '. $e->getMessage();
                         }

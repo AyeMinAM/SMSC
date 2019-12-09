@@ -160,7 +160,7 @@ Template Name: Ajax register
                     <option value="Select Origin Country">Select Origin Country</option>
 
                     <?php global $wpdb;
-                    $result = $wpdb->get_results("SELECT * FROM wp_country order by Name");
+                    $result = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "country order by Name");
                     foreach($result as $wp_country){?> 
                         <option value="<?php echo $wp_country->Code; ?>">
                             <?php echo  $wp_country->Name; ?>
@@ -282,7 +282,7 @@ Template Name: Ajax register
         <select id="select_e_country" name="select_e_country" style="width:100%">
                     <option value="Select Country">Select Country</option>
                     <?php global $wpdb;
-                    $result = $wpdb->get_results("SELECT * FROM wp_country order by Name");
+                    $result = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "country order by Name");
                     foreach($result as $wp_country){?> 
                         <option value="<?php echo $wp_country->Code; ?>">
                             <?php echo  $wp_country->Name; ?>
