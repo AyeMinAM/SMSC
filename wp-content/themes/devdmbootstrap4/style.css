@@ -1253,7 +1253,8 @@ font-size:0.8rem;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  max-height: 800px;
+  max-height: 500px;
+  height: 500px;
   width: auto;
 }
 
