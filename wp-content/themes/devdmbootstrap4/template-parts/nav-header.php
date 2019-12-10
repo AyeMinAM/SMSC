@@ -69,7 +69,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('gallery') ) ); ?>">Photo Gallery</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('volunteer') ) ); ?>">Volunteers</a>
+                           <!--  <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('volunteer') ) ); ?>">Volunteers</a> -->
                              
                             </div>
                         </li>

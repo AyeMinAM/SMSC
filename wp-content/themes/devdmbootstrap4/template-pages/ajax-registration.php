@@ -179,9 +179,9 @@ Template Name: Ajax register
             <div class="custom-file">
             <div style='display:none'><a href=javascript:void(0) class="upload-info-button upload-info-button--first">Get first file info</a></div>
             
-                <div id="custom-file-container-image" class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
-                        href=javascript:void(0) class=custom-file-container__image-clear
-                        title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
+              <div id="custom-file-container-image" class=custom-file-container data-upload-id=myFirstImage><label>Upload your photo ID.<a href=javascript:void(0) class=custom-file-container__image-clear
+                        title="Clear Image">&times;</a></label> 
+                        <label class=custom-file-container__custom-file><input
                         type="file" class="custom-file-container__custom-file__custom-file-input" id="fileToUpload" name="fileToUpload" accept=image/*
                         aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=2097152> <span
                         class=custom-file-container__custom-file__custom-file-control></span></label>
@@ -307,7 +307,7 @@ Template Name: Ajax register
 
 <div class="form-row"> 
     <div class="form-group col-md-12">
-      Most recent meditation retreats attend (Theravada and non-Theravada), up to 5 retreats.   
+      Describe your previous retreats (up to five) including Type, Teacher, Location, date and duration for each retreat.  
     </div> 
 </div> 
 
@@ -337,7 +337,7 @@ Template Name: Ajax register
     <div class="form-row"> 
     <div class="form-group col-md-12">
       Please answer a few more questions about meals and medical insurance so that we can provide you best based on your needs. 
-      All fields are mandatory
+      All fields are mandatory.
     </div> 
     </div> 
 <div class="form-row"> 
@@ -401,7 +401,7 @@ Template Name: Ajax register
 
 <div class="form-row"> 
     <div class="form-group col-md-12">
-      Do you have any physical or mental health issue SMSC should be made aware?. 
+      Do you have any physical or mental health issue(s) SMSC need to know about?
     </div> 
 </div> 
 
@@ -554,7 +554,7 @@ Template Name: Ajax register
 
       <div class="form-row"> 
         <div class="form-group col-md-12">
-        If "No", you will need to fill up this form at every future retreat you attend.
+        If you select "No", you will need to fill up this form at every future retreat you attend.
         </div> 
     </div> 
 
