@@ -12,7 +12,11 @@ Template Name: Past Activities Page
 
 
 $args = array(
-     );
+    'posts_per_page'   => -1,
+    'post_status' => 'publish',
+    'post_type'   => 'post',
+    'category_name' => 'past-activities'
+);
    
     $posts = get_posts( $args );
    
@@ -25,10 +29,12 @@ $args = array(
             </div>
     <div class="row" style="margin-top:20px;">  
         <div class="col-sm-12">
-            <div id="accordion" class="accordion">
+            <div id="accordion" class="accordion scroll">
                         <div class="card mb-0">
                             <?php
                             $slideNo = 1; 
+                           
+
                             foreach( $posts as $post ) 
                             { 
                                 
@@ -49,7 +55,7 @@ $args = array(
                                         <?php 
                                             
                                             $slideNo +=1; 
-                                        } ?>
+                             } ?>
                         </div>
             </div>
         </div>   
