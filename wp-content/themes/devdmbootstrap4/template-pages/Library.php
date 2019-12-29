@@ -22,7 +22,7 @@ Template Name: Library Page
 
                 <p class="text-justify">
 
-                The SMSC Dhamma library contains some of the Dhamma talks as given by our Spiritual Advisor Chanmyay Sayadawgyi and the resident teacher Sa-yar Myat at beginner, intermediate and advanced meditation classes. This library is an attempt to portray the essence of the SMSC organization and its operations.</p>
+                The SMSC Dhamma library contains some of the Dhamma talks as given by our Spiritual Advisor Chanmyay Sayadawgyi and the resident teacher Sayar Myat at beginner, intermediate and advanced meditation classes. This library is an attempt to portray the essence of the SMSC organization and its operations.</p>
                 </div>
             </div>
             <div class="row justify-content-md-center r-margin">
@@ -47,11 +47,11 @@ Template Name: Library Page
                                          <a class="resource-links" href="sounds/vipassana_med4.mp3">
                                         4.&nbspWhat Is Vipassana (Insight)</a><br>
                                          <a class="resource-links" href="sounds/vipassana_med5.mp3">
-                                        5.&nbspPurification of Moral Conduct and Mind (Five Mental Hinderences)</a><br>
+                                        5.&nbspPurification of Moral Conduct and Mind (Five Mental Hindrances)</a><br>
                                          <a class="resource-links" href="sounds/vipassana_med6.mp3">              
-                                        6.&nbspPurification of Mind (Five Controlling Mental FaculitiesI)</a><br>
+                                        6.&nbspPurification of Mind (Five Controlling Mental Faculities I)</a><br>
                                          <a class="resource-links" href="sounds/vipassana_med7.mp3">                         
-                                        7.&nbspPurification of Mind (Five Controlling Mental FaculitiesII)</a><br>
+                                        7.&nbspPurification of Mind (Five Controlling Mental Faculities II)</a><br>
                                          <a class="resource-links" href="sounds/vipassana_med8.mp3">
                                         8.&nbspPurification of Mind (Absorption, Access and Momentary concentration)</a><br>
                                          <a class="resource-links" href="sounds/vipassana_med9.mp3">
@@ -69,11 +69,11 @@ Template Name: Library Page
                                         <a class="resource-links" href="sounds/vipassana_med15.mp3">
                                         15.Purification by Overcoming Doubt (Causal Relation of Body-Mind process V)</a><br>
                                         <a class="resource-links" href="sounds/vipassana_med16.mp3">
-                                        16.&nbspThe Way of Deliverance (The Four Noble Truth l)</a><br>
+                                        16.&nbspThe Way of Deliverance (The Four Noble Truths l)</a><br>
                                         <a class="resource-links" href="sounds/vipassana_med17.mp3">
-                                        17.&nbspThe Way of Deliverance (The Four Noble Truth ll)</a><br>
+                                        17.&nbspThe Way of Deliverance (The Four Noble Truths ll)</a><br>
                                         <a class="resource-links" href="sounds/vipassana_med18.mp3">
-                                        18.&nbspThe Way of Deliverance (The Four Noble Truth Ill)</a><br>
+                                        18.&nbspThe Way of Deliverance (The Four Noble Truths Ill)</a><br>
                                         <a class="resource-links" href="sounds/vipassana_med19.mp3">
                                         19.&nbspClear Comprehension of Mind and Matter (The Five Aggregates)</a><br>
                                         <a class="resource-links" href="sounds/vipassana_med20.mp3">
@@ -108,7 +108,7 @@ Template Name: Library Page
                                         Mindfulness (Sati)                 
                                         </a><br>
                                          <a class="resource-links" href="../articles/05instruction.pdf">
-                                        Insight Meditation Instruction(Sitting &amp; Walking)</a><br>
+                                        Insight Meditation Instruction (Sitting &amp; Walking)</a><br>
                                          <a class="resource-links" href="../articles/06On_Watching_Thoughts_during_Vipassana_Meditation.pdf">
                                         On Watching Thoughts during Vipassana Meditation</a><br>
                                          <a class="resource-links" href="../articles/07_Thirteen_Stages_of_Insight_Knowledge.pdf">Thirteen Stages of Insight Knowledge</a><br>
@@ -161,32 +161,35 @@ Template Name: Library Page
                                 <div class="resources-text">
                                     <a class="label smsc-title r-website" href="http://en.wikipedia.org/wiki/Mahasi_Sayadaw" target="_blank"> Mahasi Sayadaw</a>
                                      <p>
-                                        The most eminent Burmese Theravada Buddhist monk and meditation master who had a significant impact on the teaching of Vipassana (Insight) meditation in the West and throughout Asia.
+                                        Is the most eminent Burmese Theravada Buddhist monk and meditation master who had a significant impact on the teaching of Vipassana (Insight) meditation in the West and throughout Asia.
                                      </p>
 
                                      <a class="label smsc-title r-website" href="http://www.chanmyayusa.org/" target="_blank"> Chanmyay Satipatthana Vihara</a>
                                      <p>
-                                       Satipatthana Vipassana Association (Springfield, Illinois, USA) dedicated to propagate Theravada Buddhism keeping Pure Insight Meditation (Mahasi Tradition) as central theme
+                                       Satipatthana Vipassana Association (Springfield, Illinois, USA) dedicated to propagate Theravada Buddhism, keeping Pure Insight Meditation (Mahasi Tradition) as the central theme.
                                      </p>
 
-                                      <a class="label smsc-title r-website" href="http://www.chanmyay.org/" target="_blank"> Chanmyay Yeiktha Meditation Center</a>
+                                      <a class="label smsc-title r-website" href="http://www.chanmyay.org/" target="_blank"> Chanmyay Yeiktha Meditation Centre</a>
                                      <p>
-                                       Pure Vipassana meditation center in Myanmar. A great place for practitioners who wish to attend longer term retreats. Meditation, room and board are free of charge
+                                       Pure Vipassana meditation center in Myanmar. A great place for practitioners who wish to attend longer term retreats. Meditation, room and board are free of charge.
+
                                      </p>
 
                                       <a class="label smsc-title r-website" href="dhammadownload.com" target="_blank"> dhammadownload.com</a>
                                      <p>
-                                       Dhamma talks given by senior monks of Myanmar in audio, video and text in English and Myanmar.
+                                       Dhamma talks given by senior monks of Myanmar. Available in audio, video and text (English and Burmese).
+
                                      </p>
 
                                       <a class="label smsc-title r-website" href="http://www.myanmarnet.net/nibbana/#.Vcp8JRNViko" target="_blank"> nibbana.com</a>
                                      <p>
-                                       Buddhism in Myanmar, one of the most comprehensive site for Buddha-Dhamma and Theravada Buddhism of Myanmar.
+                                       Buddhism in Myanmar, one of the most comprehensive sites for Buddha-Dhamma and Theravada Buddhism.
                                      </p>
 
                                       <a class="label smsc-title r-website" href="https://www.youtube.com/user/ChanmyayYeikthaBC" target="_blank"> youtube.com/user/ChanmyayYeikthaBC</a>
                                      <p>
-                                       Videos uploaded by Satipatthana Meditation Society of Canada: Theravada Buddhism in General; the Society's activities.
+                                       Videos uploaded by the Satipatthana Meditation Society of Canada: Theravada Buddhism in General; the Society's activities.
+
                                      </p>
                                 </div><!--resource text-->
                     </div><!-- resouce container-->
@@ -195,98 +198,6 @@ Template Name: Library Page
 
     </div><!-- end of card-->
 </div><!--end of container-->
-
-
-
-
-
-
-
-
-
-
-
-
-  <!--   <div class="row" style="margin-top:20px;">
-        <div class="col-sm-12 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
-        </div>
-    </div>
-    
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-12">
-        <span class = "label label_schedule_title">
-        Chants</span>
-        </div>
-        <div class="col-sm-12">
-            
-            <div class="row" style="margin-top:20px;">
-                <div class="col text-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-chants.png"  class="img-rounded"  alt="beginner">
-                </div>
-                
-                <div class="col-sm-10">
-                    <p class="text-justify">
-                        <a href="#" >Chant of Metta</a> <br>
-                        <a href="#" >SMSC meditation format with chanting</a> <br>
-                    
-                        <span class="collapse" id="chant_details">
-                            
-                        </span>
-                        <a  href="#" data-toggle="collapse" data-target="#chant_details">click for more &raquo;</a>
-                    </p>
-                </div>      
-            </div>
-        </div>
-    </div>
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-12 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
-        </div>
-    </div>
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-12">
-        <span class = "label label_schedule_title">
-        Websites</span>
-        </div>
-        <div class="col-sm-12">
-            
-            <div class="row" style="margin-top:20px;">
-                <div class="col text-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/group-3.png"  class="img-rounded"  alt="beginner">
-                </div>
-                
-                <div class="col-sm-10">
-                    
-                        <a href="#" >Mahasi Sayadaw</a> <br>
-                        <p class="text-justify">
-                        The most eminent Burmese Theravada Buddhist monk and meditation master who had a significant impact on the teaching of Vipassana (Insight) meditation in the West and throughout Asia.
-                        </p>
-
-                        <a href="#" >Chanmyay Satipatthana Vihara</a> <br>
-                        <p class="text-justify">
-                        Satipatthana Vipassana Association (Springfield, Illinois, USA) dedicated to propagate Theravada Buddhism keeping Pure Insight Meditation (Mahasi Tradition) as central theme
-                        </p>
-
-                    
-                        <span class="collapse" id="website_details">
-                            
-                        </span>
-                        <a  href="#" data-toggle="collapse" data-target="#website_details">click for more &raquo;</a>
-                 </div>      
-            </div>
-        </div>
-    </div>
-
-    <div class="row" style="margin-top:20px;">
-        <div class="col-sm-12 text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="smsc_img_divider" alt="divider">           
-        </div>
-    </div> -->
-
 
 <?php get_template_part('template-parts/nav','footer'); ?>
 

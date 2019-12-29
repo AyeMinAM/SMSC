@@ -49,13 +49,13 @@
                             <span class="nav-text-break">Meditation</span><span >Programs</span>
                             </a>
                             <div class="dropdown-menu main-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('beginner') ) ); ?>">Beginner</a>
+                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('beginner') ) ); ?>">Beginner Classes</a>
                             <div class="dropdown-divider"></div>
-                           <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('intermediate') ) ); ?>">Intermediate</a>
+                           <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('intermediate') ) ); ?>">Intermediate Classes</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('residential') ) ); ?>">Residential Retreat</a>
+                            <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('residential') ) ); ?>">Residential Retreats</a>
                             <div class="dropdown-divider"></div>
-                           <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('annual') ) ); ?>">Annual Retreat</a>
+                           <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('annual') ) ); ?>">Annual Retreats</a>
                             </div>
                         </li>
 
@@ -68,7 +68,7 @@
                             <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('upcomingevents') ) ); ?>">Upcoming Events</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('gallery') ) ); ?>">Photo Gallery</a>
-                            <div class="dropdown-divider"></div>
+                            
                            <!--  <a class="dropdown-item main-menu-item" href="<?php echo esc_url( get_permalink( get_page_by_title('volunteer') ) ); ?>">Volunteers</a> -->
                              
                             </div>
@@ -111,7 +111,7 @@
                     </li>
                     <li class="one-quarter donation">
                         <a href="<?php echo get_site_url(); ?>/donation">
-                        <button class="btn navbar-btn button-donation smsc_margin">Donation</button>
+                        <button class="btn navbar-btn button-donation smsc_margin">Donate</button>
                         </a>
                     </li>
                     </ul>

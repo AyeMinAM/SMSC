@@ -35,7 +35,7 @@ Template Name: classes Page
                 <div class="col-md-6 vertical-center">
                   <div class="card-block">
                     <h4 class="card-title">Beginner Class</h4>
-                    <p class="card-text">Mindfulness-Insight Course for Beginners Classes are an introduction to the meditation practice, to both beginners and the experienced practitioners with no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). The program consists of six weekly sessions, 2-hour long, involving guided meditation and lectures about the practice with questions and answers. This course is offered several times a year.</p>
+                    <p class="card-text">The Mindfulness-Insight course for beginners is an introduction to the meditation practice.  This class is for both beginners and experienced practitioners that have no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). The program consists of six weekly sessions, 2 hours long, involving guided meditation and lectures about the practice with questions and answers. This course is offered several times a year.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/Beginner" class="btn btn-lg btn-outline">
                     View details</a> 
@@ -63,7 +63,7 @@ Template Name: classes Page
                 <div class="col-md-6 vertical-center order-md-1 ">
                   <div class="card-block-odd-card">
                     <h4 class="card-title">Intermediate Class</h4>
-                    <p class="card-text">Intermediate Weekly Class is 2-hour long, involving a 60-minute meditation time and a Dhamma talk (lecture about the practice with a Q and A period). The Intermediate class is year-round, weekly on Tuesday evenings.</p>
+                    <p class="card-text">The Intermediate class is held weekly on Tuesday evenings and is also 2 hours long.  It involves a 60 minute meditation time, followed by a Dhamma talk (lecture about the practice with a Q and A period). The intermediate class is an ongoing year-round program.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/Intermediate" class="btn btn-lg btn-outline">
                     View details</a> 
