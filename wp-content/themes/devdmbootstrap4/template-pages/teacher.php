@@ -42,10 +42,11 @@ Template Name: The Teachers Page
         <div class="col-lg-6 col-md-12 col-sm-12">
            <h4 class="label smsc-title style="margin-bottom:1rem">Sayar Myat</h4>
            <p class="text-justify">
-              Sayar Myat was born and raised as a Buddhist in Myanmar.  He learned and practiced the correct form of Theravada Buddhism and Insight meditation from his principle teacher Sayadawgyi U Janaka Bhivamsa of Yangon, Myanmar, and also from the late Sayadawgyi U Pandita Bhivamsa and the late Sayadawgyi U Silananda Bhivamsa.  He came to Canada in 1974.  
+              Sayar Myat was born and raised as a Buddhist in Myanmar.  He learned and practiced the correct form of Theravada Buddhism and Insight meditation from his principal teacher Sayadawgyi U Janaka Bhivamsa of Yangon, Myanmar, and also from the late Sayadawgyi U Pandita Bhivamsa and the late Sayadawgyi U Silananda Bhivamsa. Sayar Myat came to Canada in 1974.  
             </p>
             <p class="text-justify">
-                Since 1989, he has directed his effort towards the teaching of Theravada Buddhism using Mindfulness Meditation practice as a core principle.  In 1991, he helped found the Not-For-Profit Manawmaya Theravada Buddhist Society (MTBS), and worked  as director, teacher and translator.  Over the years the Society became a place primarily for Myanmar Canadians whose principle language was Burmese. 
+                Since 1989, he has directed his efforts towards the teaching of Theravada Buddhism, using Mindfulness Meditation practice as a core principle. In 1991, he helped found the Manawmaya Theravada Buddhist Society (MTBS), and in 2007, founded the Satipatthana Meditation Society of Canada (SMSC).  Both societies are not- for-profit organizations. Sayar Myat fills the roles of president, director, teacher, and translator at SMSC, the only place in Canada where people can learn and practice Mindfulness-Insight Meditation in the English language year-round.
+
             </p>
         </div>
      </div> <!--end of one row-->
@@ -63,10 +64,11 @@ Template Name: The Teachers Page
         <div class="col-lg-6 col-md-12 col-sm-12">
            <h4 class="label smsc-title style="margin-bottom:1rem">Sayalay Nana Malini</h4>
            <p class="text-justify">
-               Sayalay Nana Malini was born in Bangkor Island Indonesia.  Sayalay’s birth name as a lay person was Jennifer Chew.  She was ordained at Chanmyay Yeiktha, Yangon, Myanmar.  Sayalay’s preceptor monk was Sayadaw U Janaka Bhivamsa.
+               Sayalay Nana Malini was born in Bankor Island Indonesia. Her birth name as a layperson was Jennifer Chew. She was ordained at Chanmyay Yeiktha, Yangon, Myanmar. Sayalay’s preceptor monk was Sayadaw U Janaka Bhivamsa.
             </p>
             <p class="text-justify">
-                Sayalay participated in her first group meditation in 2001, in Indonesia.  In 2002, she participated annually in meditation groups in Myanmar.  The first one was a week long, and the longest was one year in duration.  Ten years later her honourable teacher U Janaka Bhivamsa told Sayalay Nana Malini that she would receive even more benefits if she could share her knowledge of Vipassana with those who wish to be free from suffering.  Sayalay accepted her honourable teacher’s words, and started teaching meditation in Indonesia, Macao, Hong Kong and Canada. 
+                Sayalay participated in her first one week retreat in Indonesia in 2001.  Since that time she has dedicated herself and practiced in depth, for as long as one year at a time. Ten years later her honorable teacher U Janaka Bhivamsa told Sayalay Nana Malini that she would receive even more benefits if she could share her knowledge of Vipassana with those who wish to be free from suffering. Sayalay accepted her honorable teacher’s words and started teaching meditation in Indonesia, Macao, Hong Kong, and Canada.
+
             </p>
         </div>
      </div> <!--end of one row-->

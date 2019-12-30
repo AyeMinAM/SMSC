@@ -212,6 +212,7 @@ Template Name: Beginner Page
                             <h4 class="card-title">Residential Reteats</h4>
                             <p class="card-o-programs-text justify">A Residential Retreat is usually held once a month, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC. Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.
 
+
 </p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
@@ -231,7 +232,7 @@ Template Name: Beginner Page
                        <div class="vertical-center">
                         <div class="card-block">
                           <h4 class="card-title">Annual Retreats</h4>
-                          <p class="card-o-programs-text justify">Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  Pre-registration and acceptance are required for these due to limited accommodation space.
+                          <p class="card-o-programs-text justify">Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  They are held at the Chanmyay Yeiktha Retreat Centre in Hope, B.C.  Pre-registration and acceptance are required for these due to limited accommodation space.
 </p>
                           <div class="col text-center">
                           <a href="<?php echo get_site_url(); ?>/annual" class="btn btn-lg btn-outline">

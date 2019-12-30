@@ -189,7 +189,7 @@ Template Name: Annual Retreat Page
                     <div class="vertical-center">
                       <div class="card-block">
                         <h4 class="card-title">Residential Retreats</h4>
-                        <p class="card-o-programs-text">Residential Retreat are usually held once a month, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Centre in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for e-mail notifications.</p>
+                        <p class="card-o-programs-text">A Residential Retreat is usually held once a month, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC. Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.</p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
                         View details</a> 
@@ -208,7 +208,8 @@ Template Name: Annual Retreat Page
                         <div class="vertical-center">
                           <div class="card-block">
                             <h4 class="card-title">Beginner Classes</h4>
-                            <p class="card-o-programs-text">Beginners Classes are an introduction to the meditation practice, to both beginners and the experienced practitioners with no previous exposure to Mahasi tradition. The program consists of six weekly sessions, 2-hour long, involving guided meditation and lectures about the practice with Q & A.  This course is offered several times a year.</p>
+                            <p class="card-o-programs-text">The Mindfulness-Insight course for beginners is an introduction to the meditation practice.  This class is for both beginners and experienced practitioners who have no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). The program consists of six weekly sessions, 2 hours long, involving guided meditation and lectures about the practice, followed by a question and answer session. This course is offered several times a year.
+</p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/Beginner" class="btn btn-lg btn-outline">
                             View details</a> 
@@ -227,7 +228,8 @@ Template Name: Annual Retreat Page
                        <div class="vertical-center">
                         <div class="card-block">
                           <h4 class="card-title">Intermediate Classes</h4>
-                          <p class="card-o-programs-text">Intermediate Weekly Class is 2-hour long, involving a 60-minute meditation time and a Dhamma talk (lecture about the practice with a Q and A period).  The Intermediate class is year-round, weekly on Tuesday evenings.</p>
+                          <p class="card-o-programs-text">The intermediate class is held weekly on Tuesday evenings and is also 2 hours long.  It involves a 60 minute meditation time, followed by a Dhamma talk (lecture about the practice) followed by a question and answer session. The intermediate class is an ongoing year-round program.
+</p>
                           <div class="col text-center">
                           <a href="<?php echo get_site_url(); ?>/intermediate" class="btn btn-lg btn-outline">
                           View details</a> 

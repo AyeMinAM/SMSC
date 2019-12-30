@@ -237,7 +237,8 @@ Template Name: intermediate Page
                     <div class="vertical-center">
                       <div class="card-block">
                         <h4 class="card-title">Beginner Classes</h4>
-                        <p class="card-o-programs-text justify">Beginners Classes are an introduction to the meditation practice, to both beginners and the experienced practitioners with no previous exposure to Mahasi tradition. The program consists of six weekly sessions, 2-hour long, involving guided meditation and lectures about the practice with Q & A.  This course is offered several times a year.</p>
+                        <p class="card-o-programs-text justify">The Mindfulness-Insight course for beginners is an introduction to the meditation practice.  This class is for both beginners and experienced practitioners who have no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). The program consists of six weekly sessions, 2 hours long, involving guided meditation and lectures about the practice, followed by a question and answer session. This course is offered several times a year.
+</p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/beginner" class="btn btn-lg btn-outline">
                         View details</a> 
@@ -256,7 +257,8 @@ Template Name: intermediate Page
                         <div class="vertical-center">
                           <div class="card-block">
                             <h4 class="card-title">Residential Retreats</h4>
-                            <p class="card-o-programs-text justify">Residential Retreat are usually held once a month, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Centre in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for e-mail notifications.</p>
+                            <p class="card-o-programs-text justify">A Residential Retreat is usually held once a month, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC. Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.
+</p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
                             View details</a> 
@@ -275,7 +277,8 @@ Template Name: intermediate Page
                        <div class="vertical-center">
                         <div class="card-block">
                           <h4 class="card-title justify">Annual Retreats</h4>
-                          <p class="card-o-programs-text">Annual Retreat are usually held in summer of each year for 9 to 17 days, at Chanmyay Yeiktha Retreat Centre in Hope, BC. Pre-registration and acceptance is required. Limited space.</p>
+                          <p class="card-o-programs-text">Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  They are held at the Chanmyay Yeiktha Retreat Centre in Hope, B.C.  Pre-registration and acceptance are required for these due to limited accommodation space.
+</p>
                           <div class="col text-center">
                           <a href="<?php echo get_site_url(); ?>/annual" class="btn btn-lg btn-outline">
                           View details</a> 
