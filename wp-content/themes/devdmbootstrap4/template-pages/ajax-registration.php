@@ -135,10 +135,10 @@ Template Name: Ajax register
         <input type="text" class="form-control"   id="input_occupation" name="input_occupation" placeholder="Occupation"> 
         </div>  
         <div class="form-group col-md-6"> 
-        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date of Birth">
+        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Year of Birth">
         </div> 
       </div> 
-
+<!--
         <div class="form-group col-md-12">
             Please provide one of the identification documents. <br>
             (Driver license for Canadians and valid passport page with photo on it for oversea yogis.)  
@@ -179,9 +179,9 @@ Template Name: Ajax register
             <div class="custom-file">
             <div style='display:none'><a href=javascript:void(0) class="upload-info-button upload-info-button--first">Get first file info</a></div>
             
-                <div id="custom-file-container-image" class=custom-file-container data-upload-id=myFirstImage><label>Upload Government issued photo ID<a
-                        href=javascript:void(0) class=custom-file-container__image-clear
-                        title="Clear Image">&times;</a></label> <label class=custom-file-container__custom-file><input
+              <div id="custom-file-container-image" class=custom-file-container data-upload-id=myFirstImage><label>Upload your photo ID.<a href=javascript:void(0) class=custom-file-container__image-clear
+                        title="Clear Image">&times;</a></label> 
+                        <label class=custom-file-container__custom-file><input
                         type="file" class="custom-file-container__custom-file__custom-file-input" id="fileToUpload" name="fileToUpload" accept=image/*
                         aria-label="Choose File"> <input type=hidden name=MAX_FILE_SIZE value=2097152> <span
                         class=custom-file-container__custom-file__custom-file-control></span></label>
@@ -192,14 +192,7 @@ Template Name: Ajax register
          <div id="error_file"></div>
 
         </div>
-       <!-- <div class="form-row">
-        <div class="form-group col-md-6">
-         <input type="file" name="fileToUpload"  accept="image/*" id="fileToUpload">
-
-         
-
-         </div> 
-        </div>-->
+       -->
        
          <button type="button" class="next action-button">Continue</button> 
     </fieldset>
@@ -307,7 +300,7 @@ Template Name: Ajax register
 
 <div class="form-row"> 
     <div class="form-group col-md-12">
-      Most recent meditation retreats attend (Theravada and non-Theravada), up to 5 retreats.   
+      Describe your previous retreats (up to five) including Type, Teacher, Location, date and duration for each retreat.  
     </div> 
 </div> 
 
@@ -337,7 +330,7 @@ Template Name: Ajax register
     <div class="form-row"> 
     <div class="form-group col-md-12">
       Please answer a few more questions about meals and medical insurance so that we can provide you best based on your needs. 
-      All fields are mandatory
+      All fields are mandatory.
     </div> 
     </div> 
 <div class="form-row"> 
@@ -401,7 +394,7 @@ Template Name: Ajax register
 
 <div class="form-row"> 
     <div class="form-group col-md-12">
-      Do you have any physical or mental health issue SMSC should be made aware?. 
+      Do you have any physical or mental health issue(s) SMSC need to know about?
     </div> 
 </div> 
 
@@ -546,7 +539,7 @@ Template Name: Ajax register
                 <label class="form-check-label" >Yes</label>
             </div>
             <div id="div_save" class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="radio_save" id="rdo_female" value="0">
+                <input class="form-check-input" type="radio" name="radio_save"  value="0">
                 <label class="form-check-label" >No</label>
             </div>
         </div>  
@@ -554,7 +547,7 @@ Template Name: Ajax register
 
       <div class="form-row"> 
         <div class="form-group col-md-12">
-        If "No", you will need to fill up this form at every future retreat you attend.
+        If you select "No", you will need to fill up this form at every future retreat you attend.
         </div> 
     </div> 
 
@@ -647,11 +640,11 @@ jQuery(document).ready(function ()
         format: 'DD/MM/YYYY' 
     });
 
-
+/*
    $('#inputDOB').datetimepicker({
         format: 'DD/MM/YYYY',
         maxDate : 'now'
-    });
+    });*/
 
 
     $('#input_date_issue').datetimepicker({
@@ -1028,6 +1021,19 @@ jQuery(document).ready(function ()
     },'Must be less than {0}.');
 
 
+    $.validator.addMethod("lessThanThisYear", 
+    function(value, element, params) {
+
+         
+             
+        console.log(value < params);
+        return value < params;
+       
+      
+    },'Must be less than {0}.');
+
+
+
 
     $.validator.addMethod('filesize', function (value, element, param) {
         console.log("element.files[0].size:" + element.files[0].size);
@@ -1082,7 +1088,8 @@ jQuery(document).ready(function ()
                             },
                             inputDOB: {
                                 required: true,
-                                regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+                                regxDate: /^\d{4}$/,
+                                lessThanThisYear:new Date().getFullYear()
                             }, 
                             selectcountry: "checkCountry" ,
                             fileToUpload: {
@@ -1158,7 +1165,7 @@ jQuery(document).ready(function ()
                             inputcity:"Please enter City",
                             inputemail: "Please enter a valid email address",
                             fileToUpload: "Please upload valid government issued photo. File size must be less than 2MB. Only JPG, GIF and PNG types are accepted",
-                            inputDOB: "Please enter Date of Birth",
+                            inputDOB: "Please enter year of Birth",
                             inputphone: "Please enter your valid phone number",
                             inputRetreatFrom: "Please enter valid the start date of retreat",
                             inputRetreatTo: "Please enter valid the end date of retreat",

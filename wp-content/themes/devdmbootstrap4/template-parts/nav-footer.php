@@ -24,7 +24,7 @@
 
                     <div class=" col-md-4 col-sm-12">
                         <div class="footer-right">
-                            <div>Made with love, Dāna  &amp; Mettā by</div>
+                            <div>Made with Love, Dāna  &amp; Mettā by</div>
                             <div>Sumi K, Min Min T</div>
                             <div>P. Shen &amp; Aye M.</div>
                         </div>
