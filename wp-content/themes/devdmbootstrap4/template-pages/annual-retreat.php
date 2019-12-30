@@ -11,7 +11,7 @@ Template Name: Annual Retreat Page
          <div class="lazy col-sm-12 smsc_beginner_img" data-src="<?php echo get_template_directory_uri(); ?>/images/annual-retreat.jpg">
             <div class="text-center header-class-title-height">
                       <span class="header-class-title">
-                      Annual Retreat
+                      Annual Retreats
                       </span>
                       <div style="margin-top:2rem;"> 
                         <a href="<?php echo esc_url( get_permalink( get_page_by_title('register_retreat') ) ); ?>" class="btn btn-lg btn-register">
@@ -188,8 +188,8 @@ Template Name: Annual Retreat Page
                     </div>
                     <div class="vertical-center">
                       <div class="card-block">
-                        <h4 class="card-title">Residential Retreat</h4>
-                        <p class="card-o-programs-text">Residential Retreat are usually held once a month, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Center in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for e-mail notifications.</p>
+                        <h4 class="card-title">Residential Retreats</h4>
+                        <p class="card-o-programs-text">Residential Retreat are usually held once a month, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Centre in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for e-mail notifications.</p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
                         View details</a> 
@@ -241,97 +241,7 @@ Template Name: Annual Retreat Page
                
         </div>
 </div>
-
-<!--  <div class="row">
-        <div class="col">
-
-             <div class="row">
-                <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/classes-intermediate.jpg"  
-                 alt="Intermediate">
-              </div>
-              <div class="row">
-                <span class = "col label label_title_beginner" style="margin-top:10px;">
-                    Intermediate</span>
-                
-              </div>
-              <div class="row">
-                <div class="col">
-                    <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-                </div>
-              </div>
-
-
-                <div class="row">
-                <div class="col text-center">
-                    <a href="#" class="btn btn-lg btn-beginner">
-                    Register</a> 
-                    </div>
-
- 
-                </a>    
-                </div>        
-        </div>
-        <div class="col">
-        
-        <div class="row">
-        <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/retreat-daily.jpg"  
-         alt="Retreat Daily">
-         </div>
-        <div class="row">
-        <span class = "col label label_title_beginner" style="margin-top:10px;">
-        Day Retreat</span>
-        
-        </div>
-        <div class="row">
-        <div class="col">
-            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-        </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col text-center">
-            <a href="#" class="btn btn-lg btn-beginner">
-            Register</a> 
-            </div>
-
-
-        </a>    
-        </div>        
-
-        </div>
-        <div class="col">
-            
-        <div class="row">
-        <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/retreat-monthly.jpg"  
-         alt="Monthly Retreat">
-         </div>
-        <div class="row">
-        <span class = "col label label_title_beginner" style="margin-top:10px;">
-            Monthly Retreat</span>
-        
-        </div>
-        <div class="row">
-        <div class="col">
-            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-        </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col text-center">
-            <a href="#" class="btn btn-lg btn-beginner">
-            Register</a> 
-            </div>
-
-
-        </a>    
-        </div>                   
-        </div>
-</div> -->
-<!--other classes and retreats-->
-
-
+SMS
 <script>
 jQuery(document).ready(function () {
 

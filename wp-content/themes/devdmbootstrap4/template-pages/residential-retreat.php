@@ -11,7 +11,7 @@ Template Name: Residential Page
          <div class="lazy col-sm-12 smsc_beginner_img" data-src="<?php echo get_template_directory_uri(); ?>/images/residential-retreat.jpg">
             <div class="text-center header-class-title-height">
                       <span class="header-class-title">
-                      Residential Retreat
+                      Residential Retreats
                       </span>
                       <div style="margin-top:2rem;"> 
                         <a href="<?php echo esc_url( get_permalink( get_page_by_title('register_retreat') ) ); ?>" class="btn btn-lg btn-register">
@@ -188,7 +188,7 @@ Template Name: Residential Page
                     </div>
                     <div class="vertical-center">
                       <div class="card-block">
-                        <h4 class="card-title">Annual Retreat</h4>
+                        <h4 class="card-title">Annual Retreats</h4>
                         <p class="card-o-programs-text">Annual Retreat are usually held in summer of each year for 9 to 17 days, at Chanmyay Yeiktha Retreat Center in Hope, BC. Pre-registration and acceptance is required. Limited space.</p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/annual" class="btn btn-lg btn-outline">
@@ -241,95 +241,6 @@ Template Name: Residential Page
                
         </div>
 </div>
-
-<!--  <div class="row">
-        <div class="col">
-
-             <div class="row">
-                <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/classes-intermediate.jpg"  
-                 alt="Intermediate">
-              </div>
-              <div class="row">
-                <span class = "col label label_title_beginner" style="margin-top:10px;">
-                    Intermediate</span>
-                
-              </div>
-              <div class="row">
-                <div class="col">
-                    <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-                </div>
-              </div>
-
-
-                <div class="row">
-                <div class="col text-center">
-                    <a href="#" class="btn btn-lg btn-beginner">
-                    Register</a> 
-                    </div>
-
- 
-                </a>    
-                </div>        
-        </div>
-        <div class="col">
-        
-        <div class="row">
-        <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/retreat-daily.jpg"  
-         alt="Retreat Daily">
-         </div>
-        <div class="row">
-        <span class = "col label label_title_beginner" style="margin-top:10px;">
-        Day Retreat</span>
-        
-        </div>
-        <div class="row">
-        <div class="col">
-            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-        </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col text-center">
-            <a href="#" class="btn btn-lg btn-beginner">
-            Register</a> 
-            </div>
-
-
-        </a>    
-        </div>        
-
-        </div>
-        <div class="col">
-            
-        <div class="row">
-        <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/retreat-monthly.jpg"  
-         alt="Monthly Retreat">
-         </div>
-        <div class="row">
-        <span class = "col label label_title_beginner" style="margin-top:10px;">
-            Monthly Retreat</span>
-        
-        </div>
-        <div class="row">
-        <div class="col">
-            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-        </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col text-center">
-            <a href="#" class="btn btn-lg btn-beginner">
-            Register</a> 
-            </div>
-
-
-        </a>    
-        </div>                   
-        </div>
-</div> -->
-<!--other classes and retreats-->
 
 
 <script>

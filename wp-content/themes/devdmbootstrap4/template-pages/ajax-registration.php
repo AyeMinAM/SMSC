@@ -40,9 +40,9 @@ Template Name: Ajax register
         
         It is essential to have previous experience in Mahasi Meditation Method and 
         to strictly adhere to the 9 precepts and retreat schedule.  
-        Signed application needs to be received before coming to the center.  
+        Signed application needs to be received before coming to the centre.  
         Final-acceptance by SMSC required. (If you have no access to 
-        sign on-line can sign on arrival to the Retreat Center)</p>
+        sign on-line can sign on arrival to the Retreat Centre)</p>
     
     </div>
     

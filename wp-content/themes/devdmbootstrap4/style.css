@@ -26,6 +26,7 @@ body{
 }
 body p{
   font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
 }
 
 
@@ -1019,7 +1020,7 @@ a.resource-links:hover{
 }
 
 #r-more p.collapse:not(.show) {
-    height: 5.1rem !important;
+    height: 4.9rem !important;
     overflow: hidden;
     display: -webkit-box;
     /*-webkit-line-clamp: 2;*/
@@ -1045,7 +1046,7 @@ a.resource-links:hover{
 }
 
 #r-2-more p.collapse:not(.show) {
-    height: 5.1rem !important;
+    height: 4.8rem !important;
     overflow: hidden;
     display: -webkit-box;
     /*-webkit-line-clamp: 2;*/
@@ -1272,4 +1273,10 @@ font-size:0.8rem;
   max-height: 50px;
 }
 
+<<<<<<< HEAD
  
+=======
+.successfully-message{
+  font-family: "OpenSans", sans-serif;
+}
+>>>>>>> 01579bc07d630d7c85e2369ea31e2de4cf9b0b6a

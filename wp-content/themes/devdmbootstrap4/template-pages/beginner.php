@@ -189,8 +189,9 @@ Template Name: Beginner Page
                     </div>
                     <div class="vertical-center">
                       <div class="card-block">
-                        <h4 class="card-title">Intermediate Class</h4>
-                        <p class="card-o-programs-text justify">Intermediate Weekly Class is 2-hour long, involving a 60-minute meditation time and a Dhamma talk (lecture about the practice with a Q and A period).  The Intermediate class is year-round, weekly on Tuesday evenings.</p>
+                        <h4 class="card-title">Intermediate Classes</h4>
+                        <p class="card-o-programs-text justify">The Intermediate class is held weekly on Tuesday evenings and is also 2 hours long.  It involves a 60 minute meditation time, followed by a Dhamma talk (lecture about the practice with a Q and A period). The intermediate class is an ongoing year-round program.
+</p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/intermediate" class="btn btn-lg btn-outline">
                         View details</a> 
@@ -208,8 +209,9 @@ Template Name: Beginner Page
                         </div>
                         <div class="vertical-center">
                           <div class="card-block">
-                            <h4 class="card-title">Residential Reteat</h4>
-                            <p class="card-o-programs-text justify">Residential Retreat are usually held once a month, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Center in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for e-mail notifications.
+                            <h4 class="card-title">Residential Reteats</h4>
+                            <p class="card-o-programs-text justify">A Residential Retreat is usually held once a month, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC. Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.
+
 </p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
@@ -228,8 +230,9 @@ Template Name: Beginner Page
                        </div>
                        <div class="vertical-center">
                         <div class="card-block">
-                          <h4 class="card-title">Annual Retreat</h4>
-                          <p class="card-o-programs-text justify">Annual Retreat are usually held in summer of each year for 9 to 17 days, at Chanmyay Yeiktha Retreat Center in Hope, BC. Pre-registration and acceptance is required. Limited space.</p>
+                          <h4 class="card-title">Annual Retreats</h4>
+                          <p class="card-o-programs-text justify">Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  Pre-registration and acceptance are required for these due to limited accommodation space.
+</p>
                           <div class="col text-center">
                           <a href="<?php echo get_site_url(); ?>/annual" class="btn btn-lg btn-outline">
                           View details</a> 
@@ -243,96 +246,6 @@ Template Name: Beginner Page
                
         </div>
 </div>
-
-<!--  <div class="row">
-        <div class="col">
-
-             <div class="row">
-                <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/classes-intermediate.jpg"  
-                 alt="Intermediate">
-              </div>
-              <div class="row">
-                <span class = "col label label_title_beginner" style="margin-top:10px;">
-                    Intermediate</span>
-                
-              </div>
-              <div class="row">
-                <div class="col">
-                    <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-                </div>
-              </div>
-
-
-                <div class="row">
-                <div class="col text-center">
-                    <a href="#" class="btn btn-lg btn-beginner">
-                    Register</a> 
-                    </div>
-
- 
-                </a>    
-                </div>        
-        </div>
-        <div class="col">
-        
-        <div class="row">
-        <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/retreat-daily.jpg"  
-         alt="Retreat Daily">
-         </div>
-        <div class="row">
-        <span class = "col label label_title_beginner" style="margin-top:10px;">
-        Day Retreat</span>
-        
-        </div>
-        <div class="row">
-        <div class="col">
-            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-        </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col text-center">
-            <a href="#" class="btn btn-lg btn-beginner">
-            Register</a> 
-            </div>
-
-
-        </a>    
-        </div>        
-
-        </div>
-        <div class="col">
-            
-        <div class="row">
-        <img class="col" style="width:350px;height:233px" src="<?php echo get_template_directory_uri(); ?>/images/retreat-monthly.jpg"  
-         alt="Monthly Retreat">
-         </div>
-        <div class="row">
-        <span class = "col label label_title_beginner" style="margin-top:10px;">
-            Monthly Retreat</span>
-        
-        </div>
-        <div class="row">
-        <div class="col">
-            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo</p>
-        </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col text-center">
-            <a href="#" class="btn btn-lg btn-beginner">
-            Register</a> 
-            </div>
-
-
-        </a>    
-        </div>                   
-        </div>
-</div> -->
-<!--other classes and retreats-->
-
 
 <script>
 jQuery(document).ready(function () {

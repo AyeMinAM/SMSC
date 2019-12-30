@@ -43,8 +43,8 @@ Template Name: Register Class Page
                         <div class="input-group T-margin-1">
                             <select class="custom-select my-1 mr-sm-2" id="select_program" name="select_program"  >
                                 <option value="">Pick a program</option>
-                                <option value="1">Beginner</option>
-                                <option value="2">Intermediate</option>
+                                <option value="1">Beginner Classes</option>
+                                <option value="2">Intermediate Classes</option>
                             </select>
                         </div>
 
