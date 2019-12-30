@@ -757,7 +757,7 @@ function registerSubmit(){
  
     $inputemail = $_POST['inputemail'];
 
-
+/*
     if(!isset($_FILES['fileToUpload'])) {
         echo 'Error:file upload is missing';
         die();
@@ -786,7 +786,6 @@ function registerSubmit(){
 
     $temp = explode(".", $_FILES["fileToUpload"]["name"]);
 
-    $useremail= explode("@", $inputemail)[0];
 
 
     $newfilename = $useremail .  '.' . end($temp);
@@ -796,7 +795,11 @@ function registerSubmit(){
 
     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], dirname( __FILE__ ) . '/uploads/' .  $newfilename);
         
-   
+   */
+
+    $useremail= explode("@", $inputemail)[0];
+
+
     if(IsNullOrEmptyString($_POST['inputfirstname']))
     {
        echo 'Error: first name is empty.' ;
@@ -872,7 +875,7 @@ function registerSubmit(){
     }
 
 
-
+/*
     if(IsNullOrEmptyString( $_POST['input_occupation']))
     {
        echo 'Error: Occupation is empty.' ;
@@ -881,20 +884,21 @@ function registerSubmit(){
 
     error_log("DOB:" . $_POST['inputDOB']);
 
-
+*/
     if(IsNullOrEmptyString( $_POST['inputDOB']))
     {
-       echo 'Error: DOB is empty.' ;
+       echo 'Error: YOB is empty.' ;
        die(); 
     }
-    else if(!preg_match("/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{4})$/",$_POST['inputDOB']))
+    else if(!preg_match("/^\d{4}$/",$_POST['inputDOB']))
     {
-        echo 'Error: DOB is invalid.' ;
+        echo 'Error: YOB is invalid.' ;
         die(); 
 
     }
     
 
+    /*
     if(IsNullOrEmptyString($_POST['input_driver_no']) && IsNullOrEmptyString($_POST['input_passport']))
     {
  
@@ -928,6 +932,8 @@ function registerSubmit(){
             die(); 
         }
     }
+    */
+
 
     if(IsNullOrEmptyString($_POST['inputRetreatFrom']))
     {
@@ -1145,18 +1151,18 @@ function registerSubmit(){
     $input_e_email = $_POST['input_e_email'];
     $txt_retreats = $_POST['txt_retreats'];
     
-    $radio_vegetarian =  $_POST['radio_vegetarian'] = "1" ?  "Y": "N";
-    $radio_allergies =  $_POST['radio_allergies'] = "1" ?  "Y": "N";
+    $radio_vegetarian =  $_POST['radio_vegetarian'] == "1" ?  "Y": "N";
+    $radio_allergies =  $_POST['radio_allergies'] == "1" ?  "Y": "N";
 
     $txtfood_allergy = $_POST['txtfood_allergy'];
 
     $txt_insurance = $_POST['txt_insurance'];
 
-    $radio_issue_MP =  $_POST['radio_issue_MP'] = "1" ?  "Y": "N";
+    $radio_issue_MP =  $_POST['radio_issue_MP'] == "1" ?  "Y": "N";
 
     $txt_issue_MP = $_POST['txt_issue_MP'];
 
-    $radio_save =  $_POST['radio_save'] = "1" ?  "Y": "N";
+    $radio_save =  $_POST['radio_save'] == "1" ?  "Y": "N";
 
     $input_ack_date = $_POST['input_ack_date'];
     $input_ack_firstname = $_POST['input_ack_firstname'];
@@ -1168,70 +1174,75 @@ function registerSubmit(){
         
         //$wpdb->query( "START TRANSACTION" );
 
-        if($wpdb->insert($wpdb->prefix . 'register',array(
-            'program'=>"retreat",
-            'first_name'=>$inputfirstname,
-            'last_name'=>$inputlastname,
-            'gender'=>$select_gender,
-            'addressline1'=>$inputaddline1,
-            'addressline2'=>$inputaddline2,
-            'postalcode'=>$inputpcode,
-            'province_territory'=>$inputprovince,
-            'city'=>$inputcity,
-            'country'=>$selectcountry,
-            'phone'=>$inputphone,
-            'email'=>$inputemail,
-            'occupation'=>$input_occupation,
-            'dob'=>$inputDOB,
-            'driver_license'=>$input_driver_no,
-            'passport_no'=>$input_passport,
-            'passport_issue_date'=>$input_date_issue,
-            'country_origin'=>$select_origin_country,
-            'gov_issue_photo'=>$newfilename,
-            'start_retreat_date'=>$inputRetreatFrom,
-            'end_retreat_date'=>$inputRetreatTo,
-            'e_first_name'=>$input_e_firstname,
-            'e_last_ name'=>$input_e_lastname,
-            'e_relationship'=>$input_e_relationship,
-            'e_addressline1'=>$input_e_addline1,
-            'e_addressline2'=>$input_e_addline2,
-            'e_postalcode'=>$input_e_pcode,
-            'e_province_territory'=>$input_e_province,
-            'e_city'=>$input_e_city,
-            'e_country'=>$select_e_country,
-            'e_phone'=>$input_e_phone,
-            'e_email'=>$input_e_email,
-            'attended_retreats'=>$txt_retreats,
-            'is_vegetarian'=>$radio_vegetarian,
-            'has_allergy'=>$radio_allergies,
-            'food_allergy'=>$txtfood_allergy,
-            'insurance'=>$txt_insurance,
-            'has_issue_MP'=>$radio_issue_MP,
-            'MP_health'=>$txt_issue_MP,
-            'status'=>$radio_save,
-            'ack_date'=>$input_ack_date,
-            'inserted_datetime'=> date("Y-m-d H:i:s"),
-            'inserted_by'=>$inputemail
-
-        ))===FALSE){
-        
-            echo "Error:database insert error.";
-            die();
-
-        }
-        else 
+        if($radio_save=="Y")
         {
-            error_log("successfully added, row ID is ".$wpdb->insert_id);
 
-            // $wpdb->query( "COMMIT" );
+            error_log("$inputRetreatFrom ".$inputRetreatFrom);
+
+            $inputRetreatFrom = str_replace('/', '-', $inputRetreatFrom );
+            $inputRetreatTo = str_replace('/', '-', $inputRetreatTo );
+            $input_ack_date = str_replace('/', '-', $input_ack_date );
 
 
+            if($wpdb->insert($wpdb->prefix . 'register',array(
+                'program'=>"retreat",
+                'first_name'=>$inputfirstname,
+                'last_name'=>$inputlastname,
+                'gender'=>$select_gender,
+                'addressline1'=>$inputaddline1,
+                'addressline2'=>$inputaddline2,
+                'postalcode'=>$inputpcode,
+                'province_territory'=>$inputprovince,
+                'city'=>$inputcity,
+                'country'=>$selectcountry,
+                'phone'=>$inputphone,
+                'email'=>$inputemail,
+                'occupation'=>$input_occupation,
+                'dob'=>$inputDOB,
+                'start_retreat_date'=>date("Y-m-d", strtotime($inputRetreatFrom)) ,
+                'end_retreat_date'=>date("Y-m-d",strtotime($inputRetreatTo)),
+                'e_first_name'=>$input_e_firstname,
+                'e_last_ name'=>$input_e_lastname,
+                'e_relationship'=>$input_e_relationship,
+                'e_addressline1'=>$input_e_addline1,
+                'e_addressline2'=>$input_e_addline2,
+                'e_postalcode'=>$input_e_pcode,
+                'e_province_territory'=>$input_e_province,
+                'e_city'=>$input_e_city,
+                'e_country'=>$select_e_country,
+                'e_phone'=>$input_e_phone,
+                'e_email'=>$input_e_email,
+                'attended_retreats'=>$txt_retreats,
+                'is_vegetarian'=>$radio_vegetarian,
+                'has_allergy'=>$radio_allergies,
+                'food_allergy'=>$txtfood_allergy,
+                'insurance'=>$txt_insurance,
+                'has_issue_MP'=>$radio_issue_MP,
+                'MP_health'=>$txt_issue_MP,
+                'status'=>$radio_save,
+                'ack_date'=>date("Y-m-d",strtotime($input_ack_date)),
+                'inserted_datetime'=> date("Y-m-d H:i:s"),
+                'inserted_by'=>$inputemail
+    
+            ))===FALSE){
+            
+                echo "Error:database insert error.";
+                die();
+    
+            }
+            else
+            {
+
+                error_log("successfully added, row ID is ".$wpdb->insert_id);
+
+            }
+        }
+         
+ 
             $options_results = $wpdb->get_results( 
                 "SELECT * FROM " . $wpdb->prefix . "options WHERE option_name LIKE 'SMTP_%'"
             );
-            // error_log(print_r($options_results));
-
-
+          
             $host = ''; 
             $username = ''; 
             $password = ''; 
@@ -1348,7 +1359,8 @@ function registerSubmit(){
                     $body = str_replace('{inputemail}', $inputemail, $body);
                     $body = str_replace('{input_occupation}', $input_occupation, $body);
                     $body = str_replace('{inputDOB}', $inputDOB, $body);
-                    $body = str_replace('{input_driver_no}', $input_driver_no, $body);
+                    
+                    /*$body = str_replace('{input_driver_no}', $input_driver_no, $body);
                     $body = str_replace('{input_passport}', $input_passport, $body);
                     $body = str_replace('{input_date_issue}', $input_date_issue, $body);
 
@@ -1373,7 +1385,7 @@ function registerSubmit(){
 
 
  
-                    $body = str_replace('{gov_issue_photo}', $image_path, $body);
+                    $body = str_replace('{gov_issue_photo}', $image_path, $body);*/
                     $body = str_replace('{inputRetreatFrom}', $inputRetreatFrom, $body);
                     $body = str_replace('{inputRetreatTo}', $inputRetreatTo, $body);
                     $body = str_replace('{input_e_firstname}', $input_e_firstname, $body);
@@ -1508,8 +1520,7 @@ function registerSubmit(){
                 echo 'Error: Mailer config is missing' ; 
 
             }
-        
-        }
+      
     
 
     } catch (Exception $e) {

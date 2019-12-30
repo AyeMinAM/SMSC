@@ -135,10 +135,10 @@ Template Name: Ajax register
         <input type="text" class="form-control"   id="input_occupation" name="input_occupation" placeholder="Occupation"> 
         </div>  
         <div class="form-group col-md-6"> 
-        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date of Birth">
+        <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Year of Birth">
         </div> 
       </div> 
-
+<!--
         <div class="form-group col-md-12">
             Please provide one of the identification documents. <br>
             (Driver license for Canadians and valid passport page with photo on it for oversea yogis.)  
@@ -192,14 +192,7 @@ Template Name: Ajax register
          <div id="error_file"></div>
 
         </div>
-       <!-- <div class="form-row">
-        <div class="form-group col-md-6">
-         <input type="file" name="fileToUpload"  accept="image/*" id="fileToUpload">
-
-         
-
-         </div> 
-        </div>-->
+       -->
        
          <button type="button" class="next action-button">Continue</button> 
     </fieldset>
@@ -546,7 +539,7 @@ Template Name: Ajax register
                 <label class="form-check-label" >Yes</label>
             </div>
             <div id="div_save" class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="radio_save" id="rdo_female" value="0">
+                <input class="form-check-input" type="radio" name="radio_save"  value="0">
                 <label class="form-check-label" >No</label>
             </div>
         </div>  
@@ -647,11 +640,11 @@ jQuery(document).ready(function ()
         format: 'DD/MM/YYYY' 
     });
 
-
+/*
    $('#inputDOB').datetimepicker({
         format: 'DD/MM/YYYY',
         maxDate : 'now'
-    });
+    });*/
 
 
     $('#input_date_issue').datetimepicker({
@@ -1028,6 +1021,19 @@ jQuery(document).ready(function ()
     },'Must be less than {0}.');
 
 
+    $.validator.addMethod("lessThanThisYear", 
+    function(value, element, params) {
+
+         
+             
+        console.log(value < params);
+        return value < params;
+       
+      
+    },'Must be less than {0}.');
+
+
+
 
     $.validator.addMethod('filesize', function (value, element, param) {
         console.log("element.files[0].size:" + element.files[0].size);
@@ -1082,7 +1088,8 @@ jQuery(document).ready(function ()
                             },
                             inputDOB: {
                                 required: true,
-                                regxDate: /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/
+                                regxDate: /^\d{4}$/,
+                                lessThanThisYear:new Date().getFullYear()
                             }, 
                             selectcountry: "checkCountry" ,
                             fileToUpload: {
@@ -1158,7 +1165,7 @@ jQuery(document).ready(function ()
                             inputcity:"Please enter City",
                             inputemail: "Please enter a valid email address",
                             fileToUpload: "Please upload valid government issued photo. File size must be less than 2MB. Only JPG, GIF and PNG types are accepted",
-                            inputDOB: "Please enter Date of Birth",
+                            inputDOB: "Please enter year of Birth",
                             inputphone: "Please enter your valid phone number",
                             inputRetreatFrom: "Please enter valid the start date of retreat",
                             inputRetreatTo: "Please enter valid the end date of retreat",

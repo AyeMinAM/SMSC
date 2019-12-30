@@ -1,11 +1,7 @@
 <?php get_header(); 
 
 /*
-<<<<<<< HEAD
-Template Name: Classes Page
-=======
 Template Name: classes Page
->>>>>>> f6117e66978393e502370689ada8e961ca8e4d60
 */
 ?>
  
