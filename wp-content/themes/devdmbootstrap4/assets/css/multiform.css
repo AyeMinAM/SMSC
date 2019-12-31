@@ -55,7 +55,7 @@ ul#progressbar li{
 .multi_step_form #msform {
   position: relative;
   padding-top: 50px;
-  min-height: 1500px;
+  min-height: 930px;
   margin: 0 auto;
   background: #ffffff;
   z-index: 1;

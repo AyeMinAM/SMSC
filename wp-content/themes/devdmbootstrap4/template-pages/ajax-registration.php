@@ -1240,6 +1240,9 @@ jQuery(document).ready(function ()
                 //show the next fieldset
                 next_fs.show();
                 current_fs.hide();
+
+                window.scrollTo(0, 0);
+
  
             }
            
@@ -1256,6 +1259,9 @@ jQuery(document).ready(function ()
             //show the previous fieldset
             previous_fs.show();
             current_fs.hide();
+
+            //window.scrollTo(0, 0);
+
 
         });
 
