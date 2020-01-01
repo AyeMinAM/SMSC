@@ -59,7 +59,8 @@ Template Name: retreats Page
                 <div class="col-md-6 vertical-center order-md-1 ">
                   <div class="card-block-odd-card">
                     <h4 class="card-title">Annual Retreats</h4>
-                    <p class="card-text">Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  Pre-registration and acceptance are required for these due to limited accommodation space.
+                    <p class="card-text">Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  They are held at the Chanmyay Yeiktha Retreat Centre in Hope, B.C.  Pre-registration and acceptance are required for these due to limited accommodation space.
+
 
 </p>
                     <div class="col text-center">

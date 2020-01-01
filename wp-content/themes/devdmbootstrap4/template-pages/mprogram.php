@@ -58,7 +58,8 @@ Template Name: mprograms Page
                 <div class="col-md-6 vertical-center order-md-1 ">
                   <div class="card-block-odd-card">
                     <h4 class="card-title">Intermediate Classes</h4>
-                    <p class="card-text">The Intermediate class is held weekly on Tuesday evenings and is also 2 hours long.  It involves a 60 minute meditation time, followed by a Dhamma talk (lecture about the practice with a Q and A period). The intermediate class is an ongoing year-round program.
+                    <p class="card-text">The intermediate class is held weekly on Tuesday evenings and is also 2 hours long.  It involves a 60 minute meditation time, followed by a Dhamma talk (lecture about the practice) followed by a question and answer session. The intermediate class is an ongoing year-round program.
+
  </p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/Intermediate" class="btn btn-lg btn-outline">
@@ -88,7 +89,8 @@ Template Name: mprograms Page
                 <div class="col-md-6 vertical-center">
                   <div class="card-block">
                     <h4 class="card-title">Residential Retreats</h4>
-                    <p class="card-text">Residential Retreat are usually held once a month, mostly on long weekends of the month at Chanmyay Yeiktha Retreat Centre in Hope, BC. It is announced on the Upcoming Events page. You may also send an email request to sign up for e-mail notifications.
+                    <p class="card-text">A Residential Retreat is usually held once a month, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC. Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.
+
 </p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/residential" class="btn btn-lg btn-outline">
@@ -117,7 +119,8 @@ Template Name: mprograms Page
                 <div class="col-md-6 vertical-center order-md-1 ">
                   <div class="card-block-odd-card">
                     <h4 class="card-title">Annual Retreats</h4>
-                    <p class="card-text">A Residential Retreat is usually held once a month, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC. Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.</p>
+                    <p class="card-text">Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  They are held at the Chanmyay Yeiktha Retreat Centre in Hope, B.C.  Pre-registration and acceptance are required for these due to limited accommodation space.
+</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/annual" class="btn btn-lg btn-outline">
                     View details</a> 

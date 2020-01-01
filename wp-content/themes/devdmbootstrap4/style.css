@@ -256,6 +256,10 @@ a:hover{
   color:#ffffff;
   text-decoration: none;
 }
+a.email-link{
+  color:#932a0c;
+}
+
 .T-margin-1{
   margin-top:1rem;
 }
@@ -1104,9 +1108,18 @@ padding: 2rem 0;
   }
 }
 
+.btn-donate-large {
+  color: #ffffff;
+  background-color:#ff9933;
+  letter-spacing: 0.05em;
+  font-family: "OpenSans", sans-serif;
+  padding: 20px 120px; 
+  font-size: 18px;
+}
+
 .btn-donate-02{
     color: #ffffff;
-    background-color: #932a0c;
+    background-color: #ff9933;
     letter-spacing: 0.05em;
     font-family: OpenSans;
     padding: 0.8rem 2.5rem;

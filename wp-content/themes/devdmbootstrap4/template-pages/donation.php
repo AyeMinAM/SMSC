@@ -54,7 +54,7 @@ Template Name: donation Page
                                              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                                 <input type="hidden" name="cmd" value="_s-xclick">
                                                 <input type="hidden" name="hosted_button_id" value="QE4U9RQLGFTYY">
-                                                <input class="btn btn-donate-02" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                                <input type="hidden" class="btn btn-donate-02" text="Donate" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                                             </form>
                                     </div>
                 </div>

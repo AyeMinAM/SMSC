@@ -11,7 +11,7 @@ Template Name: intermediate Page
          <div class="lazy col-sm-12 smsc_beginner_img" data-src="<?php echo get_template_directory_uri(); ?>/images/Intermediate-classes.jpg">
             <div class="text-center header-class-title-height">
                       <span class="header-class-title">
-                      Intermediate Meditation Class (Weekly)
+                      Intermediate Meditation Classes
                       </span>
                       <div style="margin-top:2rem;"> 
                         <a href="<?php echo esc_url( get_permalink( get_page_by_title('registerclass') ) ); ?>" class="btn btn-lg btn-register">
@@ -138,7 +138,7 @@ Template Name: intermediate Page
                  <div class="col-sm-2"></div>
                  <div class="col">
                              <span class = "label label_schedule_title">
-                             Additional Info
+                             Additional Infomation
                              </span></div>
             </div>  
             <div class="row">
@@ -177,7 +177,7 @@ Template Name: intermediate Page
                 
                  <div class="col">
                              <span class = "label label_schedule_title">
-                             Additional Info
+                             Additional Information
                              </span></div>
             </div>  
             <div class="row">

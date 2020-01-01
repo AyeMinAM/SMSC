@@ -127,7 +127,7 @@ Template Name: Library Page
                     <div class="col-lg-2">
                         <div class="text-center">
                                 <img class="icons-resources" src="<?php echo get_template_directory_uri(); ?>/images/icon-chants.png"  alt="beginner">
-                                <h5 class="label smsc-title">Articles</h5>
+                                <h5 class="label smsc-title">Chants</h5>
                         </div>                        
                     </div>
                     <div class="col-lg-7">   
@@ -138,8 +138,11 @@ Template Name: Library Page
                                     <p >
                                         <a class="resource-links" href="../articles/06the_chant_metta.pdf">
                                         Chant of Metta </a> </br>
-                                         <a class="resource-links" href="../articles/07_format_of_a_meditation_session.pdf">  
-                                       SMSC meditation format with chanting </a><br>
+                                        <a class="resource-links" href="../articles/Taking Five Precepts v1.2.1 20191104.pdf">
+                                       Taking Three Refuges and Five Precepts</a> </br>
+                                        <a class="resource-links" href="../articles/Taking Nine Precepts v1.2.1 20191104.pdf">
+                                        Taking Three Refuges and Nine Precepts</a> </br>
+                                         
                                      </p>
                                      <div>All articles are available in PDF file format. Please click on the link you wish to open or download. <span><a class="pdf-link" href="http://get.adobe.com/reader/" target="_blank">Click here to install free PDF reader.</a></span></div>
                    

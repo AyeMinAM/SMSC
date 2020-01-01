@@ -48,12 +48,12 @@ Template Name: The Project Page
 
             </p>
              <p class="text-justify">
-                If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through info(at)satipatthana.ca.  As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors (Canadian resident donors are able to claim tax deductions for their contributions). 
+                If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through <a class="email-link" href="mailto:info@satipatthana.ca">info@satipatthana.ca</a>.  As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors (Canadian resident donors are able to claim tax deductions for their contributions). 
             </p>
             <p>Sadhu. Sadhu. Sadhu.</p>
              <div  class="col-sm-12 text-center"> 
 
-                <a href="#" class="btn btn-lg btn-register">
+                <a href="#" class="btn btn-lg btn-donate-large">
                 Donate</a>
             </div>
 

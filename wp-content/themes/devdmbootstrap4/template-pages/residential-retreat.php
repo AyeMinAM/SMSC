@@ -129,7 +129,7 @@ Template Name: Residential Page
                 
                  <div class="col">
                              <span class = "label label_schedule_title">
-                             Additional Info
+                             Additional Information
                              </span></div>
             </div>  
             <div class="row">

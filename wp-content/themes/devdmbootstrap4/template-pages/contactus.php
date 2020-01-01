@@ -51,7 +51,7 @@ Template Name: Contact Us Page
                 Chanmyay Yeiktha Canada <br>
                 19640 Silverhope Rd, Hope BC, <br>
                  Canada, V0X-1L2<br>
-                <i class="fa fa-envelope" aria-hidden="true"></i> <span style="padding-left:0.5rem">chanmyay.bc@gmail.com</span>
+                <i class="fa fa-envelope" aria-hidden="true"></i> <span style="padding-left:0.5rem">info@satipatthana.ca</span>
                 <br>
                 <i class="fa fa-phone" aria-hidden="true"> </i><span style="padding-left:0.5rem">(604)-860-0808</span>
 

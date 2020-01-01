@@ -6,7 +6,7 @@ Template Name: Annual Retreat Page
 <?php get_template_part('template-parts/head'); ?>
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container-fluid" style="background-color: orange;">
+<div class="container-fluid">
     <div class="row">
          <div class="lazy col-sm-12 smsc_beginner_img" data-src="<?php echo get_template_directory_uri(); ?>/images/annual-retreat.jpg">
             <div class="text-center header-class-title-height">
@@ -129,7 +129,7 @@ Template Name: Annual Retreat Page
                 
                  <div class="col">
                              <span class = "label label_schedule_title">
-                             Additional Info
+                             Additional Infomation
                              </span></div>
             </div>  
             <div class="row">

@@ -130,7 +130,7 @@ Template Name: Beginner Page
                 
                  <div class="col">
                              <span class = "label label_schedule_title">
-                             Additional Info
+                             Additional Information
                              </span></div>
             </div>  
             <div class="row">
@@ -190,7 +190,8 @@ Template Name: Beginner Page
                     <div class="vertical-center">
                       <div class="card-block">
                         <h4 class="card-title">Intermediate Classes</h4>
-                        <p class="card-o-programs-text justify">The Intermediate class is held weekly on Tuesday evenings and is also 2 hours long.  It involves a 60 minute meditation time, followed by a Dhamma talk (lecture about the practice with a Q and A period). The intermediate class is an ongoing year-round program.
+                        <p class="card-o-programs-text justify">The intermediate class is held weekly on Tuesday evenings and is 2 hours long.  It involves a 60 minute meditation time, followed by a Dhamma talk (lecture about the practice) followed by a question and answer session. The intermediate class is an ongoing year-round program.
+
 </p>
                         <div class="col text-center">
                         <a href="<?php echo get_site_url(); ?>/intermediate" class="btn btn-lg btn-outline">
