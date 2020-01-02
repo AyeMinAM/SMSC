@@ -82,7 +82,7 @@
             <div class="card card-smsc">
               <div class="row">
                  <div class="col-md-6 padding-adjust">
-                  <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
+                  <div class="card-img-bottom smsc_card_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
                   </div>
                 </div>
                 <div class="col-md-6 vertical-center">
@@ -111,7 +111,7 @@
             <div class="card card-smsc">
               <div class="row">
                 <div class="col-md-6 order-md-12 padding-adjust-left">
-                  <div class="card-img-bottom-odd-card smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/residential-retreat.jpg">
+                  <div class="card-img-bottom-odd-card smsc_card_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/residential-retreat.jpg">
                   </div>
                 </div>
                 <div class="col-md-6 vertical-center order-md-1 ">
@@ -141,7 +141,7 @@
             <div class="card card-smsc">
               <div class="row">
                  <div class="col-md-6 padding-adjust">
-                  <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/events.jpg">
+                  <div class="card-img-bottom smsc_card_img_events" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/events.jpg">
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -266,7 +266,7 @@
     </div>
 
     <div class="row">
-        <h4 class = "label smsc-title">Check out our social media for news and update about our events and programs.
+        <h4 class = "label smsc-title" style="padding:0 1rem;">Check out our social media for news and update about our events and programs.
         </h4>
     </div>
     <div class="row" style="margin-top:20px;">

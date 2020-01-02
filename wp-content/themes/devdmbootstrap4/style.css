@@ -616,6 +616,28 @@ h1.smsc_header_title a:hover{
   }
 }
 
+.smsc_card_img {
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    background-image: url('images/hero-header.jpg') center no-repeat;
+}
+
+@media only screen and (min-width: 768px){
+  .smsc_card_img{
+    height:100%;
+  }
+}
+
+.smsc_card_img_events{
+    height: 22rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    background-image: url('images/hero-header.jpg') center no-repeat;
+}
+
 .slogan{
   position: relative;
   top: 20%;
@@ -704,12 +726,18 @@ h1.smsc-header{
   color:#93210c;
 }
 .card-o-programs-text{
-  height:10.5rem;
+  height:auto;
   overflow: hidden;
 }
+
+@media (min-width:768px){
+  .card-o-programs-text{
+    height:10.5rem;
+  }
+}
+
 .card-img-bottom {
   color: #fff;
-  height: 22rem;
   background-size: cover;
   background-position: center;
   border-radius: .5rem 0.5rem 0 0;
@@ -731,14 +759,13 @@ h1.smsc-header{
 
 @media (min-width: 768px) and (max-width: 991px) { 
  .card-img-bottom{
-  height:30rem;
+  height:100%;
   border-radius: .5rem 0 0 0.5rem;
  }
 }
 
 .card-img-bottom-odd-card {
   color: #fff;
-  height: 22rem;
   background-size: cover;
   background-position: center;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -752,26 +779,37 @@ h1.smsc-header{
 
 @media (min-width: 768px) and (max-width: 991px) { 
  .card-img-bottom-odd-card{
-  height:30rem;
   border-radius: 0 .5rem 0.5rem 0;
  }
+}
+.card-block-others{
+  padding:1rem;
 }
 
 .card-block{
   padding:1rem;
 }
-
-.card-block-events{
-  padding:2rem 1rem;
+@media (min-width:768px){
+  .card-block{
+    padding:2rem 1rem;
+  }
 }
+.card-block-events{
+  padding:1rem;
+}
+@media (min-width:768px){
+  .card-block-events{
+    padding:2rem 1rem;
+  }
+}
+
 .card-block-odd-card{
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem;
 }
 
 @media (min-width:768px){
-
   .card-block-odd-card{
-   padding: 1rem 0 1rem 2rem;
+   padding: 2rem 0 2rem 2rem;
   }
 }
 
@@ -943,7 +981,7 @@ margin:1rem auto;
 width: 100%;
 }
 
-@media (min-width:576px){
+@media (min-width:1140px){
   .about-smsc-bg{
     padding: 2rem;
     margin:2rem auto;

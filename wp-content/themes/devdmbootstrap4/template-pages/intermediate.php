@@ -230,12 +230,12 @@ Template Name: intermediate Page
 <div class="container">
         <h1 class="smsc-header" style="margin-bottom: 1rem">Other Programs &amp; Retreats</h1>
         <div class="row">
-                 <div class="col-lg-4 col-md-6 col-xs-12">
+                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div class="card card-smsc">
                     <div class="card-o-programs-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
                     </div>
                     <div class="vertical-center">
-                      <div class="card-block">
+                      <div class="card-block-others">
                         <h4 class="card-title">Beginner Classes</h4>
                         <p class="card-o-programs-text justify">The Mindfulness-Insight course for beginners is an introduction to the meditation practice.  This class is for both beginners and experienced practitioners who have no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). The program consists of six weekly sessions, 2 hours long, involving guided meditation and lectures about the practice, followed by a question and answer session. This course is offered several times a year.
 </p>
@@ -250,12 +250,12 @@ Template Name: intermediate Page
 
                 <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="divider-other-programs" alt="divider">  
 
-                <div class="col-lg-4 col-md-6 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div class="card card-smsc">
                       <div class="card-o-programs-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/residential-retreat.jpg">
                         </div>
                         <div class="vertical-center">
-                          <div class="card-block">
+                          <div class="card-block-others">
                             <h4 class="card-title">Residential Retreats</h4>
                             <p class="card-o-programs-text justify">A Residential Retreat is usually held once a month, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC. Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.
 </p>
@@ -270,12 +270,12 @@ Template Name: intermediate Page
 
                 <img src="<?php echo get_template_directory_uri(); ?>/images/divider.png" class="divider-other-programs" alt="divider">  
 
-                <div class="col-lg-4 col-md-6 col-xs-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div class="card card-smsc card-smsc-others-programs-last">
                        <div class="card-o-programs-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/annual-retreat.jpg">
                        </div>
                        <div class="vertical-center">
-                        <div class="card-block">
+                        <div class="card-block-others">
                           <h4 class="card-title justify">Annual Retreats</h4>
                           <p class="card-o-programs-text">Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  They are held at the Chanmyay Yeiktha Retreat Centre in Hope, B.C.  Pre-registration and acceptance are required for these due to limited accommodation space.
 </p>

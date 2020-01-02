@@ -187,7 +187,7 @@ Template Name: Annual Retreat Page
                     <div class="card-o-programs-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/residential-retreat.jpg">
                     </div>
                     <div class="vertical-center">
-                      <div class="card-block">
+                      <div class="card-block-others">
                         <h4 class="card-title">Residential Retreats</h4>
                         <p class="card-o-programs-text">A Residential Retreat is usually held once a month, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC. Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.</p>
                         <div class="col text-center">
@@ -206,7 +206,7 @@ Template Name: Annual Retreat Page
                       <div class="card-o-programs-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
                         </div>
                         <div class="vertical-center">
-                          <div class="card-block">
+                          <div class="card-block-others">
                             <h4 class="card-title">Beginner Classes</h4>
                             <p class="card-o-programs-text">The Mindfulness-Insight course for beginners is an introduction to the meditation practice.  This class is for both beginners and experienced practitioners who have no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). The program consists of six weekly sessions, 2 hours long, involving guided meditation and lectures about the practice, followed by a question and answer session. This course is offered several times a year.
 </p>
@@ -226,7 +226,7 @@ Template Name: Annual Retreat Page
                        <div class="card-o-programs-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/Intermediate-classes.jpg">
                        </div>
                        <div class="vertical-center">
-                        <div class="card-block">
+                        <div class="card-block-others">
                           <h4 class="card-title">Intermediate Classes</h4>
                           <p class="card-o-programs-text">The intermediate class is held weekly on Tuesday evenings and is also 2 hours long.  It involves a 60 minute meditation time, followed by a Dhamma talk (lecture about the practice) followed by a question and answer session. The intermediate class is an ongoing year-round program.
 </p>

@@ -25,7 +25,7 @@ Template Name: classes Page
             <div class="card card-smsc">
               <div class="row">
                  <div class="col-md-6 padding-adjust">
-                  <div class="card-img-bottom smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
+                  <div class="card-img-bottom smsc_card_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/classes-beginner.jpg">
                   </div>
                 </div>
                 <div class="col-md-6 vertical-center">
@@ -53,7 +53,7 @@ Template Name: classes Page
             <div class="card card-smsc">
               <div class="row">
                 <div class="col-md-6 order-md-12 padding-adjust-left">
-                  <div class="card-img-bottom-odd-card smsc_header_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/Intermediate-classes.jpg">
+                  <div class="card-img-bottom-odd-card smsc_card_img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/Intermediate-classes.jpg">
                   </div>
                 </div>
                 <div class="col-md-6 vertical-center order-md-1 ">
