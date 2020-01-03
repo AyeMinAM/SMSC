@@ -16,7 +16,7 @@ Template Name: Gallery Plugin Page
 
 <!-- main slider carousel -->
 <div class="row" style="margin-top:20px;">
-<?php echo do_shortcode('[URIS id=257]'); ?>
+<?php echo do_shortcode('[URIS id=301]'); ?>
 </div>
 <!--/main slider carousel-->
 </div>
