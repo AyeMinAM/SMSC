@@ -84,10 +84,18 @@ body p{
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-    background-color:#ff9933
+    background-color:#ff9933;
+    margin-bottom: 1rem;
 }
 
  
+@media (min-width: 992px){
+  .button-donation{
+    margin-bottom: 0!important;
+  }
+}
+
+
 
 .smsc_header_title a
 {
@@ -375,9 +383,6 @@ h5{
 
 /*NAV*/
 
-.nav-link{
-  font-weight: bold;
-}
 
 @media (min-width:991px){
   .nav-link{

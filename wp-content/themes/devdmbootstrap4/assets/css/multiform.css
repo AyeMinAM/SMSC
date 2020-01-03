@@ -21,6 +21,7 @@
   border-radius: .5rem;
   margin-left:1rem;
   margin-right:1rem;
+  /*padding-bottom: 1rem;*/
 }
 
 @media (min-width:576px){
@@ -51,11 +52,12 @@ ul#progressbar li{
 .multi_step_form {
  display: block;
   overflow: hidden;
+  padding-bottom: 1rem;
 }
 .multi_step_form #msform {
   position: relative;
   padding-top: 50px;
-  min-height: 930px;
+  height: auto;
   margin: 0 auto;
   background: #ffffff;
   z-index: 1;
@@ -362,18 +364,16 @@ ul#progressbar li{
   margin: 0 5px;
   display: inline-block;
 }
-.multi_step_form #msform .action-button:hover, .multi_step_form #msform .action-button:focus {
-  background: #ff9933;
-  border-color:#ff9933;
-}
+
 .multi_step_form #msform .previous_button {
-  background: transparent;
-  color: #99a2a8;
-  border-color: #99a2a8;
+  background: #932a0c;
+  border-color: #932a0c;
 }
-.multi_step_form #msform .previous_button:hover, .multi_step_form #msform .previous_button:focus {
-  background: #405867;
-  border-color: #405867;
+.multi_step_form #msform .previous_button:hover, .multi_step_form #msform .previous_button:focus,
+.multi_step_form #msform .action-button:hover, .multi_step_form #msform .action-button:focus
+ {
+  background: #ff9933;
+  border-color: #ff9933;
   color: #fff;
 }
 
