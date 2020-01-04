@@ -608,22 +608,7 @@ Template Name: Ajax register
  
 jQuery(document).ready(function () 
 {
-
-
-    $.extend(true, $.fn.datetimepicker.defaults, {
-    icons: {
-      time: 'far fa-clock',
-      date: 'far fa-calendar',
-      up: 'fas fa-arrow-up',
-      down: 'fas fa-arrow-down',
-      previous: 'fas fa-chevron-left',
-      next: 'fas fa-chevron-right',
-      today: 'fas fa-calendar-check',
-      clear: 'far fa-trash-alt',
-      close: 'far fa-times-circle'
-    }
-  });
-
+ 
     function adjustBox() {
             var H = 0;
             $("div").each(function (i) {
@@ -645,36 +630,22 @@ jQuery(document).ready(function ()
     jQuery( "#chk_agree" ).checkboxradio();
 
 
-
  
-    $('#inputRetreatFrom').datetimepicker({
-        format: 'DD/MM/YYYY',
-        widgetPositioning: {
-            horizontal: 'right',
-            vertical: 'bottom'
-        }
+    $('#inputRetreatFrom').datepicker({
+    dateFormat: 'dd/mm/yy'});
+
+
+    
+    $('#inputRetreatTo').datepicker({
+    dateFormat: 'dd/mm/yy'});
  
-    });
+ 
 
+    $('#input_date_issue').datepicker({
+    dateFormat: 'dd/mm/yy'});
 
-    $('#inputRetreatTo').datetimepicker({
-        format: 'DD/MM/YYYY' 
-    });
-
-/*
-   $('#inputDOB').datetimepicker({
-        format: 'DD/MM/YYYY',
-        maxDate : 'now'
-    });*/
-
-
-    $('#input_date_issue').datetimepicker({
-        format: 'DD/MM/YYYY'
-    });
-
-    $('#input_ack_date').datetimepicker({
-        format: 'DD/MM/YYYY'
-    });
+    $('#input_ack_date').datepicker({
+    dateFormat: 'dd/mm/yy'});
 
 
     var form = $("#msform");
@@ -763,7 +734,7 @@ jQuery(document).ready(function ()
 
     $('#select_e_country').select2();
 
-
+/*
     var DateField = function(config) {
         jsGrid.Field.call(this, config);
     };
@@ -844,7 +815,7 @@ jQuery(document).ready(function ()
            
         ]
     });
-
+*/
     
 
     $.validator.addMethod("regx", function(value, element, regexpr) {          
@@ -1109,8 +1080,7 @@ jQuery(document).ready(function ()
                             },
                             inputDOB: {
                                 required: true,
-                                regxDate: /^\d{4}$/,
-                                lessThanThisYear:new Date().getFullYear()
+                                regxDate: /^\d{4}$/
                             }, 
                             selectcountry: "checkCountry" ,
                             fileToUpload: {
