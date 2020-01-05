@@ -36,7 +36,7 @@ Template Name: donation Page
                                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                                 <input type="hidden" name="cmd" value="_s-xclick">
                                                 <input type="hidden" name="hosted_button_id" value="J9R72EW48K3ZG">
-                                                <input class="btn btn-donate-02" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                                <input type="image" src="<?php echo get_template_directory_uri(); ?>/images/paypal-btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                                             </form>
                                  </div>
 
@@ -45,16 +45,16 @@ Template Name: donation Page
                                              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                                 <input type="hidden" name="cmd" value="_s-xclick">
                                                 <input type="hidden" name="hosted_button_id" value="233ZK6MB4K9ZU">
-                                                <input class="btn btn-donate-02" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">	
+                                                <input type="image" src="<?php echo get_template_directory_uri(); ?>/images/paypal-btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">	
                                             </form>
                                 </div>
 
                                 <div class="different-donation"> 
                                              <p>For Membership</p>
-                                             <form id="paypal-button-container" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                                 <input type="hidden" name="cmd" value="_s-xclick">
                                                 <input type="hidden" name="hosted_button_id" value="QE4U9RQLGFTYY">
-                                                <input type="hidden" class="btn btn-donate-02" text="Donate" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                                <input type="image" src="<?php echo get_template_directory_uri(); ?>/images/paypal-btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                                             </form>
 
                                 </div>
@@ -71,34 +71,6 @@ Template Name: donation Page
                 </div>
         </div><!--card-->
 </div><!--container-->
-
-<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
-<script>
-    paypal.Buttons({
-        style: {
-            shape: 'rect',
-            color: 'gold',
-            layout: 'horizontal',
-            label: 'paypal',
-            
-        },
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '1'
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name + '!');
-            });
-        }
-    }).render('#paypal-button-container');
-</script>
-
 
 <?php get_template_part('template-parts/nav','footer'); ?>
 

@@ -172,13 +172,13 @@ Template Name: Library Page
                                        Satipatthana Vipassana Association (Springfield, Illinois, USA) dedicated to propagate Theravada Buddhism, keeping Pure Insight Meditation (Mahasi Tradition) as the central theme.
                                      </p>
 
-                                      <a class="label smsc-title r-website" href="http://www.chanmyay.org/" target="_blank"> Chanmyay Yeiktha Meditation Centre</a>
+                                      <!-- <a class="label smsc-title r-website" href="http://www.chanmyay.org/" target="_blank"> Chanmyay Yeiktha Meditation Centre</a>
                                      <p>
                                        Pure Vipassana meditation center in Myanmar. A great place for practitioners who wish to attend longer term retreats. Meditation, room and board are free of charge.
 
-                                     </p>
+                                     </p> -->
 
-                                      <a class="label smsc-title r-website" href="dhammadownload.com" target="_blank"> dhammadownload.com</a>
+                                      <a class="label smsc-title r-website" href="http://dhammadownload.com/" target="_blank"> dhammadownload.com</a>
                                      <p>
                                        Dhamma talks given by senior monks of Myanmar. Available in audio, video and text (English and Burmese).
 

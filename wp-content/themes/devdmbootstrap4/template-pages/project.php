@@ -52,9 +52,14 @@ Template Name: The Project Page
             </p>
             <p>Sadhu. Sadhu. Sadhu.</p>
              <div  class="col-sm-12 text-center"> 
-
-                <a href="#" class="btn btn-lg btn-donate-large">
-                Donate</a>
+                 
+                                             <p>Donte via PayPal</p>
+                                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                                <input type="hidden" name="cmd" value="_s-xclick">
+                                                <input type="hidden" name="hosted_button_id" value="233ZK6MB4K9ZU">
+                                                <input type="image" src="<?php echo get_template_directory_uri(); ?>/images/paypal-btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">   
+                                            </form>
+                              
             </div>
 
     </div>

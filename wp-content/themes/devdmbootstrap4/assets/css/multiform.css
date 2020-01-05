@@ -304,6 +304,7 @@ ul#progressbar li{
 }
 .multi_step_form #msform #progressbar {
   margin-bottom: 30px;
+  padding-left:0;
   overflow: hidden;
 }
 .multi_step_form #msform #progressbar li {
