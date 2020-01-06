@@ -582,7 +582,7 @@ Template Name: Ajax register
 
     <button type="button" class="action-button previous previous previous previous_button">Back</button> 
 
-    <button id="registerSubmit" type="submit" class="btn action-button">Submit</button>
+    <button id="registerSubmit" type="submit" class="action-button">Submit</button>
     <div id="message"> </div>
 
     </fieldset>  

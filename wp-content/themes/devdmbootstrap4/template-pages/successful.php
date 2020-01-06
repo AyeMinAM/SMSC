@@ -64,7 +64,7 @@ a, a:hover, a:active{
   </p>
   <div class="">
     <p>If you would like to donate, please go to </p>
-    <a class="btn-donation" href="<?php echo get_site_url(); ?>/donation" role="button">Donation</a>
+    <a class="btn-donation" href="<?php echo get_site_url(); ?>/donation" role="button">Donate</a>
   </div>
 </div>
  
