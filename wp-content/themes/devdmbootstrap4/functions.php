@@ -1352,7 +1352,7 @@ function registerSubmit(){
                     $body = str_replace('{inputcity}', $inputcity, $body);
 
                     $countryName = $wpdb->get_row( 
-                        "SELECT * FROM wp_country WHERE Code='" . $selectcountry . "'"
+                        "SELECT * FROM  " . $wpdb->prefix . "country WHERE Code='" . $selectcountry . "'"
                     );
 
                     $body = str_replace('{selectcountry}', $countryName->Name, $body);
@@ -1399,7 +1399,7 @@ function registerSubmit(){
                     $body = str_replace('{input_e_city}', $input_e_city, $body);
 
                     $e_countryName = $wpdb->get_row( 
-                        "SELECT * FROM wp_country WHERE Code='" . $select_e_country . "'"
+                        "SELECT * FROM " . $wpdb->prefix . "country WHERE Code='" . $select_e_country . "'"
                     );
 
                     $body = str_replace('{select_e_country}', $e_countryName->Name, $body);
