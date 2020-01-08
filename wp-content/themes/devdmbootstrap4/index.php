@@ -117,7 +117,7 @@
                 <div class="col-md-6 vertical-center order-md-1 ">
                   <div class="card-block-odd-card">
                     <h4 class="card-title">Meditation Retreats</h4>
-                    <p class="card-text">Residential Retreats are offered 8 times a year, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC.  Announcements are posted on our “Upcoming Events” page. You may also send us an email to sign up for notifications via email.</p>
+                    <p class="card-text">Residential Retreats are offered 8 times a year, primarily on long weekends, at the Chanmyay Yeiktha Retreat Centre in Hope, BC.  Announcements are posted on our “Upcoming Events” page under SMSC community. You may also send us an email to sign up for notifications via email.</p>
                     <p>Annual Retreats are usually held in the summer of each year, these last from 9 to 17 days on average.  Pre-registration and acceptance are required for these due to limited accommodation space.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/retreats/" class="btn btn-lg btn-outline">
@@ -147,7 +147,7 @@
                 <div class="col-md-6">
                   <div class="card-block-events">
                     <h4 class="card-title">Events</h4>
-                    <p class="card-text">Special events are announced on our "Upcoming Events" page under SMSC Community. If you wish to be notified by email, you are welcome to join our email list by sending us an email to enroll.</p>
+                    <p class="card-text">Special events are announced on our "Upcoming Events" page under SMSC Community. If you wish to be notified by email, please send us an email to receive notifications.</p>
                     <div class="col text-center">
                     <a href="<?php echo get_site_url(); ?>/upcomingevents/" class="btn btn-lg btn-outline">
                     Find out more</a> 

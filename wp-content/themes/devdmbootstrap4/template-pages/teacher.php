@@ -45,7 +45,7 @@ Template Name: The Teachers Page
               Sayar Myat was born and raised as a Buddhist in Myanmar.  He learned and practiced the correct form of Theravada Buddhism and Insight meditation from his principal teacher Sayadawgyi U Janaka Bhivamsa of Yangon, Myanmar, and also from the late Sayadawgyi U Pandita Bhivamsa and the late Sayadawgyi U Silananda Bhivamsa. Sayar Myat came to Canada in 1974.  
             </p>
             <p class="text-justify">
-                Since 1989, he has directed his efforts towards the teaching of Theravada Buddhism, using Mindfulness Meditation practice as a core principle. In 1991, he helped found the Manawmaya Theravada Buddhist Society (MTBS), and in 2007, founded the Satipatthana Meditation Society of Canada (SMSC).  Both societies are not- for-profit organizations. Sayar Myat fills the roles of president, director, teacher, and translator at SMSC, the only place in Canada where people can learn and practice Mindfulness-Insight Meditation in the English language year-round.
+                Since 1989 he has directed his efforts towards the teaching of Theravada Buddhism, using Mindfulness Meditation practice as a core principle. In 1991 he helped found the Manawmaya Theravada Buddhist Society (MTBS), and in 2007 founded the Satipatthana Meditation Society of Canada (SMSC).  Both societies are not- for-profit organizations. Sayar Myat fills the roles of president, director, teacher, and translator at SMSC, the only place in Canada where people can learn and practice Mindfulness-Insight Meditation in the English language year-round.
 
             </p>
         </div>

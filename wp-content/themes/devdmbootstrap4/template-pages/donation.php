@@ -27,12 +27,12 @@ Template Name: donation Page
             <p class="text-justify">
             The Satipatthana Meditation Society of Canada (SMSC) is a registered non-profit Theravada Buddhist organization. The Society carries on business without purpose of material or monetary gain for its members and any profit or other accretions to the Society is used for promoting its purpose. Through the generosity of members, students, friends, family and the public we are able to offer all our classes and retreats free of charge.
             </p>
-            <p>Those wishing to support our endeavours may do so with PayPal:</p>
+            <p>Those wishing to support our endeavours may do so via PayPal:</p>
             
                 <div class="donation-container">
                     <!--  <img src="http://localhost:8888/SMSC/wp-content/themes/devdmbootstrap4/images/pattern-quarter.png"> -->
                                 <div class="different-donation">
-                                            <p>for general donation</p>
+                                            <p>For general donations</p>
                                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                                 <input type="hidden" name="cmd" value="_s-xclick">
                                                 <input type="hidden" name="hosted_button_id" value="J9R72EW48K3ZG">
