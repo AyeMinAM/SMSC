@@ -40,9 +40,11 @@ Template Name: Ajax register
         
         It is essential to have previous experience in Mahasi Meditation Method and 
         to strictly adhere to the 9 precepts and retreat schedule.  
-        Signed application needs to be received before coming to the centre.  
-        Final-acceptance by SMSC required. (If you have no access to 
-        sign on-line can sign on arrival to the Retreat Centre)</p>
+
+        Signed applications need to be received before coming to the centre.  
+        Final acceptance and approval by SMSC required. (If you have no access to 
+        sign on-line, you may sign on arrival to the Retreat Centre).</p>
+
     
     </div>
     
@@ -474,7 +476,9 @@ Template Name: Ajax register
            
         </div>  
          <div class="form-group col-md-10">
-         - Strictly adhere to Nine Precepts
+
+         - Strictly adhere to the Nine Precepts
+
         </div>  
     </div>
 
@@ -501,7 +505,9 @@ Template Name: Ajax register
            
         </div>  
          <div class="form-group col-md-10">
-         - Follow retreat schedule  
+
+         - Follow the retreat schedule  
+
         </div>  
     </div>
 
@@ -519,7 +525,8 @@ Template Name: Ajax register
            2.  
         </div>  
          <div class="form-group col-md-10">
-            I am aware that I may be photographed or videotaped at retreat for sharing among SMSC 
+
+            I am aware that I may be photographed or videotaped at the retreat for sharing among SMSC 
             participants, yogis and SMSC Dhamma friends. 
         </div>  
     </div> 
@@ -530,7 +537,7 @@ Template Name: Ajax register
            3.  
         </div>  
          <div class="form-group col-md-10">
-         I agree to keep my personal information on the SMSC file. 
+         I agree to allow my personal information to be kept on file with the SMSC. 
         </div>  
     </div> 
  
@@ -549,13 +556,14 @@ Template Name: Ajax register
 
       <div class="form-row"> 
         <div class="form-group col-md-12">
-        If you select "No", you will need to fill up this form at every future retreat you attend.
+        If you select "No", you will need to fill out this form at each future retreat you attend.
+
         </div> 
     </div> 
 
       <div class="form-row"> 
         <div class="form-group col-md-12">
-        BY SUBMITTING THIS ELECTRONIC APPLICATION I WAIVE ALL FORM OF LIABILITY TOWARDS SMSC, ITS STAFF AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREATS I WILL BE ATTENDING AT SMSC.
+        BY SUBMITTING THIS ELECTRONIC APPLICATION I AGREE TO WAIVE ALL FORM OF LIABILITY TOWARD THE SMSC, ITS STAFF AND VOLUNTEERS FOR THIS RETREAT AND ALL OTHER RETREATS I WILL BE ATTENDING WITH THE SMSC.
         </div> 
     </div> 
 

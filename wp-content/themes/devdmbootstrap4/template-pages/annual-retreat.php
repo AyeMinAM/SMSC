@@ -208,7 +208,8 @@ Template Name: Annual Retreat Page
                         <div class="vertical-center">
                           <div class="card-block-others">
                             <h4 class="card-title">Beginner Classes</h4>
-                            <p class="card-o-programs-text">The Mindfulness-Insight course for beginners is an introduction to the meditation practice.  This class is for both beginners and experienced practitioners who have no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). The program consists of six weekly sessions, 2 hours long, involving guided meditation and lectures about the practice, followed by a question and answer session. This course is offered several times a year.
+
+                            <p class="card-o-programs-text">The Mindfulness-Insight course for beginners is an introduction to the meditation practice.  This class is for both beginners and experienced practitioners who have no previous exposure to the Pure Vipassana Meditation method (Mahasi tradition). <!-- The program consists of six weekly sessions, 2 hours long, involving guided meditation and lectures about the practice, followed by a question and answer session. This course is offered several times a year. -->
 </p>
                             <div class="col text-center">
                             <a href="<?php echo get_site_url(); ?>/Beginner" class="btn btn-lg btn-outline">

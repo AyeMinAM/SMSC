@@ -414,17 +414,17 @@ h5{
   @media (min-width:1200px){
     .social-media-icons-top{
     display: inline;
-    float: right;
+   /* float: right;*/
     color: white;
-    /*position: absolute;*/
-    right: 10%;
-    top: 10%;
+    position: absolute;
+    right: 0%;
     font-size: 1.5rem;
     letter-spacing: .5rem;
     }
   }
 
-@media (min-width: 991px) and (max-width: 1200px) { 
+
+@media (min-width: 993px) and (max-width: 1200px) { 
 .social-media-icons-top{
     display: inline;
     float: right;

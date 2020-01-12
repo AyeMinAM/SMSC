@@ -38,7 +38,8 @@ Template Name: Library Page
                                     <h5 class="label smsc-title"> Dhamma Talks by Chanmyay Sayadawgyi, Retreat 1992</h5>
                                     <div id="r-more">
                                     <p class="collapse" id="collapse-r-more">
-                                        <a class="resource-links" href="sounds/vipassana_med1.mp3">
+
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med1.mp3">
                                         1.&nbspHow to Practice Insight Meditation through Mindfulness I </a> </br>
                                          <a class="resource-links" href="sounds/vipassana_med2.mp3">              
                                         2.&nbspHow to Practice Insight Meditation through Mindfulness II </a><br>

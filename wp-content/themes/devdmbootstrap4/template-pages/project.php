@@ -43,17 +43,17 @@ Template Name: The Project Page
                         <li>beginner and intermediate meditation classes;</li>
                         <li>day and weekend retreats;</li>
                         <li>weekend Dhamma workshops;</li>
-                        <li>advance Dhamma programs. </li>
+                        <li>advanced Dhamma programs. </li>
                     </ul>
 
             </p>
              <p class="text-justify">
-                If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through <a class="email-link" href="mailto:info@satipatthana.ca">info@satipatthana.ca</a>.  As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors (Canadian resident donors are able to claim tax deductions for their contributions). 
+                If you wish to participate in this meritorious deed you are encouraged to contact the SMSC through <a class="email-link" href="mailto:info@satipatthana.ca">info@satipatthana.ca</a> or donate directly via the PayPal link below. As the SMSC is a registered Canadian charitable organization, receipts will be issued to all donors (Canadian resident donors are able to claim tax deductions for their contributions). 
             </p>
             <p>Sadhu. Sadhu. Sadhu.</p>
              <div  class="col-sm-12 text-center"> 
                  
-                                             <p>Donte via PayPal</p>
+                                             <p>Donate via PayPal</p>
                                              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                                 <input type="hidden" name="cmd" value="_s-xclick">
                                                 <input type="hidden" name="hosted_button_id" value="233ZK6MB4K9ZU">
