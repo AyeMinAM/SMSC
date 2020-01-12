@@ -1021,13 +1021,13 @@ width: 100%;
   font-family: 'OpenSans', sans-serif;
 }
 
-.card-header .fa {
+/*.card-header .fa {
   transition: .3s transform ease-in-out;
 }
 .card-header .collapsed .fa {
   transform: rotate(180deg);
 }
-
+*/
 .card-header >a {
   padding: 12px 35px 12px 15px;
   display: inline-block;

@@ -11,7 +11,7 @@ Template Name: successful Class Page
   font-family: "OpenSans", sans-serif;
 }
 
-a, a:hover, a:active{
+a.contact_us, a.contact_us:hover, a.contact_us:active{
    color:#93210c;
 }
 
@@ -47,7 +47,8 @@ a, a:hover, a:active{
     padding: 3rem;
   }
 </style>
- 
+ <div class="row justify-content-sm-center">
+  <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
  <div class="jumbotron text-xs-center">
  <!--  <h1 class="display-3">Thank You!</h1>
   <div class="alert alert-success" role="alert">You have submitted successfully!</div>
@@ -60,11 +61,12 @@ a, a:hover, a:active{
   
   <hr>
   <p>
-    If you have any questions, please <a href="<?php echo esc_url( get_permalink( get_page_by_title('contactus') ) ); ?>">Contact us.</a>
+    If you have any questions, please <a class="contact_us" href="<?php echo esc_url( get_permalink( get_page_by_title('contactus') ) ); ?>">Contact us.</a>
   </p>
   <div class="">
     <p>If you would like to donate, please go to </p>
     <a class="btn-donation" href="<?php echo get_site_url(); ?>/donation" role="button">Donate</a>
   </div>
-</div>
+</div><!--jumbotron-->
+</div><!--row-->
  
