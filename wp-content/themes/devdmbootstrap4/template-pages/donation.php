@@ -66,7 +66,7 @@ Template Name: donation Page
                      We wish to express our sincere appreciation and gratitude for the ongoing support we receive. It is through this kindness that we are able to continue to practice, discuss, promote and provide education about Theravada Buddhism.
                     </p>
                     <p class="text-justify">
-                     Please contact us at:  <a href="mailto:info@satipatthana.ca">info@satipatthana.ca</a> should you have any questions or require further information.
+                     Please contact us at:  <a class="email-link" href="mailto:info@satipatthana.ca">info@satipatthana.ca</a> should you have any questions or require further information.
                     </p>
                     <p>Sadhu. Sadhu. Sadhu.</p>
                 </div>
