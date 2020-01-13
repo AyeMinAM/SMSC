@@ -1199,6 +1199,14 @@ form ::placeholder{
   padding:2rem;
 }
 
+.custom-select{
+  background-image: none;
+}
+
+media (min-width: 576px)
+.mr-sm-2, .mx-sm-2 {
+    margin-right: 0 !important;
+    }
 /*FOOTER*/
 footer{
   font-family: 'Open Sans', sans-serif!important;
