@@ -41,43 +41,43 @@ Template Name: Library Page
 
                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med1.mp3">
                                         1.&nbspHow to Practice Insight Meditation through Mindfulness I </a> </br>
-                                         <a class="resource-links" href="sounds/vipassana_med2.mp3">              
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med2.mp3">              
                                         2.&nbspHow to Practice Insight Meditation through Mindfulness II </a><br>
-                                         <a class="resource-links" href="sounds/vipassana_med3.mp3">                       
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med3.mp3">                       
                                         3.&nbspHow to Practice Insight Meditation through Mindfulness III</a><br>
-                                         <a class="resource-links" href="sounds/vipassana_med4.mp3">
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med4.mp3">
                                         4.&nbspWhat Is Vipassana (Insight)</a><br>
-                                         <a class="resource-links" href="sounds/vipassana_med5.mp3">
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med5.mp3">
                                         5.&nbspPurification of Moral Conduct and Mind (Five Mental Hindrances)</a><br>
-                                         <a class="resource-links" href="sounds/vipassana_med6.mp3">              
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med6.mp3">              
                                         6.&nbspPurification of Mind (Five Controlling Mental Faculities I)</a><br>
-                                         <a class="resource-links" href="sounds/vipassana_med7.mp3">                         
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med7.mp3">                         
                                         7.&nbspPurification of Mind (Five Controlling Mental Faculities II)</a><br>
                                          <a class="resource-links" href="sounds/vipassana_med8.mp3">
                                         8.&nbspPurification of Mind (Absorption, Access and Momentary concentration)</a><br>
-                                         <a class="resource-links" href="sounds/vipassana_med9.mp3">
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med9.mp3">
                                         9.&nbspPurification of View (Specific and Common Characteristics of Body-Mind Process)</a><br>
-                                         <a class="resource-links" href="sounds/vipassana_med10.mp3">
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med10.mp3">
                                         10.&nbspPurification of View (Discerning and Unsatisfactory nature of Body-Mind process)</a><br>
-                                         <a class="resource-links" href="sounds/vipassana_med11.mp3">
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med11.mp3">
                                         11.&nbspPurification by Overcoming Doubt (Causal Relation of Body-Mind process I)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med12.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med12.mp3">
                                         12.&nbspPurification by Overcoming Doubt (Causal Relation of Body-Mind process II)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med13.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med13.mp3">
                                         13.&nbspPurification by Overcoming Doubt (Causal Relation of Body-Mind process III)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med14.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med14.mp3">
                                         14.&nbspPurification by Overcoming Doubt (Causal Relation of Body-Mind process lV)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med15.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med15.mp3">
                                         15.Purification by Overcoming Doubt (Causal Relation of Body-Mind process V)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med16.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med16.mp3">
                                         16.&nbspThe Way of Deliverance (The Four Noble Truths l)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med17.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med17.mp3">
                                         17.&nbspThe Way of Deliverance (The Four Noble Truths ll)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med18.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med18.mp3">
                                         18.&nbspThe Way of Deliverance (The Four Noble Truths Ill)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med19.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med19.mp3">
                                         19.&nbspClear Comprehension of Mind and Matter (The Five Aggregates)</a><br>
-                                        <a class="resource-links" href="sounds/vipassana_med20.mp3">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/sounds/vipassana_med20.mp3">
                                         20.&nbspSeven Benefits of Mindfulness-Insight Meditation</a><br>                          </p>
                     <a class="resource-links collapsed" data-toggle="collapse" href="#collapse-r-more" aria-expanded="false" aria-controls="collapse-r-more"></a>
                     </div> <!--end of summary-->
@@ -99,21 +99,21 @@ Template Name: Library Page
                                     <h5 class="label smsc-title"> Written by Sayar Myat</h5>
                                     <div id="r-2-more">
                                     <p class="collapse" id="collapse-r-2-more">
-                                        <a class="resource-links" href="../articles/01awakened.pdf">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/01awakened.pdf">
                                         The Awakened Mind </a> </br>
-                                         <a class="resource-links" href="../articles/02three.pdf">              
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/02three.pdf">              
                                         Three Pillars of Buddhism </a><br>
-                                         <a class="resource-links" href="../articles/03medi_time.pdf">                       
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/03medi_time.pdf">                       
                                         Meditation and the Concept of Time</a><br>
-                                        <a class="resource-links" href="../articles/04mindfulness.pdf">      
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/04mindfulness.pdf">      
                                         Mindfulness (Sati)                 
                                         </a><br>
-                                         <a class="resource-links" href="../articles/05instruction.pdf">
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/05instruction.pdf">
                                         Insight Meditation Instruction (Sitting &amp; Walking)</a><br>
-                                         <a class="resource-links" href="../articles/06On_Watching_Thoughts_during_Vipassana_Meditation.pdf">
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/06On_Watching_Thoughts_during_Vipassana_Meditation.pdf">
                                         On Watching Thoughts during Vipassana Meditation</a><br>
-                                         <a class="resource-links" href="../articles/07_Thirteen_Stages_of_Insight_Knowledge.pdf">Thirteen Stages of Insight Knowledge</a><br>
-                                         <a class="resource-links" href="../articles/The Four Noble Truths.pdf">                         
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/07_Thirteen_Stages_of_Insight_Knowledge.pdf">Thirteen Stages of Insight Knowledge</a><br>
+                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/The Four Noble Truths.pdf">                         
                                         The Four Noble Truths</a><br>
                                          
                                      </p>
@@ -137,11 +137,11 @@ Template Name: Library Page
                                     <h5 class="label smsc-title"> Chants</h5>
                                     <div>
                                     <p >
-                                        <a class="resource-links" href="../articles/06the_chant_metta.pdf">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/06the_chant_metta.pdf">
                                         Chant of Metta </a> </br>
-                                        <a class="resource-links" href="../articles/Taking Five Precepts v1.2.1 20191104.pdf">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/Taking-Five-Precepts-01.pdf">
                                        Taking Three Refuges and Five Precepts</a> </br>
-                                        <a class="resource-links" href="../articles/Taking Nine Precepts v1.2.1 20191104.pdf">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/Taking-Five-Precepts-02.pdf">
                                         Taking Three Refuges and Nine Precepts</a> </br>
                                          
                                      </p>
@@ -185,7 +185,7 @@ Template Name: Library Page
 
                                      </p>
 
-                                      <a class="label smsc-title r-website" href="http://www.myanmarnet.net/nibbana/#.Vcp8JRNViko" target="_blank"> nibbana.com</a>
+                                      <a class="label smsc-title r-website" href="http://www.myanmarnet.net/nibbana/#.Vcp8JRNViko" target="_blank">nibbana.com</a>
                                      <p>
                                        Buddhism in Myanmar, one of the most comprehensive sites for Buddha-Dhamma and Theravada Buddhism.
                                      </p>
