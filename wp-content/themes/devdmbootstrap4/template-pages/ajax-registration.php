@@ -1182,8 +1182,8 @@ jQuery(document).ready(function ()
                             input_e_city:"Please enter City",
                             input_e_email: "Please enter a valid email address",
                             input_e_phone: "Please enter your valid phone number",
-                            input_ack_firstname:"Please check your sign for first name and it must be the same as your first name.",
-                            input_ack_lastname:"Please check your sign for last name and it must be the same as your last name.",
+                            input_ack_firstname:"Your first name for the signature must be the same as the first name you typed in at Section 1",
+                            input_ack_lastname:"Your last name for the signature must be the same as the last name you typed in at Section 1.",
                             input_ack_date:"Please enter valid sign date"
 
                         } 
