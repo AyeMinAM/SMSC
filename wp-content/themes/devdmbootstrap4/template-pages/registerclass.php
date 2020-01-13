@@ -9,7 +9,7 @@ Template Name: Register Class Page
 
 <?php get_template_part('template-parts/nav','header'); ?>
 
-<div class="container" style="margin-top:1rem;">
+<div id="divbody"  class="container" style="margin-top:1rem;">
     
         <div class="row justify-content-md-center">
             <div class="col-lg-8 col-sm-12">
@@ -123,7 +123,7 @@ Template Name: Register Class Page
 
                     console.log(response);
                     $("#registerSubmit").attr("disabled", false);
-                    $('.btn').html($("#registerSubmit").data('original-text'));
+                    $('#registerSubmit').html($("#registerSubmit").data('original-text'));
 
 
                     if ( response.startsWith('Error:') ) 
@@ -141,7 +141,7 @@ Template Name: Register Class Page
                         url: "<?php echo esc_url( get_permalink( get_page_by_title('successful') ) ); ?>" ,
                         success: function(data) {
                             // data is ur summary
-                            $('#divRegister').html(data);
+                            $('#divbody').html(data);
                         }
 
                         });

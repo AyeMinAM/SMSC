@@ -701,7 +701,7 @@ jQuery(document).ready(function ()
                    // alert(response); 
                     console.log(response);
                     $("#registerSubmit").attr("disabled", false);
-                    $('.btn').html($("#registerSubmit").data('original-text'));
+                    $('#registerSubmit').html($("#registerSubmit").data('original-text'));
 
 
                     if (response.indexOf('Error:') !==-1  ) 
