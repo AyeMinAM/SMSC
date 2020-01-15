@@ -244,7 +244,7 @@ Template Name: Annual Retreat Page
                
         </div>
 </div>
-SMS
+
 <script>
 jQuery(document).ready(function () {
 

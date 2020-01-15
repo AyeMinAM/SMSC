@@ -141,7 +141,7 @@ Template Name: Library Page
                                         Chant of Metta </a> </br>
                                         <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/Taking-Five-Precepts-01.pdf">
                                        Taking Three Refuges and Five Precepts</a> </br>
-                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/Taking-Five-Precepts-02.pdf">
+                                        <a class="resource-links" href="<?php echo get_template_directory_uri(); ?>/articles/Taking-Nine-Precepts-02.pdf">
                                         Taking Three Refuges and Nine Precepts</a> </br>
                                          
                                      </p>
